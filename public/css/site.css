@@ -1,0 +1,21 @@
+@media print {    
+  .no-print, .no-print * {
+    display: none !important;
+  }
+
+  .container {
+    max-width: none !important;
+  }
+}
+
+.push-bottom {
+  margin-bottom: 40px;
+}
+
+ol > li > ul {
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+}

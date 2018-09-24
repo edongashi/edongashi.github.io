@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Slajdet</title>
+  <script>
+    var qs = (function (a) {
+      if (a == "") return {};
+      var b = {};
+      for (var i = 0; i < a.length; ++i) {
+        var p = a[i].split('=', 2);
+        if (p.length == 1)
+          b[p[0]] = "";
+        else
+          b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+      }
+      return b;
+    })(window.location.search.substr(1).split('&'));
+    if (qs.title) {
+      document.title = qs.title
+    }
+
+    var printPdf = 'print-pdf' in qs
+  </script>
+  <link rel="stylesheet" href="/revealjs/css/reveal.css">
+  <link rel="stylesheet" href="/revealjs/css/theme/white.css" id="theme">
+  <link rel="stylesheet" href="/revealjs/lib/css/github.css">
+  <script>
+    document.write('<link rel="stylesheet" href="/revealjs/css/print/' + (printPdf ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+  </script>
+
+  <style type="text/css">
+    @page {
+      margin: 0;
+      size: auto;
+    }
+
+    @media print {
+      .reveal pre code {
+        max-height: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <script>
+        if (qs.src) {
+          var src = qs.src
+          if (/\.html$/i.test(src)) {
+            src = src.substr(0, src.length - 5)
+          }
+
+          if (src === '/') {
+            src = '/index'
+          }
+
+          if (!/[^A-Za-z0-9 _./-]/.test(src)) {
+            document.write('<section data-markdown=" ' + src + '.md" data-separator="^---$" data-separator-vertical="^--$"></section>')
+          }
+        }
+      </script>
+    </div>
+  </div>
+
+  <script src="/revealjs/lib/js/head.min.js"></script>
+  <script src="/revealjs/js/reveal.js"></script>
+  <script>
+    function extend() {
+      var target = {};
+      for (var i = 0; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (source.hasOwnProperty(key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    }
+
+    if (printPdf) {
+      window.onMathJaxReady = function (MathJax) {
+        setTimeout(function () {
+          if (Reveal.isReady()) {
+            setTimeout(function () {
+              MathJax.Hub.Queue(function () {
+                window.print()
+              });
+            }, 0);
+          } else {
+            Reveal.addEventListener('ready', function () {
+              setTimeout(function () {
+                MathJax.Hub.Queue(function () {
+                  window.print()
+                });
+              }, 0);
+            });
+          }
+        }, 0);
+      }
+    }
+
+    var deps = [
+      { src: '/revealjs/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+      { src: '/revealjs/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+      { src: '/revealjs/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+      { src: '/revealjs/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+      { src: '/revealjs/plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } },
+      { src: '/revealjs/plugin/zoom-js/zoom.js', async: true },
+      { src: '/revealjs/plugin/math/math.js', async: true }
+    ];
+
+    var queryOptions = Reveal.getQueryHash() || {};
+    var options = {
+      dependencies: deps,
+      notesSeparator: "note:",
+      separator: "^---$",
+      verticalSeparator: "^--$",
+      theme: "white",
+      highlightTheme: "vs2015",
+      controls: true,
+      progress: true,
+      slideNumber: false,
+      history: false,
+      keyboard: true,
+      overview: true,
+      center: true,
+      touch: true,
+      loop: false,
+      rtl: false,
+      shuffle: false,
+      fragments: true,
+      embedded: false,
+      help: true,
+      showNotes: false,
+      autoSlide: 0,
+      autoSlideStoppable: true,
+      mouseWheel: false,
+      hideAddressBar: true,
+      previewLinks: false,
+      transition: "slide",
+      transitionSpeed: "fast",
+      backgroundTransition: "default",
+      viewDistance: 3,
+      parallaxBackgroundImage: "",
+      parallaxBackgroundSize: "",
+      parallaxBackgroundHorizontal: null,
+      parallaxBackgroundVertical: null,
+      slideExplorerEnabled: true,
+      browserPath: null,
+      attributes: ""
+    };
+    options = extend(options, queryOptions);
+    Reveal.initialize(options);
+  </script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-126221132-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+
+</html>
