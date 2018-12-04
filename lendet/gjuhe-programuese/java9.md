@@ -34,9 +34,9 @@ Funksioni ka **domenin** dhe **rangun**.
 
 $$
 \begin{array} {ccrcl}
-f(x) = x^2 \; & : & \; \mathbb{Z} & \rightarrow & \mathbb{Z} \\ \\
-g(a,b) = a + b \; & : & \; \mathbb{Z} \times \mathbb{Z} & \rightarrow & \mathbb{Z} \\ \\
-h(a,b) = \dfrac{a}{b} \; & : & \; \mathbb{Z} \times (\mathbb{Z} \setminus \lbrace 0 \rbrace) & \rightarrow & \mathbb{R} \\ \\
+f(x) = x^2 & : & \mathbb{Z} & \rightarrow & \mathbb{Z} \\ \\
+g(a,b) = a + b & : & \mathbb{Z} \times \mathbb{Z} & \rightarrow & \mathbb{Z} \\ \\
+h(a,b) = \dfrac{a}{b} & : & \mathbb{Z} \times (\mathbb{Z} \setminus \lbrace 0 \rbrace) & \rightarrow & \mathbb{R} \\ \\
 \sin(x) & : & \mathbb{R} & \rightarrow & [-1, 1]
 \end{array}
 $$
