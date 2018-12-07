@@ -22,6 +22,7 @@ noslides: true
 6. [Java 6 - Vargjet](/lendet/gjuhe-programuese/java6)
 7. [Java 7 - Përsëritje](/lendet/gjuhe-programuese/java7)
 8. [Java 8 - Matricat](/lendet/gjuhe-programuese/java8)
+8. [Java 9 - Funksionet](/lendet/gjuhe-programuese/java9)
 
 ---
 
