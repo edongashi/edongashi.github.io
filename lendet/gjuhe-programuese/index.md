@@ -6,6 +6,10 @@ noslides: true
 
 # Gjuhë Programuese
 
+## Njoftim për grupin 1A"
+
+Orari i ushtrimeve për grupin 1A" është zhvendosur të enjteve nga ora 14:00.
+
 ## Rezultatet e kolokviumit të parë
 
 [Klikoni këtu](/lendet/gjuhe-programuese/kolokviumi1) për të hapur rezultatet e kolokviumit të parë. Rishikimi i punimeve mund të bëhet të enjten (06/12/2018) nga ora 13:00 në sallën 615.
@@ -45,6 +49,6 @@ noslides: true
 Grupi|Dita|Ora|Salla
 -|-|-|-
 1A'|E enjte|11:30-13:00|615
-1A"|E hënë|08:45-10:15|615
+1A"|E enjte|14:00-15:30|615
 1B'|E mërkurë|09:45-11:15|615
 1B"|E mërkurë|11:30-13:00|615
