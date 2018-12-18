@@ -27,6 +27,8 @@ Orari i ushtrimeve për grupin 1A" është zhvendosur të enjteve nga ora 14:00.
 7. [Java 7 - Përsëritje](/lendet/gjuhe-programuese/java7)
 8. [Java 8 - Matricat](/lendet/gjuhe-programuese/java8)
 8. [Java 9 - Funksionet](/lendet/gjuhe-programuese/java9)
+8. [Java 10 - Variablat lokale/globale](/lendet/gjuhe-programuese/java10)
+9. [Java 11 - Mbingarkimi i funksioneve, direktivat paraprocesorike](/lendet/gjuhe-programuese/java11)
 
 ---
 
