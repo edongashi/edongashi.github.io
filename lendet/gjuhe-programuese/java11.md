@@ -139,6 +139,43 @@ Kudo që shihet `PI` zëvendësohet me 3.14
 
 ---
 
+Definimet shpesh përdoren për t'iu shoqëruar emra vlerave konstante numerike, psh PI.
+
+Përveç kësaj, definimet janë të përshtatshme për t'i dhënë kuptim numrave sipas nevojave tona.
+
+---
+
+**Shembull:** Definimi i ngjyrave të semaforit:
+
+```cpp
+#define KUQE 0
+#define VERDHE 1
+#define GJELBER 2
+
+void statusi(int ngjyra) {
+  switch (ngjyra) {
+    case KUQE:    cout << "Stop.";        break;
+    case VERDHE:  cout << "Gati.";        break;
+    case GJELBER: cout << "Nisu.";        break;
+    default:      cout << "S'ka kuptim."; break;
+  }
+}
+```
+
+---
+
+Më e kapshme është të themi `KUQE`, `VERDHE`, `GJELBER` sesa `0`, `1`,` 2`.
+
+Gjithashtu zvogëlohet shanca për gabime.
+
+---
+
+Me këtë filozofi punojnë shkronjat dhe simbolet në kompjuter.
+
+Shkronjës `A` i shoqërohet numri `65`, shkronjës `B` i shoqërohet numri `66`, etj...
+
+---
+
 Zëvendësimet përmes `#define` mund të jenë edhe parametrike. Këto njihen si macro, dhe zakonisht nuk preferohet përdorimi i tyre.
 
 ```cpp
@@ -165,6 +202,10 @@ Të shkruhen funksionet e mbingarkuara `shuma`. Funksioni i parë merr një varg
 
 ---
 
+Të shkruhet programi i cili definon të gjitha ditët e javës si konstante, dhe përmes një funksioni të bëhet switch vlera e ditës dhe shfaqet dita përkatëse.
+
+---
+
 Të shkruhet funksioni i cili llogarit determinantën e matricës katrore të madhësisë 3.
 
 ---
@@ -180,4 +221,4 @@ $$
 
 ---
 
-Të shkruhen funksioni i cili llogarit produktin skalar të dy vargjenve.
+Të shkruhen funksioni i cili llogarit produktin skalar të dy vargjeve.
