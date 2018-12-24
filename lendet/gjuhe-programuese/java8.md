@@ -249,6 +249,39 @@ $$
 
 Të shfaqet në ekran kjo matricë duke rezervuar 3 kolona për secilin element.
 
+--
+
+```cpp
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+  const int m = 3;
+  const int n = 4;
+  int A[m][n];
+  
+  // Mbushja
+  for (int i = 0; i < m; i++) {
+    for (int j = 0; j < n; j++) {
+      A[i][j] = i * n + j;
+    }
+  }
+
+  // Shfaqja
+  for (int i = 0; i < m; i++) {
+    for (int j = 0; j < n; j++) {
+      cout << setw(3) << A[i][j];
+    }
+
+    cout << endl;
+  }
+
+  return 0;
+}
+```
+
 ---
 
 **Detyrë:** Të deklarohet një matricë e rendit $3\times 4$. Të mbushet kjo matricë nga tastiera.
@@ -318,6 +351,46 @@ $$
 
 Të shfaqet në ekran kjo matricë duke rezervuar 3 kolona për secilin element.
 
+--
+
+```cpp
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+  const int n = 5;
+  int A[n][n];
+  
+  // Mbushja
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      if (i < j) {
+        // Mbi diagonale
+        A[i][j] = -1;
+      } else if (i == j) {
+        // Ne diagonale
+        A[i][j] = 0;
+      } else {
+        A[i][j] = 1;
+      }
+    }
+  }
+
+  // Shfaqja
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      cout << setw(3) << A[i][j];
+    }
+
+    cout << endl;
+  }
+
+  return 0;
+}
+```
+
 ---
 
 ## Sortimi i vektorit
@@ -325,3 +398,112 @@ Të shfaqet në ekran kjo matricë duke rezervuar 3 kolona për secilin element.
 ---
 
 **Detyrë:** Është dhënë vektori $V_n=\lbrace 7, 2, 1, 5, 9, 6 \rbrace$. Të sortohen anëtarët e këtij vektori duke filluar nga më i vogli deri te më i madhi.
+
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  const int n = 6;
+  int v[n] = { 7, 2, 1, 5, 9, 6 };
+  cout << "Para sortimit:";
+  for (int i = 0; i < n; i++) {
+    cout << " " << v[i];
+  }
+
+  cout << endl;
+
+  for (int i = 0; i < n - 1; i++) {
+    for (int j = i + 1; j < n; j++) {
+      if (v[j] < v[i]) {
+        int temp = v[j];
+        v[j] = v[i];
+        v[i] = temp;
+      }
+    }
+  }
+
+  
+  cout << "Pas sortimit: ";
+  for (int i = 0; i < n; i++) {
+    cout << " " << v[i];
+  }
+
+  cout << endl;
+  return 0;
+}
+```
+
+---
+
+## Detyra shtesë
+
+---
+
+Të krijohet matrica e rendit $n \times n$ ku $n=3$. Të mbushet kjo matricë nga tastiera, dhe pastaj të llogaritet:
+
+1. Numri i anëtarëve pozitiv.
+2. Numri i anëtarëve negativ.
+3. Shuma e elementeve mbi diagonale.
+4. Shuma e elementeve nën diagonale.
+
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  const int n = 3;
+  int A[n][n];
+
+  // Mbushja nga tastiera.
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      cout << "A[" << i + 1 << "][" << j + 1 << "] = ";
+      cin >> A[i][j];
+    }
+  }
+
+  // Numri i anetareve pozitiv dhe negativ.
+  int nrPozitiv = 0;
+  int nrNegativ = 0;
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      if (A[i][j] > 0) {
+        nrPozitiv++;
+      }
+
+      if (A[i][j] < 0) {
+        nrNegativ++;
+      }
+    }
+  }
+
+  // Shuma e anetareve mbi dhe nen diagonale.
+  int shumaMbiDiagonale = 0;
+  int shumaNenDiagonale = 0;
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      if (i < j) {
+        shumaMbiDiagonale += A[i][j];
+      }
+
+      if (i > j) {
+        shumaNenDiagonale += A[i][j];
+      }
+    }
+  }
+
+  cout << "Numri i anetareve pozitiv: " << nrPozitiv << endl;
+  cout << "Numri i anetareve negativ: " << nrNegativ << endl;
+  cout << "Shuma e elementeve mbi diagonale: " << shumaMbiDiagonale << endl;
+  cout << "Shuma e elementeve nen diagonale: " << shumaNenDiagonale << endl;
+
+  return 0;
+}
+```
