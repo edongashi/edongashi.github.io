@@ -157,3 +157,81 @@ int main() {
   return 0;
 }
 ```
+
+---
+
+**Detyrë:** Të krijohet libraria `funksionet.h` e cila ofron funksionet `shuma(v,n)`, `mesatarja(v,n)`, `max(v,n)`, dhe `min(v,n)`.
+
+Nga fajlli `main.cpp` të thirren këto funksione me vektorin $v=\lbrace 4, 2, 6, 7, 1 \rbrace$
+
+--
+
+`funksionet.h`:
+
+```cpp
+int shuma(int v[], int n);
+double mesatarja(int v[], int n);
+int max(int v[], int n);
+int min(int v[], int n);
+```
+
+--
+
+`funksionet.cpp`:
+
+```cpp
+int shuma(int v[], int n) {
+  int s = 0;
+  for (int i = 0; i < n; i++) {
+    s += v[i];
+  }
+
+  return s;
+}
+
+double mesatarja(int v[], int n) {
+  return (double)shuma(v, n) / n;
+}
+
+int max(int v[], int n) {
+  int m = v[0];
+  for (int i = 1; i < n; i++) {
+    if (v[i] > m) {
+      m = v[i];
+    }
+  }
+
+  return m;
+}
+
+int min(int v[], int n) {
+  int m = v[0];
+  for (int i = 1; i < n; i++) {
+    if (v[i] < m) {
+      m = v[i];
+    }
+  }
+
+  return m;
+}
+```
+
+--
+
+`main.cpp`:
+
+```cpp
+#include <iostream>
+#include "funksionet.h"
+using namespace std;
+
+int main() {
+  const int n = 6;
+  int v[n] = { 4, 2, 6, 7, 1 };
+  cout << "Shuma: " << shuma(v, n) << endl;
+  cout << "Mesatarja: " << mesatarja(v, n) << endl;
+  cout << "Maksimumi: " << max(v, n) << endl;
+  cout << "Minimumi: " << min(v, n) << endl;
+  return 0;
+}
+```
