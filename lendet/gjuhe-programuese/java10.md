@@ -63,6 +63,39 @@ int main() {
 
 ---
 
+**Detyrë:** Çfarë shfaqet kur ekzekutohet ky kod?
+
+```cpp
+#include <iostream>
+
+int f1() {
+  int a = 25;
+  return 13;
+}
+
+int f2(int b) {
+  int a = 13;
+  return b;
+}
+
+int f3(int a) {
+  return a + 1;
+}
+
+int main() {
+  int a = -3;
+  std::cout << f2(f3(a));
+}
+```
+
+--
+
+```text
+-2
+```
+
+---
+
 **Variablat globale**
 
 Variablat që shihen nga të gjitha funksionet quhen **variabla globale**.
@@ -102,3 +135,25 @@ Ndryshimi i papritur i ndonjë variable mund të shkaktojë defekte në program.
 $$
 S = \sum_{i=3}^{8}{i} + \sum_{i=2}^{6}{i}
 $$
+
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int shuma(int a, int b) {
+  int S = 0;
+  for (int i = a; i <= b; i++) {
+    S += i;
+  }
+
+  return S;
+}
+
+int main() {
+  int S = shuma(3, 8) + shuma(2, 6);
+  cout << "S = " << S << endl;
+  return 0;
+}
+```
