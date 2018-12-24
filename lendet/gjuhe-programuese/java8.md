@@ -8,6 +8,31 @@
 
 **Detyrë:** Të mbushet nga tastiera një varg me 7 numra të plotë. Të shfaqen numrat e atij vargu të cilët janë të plotëpjestueshem me 3.
 
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+  const int n = 7;
+  int v[n];
+  for (int i = 0; i < n; i++) {
+    cout << "v[" << i + 1 << "] = ";
+    cin >> v[i];
+  }
+
+  cout << "Numrat e plotepjestueshem me 3:" << endl;
+  for (int i = 0; i < n; i++) {
+    if (v[i] % 3 == 0) {
+      cout << v[i] << endl;
+    }
+  }
+
+  return 0;
+}
+```
+
 ---
 
 ## Matricat
@@ -287,6 +312,39 @@ int main()
 **Detyrë:** Të deklarohet një matricë e rendit $3\times 4$. Të mbushet kjo matricë nga tastiera.
 
 Të shfaqet në ekran kjo matricë duke rezervuar 3 kolona për secilin element.
+
+--
+
+```cpp
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+  const int m = 3;
+  const int n = 4;
+  int A[m][n];
+
+  // Mbushja
+  for (int i = 0; i < m; i++) {
+    for (int j = 0; j < n; j++) {
+      cout << "A[" << i + 1 << "][" << j + 1 << "] = ";
+      cin >> A[i][j];
+    }
+  }
+
+  // Shfaqja
+  for (int i = 0; i < m; i++) {
+    for (int j = 0; j < n; j++) {
+      cout << setw(3) << A[i][j];
+    }
+
+    cout << endl;
+  }
+
+  return 0;
+}
+```
 
 ---
 
