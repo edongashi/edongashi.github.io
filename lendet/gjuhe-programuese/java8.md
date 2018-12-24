@@ -431,6 +431,7 @@ int main()
         // Ne diagonale
         A[i][j] = 0;
       } else {
+        // Nen diagonale
         A[i][j] = 1;
       }
     }
