@@ -1,4 +1,4 @@
-# Gjuhë Programuese - Java 10
+# Gjuhë Programuese - Java 11
 
 ---
 

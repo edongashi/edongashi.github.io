@@ -8,9 +8,21 @@ noslides: true
 
 ---
 
-## Dorëzimi i fazës së dytë
+## Mbrojtja e fazës së dytë
 
-Dorëzimi i fazës së dytë të projektit duhet të bëhet më së largu të dielen, 23/12/2018 ora 23:59.
+Grupi|Ora
+-|-
+A1 | 13:30-13:40
+A2 | 13:40-13:50
+A4 | 13:50-14:00
+A5 | 14:00-14:10
+A6 | 14:10-14:20
+B1 | 14:20-14:30
+B2 | 14:30-14:40
+B3 | 14:40-14:50
+B4 | 14:50-15:00
+B5 | 15:00-15:10
+C10| 15:10-15:20
 
 ---
 
