@@ -403,6 +403,12 @@ int main() {
 
 ---
 
+**Detyrë:** Të deklarohet struktura `NumerKompleks` me fushat `a` dhe `b` si dhe funksionet `mbledh`, `zbrit`, `shumezo`, `rrezja`, `kendi`.
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Complex_number_illustration.svg/223px-Complex_number_illustration.svg.png)  <!-- .element: style="border:none" -->
+
+---
+
 **Detyrë:** Të deklarohet struktura `Data`. 
 
 1. Të shkruhet funksioni `konstrukto(viti, muaji, dita)` i cili krijon datën nga parametrat e dhënë.
