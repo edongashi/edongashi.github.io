@@ -34,6 +34,7 @@ Orari i ushtrimeve për grupin 1A" është zhvendosur të enjteve nga ora 14:00.
 
 ## Artikuj
 
+- [Kuptimi i 'void'](/lendet/gjuhe-programuese/void)
 - [C++ përmes VS Code](/lendet/gjuhe-programuese/vs-code)
 
 ---
