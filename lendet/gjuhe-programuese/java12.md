@@ -744,7 +744,7 @@ struct Vetura
   Marka marka;
   Ngjyra ngjyra;
   int vitiProdhimit;
-  Transmisioni transimisioni;
+  Transmisioni transmisioni;
 };
 
 int main()
