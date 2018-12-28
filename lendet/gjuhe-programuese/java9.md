@@ -237,15 +237,89 @@ $$
 \textit{faktorieli}(n) = n!
 $$
 
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int faktorieli(int n) {
+  int f = 1;
+  for (int i = 1; i <= n; i++) {
+    f = f * i;
+  }
+
+  return f;
+}
+
+int main() {
+  cout << "3! = " << faktorieli(3) << endl;
+  cout << "4! = " << faktorieli(4) << endl;
+  cout << "5! = " << faktorieli(5) << endl;
+  return 0;
+}
+```
+
 ---
 
 **Detyrë:** Të shkruhet funksioni `kaKaluar(p)` i cili merr numrin e pikëve $p$ (`int`) dhe kthen nëse kalohet provimi me ato pikë ($p \geq 50$).
 
 **Ndihmesë:** Tipi i kthimit duhet të jetë `bool`.
 
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+bool kaKaluar(int p) {
+  if (p >= 50) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+int main() {
+  if (kaKaluar(60)) {
+    cout << "Studenti 1 kalon." << endl;
+  } else {
+    cout << "Studenti 1 nuk kalon." << endl;
+  }
+  
+  if (kaKaluar(35)) {
+    cout << "Studenti 2 kalon." << endl;
+  } else {
+    cout << "Studenti 2 nuk kalon." << endl;
+  }
+
+  return 0;
+}
+```
+
 ---
 
 **Detyrë:** Të shkruhet procedura `lexoDheMbledh()` e cila lexon dy numra nga tastiera dhe kthen shumën e tyre.
+
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int lexoDheMbledh() {
+  int a, b;
+  cin >> a;
+  cin >> b;
+  return a + b;
+}
+
+int main() {
+  int shuma = lexoDheMbledh();
+  cout << "Shuma: " << shuma << endl;
+  return 0;
+}
+```
 
 ---
 
@@ -280,9 +354,53 @@ $$
 
 **Detyrë:** Të shkruhet funksioni `max(a,b)` i cili merr dy numra dhe kthen numrin më të madh nga këta.
 
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int max(int a, int b) {
+  return a > b ? a : b;
+}
+
+int main() {
+  cout << "max(3,5) = " << max(3,5) << endl;
+  return 0;
+}
+```
+
 ---
 
 **Detyrë:** Të shkruhet funksioni `clamp(v,min,max)` i cili e kufizon vlerën $v$ në intervalin $[\textit{min},\textit{max}]$.
+
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+double clamp(double v, double min, double max) {
+  if (v < min) {
+    return min;
+  }
+
+  if (v > max) {
+    return max;
+  }
+
+  return v;
+}
+
+int main() {
+  double v;
+  cout << "Shtypni v (nga 1 deri 100): ";
+  cin >> v;
+  // Nese v eshte jashte 1-100 merret kufiri me i afert.
+  cout << clamp(v, 1.0, 100.0);
+  return 0;
+}
+```
 
 ---
 
@@ -292,9 +410,69 @@ $$
 f(n,x) = x + \sum_{i=1}^{n}{(3i + 2)}
 $$
 
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int f(int n, int x) {
+  int s = 0;
+  for (int i = 1; i <= n; i++) {
+    s += 3 * i + 2;
+  }
+
+  return x + s;
+}
+
+int main() {
+  int n, x;
+  cout << "Shtypni n: ";
+  cin >> n;
+  cout << "Shtypni x: ";
+  cin >> x;
+  int s = f(n, x);
+  cout << "s = " << s;
+  return 0;
+}
+```
+
 ---
 
 **Detyrë:** Të shkruhet funksionet `eshteCift(x)` dhe `eshteTek(x)` qe tregojnë nëse $x$ është çift/tek.
+
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+bool eshteCift(int nr) {
+  return nr % 2 == 0;
+}
+
+bool eshteTek(int nr) {
+  // E kthen te kunderten e eshteCift-it.
+  // (kur nuk eshte cift atehere eshte tek)
+  return !eshteCift(nr);
+}
+
+int main() {
+  int nr;
+  cout << "Shtypni numrin: ";
+  cin >> nr;
+
+  if (eshteCift(nr)) {
+    cout << "Numri i dhene eshte cift." << endl;
+  }
+
+  if (eshteTek(nr)) {
+    cout << "Numri i dhene eshte tek." << endl;
+  }
+
+  return 0;
+}
+```
 
 ---
 
@@ -304,6 +482,48 @@ $$
 f(a,b,c,x) = ax^2 + bx + c
 $$
 
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+double f(double a, double b, double c, double x) {
+  return a * x * x + b * x + c;
+}
+
+int main() {
+  cout << "y = " << f(2.0, 1.5, 3.2, 6.1);
+  return 0;
+}
+```
+
 ---
 
 **Detyrë:** Të shkruhet funksioni fibonacci përmes rekursionit.
+
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int fibonacci(int n) {
+  if (n == 0) {
+    return 0;
+  } else if (n == 1) {
+    return 1;
+  } else {
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+}
+
+int main() {
+  cout << "15 vlerat e para te serise fibonacci:" << endl;
+  for (int i = 0; i <= 14; i++) {
+    cout << fibonacci(i) << endl;
+  }
+
+  return 0;
+}
+```
