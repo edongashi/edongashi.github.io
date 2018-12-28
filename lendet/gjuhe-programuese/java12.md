@@ -707,7 +707,7 @@ int main() {
 
 ---
 
-Strukturat janë shumë të përshtatshme për të modeluar konceptet e jetës reale në program.
+Me numërime dhe struktura mund të modelojmë objektet e jetës reale.
 
 ```cpp
 #include <iostream>
