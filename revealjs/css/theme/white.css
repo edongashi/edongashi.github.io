@@ -155,8 +155,9 @@ body {
   font-family: monospace;
   text-transform: none; }
 
-.reveal p code {
-  background: #ffece0; }
+.reveal p code,
+.reveal table code {
+  background: #ffe5e0; }
 
 .reveal pre code {
   display: block;
