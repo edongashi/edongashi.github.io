@@ -6,6 +6,22 @@ noslides: true
 
 # Gjuhë Programuese
 
+## Zëvendësimi i ushtrimeve të dates 02/01/2019 (e meëkurë) per grupet 1B' dhe 1B"
+
+Ushtrimet që janë paraparë të mbahen të mërkurën (02/01/2019) zëvendësohen në daten e premte (04/01/2019) më orarin e njejtë, pra 1B' nga 09:45 dhe 1B" nga 11:30.
+
+## Detyra e dytë vlerësuese dhe kolokviumi i dytë
+
+Detyra e dytë vlerësuese organizohet javën e 7-11 janarit. Kolokviumi i dytë gjithashtu mbahet dikur në këtë interval.
+
+Temat që përfshihen në detyrën e dytë dhe kolokviumin e dytë përfshijnë:
+
+- Matricat - deklarimi, inicializimi, leximi nga tastiera, mbushja, anëtarët nën/në/mbi diagonale, mbushja sipas ndonjë formule matematike, shfaqja.
+- Funksionet - tipi kthyes, parametrat dhe tipet e tyre, argumentet, variablat lokale/globale, thirrja e funksioneve, mbingarkimet, funksionet që marrin/kthejnë numërime/struktura.
+- Urdhërat paraprocesorik - include, define.
+- Numërimet - deklarimi, përdorimi, numrat rendor.
+- Strukturat - deklarimi, inicializimi, qasja në anëtaret, llogaritjet e ndryshme.
+
 ## Njoftim për grupin 1A"
 
 Orari i ushtrimeve për grupin 1A" është zhvendosur të enjteve nga ora 14:00.
