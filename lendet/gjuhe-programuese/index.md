@@ -6,7 +6,7 @@ noslides: true
 
 # Gjuhë Programuese
 
-## Zëvendësimi i ushtrimeve të dates 02/01/2019 (e meëkurë) per grupet 1B' dhe 1B"
+## Zëvendësimi i ushtrimeve të datës 02/01/2019 (e mërkurë) për grupet 1B' dhe 1B"
 
 Ushtrimet që janë paraparë të mbahen të mërkurën (02/01/2019) zëvendësohen në daten e premte (04/01/2019) më orarin e njejtë, pra 1B' nga 09:45 dhe 1B" nga 11:30.
 
