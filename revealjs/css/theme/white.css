@@ -156,8 +156,10 @@ body {
   text-transform: none; }
 
 .reveal p code,
-.reveal table code {
-  background: #fff0ea; }
+.reveal table code,
+.reveal li code {
+  background: #f8f8f8;
+  color: #500000; }
 
 .reveal pre code {
   display: block;
