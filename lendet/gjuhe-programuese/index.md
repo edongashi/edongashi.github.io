@@ -17,7 +17,7 @@ Detyra e dytë vlerësuese organizohet javën e 7-11 janarit. Kolokviumi i dytë
 Temat që përfshihen në detyrën e dytë dhe kolokviumin e dytë përfshijnë:
 
 - Matricat - deklarimi, inicializimi, leximi nga tastiera, mbushja, anëtarët nën/në/mbi diagonale, mbushja sipas ndonjë formule matematike, shfaqja.
-- Funksionet - tipi kthyes, parametrat dhe tipet e tyre, argumentet, variablat lokale/globale, thirrja e funksioneve, mbingarkimet, funksionet që marrin/kthejnë numërime/struktura.
+- Funksionet - tipi kthyes, parametrat dhe tipet e tyre, argumentet, variablat lokale/globale, thirrja e funksioneve, rekurzioni, mbingarkimet, funksionet që marrin/kthejnë numërime/struktura.
 - Urdhërat paraprocesorik - include, define.
 - Numërimet - deklarimi, përdorimi, numrat rendor.
 - Strukturat - deklarimi, inicializimi, qasja në anëtaret, llogaritjet e ndryshme.

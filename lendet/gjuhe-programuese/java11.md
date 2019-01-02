@@ -97,15 +97,82 @@ double shuma(int a, int b); // Gabim!
 
 E njejta të përsëritet edhe për tipin `double`.
 
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int shuma(int a, int b) {
+  return a + b;
+}
+
+int shuma(int a, int b, int c) {
+  return a + b + c;
+}
+
+int shuma(int a, int b, int c, int d) {
+  return a + b + c + d;
+}
+
+double shuma(double a, double b) {
+  return a + b;
+}
+
+double shuma(double a, double b, double c) {
+  return a + b + c;
+}
+
+double shuma(double a, double b, double c, double d) {
+  return a + b + c + d;
+}
+
+int main() {
+  int s2, s3, s4;
+
+  s2 = shuma(3, 5);
+  cout << "Shuma e dy numrave:" << s2 << endl;
+
+  s3 = shuma(7, 12, 1);
+  cout << "Shuma e tre numrave:" << s3 << endl;
+
+  s4 = shuma(6, 1, 3, 5);
+  cout << "Shuma e kater numrave:" << s4 << endl;
+
+  return 0;
+}
+```
+
 ---
 
-**Detyrë:** Të krijohet funksioni diskret dhe kontinual `y(x)` për shprehjen në vijim:
+**Detyrë:** Të krijohet funksioni diskret dhe kontinual `f(x)` për shprehjen në vijim:
 
 $$
-y(x) = \dfrac{2x}{3}
+f(x) = \dfrac{2x}{3}
 $$
 
 Të thirret ky funksion me vlerat `5` dhe `5.0` dhe të shfaqen rezultatet.
+
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int f(int x) {
+  return 2 * x / 3;
+}
+
+double f(double x) {
+  return 2.0 * x / 3.0;
+}
+
+int main() {
+  cout << f(5) << endl;
+  cout << f(5.0) << endl;
+  return 0;
+}
+```
 
 ---
 
@@ -136,6 +203,32 @@ Kudo që shihet `PI` zëvendësohet me 3.14
 ---
 
 **Detyrë:** Të shkruhet funksionet `siperfaqja` dhe `perimetri` të cilat pranojnë vlerën e rrezës `r` dhe kthejnë sipërfaqen dhe perimetrin e rrethit. Vlera PI të definohet përmes `#define`.
+
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+#define PI 3.1415
+
+double siperfaqja(double r) {
+  return PI * r * r;
+}
+
+double perimetri(double r) {
+  return 2 * PI * r;
+}
+
+int main() {
+  double r;
+  cout << "Jepni r: ";
+  cin >> r;
+  cout << "Siperfaqja: " << siperfaqja(r) << endl;
+  cout << "Perimetri: " << perimetri(r) << endl;
+  return 0;
+}
+```
 
 ---
 
@@ -192,6 +285,20 @@ Edhe pse thirrja e macros duket si funksion i zakonshëm, ajo në realitet zëve
 
 **Detyrë:** Të shkruhet macro `abs(x)` e cila zëvendësohet me shprehjen për vlerën absolute të x.
 
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+#define abs(x) ((x >= 0) ? (x) : -(x))
+
+int main() {
+  cout << abs(2 - 3);
+  return 0;
+}
+```
+
 ---
 
 ## Detyra shtesë
@@ -200,13 +307,113 @@ Edhe pse thirrja e macros duket si funksion i zakonshëm, ajo në realitet zëve
 
 Të shkruhen funksionet e mbingarkuara `shuma`. Funksioni i parë merr një varg ndërsa i dyti merr një matricë. Të dy funksionet kthejnë shumën e strukturës së dërguar.
 
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+#define N 4
+
+int shuma(int v[], int m)
+{
+  int s = 0;
+  for (int i = 0; i < m; i++)
+  {
+    s += v[i];
+  }
+
+  return s;
+}
+
+int shuma(int M[][N], int m)
+{
+  int s = 0;
+  for (int i = 0; i < m; i++)
+  {
+    for (int j = 0; j < N; j++)
+    {
+      s += M[i][j];
+    }
+  }
+
+  return s;
+}
+
+int main()
+{
+  int v[4] = { 1, 3, 2, 6 };
+  cout << "Shuma e vektorit: "
+       << shuma(v, 4 /* nr elementeve */)
+       << endl;
+
+  int M[3][N] = {
+    { 3, 2, 7, 5 },
+    { 5, 4, 3, 1 },
+    { 3, 6, 2, 1 }
+  };
+
+  cout << "Shuma e matrices: " 
+       << shuma(M, 3 /* nr rreshtave */)
+       << endl;
+  return 0;
+}
+```
+
 ---
 
 Të shkruhet programi i cili definon të gjitha ditët e javës si konstante, dhe përmes një funksioni të bëhet switch vlera e ditës dhe shfaqet dita përkatëse.
 
----
+--
 
-Të shkruhet funksioni i cili llogarit determinantën e matricës katrore të madhësisë 3.
+```cpp
+#include <iostream>
+using namespace std;
+
+#define DIELE 0
+#define HENE 1
+#define MARTE 2
+#define MERKURE 3
+#define ENJTE 4
+#define PREMTE 5
+#define SHTUNE 6
+
+void shfaqDiten(int nr) {
+  switch (nr) {
+    case HENE:
+      cout << "E hene";
+      break;
+    case MARTE:
+      cout << "E marte";
+      break;
+    case MERKURE:
+      cout << "E merkure";
+      break;
+    case ENJTE:
+      cout << "E enjte";
+      break;
+    case PREMTE:
+      cout << "E premte";
+      break;
+    case SHTUNE:
+      cout << "E shtune";
+      break;
+    case DIELE:
+      cout << "E diel";
+      break;
+    default:
+      cout << "Gabim";
+      break;
+  }
+}
+
+int main() {
+  int r;
+  cout << "Jepni numrin e dites: ";
+  cin >> r;
+  shfaqDiten(r);
+}
+```
 
 ---
 
@@ -219,6 +426,72 @@ f(n,x) = \begin{cases}
 \end{cases}
 $$
 
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int f(int n, int x)
+{
+  int s = 0;
+  int p = 1;
+
+  for (int i = 1; i <= n; i++)
+  {
+    s = s + i;
+    p = p * i;
+  }
+
+  if (x >= 0)
+  {
+    return s;
+  }
+  else
+  {
+    return p;
+  }
+}
+
+int main()
+{
+  int n, x;
+  cout << "Shtypni n: ";
+  cin >> n;
+  cout << "Shtypni x: ";
+  cin >> x;
+  cout << "f(n,x) = " << f(n, x);
+  return 0;
+}
+```
+
 ---
 
 Të shkruhen funksioni i cili llogarit produktin skalar të dy vargjeve.
+
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int produktiSkalar(int a[], int b[], int n)
+{
+  int s = 0;
+  for (int i = 0; i < n; i++)
+  {
+    s = s + a[i] * b[i];
+  }
+
+  return s;
+}
+
+int main()
+{
+  const int n = 5;
+  int a[n] = {1, 0, 1, 4, 7};
+  int b[n] = {34, 7, 7, 5, 1};
+  cout << produktiSkalar(a, b, n) << endl;
+  return 0;
+}
+```
