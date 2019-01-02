@@ -155,6 +155,9 @@ body {
   font-family: monospace;
   text-transform: none; }
 
+.reveal p code {
+  background: #ffcead; }
+
 .reveal pre code {
   display: block;
   padding: 5px;
