@@ -142,7 +142,7 @@ Zakonisht njihet si back-end programim.
 
 ---
 
-**Klient aplikacioni** është një aplikacion që ekzekutohet në shfletues dhe komunikon me web serverin. Zakonisht shkruhen në JavaScript.
+**Klient aplikacioni** është një aplikacion që ekzekutohet në shfletues dhe komunikon me web serverin. Zakonisht shkruhen në JavaScript dhe njihet si front-end programim..
 
 Disa teknologji për klient aplikacione:
 
