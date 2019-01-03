@@ -77,7 +77,7 @@ Gjuhë të tilla: Java, C++, C#, JavaScript
 
 ---
 
-## Llojet e programeve
+## Llojet e gjuhëve programuese
 
 ---
 
@@ -107,6 +107,10 @@ Memoria e programit mund të jetë:
 
 - **E menaxhuar** - gjatë ekzekutimit dikush kujdesët që memorien e pashfrytëzuar ta lirojë (garbage collection).
 - **E pamenaxhuar** - programuesi vet duhet të kujdesët që memorien e pashfrytëzuar ta lirojë.
+
+---
+
+## Llojet e programeve
 
 ---
 
