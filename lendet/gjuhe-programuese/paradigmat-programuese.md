@@ -85,7 +85,7 @@ Gjuha programuese mund të jetë:
 
 - **E kompajlluar** - një program tjetër e merr kodin dhe e kthen në urdhëra të makinës, psh. C++.
 - **E interpretuar** - një program tjetër e merr kodin dhe e ekzekuton aty për aty, psh. JavaScript.
-- **JIT (Just In Time) kompajlluar** - programi kompajllohet në një gjuhë të ndërmjetshme. Kjo gjuhë kompajllohet në urdhëra të makinës kur ekzekutohet programi (aty për aty).
+- **JIT (Just In Time) kompajlluar** - programi kompajllohet në një gjuhë të ndërmjetshme. Kjo gjuhë kompajllohet në urdhëra të makinës kur ekzekutohet programi (aty për aty), psh Java, C#.
 
 ---
 
@@ -142,7 +142,9 @@ Zakonisht njihet si back-end programim.
 
 ---
 
-**Klient aplikacioni** është një aplikacion që ekzekutohet në shfletues dhe komunikon me web serverin. Zakonisht shkruhen në JavaScript dhe njihet si front-end programim..
+**Klient aplikacioni** është një aplikacion që ekzekutohet në shfletues dhe komunikon me web serverin.
+
+Zakonisht shkruhen në JavaScript dhe njihet si front-end programim.
 
 Disa teknologji për klient aplikacione:
 
@@ -161,3 +163,13 @@ Disa teknologji për desktop aplikacione:
 - Java me JavaFX, Swing, etj.
 - Node.js me Electron
 - C++ me Qt
+
+---
+
+**Aplikacionet mobile** janë programet e shkruara për pajisje mobile - kryesoret Android dhe iOS.
+
+Disa teknologji për ueb aplikacione:
+
+- Android me Java, Kotlin, Scala
+- iOS me Swift, Objective-C
+- Ndër-platformë me React Native, Flutter, Xamarin, etj.
