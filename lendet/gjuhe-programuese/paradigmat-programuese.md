@@ -130,6 +130,7 @@ Programet shfrytëzohen për shumë qëllime:
 - Aplikacionet desktop - ndërfaqe GUI.
 - Aplikacione mobile - GUI në pajisje mobile.
 - Aplikacione console - kryejnë punë të ndryshme.
+- Aplikacionet në mikrokontrollerë dhe sisteme operative.
 
 ---
 
