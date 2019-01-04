@@ -129,8 +129,8 @@ Programet shfrytëzohen për shumë qëllime:
 - Web klientë - aplikacione në shfletues.
 - Aplikacionet desktop - ndërfaqe GUI.
 - Aplikacione mobile - GUI në pajisje mobile.
-- Aplikacione console - kryejnë punë të ndryshme.
-- Aplikacionet në mikrokontrollerë dhe sisteme operative.
+- Programet console - kryejnë punë të ndryshme.
+- Programet në mikrokontrollerë dhe sisteme operative.
 
 ---
 
