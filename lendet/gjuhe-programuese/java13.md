@@ -239,6 +239,14 @@ struct rezultati {
   int piketMeGoje;
 };
 
+struct notat {
+  rezultati matematike;
+  rezultati fizike;
+  rezultati baza;
+  rezultati programim;
+  rezultati zgjedhore;
+};
+
 int nota(rezultati r) {
   if (r.piketMeShkrim < 50 || r.piketMeGoje < 50) {
     return 5;
@@ -259,14 +267,6 @@ int nota(rezultati r) {
     return 5;
   }
 }
-
-struct notat {
-  rezultati matematike;
-  rezultati fizike;
-  rezultati baza;
-  rezultati programim;
-  rezultati zgjedhore;
-};
 
 double notaMesatare(notat n) {
   return (nota(n.matematike) 
@@ -309,10 +309,9 @@ int main() {
   studenti.programim = {42, 58};
   studenti.zgjedhore = {95, 100};
 
-  cout 
-    << "Matematike me goje: " 
-    << studenti.matematike.piketMeGoje
-    << endl;
+  cout << "Matematike me goje: " 
+       << studenti.matematike.piketMeGoje
+       << endl;
 
   cout << "Nota mesatare e studentit: "
        << notaMesatare(studenti)
