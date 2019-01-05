@@ -46,6 +46,7 @@ Orari i ushtrimeve për grupin 1A" është zhvendosur të enjteve nga ora 14:00.
 10. [Variablat lokale/globale](/lendet/gjuhe-programuese/java10)
 11. [Mbingarkimi i funksioneve, direktivat paraprocesorike](/lendet/gjuhe-programuese/java11)
 12. [Numërimet dhe strukturat](/lendet/gjuhe-programuese/java12)
+13. [Ushtrime me struktura](/lendet/gjuhe-programuese/java13)
 
 ---
 
