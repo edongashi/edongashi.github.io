@@ -324,3 +324,57 @@ int main() {
   return 0;
 }
 ```
+
+---
+
+**Detyrë:** Të deklarohet struktura `vetura(marka, viti)` dhe të krijohen funksione të cilat e kthejnë në string këtë strukturë.
+
+--
+
+```cpp
+#include <string>
+#include <iostream>
+#include <sstream>
+using namespace std;
+
+enum marka {
+  audi,
+  bmw,
+  mercedes
+};
+
+struct vetura {
+  marka marka;
+  int viti;
+};
+
+string toString(marka m) {
+  stringstream ss;
+  switch (m) {
+    case audi:
+      ss << "Audi";
+      break;
+    case bmw:
+      ss << "BMW";
+      break;
+    case mercedes:
+      ss << "Mercedes";
+      break;
+  }
+
+  return ss.str();
+}
+
+string toString(vetura v) {
+  stringstream ss;
+  ss << "Marka: " << toString(v.marka)
+     << ", Viti: " << v.viti;
+  return ss.str();
+}
+
+int main() {
+  vetura v = { mercedes, 2010 };
+  cout << toString(v);
+  return 0;
+}
+```
