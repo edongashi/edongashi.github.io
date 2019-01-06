@@ -337,18 +337,18 @@ int main() {
 #include <sstream>
 using namespace std;
 
-enum marka {
+enum Marka {
   audi,
   bmw,
   mercedes
 };
 
-struct vetura {
-  marka marka;
+struct Vetura {
+  Marka marka;
   int viti;
 };
 
-string toString(marka m) {
+string toString(Marka m) {
   stringstream ss;
   switch (m) {
     case audi:
@@ -365,7 +365,7 @@ string toString(marka m) {
   return ss.str();
 }
 
-string toString(vetura v) {
+string toString(Vetura v) {
   stringstream ss;
   ss << "Marka: " << toString(v.marka)
      << ", Viti: " << v.viti;
@@ -373,7 +373,7 @@ string toString(vetura v) {
 }
 
 int main() {
-  vetura v = { mercedes, 2010 };
+  Vetura v = { mercedes, 2010 };
   cout << toString(v);
   return 0;
 }
