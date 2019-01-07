@@ -224,6 +224,71 @@ int main() {
 
 ---
 
+**Funksionet brenda strukturave**
+
+Funksionet mund të vendosen edhe brenda strukturave, me ç'rast funksioni ka qasje direkte në fushat e strukturës.
+
+```cpp
+struct drejtkendeshi {
+  int a;
+  int b;
+
+  int perimetri() {
+    return 2 * (a + b);
+  }
+};
+```
+
+---
+
+Funksionet brenda strukturave thirren duke iu qasur me pikë `.`:
+
+```cpp
+drejtkendeshi d = { 5, 3 };
+cout << d.perimetri(); // shtypet 16
+```
+
+Vëreni se si funksioni parametri nuk po merr asnjë parametër, kjo pasi që është në kuadër të strukturës.
+
+---
+
+**Detyrë:** Të shkruhet struktura `drejtkendeshi` dhe të shkruhen funksionet `perimetri`, `siperfaqja`, dhe `diagonalja` brenda asaj strukture dhe të thirren për drejtkëndëshin $(4,3)$.
+
+--
+
+```cpp
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+struct drejtkendeshi {
+  int a;
+  int b;
+  
+  int siperfaqja() {
+    return a * b;
+  }
+
+  int perimetri() {
+    return 2 * (a + b);
+  }
+
+  double diagonalja() {
+    return sqrt(pow(a, 2) + pow(b, 2));
+  }
+};
+
+int main() {
+  drejtkendeshi d = { 4, 3 };
+  cout << "Siperfaqja: " << d.siperfaqja() << endl;
+  cout << "Perimetri: "  << d.perimetri()  << endl;
+  cout << "Diagonalja: " << d.diagonalja() << endl;
+  return 0;
+}
+```
+
+---
+
 **Detyrë:** Të deklarohet struktura `rezultati(piketShkrim, piketGoje)`. Të deklarohet struktura `notat` e cila mban 5 rezultate për lëndët e semestrit.
 
 Pastaj të definohen funksionet `int nota(rezultati)`, `double notaMesatare(notat)`, `int provimeTeKaluara(notat)`.
