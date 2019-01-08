@@ -92,6 +92,8 @@ function runQuery(node, query) {
       targets.addClass(setter.value)
     } else if (setter.key === 'style') {
       targets.attr('style', setter.value)
+    } else if (setter.key === 'id') {
+      targets.attr('id', setter.value)
     } else {
       targets.data(setter.key, setter.value)
     }
@@ -119,8 +121,41 @@ function hookComments() {
     });
 }
 
+function initSelections() {
+  var index = 0
+  $('ol, ul')
+    .has('li.choice')
+    .each(function () {
+      index++
+      var name = '__selection_group' + index
+      var list = $(this)
+      list
+        .find('li.choice')
+        .each(function () {
+          var item = $(this)
+          var className = item.hasClass('correct') ? 'answer-correct' : 'answer-incorrect'
+          var radio = $('<input type="radio" class="no-print choice" name="' + name + '" />')
+          radio.change(function () {
+            if (this.checked) {
+              item.addClass(className)
+            } else {
+              item.removeClass(className)
+            }
+          })
+
+          item
+            .wrapAll('<label/>')
+            .children('label')
+            .prepend(radio)
+        })
+    })
+
+  $('input[type=radio]').change()
+}
+
 loadjs('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', function () {
   $(document).ready(function () {
     hookComments()
+    initSelections()
   })
 })
