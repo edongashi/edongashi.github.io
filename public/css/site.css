@@ -28,42 +28,8 @@ li.answer-incorrect {
   color: red;
 }
 
-/* Remove default styling of buttons and inputs */
-button,
-input,
-textarea,
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: auto;
-  height: auto;
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  outline: 0;
-  box-shadow: none;
-  font-family: inherit;
-  font-size: inherit;
-  text-align: inherit;
-  resize: none;
-  background-color: transparent;
-  background-image: none;
-}
-
-/* Remove clear and reveal buttons from inputs in IE */
-input::-ms-clear,
-input::-ms-reveal {
-  display: none;
-  width: 0;
-  height: 0;
-}
-
-/* Remove scrollbars from textarea in IE to match other browsers */
-textarea {
-  overflow: auto;
-}
-
 input.fill {
+  outline: none;
   width: 100px;
   font-size: 20px;
   padding-left: 4px;
