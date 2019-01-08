@@ -65,9 +65,9 @@ function runQuery(node, query) {
     }
   }
 
-  if (query.directions.includes('^') && this.parentNode) {
+  if (query.directions.includes('^') && node.parentNode) {
     if (query.exhaustive) {
-      addNodes(nodes, $(this.parentNode).closest(selector))
+      addNodes(nodes, $(node.parentNode).closest(selector))
     } else {
       addNodes(nodes, element.parents(selector))
     }
