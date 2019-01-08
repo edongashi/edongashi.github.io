@@ -144,7 +144,10 @@ function initSelections() {
           })
 
           item
+            .children()
             .wrapAll('<label/>')
+          
+          item
             .children('label')
             .prepend(radio)
         })
