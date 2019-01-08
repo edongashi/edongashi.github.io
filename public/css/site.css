@@ -30,14 +30,18 @@ li.answer-incorrect {
 
 input.fill {
   font-size: 20px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 input.fill.answer-correct {
   color: green;
+  border-color: green;
   outline-color: green;
 }
 
 input.fill.answer-incorrect {
   color: red;
+  border-color: red;
   outline-color: red;
 }
