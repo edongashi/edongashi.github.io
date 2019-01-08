@@ -155,8 +155,8 @@ int main() {
 Kush konsiderohet faktor gjatë mbingarkimit të funksioneve?
 
 1. Tipi kthyes.                   <!-- [li]: class=choice; -->
-2. Numri i parametrave.           <!-- [li]: class=choice; -->
-3. Lloji i parametrave.           <!-- [li]: class=choice; -->
+2. Vetëm numri i parametrave.     <!-- [li]: class=choice; -->
+3. Vetëm lloji i parametrave.     <!-- [li]: class=choice; -->
 4. Numri dhe lloji i parametrave. <!-- [li]: class=choice correct; -->
 
 ---
