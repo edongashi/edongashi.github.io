@@ -112,7 +112,7 @@ function hookComments() {
     .contents()
     .filter(function () { return this.nodeType == 8 })
     .each(function () {
-      runQuery(node, parseQuery(this.nodeValue))
+      runQuery(this, parseQuery(this.nodeValue))
     });
 }
 
