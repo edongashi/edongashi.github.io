@@ -163,7 +163,7 @@ function initSelections() {
 }
 
 function initFill() {
-  $('input.fill').change(function () {
+  $('input.fill').on('change input', function () {
     var element = $(this)
     var val = element.val()
     if (val === '' || val === null || val === undefined) {
