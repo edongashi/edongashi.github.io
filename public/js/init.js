@@ -174,8 +174,10 @@ function initFill() {
 
     if (val == element.data('answer')) {
       element.addClass(CORRECT)
+      element.removeClass(INCORRECT)
     } else {
       element.addClass(INCORRECT)
+      element.removeClass(CORRECT)
     }
   })
 }
@@ -184,5 +186,6 @@ loadjs('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', funct
   $(document).ready(function () {
     hookComments()
     initSelections()
+    initFill()
   })
 })

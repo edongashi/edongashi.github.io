@@ -34,10 +34,10 @@ input.fill {
 
 input.fill.answer-correct {
   color: green;
-  border-color: green;
+  outline-color: green;
 }
 
 input.fill.answer-incorrect {
   color: red;
-  border-color: red;
+  outline-color: red;
 }
