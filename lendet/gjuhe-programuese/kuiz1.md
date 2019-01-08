@@ -20,4 +20,4 @@ int main() {
 }
 ```
 
-Rezultati = <input class="fill" data-answer="7" />
+Rezultati = <input class="fill" data-answer="8" />
