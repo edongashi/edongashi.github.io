@@ -30,6 +30,7 @@ li.answer-incorrect {
 
 input.fill {
   outline: none;
+  border: 1px solid #bfbfbf;
   width: 100px;
   font-size: 20px;
   padding-left: 4px;
