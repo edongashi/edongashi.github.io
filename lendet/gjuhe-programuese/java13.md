@@ -443,3 +443,52 @@ int main() {
   return 0;
 }
 ```
+
+---
+
+**Detyrë:** Të deklarohet struktura `Personi(Emri,Mbiemri,Mosha,Paga)` dhe të shkruhen funksionet `Personi lexoTeDhenat()` i cili lexon të dhënat e një personi nga tastiera si dhe `shfaqTeDhenat(Personi)` i cili shfaq të dhënat e personit në ekran.
+
+--
+
+```cpp
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Personi
+{
+  string Emri;
+  string Mbiemri;
+  int Mosha;
+  double Paga;
+};
+
+void shfaqTeDhenat(Personi n)
+{
+  cout << "=== Te dhenat e personit ===" << endl;
+  cout << "Ju jeni:    " << n.Emri << " " << n.Mbiemri << endl;
+  cout << "Mosha juaj: " << n.Mosha << endl;
+  cout << "Paga juaj:  " << n.Paga << endl;
+}
+
+Personi merrTeDhenat(Personi b)
+{
+  cout << "Ju lutem plotesojeni formularin ne vijim." << endl;
+  cout << "Emri dhe mbiemri: ";
+  cin >> b.Emri >> b.Mbiemri;
+  cout << "Mosha: ";
+  cin >> b.Mosha;
+  cout << "Paga: ";
+  cin >> b.Paga;
+  return b;
+}
+
+int main()
+{
+  Personi v;
+  v = merrTeDhenat(v);
+  cout << endl;
+  shfaqTeDhenat(v);
+  return 0;
+}
+```
