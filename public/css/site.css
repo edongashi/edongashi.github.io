@@ -20,10 +20,24 @@ img {
   max-width: 100%;
 }
 
-.answer-correct {
+li.answer-correct {
   color: green;
 }
 
-.answer-incorrect {
+li.answer-incorrect {
   color: red;
+}
+
+input.fill {
+  font-size: 20px;
+}
+
+input.fill.answer-correct {
+  color: green;
+  border-color: green;
+}
+
+input.fill.answer-incorrect {
+  color: red;
+  border-color: red;
 }

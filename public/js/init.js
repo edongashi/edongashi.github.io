@@ -121,6 +121,9 @@ function hookComments() {
     });
 }
 
+var CORRECT = 'answer-correct'
+var INCORRECT = 'answer-incorrect'
+
 function initSelections() {
   var index = 0
   $('ol, ul')
@@ -146,7 +149,7 @@ function initSelections() {
       $(query).change(function () {
         $(query).each(function () {
           element = $(this)
-          var className = element.hasClass('correct') ? 'answer-correct' : 'answer-incorrect'
+          var className = element.hasClass('correct') ? CORRECT : INCORRECT
           if (this.checked) {
             element.addClass(className)
             element.closest('li').addClass(className)
@@ -157,6 +160,24 @@ function initSelections() {
         })
       })
     })
+}
+
+function initFill() {
+  $('input.fill').change(function () {
+    var element = $(this)
+    var val = element.val()
+    if (val === '' || val === null || val === undefined) {
+      element.removeClass(CORRECT)
+      element.removeClass(INCORRECT)
+      return
+    }
+
+    if (val == element.data('answer')) {
+      element.addClass(CORRECT)
+    } else {
+      element.addClass(INCORRECT)
+    }
+  })
 }
 
 loadjs('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', function () {

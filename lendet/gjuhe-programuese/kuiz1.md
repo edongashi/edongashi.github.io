@@ -1,5 +1,23 @@
-Question 1
+---
+noslides: true
+---
 
-1. Answer 1 <!-- [li]: class=choice; -->
-2. Answer 2 <!-- [li]: class=choice correct; -->
-3. Answer 3 <!-- [li]: class=choice; -->
+Çfarë shfaqet kur të ekzekutohet kodi në vijim?
+
+```cpp
+#include <iostream>
+
+int f(int x) {
+  if (x > 5) {
+    return x - 3;
+  } else {
+    return 2 * x;
+  }
+}
+
+int main() {
+  std::cout << "Rezultati = " << f(f(7));
+}
+```
+
+Rezultati = <input class="fill" data-answer="7" />
