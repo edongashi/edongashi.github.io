@@ -144,10 +144,7 @@ function initSelections() {
           })
 
           item
-            .children()
-            .wrapAll('<label/>')
-          
-          item
+            .wrapInner('<label/>')
             .children('label')
             .prepend(radio)
         })
