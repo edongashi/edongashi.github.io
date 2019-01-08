@@ -57,24 +57,24 @@ function runQuery(node, query) {
   var query = query.query
   var element = $(node)
   var nodes = []
-  if (q.directions.includes('<')) {
-    if (q.exhaustive) {
+  if (query.directions.includes('<')) {
+    if (query.exhaustive) {
       addNodes(nodes, element.prevAll(query))
     } else {
       addNodes(nodes, element.prevAll(query).first())
     }
   }
 
-  if (q.directions.includes('^') && this.parentNode) {
-    if (q.exhaustive) {
+  if (query.directions.includes('^') && this.parentNode) {
+    if (query.exhaustive) {
       addNodes(nodes, $(this.parentNode).closest(query))
     } else {
       addNodes(nodes, element.parents(query))
     }
   }
 
-  if (q.directions.includes('>')) {
-    if (q.exhaustive) {
+  if (query.directions.includes('>')) {
+    if (query.exhaustive) {
       addNodes(nodes, element.nextAll(query))
     } else {
       addNodes(nodes, element.nextAll(query).first())
