@@ -28,7 +28,7 @@ function parseQuery(value) {
 
   var directions = matches[1] || '^'
   var exhaustive = matches[2] === '!'
-  var query = matches[3].trim()
+  var selector = matches[3].trim()
   var body = matches[4].trim()
   var setters = []
   var reg = /(\S+)\s*=\s*([^=]+)\s*;/g
@@ -44,7 +44,7 @@ function parseQuery(value) {
   return ({
     directions: directions,
     exhaustive: exhaustive,
-    query: query,
+    selector: selector,
     setters: setters
   })
 }
@@ -54,30 +54,30 @@ function runQuery(node, query) {
     return
   }
 
-  var query = query.query
+  var selector = query.selector
   var element = $(node)
   var nodes = []
   if (query.directions.includes('<')) {
     if (query.exhaustive) {
-      addNodes(nodes, element.prevAll(query))
+      addNodes(nodes, element.prevAll(selector))
     } else {
-      addNodes(nodes, element.prevAll(query).first())
+      addNodes(nodes, element.prevAll(selector).first())
     }
   }
 
   if (query.directions.includes('^') && this.parentNode) {
     if (query.exhaustive) {
-      addNodes(nodes, $(this.parentNode).closest(query))
+      addNodes(nodes, $(this.parentNode).closest(selector))
     } else {
-      addNodes(nodes, element.parents(query))
+      addNodes(nodes, element.parents(selector))
     }
   }
 
   if (query.directions.includes('>')) {
     if (query.exhaustive) {
-      addNodes(nodes, element.nextAll(query))
+      addNodes(nodes, element.nextAll(selector))
     } else {
-      addNodes(nodes, element.nextAll(query).first())
+      addNodes(nodes, element.nextAll(selector).first())
     }
   }
 
