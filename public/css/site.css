@@ -19,3 +19,11 @@ ol > li > ul {
 img {
   max-width: 100%;
 }
+
+.answer-correct {
+  color: green;
+}
+
+.answer-incorrect {
+  color: red;
+}
