@@ -4,6 +4,8 @@ noslides: true
 
 # Kuiz në C++
 
+---
+
 Si quhet pika hyrëse e programit? <input class="fill" data-answer="main" />
 
 ---
