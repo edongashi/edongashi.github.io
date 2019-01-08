@@ -58,6 +58,12 @@ Orari i ushtrimeve për grupin 1A" është zhvendosur të enjteve nga ora 14:00.
 
 ---
 
+## Kuize
+
+- [Kuizi 1](/lendet/gjuhe-programuese/kuiz1)
+
+---
+
 ## Linqe
 
 - [SoloLearn](https://www.sololearn.com/Course/CPlusPlus/)
