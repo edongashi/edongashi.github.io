@@ -163,23 +163,28 @@ function initSelections() {
 }
 
 function initFill() {
-  $('input.fill').on('change input', function () {
-    var element = $(this)
-    var val = element.val()
-    if (val === '' || val === null || val === undefined) {
-      element.removeClass(CORRECT)
-      element.removeClass(INCORRECT)
-      return
-    }
+  $('input.fill')
+    .attr('autocomplete', 'off')
+    .attr('autocorrect', 'off')
+    .attr('autocapitalize', 'off')
+    .attr('spellcheck', 'false')
+    .on('change input', function () {
+      var element = $(this)
+      var val = element.val()
+      if (val === '' || val === null || val === undefined) {
+        element.removeClass(CORRECT)
+        element.removeClass(INCORRECT)
+        return
+      }
 
-    if (val == element.data('answer')) {
-      element.addClass(CORRECT)
-      element.removeClass(INCORRECT)
-    } else {
-      element.addClass(INCORRECT)
-      element.removeClass(CORRECT)
-    }
-  })
+      if (val == element.data('answer')) {
+        element.addClass(CORRECT)
+        element.removeClass(INCORRECT)
+      } else {
+        element.addClass(INCORRECT)
+        element.removeClass(CORRECT)
+      }
+    })
 }
 
 loadjs('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', function () {
