@@ -37,7 +37,10 @@ function parseQuery(value) {
     var key = result[1]
     var val = result[2]
     if (key && val) {
-      setters.push([key, val])
+      setters.push({
+        key: key,
+        value: val
+      })
     }
   }
 
