@@ -41,7 +41,7 @@ cout << (x > b ? b - x : x + b + 1);
 
 ---
 
-Çfarë shfaqet kur të ekzekutohet kodi në vijim? <input class="fill" data-answer="po" />
+Çfarë shfaqet kur të ekzekutohet kodi në vijim? <input class="fill" data-answer="jo" />
 
 ```cpp
 int piket = 55 - 1;
