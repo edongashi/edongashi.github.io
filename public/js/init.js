@@ -146,6 +146,7 @@ function initSelections() {
           item
             .wrapInner('<label/>')
             .children('label')
+            .first()
             .prepend(radio)
         })
     })
