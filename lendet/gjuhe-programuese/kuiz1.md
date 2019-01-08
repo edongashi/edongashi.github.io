@@ -24,10 +24,10 @@ Si quhet tipi i vërtetësisë? <input class="fill" data-answer="bool" />
 
 Çfarë na mundësojnë variablat?
 
-1. Transformimin e të dhënave.          <!-- [li]: class=choice -->
-2. Ruajtjen e përkohshme të të dhënave. <!-- [li]: class=choice correct -->
-3. Ruajtjen e përhershme të të dhënave. <!-- [li]: class=choice -->
-4. Shfaqjen në ekran.                   <!-- [li]: class=choice -->
+1. Transformimin e të dhënave.          <!-- [li]: class=choice; -->
+2. Ruajtjen e përkohshme të të dhënave. <!-- [li]: class=choice correct; -->
+3. Ruajtjen e përhershme të të dhënave. <!-- [li]: class=choice; -->
+4. Shfaqjen në ekran.                   <!-- [li]: class=choice; -->
 
 ---
 
@@ -86,10 +86,10 @@ cout << c;
 
 Çfarë është funksioni?
 
-1. Ruajtja e përkohshme e të dhënave. <!-- [li]: class=choice -->
-2. Transformimi i të dhënave.         <!-- [li]: class=choice correct -->
-3. Krahasimi i dy vlerave.            <!-- [li]: class=choice -->
-4. Dalja standarde e programit.       <!-- [li]: class=choice -->
+1. Ruajtja e përkohshme e të dhënave. <!-- [li]: class=choice; -->
+2. Transformimi i të dhënave.         <!-- [li]: class=choice correct; -->
+3. Krahasimi i dy vlerave.            <!-- [li]: class=choice; -->
+4. Dalja standarde e programit.       <!-- [li]: class=choice; -->
 
 ---
 
@@ -145,19 +145,19 @@ int main() {
 
 Çfarë quajmë mbingarkim të funksionit?
 
-1. Thirrjen e funksionit me shumë argumente. <!-- [li]: class=choice -->
-2. Kthimin e disa vlerave nga funksioni.     <!-- [li]: class=choice -->
-3. Disa funksione me të njejtin emër.        <!-- [li]: class=choice correct -->
-4. Kthimi i numrit me presje nga funksioni.  <!-- [li]: class=choice -->
+1. Thirrjen e funksionit me shumë argumente. <!-- [li]: class=choice; -->
+2. Kthimin e disa vlerave nga funksioni.     <!-- [li]: class=choice; -->
+3. Disa funksione me të njejtin emër.        <!-- [li]: class=choice correct; -->
+4. Kthimi i numrit me presje nga funksioni.  <!-- [li]: class=choice; -->
 
 ---
 
 Kush konsiderohet faktor gjatë mbingarkimit të funksioneve?
 
-1. Tipi kthyes.                   <!-- [li]: class=choice -->
-2. Numri i parametrave.           <!-- [li]: class=choice -->
-3. Lloji i parametrave.           <!-- [li]: class=choice -->
-4. Numri dhe lloji i parametrave. <!-- [li]: class=choice correct -->
+1. Tipi kthyes.                   <!-- [li]: class=choice; -->
+2. Numri i parametrave.           <!-- [li]: class=choice; -->
+3. Lloji i parametrave.           <!-- [li]: class=choice; -->
+4. Numri dhe lloji i parametrave. <!-- [li]: class=choice correct; -->
 
 ---
 
