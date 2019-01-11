@@ -8,7 +8,7 @@ noslides: true
 
 ## Llogaritja e notës finale
 
-Nota finale llogaritët sipas tabelës së mëposhtme:
+Nota finale llogaritet sipas tabelës së mëposhtme:
 
 Nota|Pikët
 -:|:-
