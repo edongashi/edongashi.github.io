@@ -21,7 +21,7 @@ noslides: true
 
 ## Caktimi i grupeve për fazën e tretë
 
-Në tabelën e mëposhtme është vendosur caktimi i projekteve që duhet ofertuar në kuadër të fazës së tretë. Grupi që ka punimin e cekur në kolonën e majtë të tabelës duhet ta shkruajë ofertën për kërkesën e projektit të kolonës së djathtë. Për shembull, grupi që ka projektin `Shkolla Digjitale` duhet ta shkruajë specifikimin teknik për projektin `Hoteli`. Grupi që ka `Hoteli`n duhet ta shkruajë specifikimin teknik për projektin `Shitblerje Online` etj.
+Në tabelën e mëposhtme është vendosur caktimi i projekteve që duhet ofertuar në kuadër të fazës së tretë. Grupi që ka punimin e cekur në kolonën e majtë të tabelës duhet ta shkruajë ofertën për kërkesën e projektit të kolonës së djathtë. Për shembull, grupi që ka projektin ***Shkolla Digjitale*** duhet ta shkruajë specifikimin teknik për projektin ***Hoteli***. Grupi që ka ***Hotelin*** duhet ta shkruajë specifikimin teknik për projektin ***Shitblerje Online*** etj.
 
 Dorëzimi i punimit dhe dokumenteve tjera duhet të bëhet më 20.01.2019 23:59. Kjo datë mund të shtyhet në rast se ka kërkesë nga studentët.
 
