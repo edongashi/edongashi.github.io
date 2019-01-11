@@ -22,7 +22,7 @@ Nota|Pikët
 Ku pikët $p$ llogaritën sipas formulës:
 
 $$
-\textit{p} = \underbrace{\textit{V}_{\textit{L}}}_{10} + \underbrace{\textit{V}_{\textit{U}}}_{10} + \underbrace{\textit{D}_{1}}_{15} + \underbrace{\textit{D}_{2}}_{15} + \big[\underbrace{K_1K_2}_{25+25} \lor \underbrace{\textit{P}}_{50} \big]
+p = \underbrace{V_L}_{10} + \underbrace{V_U}_{10} + \underbrace{D_1}_{15} + \underbrace{D_2}_{15} + \big[\underbrace{K_1K_2}_{25+25} \lor \underbrace{P}_{50} \big]
 $$
 
 
