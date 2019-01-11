@@ -6,13 +6,9 @@ noslides: true
 
 # Gjuhë Programuese
 
-## Zëvendësimi i ushtrimeve të datës 02/01/2019 (e mërkurë) për grupet 1B' dhe 1B"
-
-Ushtrimet që janë paraparë të mbahen të mërkurën (02/01/2019) zëvendësohen në daten e premte (04/01/2019) më orarin e njejtë, pra 1B' nga 09:45 dhe 1B" nga 11:30.
-
 ## Detyra e dytë vlerësuese dhe kolokviumi i dytë
 
-Detyra e dytë vlerësuese organizohet javën e 7-11 janarit. Kolokviumi i dytë gjithashtu mbahet dikur në këtë interval.
+Detyra e dytë vlerësuese organizohet javën e 7-11 janarit. Kolokviumi i dytë mbahet të premten (11/01/2019) nga ora 16:00.
 
 Temat që përfshihen në detyrën e dytë dhe kolokviumin e dytë përfshijnë:
 
@@ -22,13 +18,9 @@ Temat që përfshihen në detyrën e dytë dhe kolokviumin e dytë përfshijnë:
 - Numërimet - deklarimi, përdorimi, numrat rendor.
 - Strukturat - deklarimi, inicializimi, qasja në anëtaret, llogaritjet e ndryshme.
 
-## Njoftim për grupin 1A"
-
-Orari i ushtrimeve për grupin 1A" është zhvendosur të enjteve nga ora 14:00.
-
 ## Rezultatet e kolokviumit të parë
 
-[Klikoni këtu](/lendet/gjuhe-programuese/kolokviumi1) për të hapur rezultatet e kolokviumit të parë. Rishikimi i punimeve mund të bëhet të enjten (06/12/2018) nga ora 13:00 në sallën 615.
+[Klikoni këtu](/lendet/gjuhe-programuese/kolokviumi1) për të hapur rezultatet e kolokviumit të parë.
 
 ---
 
