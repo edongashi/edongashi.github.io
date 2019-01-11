@@ -8,21 +8,25 @@ noslides: true
 
 ---
 
-## Mbrojtja e fazës së dytë
+## Caktimi i grupeve për fazën e tretë
 
-Grupi|Ora
+Në tabelën e mëposhtme është vendosur caktimi i projekteve që duhet ofertuar në kuadër të fazës së tretë. Grupi që ka punimin e cekur në kolonën e majtë të tabelës duhet ta shkruajë ofertën për kërkesën e projektit të kolonës së djathtë. Për shembull, grupi që ka projektin `Shkolla Digjitale` duhet ta shkruajë specifikimin teknik për projektin `Hoteli`. Grupi që ka `Hoteli`n duhet ta shkruajë specifikimin teknik për projektin `Shitblerje Online` etj.
+
+Dorëzimi i punimit dhe dokumenteve tjera duhet të bëhet më 20.01.2019 23:59. Kjo datë mund të shtyhet në rast se ka kërkesë nga studentët.
+
+Grupi që ka pasur ...|Duhet ta ofertojë ...
 -|-
-A1 | 13:30-13:40
-A2 | 13:40-13:50
-A4 | 13:50-14:00
-A5 | 14:00-14:10
-A6 | 14:10-14:20
-B1 | 14:20-14:30
-B2 | 14:30-14:40
-B3 | 14:40-14:50
-B4 | 14:50-15:00
-B5 | 15:00-15:10
-C10| 15:10-15:20
+Shkolla Digjitale|Hoteli
+Hoteli|Shitblerje Online
+Shitblerje Online|Testime Online
+Testime Online|Kinemaja
+Kinemaja|Evidenca e Studenteve
+Evidenca e Studenteve|Votimi Elektronik
+Votimi Elektronik|Help Desk
+Help Desk|Prokurimi
+Prokurimi|eHealth
+eHealth|Parkingu
+Parkingu|Shkolla Digjitale
 
 ---
 
