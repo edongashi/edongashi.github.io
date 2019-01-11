@@ -11,7 +11,7 @@ noslides: true
 Nota finale llogaritët sipas tabelës së mëposhtme:
 
 Nota|Pikët
--|-
+-:|:-
 10|90+
 9|80-89
 8|70-79
