@@ -8,6 +8,17 @@ noslides: true
 
 ---
 
+## Pritjet për fazën e tretë
+
+- Dokumenti i përshkrimit
+- Planifikimi/parashikimi buxhetor
+- Planifikimi/parashikimi kohor - gantt chart
+- Use cases (UML)
+- Kontratat operacionale
+- Diagramet sekuenciale (UML)
+- Modeli i domenit (UML)
+- Përshkrime, skenare, dhe diagrame shtesë - sipas situatës
+
 ## Caktimi i grupeve për fazën e tretë
 
 Në tabelën e mëposhtme është vendosur caktimi i projekteve që duhet ofertuar në kuadër të fazës së tretë. Grupi që ka punimin e cekur në kolonën e majtë të tabelës duhet ta shkruajë ofertën për kërkesën e projektit të kolonës së djathtë. Për shembull, grupi që ka projektin `Shkolla Digjitale` duhet ta shkruajë specifikimin teknik për projektin `Hoteli`. Grupi që ka `Hoteli`n duhet ta shkruajë specifikimin teknik për projektin `Shitblerje Online` etj.
