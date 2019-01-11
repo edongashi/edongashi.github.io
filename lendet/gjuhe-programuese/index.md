@@ -6,6 +6,26 @@ noslides: true
 
 # Gjuhë Programuese
 
+## Llogaritja e notës finale
+
+Nota finale llogaritët sipas tabelës së mëposhtme:
+
+Nota|Pikët
+-|-
+10|90+
+9|80-89
+8|70-79
+7|60-69
+6|50-59
+5|Përfundi 50
+
+Ku pikët llogaritën sipas formulës:
+
+$$
+\textit{piket} = \textit{V}_{\textit{ligjerata}}(10) + \textit{V}_{\textit{ushtrime}}(10) + \textit{D}_{1}(15) + \textit{D}_{2}(15) + \big[K_1K_2 (25+25) \lor \textit{Provimi}(50) \big]
+$$
+
+
 ## Rezultatet e kolokviumit të dytë
 
 [Klikoni këtu](/lendet/gjuhe-programuese/kolokviumi2) për të hapur rezultatet e kolokviumit të dytë. Rishikimi i punimeve mund të bëhet të hënën (14/01/2019) nga ora 13:30 në sallën 615.
