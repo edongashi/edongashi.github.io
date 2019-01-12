@@ -248,7 +248,7 @@ drejtkendeshi d = { 5, 3 };
 cout << d.perimetri(); // shtypet 16
 ```
 
-Vëreni se si funksioni parametri nuk po merr asnjë parametër, kjo pasi që është në kuadër të strukturës.
+Vëreni se si funksioni `perimetri` nuk po merr asnjë parametër, kjo pasi që është në kuadër të strukturës.
 
 ---
 
@@ -471,8 +471,9 @@ void shfaqTeDhenat(Personi n)
   cout << "Paga juaj:  " << n.Paga << endl;
 }
 
-Personi merrTeDhenat(Personi b)
+Personi merrTeDhenat()
 {
+  Personi b;
   cout << "Ju lutem plotesojeni formularin ne vijim." << endl;
   cout << "Emri dhe mbiemri: ";
   cin >> b.Emri >> b.Mbiemri;
@@ -485,8 +486,7 @@ Personi merrTeDhenat(Personi b)
 
 int main()
 {
-  Personi v;
-  v = merrTeDhenat(v);
+  Personi v = merrTeDhenat();
   cout << endl;
   shfaqTeDhenat(v);
   return 0;
