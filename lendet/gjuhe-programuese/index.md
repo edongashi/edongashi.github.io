@@ -19,10 +19,10 @@ Nota|Pikët
 6|50-59
 5|Përfundi 50
 
-Ku pikët $p$ llogaritën sipas formulës:
+Ku pikët llogariten sipas formulës:
 
 $$
-p = \underbrace{V_L}_{10} + \underbrace{V_U}_{10} + \underbrace{D_1}_{15} + \underbrace{D_2}_{15} + \big[\underbrace{K_1K_2}_{25+25} \lor \underbrace{P}_{50} \big]
+\underbrace{V_L}_{10} + \underbrace{V_U}_{10} + \underbrace{D_1}_{15} + \underbrace{D_2}_{15} + \big[\underbrace{K_1K_2}_{25+25} \lor \underbrace{P}_{50} \big]
 $$
 
 
