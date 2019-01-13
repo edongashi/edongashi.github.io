@@ -8,7 +8,7 @@ noslides: true
 
 ## Llogaritja e notës finale
 
-Nota finale llogaritet sipas tabelës së mëposhtme:
+Për notë kaluese duhet ta keni përfunduar provimin me mbi 50% ose dy kolokviumet me mbi 50% të pikëve. Pastaj nota finale llogaritet sipas tabelës së mëposhtme:
 
 Nota|Pikët
 -:|:-
