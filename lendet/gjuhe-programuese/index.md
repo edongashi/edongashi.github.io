@@ -6,6 +6,10 @@ noslides: true
 
 # Gjuhë Programuese
 
+## Rezultatet finale në kolokviume
+
+[Klikoni këtu](/lendet/gjuhe-programuese/rezultatet-kolokviume) për të hapur rezultatet finale të arritura me kolokviume. Studentët të cilët nuk gjenden në këtë listë nuk marrin notë kaluese dhe duhet t'i nënshtrohen provimit.
+
 ## Llogaritja e notës finale
 
 Për notë kaluese duhet ta keni përfunduar provimin me së paku 50% ose dy kolokviumet me së paku 50% të pikëve. Pastaj nota finale llogaritet sipas tabelës së mëposhtme:
