@@ -4,6 +4,7 @@ Studentët të cilët nuk gjenden në këtë listë nuk marrin notë kaluese dhe
 
 Emri|VL|VU|D1|D2|K1|K2|K1+K2|Pikët|Nota
 -|-|-|-|-|-|-|-|-|-
+Art Ahmetaj|10|10|15|15|25|24.5|49.5|99.5|10 (Dhjetë)
 Alina Fazliu|10|10|15|15|24|25|49|99|10 (Dhjetë)
 Atdhe Blakaj|10|10|15|15|25|23.5|48.5|98.5|10 (Dhjetë)
 Altin Berisha|10|10|15|15|23.5|23.5|47|97|10 (Dhjetë)
@@ -15,7 +16,6 @@ Arlind Berisha|10|10|15|14|24.5|21.5|46|95|10 (Dhjetë)
 Rinor Zeqiri|10|10|15|15|23|22|45|95|10 (Dhjetë)
 Betim Tasholli|10|10|15|13|22.5|22.5|45|93|10 (Dhjetë)
 Egzon Gashi|10|10|15|14|22.5|21.5|44|93|10 (Dhjetë)
-Art Ahmetaj|3|10|15|15|25|24.5|49.5|92.5|10 (Dhjetë)
 Albin Semetishti|10|10|15|13|22|22|44|92|10 (Dhjetë)
 Albion Fazliu|10|10|15|13|21|23|44|92|10 (Dhjetë)
 Arianit Halimi|10|10|15|15|20|22|42|92|10 (Dhjetë)
