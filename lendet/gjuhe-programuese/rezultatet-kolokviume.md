@@ -2,6 +2,8 @@
 
 Studentët të cilët nuk gjenden në këtë listë nuk marrin notë kaluese dhe duhet t'i nënshtrohen provimit.
 
+<div class="scroll-x" markdown="1">
+
 Emri|VL|VU|D1|D2|K1|K2|K1+K2|Pikët|Nota
 -|-|-|-|-|-|-|-|-|-
 Art Ahmetaj|10|10|15|15|25|24.5|49.5|99.5|10 (Dhjetë)
@@ -30,3 +32,5 @@ Aid Mjeku|10|10|15|9|16.5|13.5|30|74|8 (Tetë)
 Albin Bicaj|10|10|15|8|18|12.5|30.5|73.5|8 (Tetë)
 Albiona Sylaj|10|10|15|8|15|13|28|71|8 (Tetë)
 Albijon Mjeku|10|10|15|7.5|12.5|12.5|25|67.5|7 (Shtatë)
+
+</div>

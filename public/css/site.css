@@ -1,3 +1,7 @@
+.scroll-x {
+  overflow: auto;
+}
+
 @media print {    
   .no-print, .no-print * {
     display: none !important;
@@ -5,6 +9,10 @@
 
   .container {
     max-width: none !important;
+  }
+
+  .scroll-x {
+    overflow-x: hidden;
   }
 }
 
