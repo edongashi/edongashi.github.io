@@ -8,6 +8,10 @@ noslides: true
 
 ---
 
+## Dorëzimi dhe mbrojtja e fazës së tretë
+
+Dorëzimi i punimit dhe dokumenteve tjera duhet të bëhet më së largu të mërkurën (23.01.2019) 23:59, ndërsa mbrojtja e punimeve do të bëhet të premten (25.01.2019). Ora e saktë e mbrojtjes për secilin grup do të shpallet së shpejti.
+
 ## Pritjet për fazën e tretë
 
 - Dokumenti i përshkrimit
@@ -22,8 +26,6 @@ noslides: true
 ## Caktimi i grupeve për fazën e tretë
 
 Në tabelën e mëposhtme është vendosur caktimi i projekteve që duhet ofertuar në kuadër të fazës së tretë. Grupi që ka punimin e cekur në kolonën e majtë të tabelës duhet ta shkruajë ofertën për kërkesën e projektit të kolonës së djathtë. Për shembull, grupi që ka projektin ***Shkolla Digjitale*** duhet ta shkruajë specifikimin teknik për projektin ***Hoteli***. Grupi që ka ***Hotelin*** duhet ta shkruajë specifikimin teknik për projektin ***Shitblerje Online*** etj.
-
-Dorëzimi i punimit dhe dokumenteve tjera duhet të bëhet më 20.01.2019 23:59. Kjo datë mund të shtyhet në rast se ka kërkesë nga studentët.
 
 Grupi që ka pasur ...|Duhet ta ofertojë ...
 -|-
@@ -41,15 +43,11 @@ Parkingu|Shkolla Digjitale
 
 ---
 
-## Orari i ushtrimeve
-
-Grupi|Dita|Ora|Salla
--|-|-|-
-A dhe B|E mërkurë|13:45-15:15|615
-
----
-
 ## Materiale
+
+### Specifikimi teknik
+
+- [SYS_SPEC_v1](/lendet/inxhinieri-softuerike/materiale/SYS_SPEC_v1.doc)
 
 ### Kërkesat e shfrytëzuesit
 
