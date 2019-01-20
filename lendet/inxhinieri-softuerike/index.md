@@ -10,7 +10,7 @@ noslides: true
 
 ## Dorëzimi dhe mbrojtja e fazës së tretë
 
-Dorëzimi i punimit dhe dokumenteve tjera duhet të bëhet më së largu të mërkurën (23.01.2019) 23:59, ndërsa mbrojtja e punimeve do të bëhet të premten (25.01.2019). Ora e saktë e mbrojtjes për secilin grup do të shpallet së shpejti.
+Dorëzimi i punimit dhe dokumenteve tjera duhet të bëhet më së largu **të premten (25.01.2019) 23:59**, ndërsa mbrojtja e punimeve do të bëhet të **hënën (28.01.2019)**. Ora e saktë e mbrojtjes për secilin grup do të shpallet së shpejti.
 
 ## Pritjet për fazën e tretë
 
