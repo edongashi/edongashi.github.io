@@ -8,7 +8,7 @@ Të vizatohet bllok diagrami për gjetjen e shumës së numrave çift nga $2$ de
 
 Të shkruhet programi i plotë i cili shfaq tekstin e mëposhtëm në ekran. Të përfshihen të gjitha elementet e programit (include, main, return).
 
-```
+```text
 Gjuha Programuese
 
 C++
@@ -164,7 +164,7 @@ int v[n] = { 5, 11, 2, 1, 17, 9, 8 };
 
 Rezultati në ekran duhet të dalë:
 
-```
+```text
 Numri i elementeve: 4
 ```
 
