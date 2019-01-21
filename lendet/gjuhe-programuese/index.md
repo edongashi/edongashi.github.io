@@ -66,9 +66,10 @@ $$
 
 ---
 
-## Kuize
+## Kuize dhe detyra
 
 - [Kuizi 1](/lendet/gjuhe-programuese/kuiz1)
+- [Përmbledhje detyrash](/lendet/gjuhe-programuese/detyra)
 
 ---
 
