@@ -75,17 +75,6 @@ $$
 
 ## Linqe
 
-- [SoloLearn](https://www.sololearn.com/Course/CPlusPlus/)
+- [SoloLearn](https://www.sololearn.com/Course/CPlusPlus/) - Kurs online në C++.
 - [cplusplus.com](http://www.cplusplus.com/doc/tutorial/) - Materiale mësimore për gjuhën C++.
 - [cpp.sh](http://cpp.sh/) - Testo programe të C++ në ueb.
-
----
-
-## Orari i ushtrimeve
-
-Grupi|Dita|Ora|Salla
--|-|-|-
-1A'|E enjte|11:30-13:00|615
-1A"|E enjte|14:00-15:30|615
-1B'|E mërkurë|09:45-11:15|615
-1B"|E mërkurë|11:30-13:00|615
