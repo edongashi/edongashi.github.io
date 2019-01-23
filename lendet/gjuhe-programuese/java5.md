@@ -275,6 +275,12 @@ Blloku është i garantuar të ekzekutohet së paku një herë.
 
 ---
 
+**while** vs. **do while**:
+
+![](https://i.redd.it/6wksqjmmyw321.jpg)  <!-- .element: style="max-height:400px;border:none;" -->
+
+---
+
 <!-- .slide: style="font-size:0.9em" -->
 
 **Detyrë:** Të shkruhet programi dhe të tregohet dalja për $a=1,\; b=10,\; c=3$.
