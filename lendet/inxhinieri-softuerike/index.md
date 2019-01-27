@@ -8,9 +8,11 @@ noslides: true
 
 ---
 
-## Lajmërim rreth mbrojtjes të fazës së tretë
+## Lajmërim rreth fazës së tretë
 
 Për shkak të grevës shtyhet mbrojtja e punimeve për një datë të pacaktuar. Caktimi i datës së mbrojtjes do të bëhet pas konfirmimit zyrtar për nisjen e afatit të provimeve.
+
+Grupet kanë të drejtën t'i përditësojnë punimet e tyre deri në datën e caktimit të mbrojtjes. Punimet e përditësuara i dërgoni në email duke e cekur emrin e grupit dhe një përshkrim minimal se çfarë keni ndryshuar.
 
 ## Dorëzimi dhe mbrojtja e fazës së tretë
 
