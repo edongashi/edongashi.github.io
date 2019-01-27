@@ -8,9 +8,13 @@ noslides: true
 
 ---
 
+## Lajmërim rreth mbrojtjes të fazës së tretë
+
+Për shkak të grevës shtyhet mbrojtja e punimeve për një datë të pacaktuar. Caktimi i datës së mbrojtjes do të bëhet pas konfirmimit zyrtar për nisjen e afatit të provimeve.
+
 ## Dorëzimi dhe mbrojtja e fazës së tretë
 
-Dorëzimi i punimit dhe dokumenteve tjera duhet të bëhet më së largu **të premten (25.01.2019) 23:59**, ndërsa mbrojtja e punimeve do të bëhet të **hënën (28.01.2019)**. Ora e saktë e mbrojtjes për secilin grup do të shpallet së shpejti.
+Dorëzimi i punimit dhe dokumenteve tjera duhet të bëhet më së largu **të premten (25.01.2019) 23:59**, ~~ndërsa mbrojtja e punimeve do të bëhet të **hënën (28.01.2019)**. Ora e saktë e mbrojtjes për secilin grup do të shpallet së shpejti.~~
 
 ## Pritjet për fazën e tretë
 
