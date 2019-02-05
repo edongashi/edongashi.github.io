@@ -10,6 +10,8 @@ noslides: true
 
 ## Orari i mbrojtjes së fazës së tretë
 
+**Për shkak të problemeve me rrymën mbrojtja bëhet në sallën 707.**
+
 Mbrojtja e projekteve do të bëhet të martën, 05/02/2019 në sallën 615. Në tabelën e mëposhtme gjeni orën e mbrojtjes për secilin grup.
 
 Grupi që ka pasur ...|Duhet ta ofertojë ...|Ora e mbrojtjes
