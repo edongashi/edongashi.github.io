@@ -15,6 +15,8 @@ noslides: true
 | Adriatik Ademi   | 5      | 15     | 25     | 45         |
 | Agnese Mulaj     | 4      | 10.8   | 24.5   | 39.3       |
 | Ahmet Bucko      | 4.5    | 15     | 25     | 44.5       |
+| Albanit Berisha  | 5      | 15     | 24     | 44         |
+| Albion Berisha   | 5      | 15     | 25     | 45         |
 | Alma Kamberi     | 4.5    | 15     | 25     | 44.5       |
 | Anitë Hajdari    | 4      | 10.8   | 18     | 32.8       |
 | Arberie Sinani   | 4      | 12     | 24.5   | 40.5       |
@@ -24,6 +26,7 @@ noslides: true
 | Begatim Lekaj    | 4.5    | 13.5   | 20.25  | 38.25      |
 | Behar Osmani     | 4.5    | 13.5   | 18     | 36         |
 | Bleona Hasanaj   | 5      | 15     | 25     | 45         |
+| Bleron Qorri     | 5      | 15     | 25     | 45         |
 | Blerta Alushi    | 4      | 10.8   | 25     | 39.8       |
 | Blerta Gllareva  | 5      | 15     | 25     | 45         |
 | Brikena Ahmeti   | 5      | 15     | 25     | 45         |
@@ -34,6 +37,7 @@ noslides: true
 | Endrit Hoti      | 4.5    | 15     | 22.5   | 42         |
 | Ermira Selmani   | 5      | 15     | 23     | 43         |
 | Ernesa Haxhijaj  | 5      | 15     | 22.5   | 42.5       |
+| Festim Prebreza  | 5      | 15     | 25     | 45         |
 | Festinë Bytyҫi   | 5      | 15     | 22.5   | 42.5       |
 | Fidan Sinani     | 5      | 15     | 18     | 38         |
 | Fisnik Spahija   | 5      | 15     | 25     | 45         |
@@ -51,7 +55,9 @@ noslides: true
 | Majlinda Halili  | 4      | 10     | 22.5   | 36.5       |
 | Melos Dauti      | 5      | 13.5   | 25     | 43.5       |
 | Monika Behluli   | 4      | 10.8   | 18     | 32.8       |
+| Natyra Ferati    | 5      | 15     | 25     | 45         |
 | Rigon Asaj       | 5      | 13.5   | 22     | 40.5       |
+| Rijad Gerguri    | 5      | 15     | 25     | 45         |
 | Rilind Hoxhaj    | 5      | 10.8   | 25     | 40.8       |
 | Seid Rudhani     | 5      | 13.5   | 18     | 36.5       |
 | Zana Ramizi      | 5      | 12     | 22     | 39         |
