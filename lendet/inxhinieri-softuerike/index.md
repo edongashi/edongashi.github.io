@@ -129,7 +129,6 @@ noslides: true
 | 115 | Zana Ramizi        | 5      | 12     | 22     | 39         |
 | 116 | Zgjim Krasniqi     | 5      | 15     | 25     | 45         |
 
-
 ---
 
 ## Materiale
