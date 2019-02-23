@@ -10,6 +10,6 @@ noslides: true
 
 ## [Inxhinieri Softuerike](/lendet/inxhinieri-softuerike)
 
-# Kurset
+# Artikuj
 
-## [Në progres - Hyrje e shpejtë në C#](/kurset/csharp/hyrje)
+## [Hyrje e shpejtë në C#](/artikuj/csharp/hyrje)
