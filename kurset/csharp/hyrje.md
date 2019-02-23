@@ -368,7 +368,7 @@ var set = new HashSet<int>();
 
 **Veprimet asinkrone**
 
-Disa veprime (zakonisht I/O) kryhen në formë asinkrone. Me `async` deklarohet metoda asinkrone, ndërsa me `await` pritet përfundimi i operacioneve brenda blloqeve asinkrone.
+Disa veprime (I/O, threadat) kryhen në formë asinkrone. Me `async` deklarohet metoda asinkrone, ndërsa me `await` pritet përfundimi i operacioneve brenda blloqeve asinkrone.
 
 ```cs
 async Task<int> NumriFjaleve(string file) {
