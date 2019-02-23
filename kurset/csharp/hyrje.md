@@ -160,7 +160,7 @@ class Program {
 
 ---
 
-Veçoritë (properties) janë shkurtesë për çiftet get/set të metodave.
+**Veçoritë (properties)** janë shkurtesë për çiftet get/set të metodave.
 
 ```csharp
 class Personi {
@@ -190,7 +190,7 @@ class Program {
 
 ---
 
-Veçoritë automatike janë formë e shkurtër për të deklaruar variablën dhe metodat në një vend.
+**Veçoritë automatike** janë formë e shkurtër për të deklaruar variablën dhe metodat në një vend.
 
 ```csharp
 // Mënyra e shkurtër përmes auto properties:
