@@ -181,7 +181,7 @@ class Program {
   static void Main() {
     Personi p = new Personi();
 
-    // Keta dy rreshta kryejne te njejten pune.
+    // Këta dy rreshta kryejnë të njejtën punë.
     p.Emri = "Filan";
     p.setEmri("Filan");
   }
@@ -362,4 +362,17 @@ Shembuj të tipeve të gatshme gjenerike:
 var dict = new Dictionary<int, string>();
 var list = new List<string>();
 var set = new HashSet<int>();
+```
+
+---
+
+**Veprimet asinkrone**
+
+Disa veprime (zakonisht I/O) kryhen në formë asinkrone. Me `async` deklarohet metoda asinkrone, ndërsa me `await` pritet përfundimi i operacioneve brenda blloqeve asinkrone.
+
+```cs
+async Task<int> NumriFjaleve(string file) {
+  var text = await File.ReadAllTextAsync(file);
+  return Regex.Matches(s, @"[\S]+");
+}
 ```
