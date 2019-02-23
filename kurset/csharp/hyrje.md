@@ -6,7 +6,7 @@ Gjuhë e bazuar në C++, e ngjashme me Java.
 
 E ndërtuar mbi platformën .NET.
 
-Shumë-paradigmëshe, kryesisht e orientuar në objekte me disa veçori funksione.
+Shumë-paradigmëshe, kryesisht e orientuar në objekte me disa veçori funksionale.
 
 ---
 
