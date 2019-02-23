@@ -12,7 +12,7 @@ Shumë-paradigmëshe, kryesisht e orientuar në objekte me disa veçori funksion
 
 **Tipet dhe variablat**
 
-```cs
+```csharp
 string emri = "Filan";
 int mosha = 21;
 bool student = true;
@@ -22,7 +22,7 @@ double notaMesatare = 8.2;
 
 Kur dihet tipi nga ana e djathtë, mund ta shkurtojmë deklarimin në `var`:
 
-```cs
+```csharp
 var x = 5; // int
 var y = "Pershendetje"; // string
 ```
@@ -31,7 +31,7 @@ var y = "Pershendetje"; // string
 
 **Shkruarja/leximi nga hyrja/dalja standarde**
 
-```cs
+```csharp
 System.Console.WriteLine("Jepni emrin tuaj:");
 string emri = System.Console.ReadLine();
 System.Console.WriteLine("Pershendetje " + emri);
@@ -39,7 +39,7 @@ System.Console.WriteLine("Pershendetje " + emri);
 
 Ose shkurtimisht:
 
-```cs
+```csharp
 using System;
 ...
 Console.WriteLine("Jepni emrin tuaj:");
@@ -51,7 +51,7 @@ Console.WriteLine("Pershendetje " + emri);
 
 **Unazat dhe vektorët**
 
-```cs
+```csharp
 string[] lendet = { "Matematike", "Fizike", "Programim" };
 foreach (string lenda in lendet) {
   Console.WriteLine("Lenda: " + lenda);
@@ -66,7 +66,7 @@ for (int i = 0; i < lendet.Length; i++) {
 
 **Numërimet - enum**
 
-```cs
+```csharp
 enum Drejtimi {
   Majtas,
   Lart,
@@ -81,7 +81,7 @@ enum Drejtimi {
 
 Në C# nuk kemi funksione globale. Në vend të tyre përdorim metoda statike.
 
-```cs
+```csharp
 class Funksionet {
   public static int Mbledh(int a, int b) {
     return a + b;
@@ -91,7 +91,7 @@ class Funksionet {
 
 Thirrja bëhet sipas `<Klasa>.<Metoda>()`
 
-```cs
+```csharp
 int rezultati = Funksionet.Mbledh(2, 3);
 Console.WriteLine("Shuma 2+3 = " + rezultati);
 ```
@@ -102,7 +102,7 @@ Console.WriteLine("Shuma 2+3 = " + rezultati);
 
 Pika e hyrjës në program quhet `Main` dhe duhet të jetë metodë statike.
 
-```cs
+```csharp
 class Program {
   static void Main() {
     Console.WriteLine("Pershendetje!");
@@ -114,7 +114,7 @@ class Program {
 
 **Klasat**
 
-```cs
+```csharp
 class Personi {
   public string Emri;
   public int Mosha;
@@ -134,7 +134,7 @@ class Program {
 
 **Metodat dhe konstruktorët e klasës**
 
-```cs
+```csharp
 class Personi {
   private string emri;
   private int mosha;
@@ -162,7 +162,7 @@ class Program {
 
 Veçoritë (properties) janë shkurtesë për çiftet get/set të metodave.
 
-```cs
+```csharp
 class Personi {
   private string emri;
 
@@ -192,7 +192,7 @@ class Program {
 
 Veçoritë automatike janë formë e shkurtër për të deklaruar variablën dhe metodat në një vend.
 
-```cs
+```csharp
 // Mënyra e shkurtër përmes auto properties:
 class Personi1 {
   public string Emri { get; set; }
@@ -258,7 +258,7 @@ Për tipe brenda tipeve ekziston edhe `private` për dukshmëri vetëm nga tipi 
 
 Ndërfaqja është kontratë e operacioneve. Emërtohet duke filluar me shkronjën `I`.
 
-```cs
+```csharp
 interface IOperacionMatematikor {
   double Transformo(double x);
 }
@@ -289,7 +289,7 @@ class Program {
 
 Cilido tip që ofron ndërfaqen `IEnumerable` mund të shëtitet me unazën `foreach`.
 
-```cs
+```csharp
 List<int> numrat = new List<int>();
 numrat.Add(3);
 numrat.Add(5);
@@ -305,7 +305,7 @@ foreach (int numri in numrat) {
 
 Lambda është vlerë që i referohet një funksioni anonim.
 
-```cs
+```csharp
 // Transformim int -> int
 Func<int, int> katrori = x => x * x;
 int x = 5;
@@ -318,7 +318,7 @@ int y = katrori(x);
 
 Formë deklarative për transformimin e koleksioneve.
 
-```cs
+```csharp
 int[] numrat = { 3, -2, 6, 7, 1, -3, 4 };
 var vlerat =
   numrat
@@ -333,7 +333,7 @@ var vlerat =
 
 Përmes tipeve gjenerike mund të krijojmë abstraksione mbi çfarëdo tipi.
 
-```cs
+```csharp
 class PemaBinare<T> {
   public T Vlera;
   public PemaBinare<T> Majtas;
@@ -358,7 +358,7 @@ class Program {
 
 Shembuj të tipeve të gatshme gjenerike:
 
-```cs
+```csharp
 var dict = new Dictionary<int, string>();
 var list = new List<string>();
 var set = new HashSet<int>();
