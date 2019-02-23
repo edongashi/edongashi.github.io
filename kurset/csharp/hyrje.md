@@ -20,6 +20,13 @@ int[] notat = { 7, 9, 8, 10, 7 };
 double notaMesatare = 8.2;
 ```
 
+Kur dihet tipi nga ana e djathtë, mund ta shkurtojmë deklarimin në `var`:
+
+```cs
+var x = 5; // int
+var y = "Pershendetje"; // string
+```
+
 ---
 
 **Shkruarja/leximi nga hyrja/dalja standarde**
@@ -38,6 +45,34 @@ using System;
 Console.WriteLine("Jepni emrin tuaj:");
 string emri = Console.ReadLine();
 Console.WriteLine("Pershendetje " + emri);
+```
+
+---
+
+**Unazat dhe vektorët**
+
+```cs
+string[] lendet = { "Matematike", "Fizike", "Programim" };
+foreach (string lenda in lendet) {
+  Console.WriteLine("Lenda: " + lenda);
+}
+
+for (int i = 0; i < lendet.Length; i++) {
+  Console.WriteLine("Lenda: " + lendet[i]);
+}
+```
+
+---
+
+**Numërimet - enum**
+
+```cs
+enum Drejtimi {
+  Majtas,
+  Lart,
+  Djathtas,
+  Poshte
+}
 ```
 
 ---
@@ -211,8 +246,120 @@ Për tipe brenda tipeve ekziston edhe `private` për dukshmëri vetëm nga tipi 
 
 ---
 
-**Modifikatorët e klasave**
+**Llojet e klasave**
 
 - `static` - nuk mund të instancohet asnjëherë, përmban vetëm anëtarë statik.
 - `abstract` - nuk mund të instancohet pa ndonjë implementim konkret.
 - `sealed` - konkrete dhe nuk mund të trashëgohet.
+
+---
+
+**Ndërfaqet (interface)**
+
+Ndërfaqja është kontratë e operacioneve. Emërtohet duke filluar me shkronjën `I`.
+
+```cs
+interface IOperacionMatematikor {
+  double Transformo(double x);
+}
+
+class Katrori : IOperacionMatematikor {
+  public double Transformo(double x) {
+    return Math.Pow(x, 2);
+  }
+}
+
+class RrenjaKatrore : IOperacionMatematikor {
+  public double Transformo(double x) {
+    return Math.Sqrt(x);
+  }
+}
+
+class Program {
+  static void Main() {
+    IOperacioniMatematikor f = new Katrori();
+    double y = f.Transformo(5.0); // == 25
+  }
+}
+```
+
+---
+
+**Koleksionet**
+
+Cilido tip që ofron ndërfaqen `IEnumerable` mund të shëtitet me unazën `foreach`.
+
+```cs
+List<int> numrat = new List<int>();
+numrat.Add(3);
+numrat.Add(5);
+numrat.Add(-1);
+foreach (int numri in numrat) {
+  Console.WriteLine("Numri: " + numri);
+}
+```
+
+---
+
+**Lambda - funksionet anonime**
+
+Lambda është vlerë që i referohet një funksioni anonim.
+
+```cs
+// Transformim int -> int
+Func<int, int> katrori = x => x * x;
+int x = 5;
+int y = katrori(x);
+```
+
+---
+
+**LINQ - pyetësorët brenda gjuhës**
+
+Formë deklarative për transformimin e koleksioneve.
+
+```cs
+int[] numrat = { 3, -2, 6, 7, 1, -3, 4 };
+var vlerat =
+  numrat
+    .Where(x => x > 0)  // marrim vetëm numrat pozitiv.
+    .Select(x => x * 3) // shumezojme numrat për 3.
+    .ToArray()          // kthejmë rezultatin në array.
+```
+
+---
+
+**Polimorfizmi parametrik - generics**
+
+Përmes tipeve gjenerike mund të krijojmë abstraksione mbi çfarëdo tipi.
+
+```cs
+class PemaBinare<T> {
+  public T Vlera;
+  public PemaBinare<T> Majtas;
+  public PemaBinare<T> Djathtas;
+
+  public PemaBinare(T vlera) {
+    this.vlera = vlera;
+  }
+}
+
+class Program {
+  static void Main() {
+    var rrenja = new PemaBinare<int>(5) {
+      Majtas = new PemaBinare<int>(3),
+      Djathtas = new PemaBinare<int>(9)
+    };
+  }
+}
+```
+
+---
+
+Shembuj të tipeve të gatshme gjenerike:
+
+```cs
+var dict = new Dictionary<int, string>();
+var list = new List<string>();
+var set = new HashSet<int>();
+```
