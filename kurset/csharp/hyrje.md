@@ -373,6 +373,6 @@ Disa veprime (I/O, threadat) kryhen në formë asinkrone. Me `async` deklarohet 
 ```cs
 async Task<int> NumriFjaleve(string file) {
   var text = await File.ReadAllTextAsync(file);
-  return Regex.Matches(s, @"[\S]+");
+  return Regex.Matches(text, @"[\S]+");
 }
 ```
