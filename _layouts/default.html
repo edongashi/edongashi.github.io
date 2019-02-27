@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: "en-us" }}">
 
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2">
-  
+
     <title>
       {% if page.title %}
         {{ page.title }} &middot; {{ site.title }}
@@ -13,17 +13,17 @@
         {{ site.title }} &middot; {{ site.tagline }}
       {% endif %}
     </title>
-  
+
     <!-- CSS -->
-    <link rel="stylesheet" href="/public/css/poole.css">
-    <link rel="stylesheet" href="/public/css/syntax.css">
-    <link rel="stylesheet" href="/public/css/lanyon.css">
-    <link rel="stylesheet" href="/public/css/site.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/public/css/poole.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/public/css/syntax.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/public/css/lanyon.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/public/css/site.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
-  
+
     <!-- Icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-    <link rel="shortcut icon" href="/public/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}/public/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/public/favicon.ico">
 
     <!-- Math -->
     <script type="text/x-mathjax-config">
@@ -37,7 +37,7 @@
     <script type="text/javascript" async
       src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   </head>
-  
+
 
   <body>
 
@@ -51,7 +51,7 @@
           <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
           <h3 class="masthead-title">
-            <a href="/" title="Home">{{ site.title }}</a>
+            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
             <small>{{ site.tagline }}</small>
           </h3>
         </div>
@@ -65,9 +65,9 @@
           <div>
             <a href="#" onclick="window.print();return false;">Printo faqen</a>
             &nbsp;|&nbsp;
-            <a href="/slideshow.html?src={{ page.url | url_encode }}&title={{ page.title | url_encode }}">Hap slajdet</a>
+            <a href="{{ site.baseurl }}/slideshow.html?src={{ page.url | url_encode }}&title={{ page.title | url_encode }}">Hap slajdet</a>
             &nbsp;|&nbsp;
-            <a href="/slideshow.html?src={{ page.url | url_encode }}&title={{ page.title | url_encode }}&print-pdf" target="_blank">Printo slajdet</a>
+            <a href="{{ site.baseurl }}/slideshow.html?src={{ page.url | url_encode }}&title={{ page.title | url_encode }}&print-pdf" target="_blank">Printo slajdet</a>
             &nbsp;|&nbsp;
             <a href="#">Kthehu lart</a>
           </div>
@@ -86,6 +86,6 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
-    <script src="/public/js/init.js" async></script>
+    <script src="{{ site.baseurl }}/public/js/init.js" async></script>
   </body>
 </html>
