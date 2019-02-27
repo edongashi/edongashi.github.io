@@ -21,3 +21,5 @@ noslides: true
 ## [Blogu](/blog)
 
 ## [Hyrje e shpejtë në C#](/artikuj/csharp/hyrje)
+
+## [Discord](https://discord.gg/HQsT3PJ)
