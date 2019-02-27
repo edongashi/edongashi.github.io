@@ -370,9 +370,23 @@ var set = new HashSet<int>();
 
 Disa veprime (I/O, threadat) kryhen në formë asinkrone. Me `async` deklarohet metoda asinkrone, ndërsa me `await` pritet përfundimi i operacioneve brenda blloqeve asinkrone.
 
-```cs
+```csharp
 async Task<int> NumriFjaleve(string file) {
   var text = await File.ReadAllTextAsync(file);
   return Regex.Matches(text, @"[\S]+").Count;
+}
+```
+
+---
+
+**Finalizatorët dhe IDisposable**
+
+Në .NET nuk ekzistojnë destruktorët. Për të liruar resurset e pamenaxhuara duhet të implementojmë `IDisposable`.
+
+Blloku `using` e thirr `Dispose()` automatikisht. Nëse harrojmë ta thirrim `Dispose()` mund të mbesin resurset e paliruara. Për ta evituar këtë mund ta mbishkruajmë metodën `Finalize` që shënohet me `~T()`.
+
+```csharp
+using (var brush = new SolidBrush(...)) {
+  ...
 }
 ```
