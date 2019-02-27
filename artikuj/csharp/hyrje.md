@@ -383,7 +383,7 @@ async Task<int> NumriFjaleve(string file) {
 
 Në .NET nuk ekzistojnë destruktorët. Për të liruar resurset e pamenaxhuara duhet të implementojmë `IDisposable`.
 
-Blloku `using` e thirr `Dispose()` automatikisht. Nëse harrojmë ta thirrim `Dispose()` mund të mbesin resurset e paliruara. Për ta evituar këtë mund ta mbishkruajmë metodën `Finalize` që shënohet me `~T()`.
+Blloku `using` e thirr `Dispose()` automatikisht. Nëse harrojmë ta thirrim mund të mbesin resurset e paliruara. Për ta evituar këtë mund ta mbishkruajmë metodën `Finalize` që shënohet me `~T()`.
 
 ```csharp
 using (var brush = new SolidBrush(...)) {
