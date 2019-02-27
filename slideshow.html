@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}/public/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/public/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
   <title>Slajdet</title>
   <script>
     var qs = (function (a) {
@@ -26,11 +26,11 @@
 
     var printPdf = 'print-pdf' in qs
   </script>
-  <link rel="stylesheet" href="{{ site.baseurl }}/revealjs/css/reveal.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/revealjs/css/theme/white.css" id="theme">
-  <link rel="stylesheet" href="{{ site.baseurl }}/revealjs/lib/css/github.css">
+  <link rel="stylesheet" href="/revealjs/css/reveal.css">
+  <link rel="stylesheet" href="/revealjs/css/theme/white.css" id="theme">
+  <link rel="stylesheet" href="/revealjs/lib/css/github.css">
   <script>
-    document.write('<link rel="stylesheet" href="{{ site.baseurl }}/revealjs/css/print/' + (printPdf ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+    document.write('<link rel="stylesheet" href="/revealjs/css/print/' + (printPdf ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
   </script>
 
   <style type="text/css">
@@ -69,8 +69,8 @@
     </div>
   </div>
 
-  <script src="{{ site.baseurl }}/revealjs/lib/js/head.min.js"></script>
-  <script src="{{ site.baseurl }}/revealjs/js/reveal.js"></script>
+  <script src="/revealjs/lib/js/head.min.js"></script>
+  <script src="/revealjs/js/reveal.js"></script>
   <script>
     function extend() {
       var target = {};
@@ -108,13 +108,13 @@
     }
 
     var deps = [
-      { src: '{{ site.baseurl }}/revealjs/lib/js/classList.js', condition: function () { return !document.body.classList; } },
-      { src: '{{ site.baseurl }}/revealjs/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-      { src: '{{ site.baseurl }}/revealjs/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-      { src: '{{ site.baseurl }}/revealjs/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
-      { src: '{{ site.baseurl }}/revealjs/plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } },
-      { src: '{{ site.baseurl }}/revealjs/plugin/zoom-js/zoom.js', async: true },
-      { src: '{{ site.baseurl }}/revealjs/plugin/math/math.js', async: true }
+      { src: '/revealjs/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+      { src: '/revealjs/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+      { src: '/revealjs/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+      { src: '/revealjs/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+      { src: '/revealjs/plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } },
+      { src: '/revealjs/plugin/zoom-js/zoom.js', async: true },
+      { src: '/revealjs/plugin/math/math.js', async: true }
     ];
 
     var queryOptions = Reveal.getQueryHash() || {};
