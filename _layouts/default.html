@@ -59,7 +59,7 @@
 
       <div class="container content">
         {{ content }}
-        {% unless page.noslides %}
+        {% unless page.noslides or layout.noslides %}
         <div class="no-print push-bottom">
           <hr />
           <div>
