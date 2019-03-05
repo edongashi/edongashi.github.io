@@ -21,7 +21,7 @@ Në rast se keni probleme me repository private vlen të përmendet që GitHub o
 | Grupi | Dita   | Ora         | Salla |
 | ----- | ------ | ----------- | ----- |
 | 1A    | E hënë | 10:00-11:30 | 615   |
-| 1B    | E hënë | 11:30-14:00 | 615   |
+| 1B    | E hënë | 11:30-13:00 | 615   |
 
 ---
 
