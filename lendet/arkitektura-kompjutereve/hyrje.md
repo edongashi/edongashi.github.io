@@ -338,7 +338,7 @@ Northbridge zakonisht ka nevojë për ftohje për shkak të clockut më të shpe
 
 ---
 
-**Kartela grafike (GPU)** - kryen operacione matematikore në matrica të vlerave.
+**Kartela grafike (GPU)** - kryen operacione matematikore në paralel.
 
 ![](https://cdn.techterms.com/img/lg/gpu_166.jpg) <!-- .element: style="max-height:400px;border:none;" -->
 
