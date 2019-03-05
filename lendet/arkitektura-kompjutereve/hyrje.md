@@ -287,7 +287,7 @@ Northbridge zakonisht ka nevojë për ftohje për shkak të clockut më të shpe
 
 **Procesori (CPU)** - "truri" i kompjuterit, ekzekuton urdhërat dhe merr vendime. Komunikon vazhdimisht me memorien kryesore.
 
-![](https://cdn.wccftech.com/wp-content/uploads/2014/04/Intel-Devils-Canyon.jpg) <!-- .element: style="max-height:400px;border:none;" -->
+![](https://5.imimg.com/data5/KT/IA/MY-40080732/intel-cpu-processor-500x500.png) <!-- .element: style="max-height:400px;border:none;" -->
 
 ---
 
