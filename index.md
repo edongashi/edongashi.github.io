@@ -10,14 +10,10 @@ noslides: true
 - [Arkitektura e Kompjuterëve](/lendet/arkitektura-kompjutereve)
 - [Visual Computing](/lendet/visual-computing)
 
----
-
 ### Linqe
 
 - [Blogu](/blog)
 - [Discord](https://discord.gg/HQsT3PJ)
-
----
 
 ### Arkiva
 
