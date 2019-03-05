@@ -1,5 +1,5 @@
 define(['react'], function (React) {
-  const { useState } = require(React)
+  const { useState } = React
 
   function randomNumber(length) {
     let result = ''
