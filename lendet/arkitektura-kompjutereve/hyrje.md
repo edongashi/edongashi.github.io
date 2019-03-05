@@ -416,6 +416,8 @@ Relacioni (3) tregon që fuqia dinamike varet nga:
 - Tensioni i veprimit
 - Frekuenca e ndryshimit të gjendjes
 
+Megjithatë, për një punë fikse shpenzimi i energjisë mbetët i njejtë edhe pse kryhet me fuqi më të ulët.
+
 ---
 
 **Faktorët e performancës**
