@@ -4,22 +4,18 @@ layout: default
 noslides: true
 ---
 
-# Lëndët
+## Lëndët
 
-## [Siguria e të Dhënave](/lendet/siguria-dhenave)
+### [Siguria e të Dhënave](/lendet/siguria-dhenave)
+### [Arkitektura e Kompjuterëve](/lendet/arkitektura-kompjutereve)
+### [Visual Computing](/lendet/visual-computing)
 
-## [Arkitektura e Kompjuterëve](/lendet/arkitektura-kompjutereve)
+## Linqe
 
-## [Grafika Kompjuterike](/lendet/grafika-kompjuterike)
+### [Blogu](/blog)
+### [Discord](https://discord.gg/HQsT3PJ)
 
-## [Gjuhë Programuese](/lendet/gjuhe-programuese)
+## Arkiva
 
-## [Inxhinieri Softuerike](/lendet/inxhinieri-softuerike)
-
-# Linqe
-
-## [Blogu](/blog)
-
-## [Hyrje e shpejtë në C#](/artikuj/csharp/hyrje)
-
-## [Discord](https://discord.gg/HQsT3PJ)
+### [Gjuhë Programuese](/lendet/gjuhe-programuese)
+### [Inxhinieri Softuerike](/lendet/inxhinieri-softuerike)

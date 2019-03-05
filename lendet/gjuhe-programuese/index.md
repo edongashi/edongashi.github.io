@@ -6,10 +6,6 @@ noslides: true
 
 # Gjuhë Programuese
 
-## Rezultatet finale në kolokviume
-
-[Klikoni këtu](/lendet/gjuhe-programuese/rezultatet-kolokviume) për të hapur rezultatet finale të arritura me kolokviume. Studentët të cilët nuk gjenden në këtë listë nuk marrin notë kaluese dhe duhet t'i nënshtrohen provimit.
-
 ## Llogaritja e notës finale
 
 Për notë kaluese duhet ta keni përfunduar provimin me së paku 50% ose dy kolokviumet me së paku 50% të pikëve. Pastaj nota finale llogaritet sipas tabelës së mëposhtme:
@@ -28,15 +24,6 @@ Ku pikët llogariten sipas formulës:
 $$
 \underbrace{V_L}_{10} + \underbrace{V_U}_{10} + \underbrace{D_1}_{15} + \underbrace{D_2}_{15} + \big[\underbrace{K_1K_2}_{25+25} \lor \underbrace{P}_{50} \big]
 $$
-
-
-## Rezultatet e kolokviumit të dytë
-
-[Klikoni këtu](/lendet/gjuhe-programuese/kolokviumi2) për të hapur rezultatet e kolokviumit të dytë. Rishikimi i punimeve mund të bëhet të hënën (14/01/2019) nga ora 13:30 në sallën 615.
-
-## Rezultatet e kolokviumit të parë
-
-[Klikoni këtu](/lendet/gjuhe-programuese/kolokviumi1) për të hapur rezultatet e kolokviumit të parë.
 
 ---
 
