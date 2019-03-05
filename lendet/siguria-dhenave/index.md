@@ -14,6 +14,8 @@ Në rast se keni probleme me repository private vlen të përmendet që GitHub o
 
 *Shënim:* Grupet mund të kenë anëtarë nga cilido grup (1A, 1B, 2A, 2B).
 
+---
+
 ## Orari i ushtrimeve
 
 | Grupi | Dita   | Ora         | Salla |
@@ -21,9 +23,13 @@ Në rast se keni probleme me repository private vlen të përmendet që GitHub o
 | 1A    | E hënë | 10:00-11:30 | 615   |
 | 1B    | E hënë | 11:30-14:00 | 615   |
 
+---
+
 ## Artikuj
 
 - [Hyrje e shpejtë në C#](/artikuj/csharp/hyrje)
+
+---
 
 ## Linqe
 
