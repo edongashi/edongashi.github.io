@@ -1,0 +1,39 @@
+---
+layout: default
+noslides: true
+title: App
+---
+
+<div id="app"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script>
+  var qs = (function (a) {
+    if (a == "") return {};
+    var b = {};
+    for (var i = 0; i < a.length; ++i) {
+      var p = a[i].split('=', 2);
+      if (p.length == 1)
+        b[p[0]] = "";
+      else
+        b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+    }
+    return b;
+  })(window.location.search.substr(1).split('&'));
+  window.babelConfig = {};
+  requirejs.config({
+    paths: {
+      'jsx': '/publis/js/react-require.min',
+      'babel': 'https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min',
+      'react': 'https://cdnjs.cloudflare.com/ajax/libs/react/16.8.1/umd/react.production.min',
+      'react-dom': 'https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.1/umd/react-dom.production.min'
+    }
+  });
+  if (qs.id && qs.id.match(/[a-zA-Z0-9_-]+/)) {
+    require(['jsx!/public/apps/' + qs.id, 'react', 'react-dom'],
+      function (Root, React, ReactDOM) {
+        ReactDOM.render(
+          React.createElement(Root),
+          document.getElementById('app'));
+      });
+  }
+</script>
