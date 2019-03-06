@@ -34,7 +34,7 @@ title: App
     require(['jsx!/public/apps/' + id, 'react', 'react-dom'],
       function (App, React, ReactDOM) {
         if (App && App.title) {
-          window.title = App.title
+          document.title = App.title
         }
 
         ReactDOM.render(
