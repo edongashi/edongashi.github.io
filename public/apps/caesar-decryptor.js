@@ -28,6 +28,7 @@ define(['react', '/public/js/nn-predict.js'], function (React, predict) {
     return <div>
       <h3>Dekriptori i Kodit të Cezarit</h3>
       <textarea
+        rows={4}
         style={{
           boxSizing: 'border-box',
           width: '100%',
