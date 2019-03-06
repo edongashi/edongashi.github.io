@@ -18,7 +18,7 @@ define(['react'], function (React) {
       <button onClick={() => setNumbers([...numbers, randomNumber(length)])}>Gjenero</button>
       <button onClick={() => setNumbers([])}>Pastro</button>
       <hr />
-      <ol>
+      <ol style={{ fontFamily: 'monospace' }}>
         {numbers.map(([bin, dec], i) => <li key={i}>{bin} ({dec})</li>)}
       </ol>
     </div>
