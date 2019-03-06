@@ -24,5 +24,6 @@ define(['react'], function (React) {
     </div>
   }
 
+  BinaryGenerator.title = 'Gjeneratori i numrave'
   return BinaryGenerator
 })

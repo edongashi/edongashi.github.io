@@ -32,9 +32,13 @@ title: App
   var id = encoding.tryDecode(qs.id);
   if (id) {
     require(['jsx!/public/apps/' + id, 'react', 'react-dom'],
-      function (Root, React, ReactDOM) {
+      function (App, React, ReactDOM) {
+        if (App && App.title) {
+          window.title = App.title
+        }
+
         ReactDOM.render(
-          React.createElement(Root),
+          React.createElement(App),
           document.getElementById('app'));
       });
   }
