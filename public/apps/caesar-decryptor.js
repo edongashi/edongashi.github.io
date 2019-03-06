@@ -19,9 +19,11 @@ define(['react', '/public/js/nn-predict.js'], function (React, predict) {
     return debouncedValue
   }
 
+  const maxSize = { maxWidth: '20%', width: '20%' }
+
   function CaesarDecryptor() {
     const [cipherText, setCipherText] = useState('')
-    const debouncedCipherText = useDebounce(cipherText, 1000)
+    const debouncedCipherText = useDebounce(cipherText, 500)
     const plainText = useMemo(() => predict(debouncedCipherText), [debouncedCipherText])
     return <div>
       <h3>Dekriptori i Kodit të Cezarit</h3>
@@ -37,19 +39,19 @@ define(['react', '/public/js/nn-predict.js'], function (React, predict) {
       {debouncedCipherText && <table>
         <tr>
           <th>Plaintext</th>
-          <th>Probabiliteti</th>
+          <th style={maxSize}>Probabiliteti</th>
         </tr>
         <tr>
           <td>{plainText[0].text}</td>
-          <td>{plainText[0].confidence}</td>
+          <td style={maxSize}>{plainText[0].confidence}</td>
         </tr>
         <tr>
           <td>{plainText[1].text}</td>
-          <td>{plainText[1].confidence}</td>
+          <td style={maxSize}>{plainText[1].confidence}</td>
         </tr>
         <tr>
           <td>{plainText[2].text}</td>
-          <td>{plainText[2].confidence}</td>
+          <td style={maxSize}>{plainText[2].confidence}</td>
         </tr>
       </table>}
     </div>
