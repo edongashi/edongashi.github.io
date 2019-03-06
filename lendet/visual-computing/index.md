@@ -2,6 +2,7 @@
 title: Visual Computing
 sidebar: true
 noslides: true
+suppresshooks: true
 ---
 
 # Visual Computing

@@ -2,6 +2,7 @@
 title: Siguria e të Dhënave
 sidebar: true
 noslides: true
+suppresshooks: true
 ---
 
 # Siguria e të Dhënave

@@ -2,6 +2,7 @@
 title: Arkitektura e Kompjuterëve
 sidebar: true
 noslides: true
+suppresshooks: true
 ---
 
 # Arkitektura e Kompjuterëve

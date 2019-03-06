@@ -2,6 +2,7 @@
 title: Ballina
 layout: default
 noslides: true
+suppresshooks: true
 ---
 
 ### Lëndët

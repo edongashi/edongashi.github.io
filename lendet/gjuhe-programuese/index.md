@@ -2,6 +2,7 @@
 title: Gjuhë Programuese
 sidebar: true
 noslides: true
+suppresshooks: true
 ---
 
 # Gjuhë Programuese

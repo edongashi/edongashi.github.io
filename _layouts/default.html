@@ -86,6 +86,8 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
+    {% unless page.suppresshooks %}
     <script src="{{ site.baseurl }}/public/js/init.js" async></script>
+    {% endunless %}
   </body>
 </html>

@@ -2,6 +2,7 @@
 title: Informata
 sidebar: true
 noslides: true
+suppresshooks: true
 ---
 
 # Informata

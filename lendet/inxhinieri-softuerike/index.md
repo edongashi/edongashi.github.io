@@ -2,6 +2,7 @@
 title: Inxhinieri Softuerike
 sidebar: true
 noslides: true
+suppresshooks: true
 ---
 
 # Inxhinieri Softuerike
