@@ -1,5 +1,5 @@
 define(['react', '/public/js/nn-predict.js'], function (React, predict) {
-  const { useState, useEffect } = React
+  const { useState, useEffect, useMemo } = React
 
   function useDebounce(value, delay) {
     const [debouncedValue, setDebouncedValue] = useState(value)
