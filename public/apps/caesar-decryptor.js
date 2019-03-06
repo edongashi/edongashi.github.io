@@ -40,18 +40,22 @@ define(['react', '/public/js/nn-predict.js'], function (React, predict) {
       {debouncedCipherText && <table>
         <tr>
           <th>Plaintext</th>
+          <th style={maxSize}>Çelësi</th>
           <th style={maxSize}>Probabiliteti</th>
         </tr>
         <tr>
           <td>{plainText[0].text}</td>
+          <td style={maxSize}>{plainText[0].key}</td>
           <td style={maxSize}>{plainText[0].confidence}</td>
         </tr>
         <tr>
           <td>{plainText[1].text}</td>
+          <td style={maxSize}>{plainText[1].key}</td>
           <td style={maxSize}>{plainText[1].confidence}</td>
         </tr>
         <tr>
           <td>{plainText[2].text}</td>
+          <td style={maxSize}>{plainText[2].key}</td>
           <td style={maxSize}>{plainText[2].confidence}</td>
         </tr>
       </table>}
