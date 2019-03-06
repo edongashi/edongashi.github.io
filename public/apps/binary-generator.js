@@ -17,6 +17,7 @@ define(['react'], function (React) {
       <h3>Gjenerator i numrave binar</h3>
       <button onClick={() => setNumbers([...numbers, randomNumber(length)])}>Gjenero</button>
       <button onClick={() => setNumbers([])}>Pastro</button>
+      <hr />
       <ol>
         {numbers.map((num, i) => <li key={i}>{num}</li>)}
       </ol>
