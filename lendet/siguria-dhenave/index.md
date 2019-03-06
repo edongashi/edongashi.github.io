@@ -26,6 +26,12 @@ Në rast se keni probleme me repository private vlen të përmendet që GitHub o
 
 ---
 
+## Materiali
+
+[Kodi i ushtrimeve](https://github.com/edongashi/data-security-2019)
+
+---
+
 ## Artikuj
 
 - [Hyrje e shpejtë në C#](/artikuj/csharp/hyrje)
