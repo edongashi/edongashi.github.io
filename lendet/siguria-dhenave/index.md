@@ -35,6 +35,7 @@ Në rast se keni probleme me repository private vlen të përmendet që GitHub o
 ## Linqe
 
 - [gitignore.io](https://gitignore.io/)
+- [C# programming guide](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/)
 
 ---
 
