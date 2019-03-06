@@ -1,4 +1,4 @@
-define(['react', '/public/js/nn-predict'], function (React, predict) {
+define(['react', '/public/js/nn-predict.js'], function (React, predict) {
   const { useState, useEffect } = React
 
   function useDebounce(value, delay) {
