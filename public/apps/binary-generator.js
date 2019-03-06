@@ -7,7 +7,7 @@ define(['react'], function (React) {
       result += Math.round(Math.random())
     }
 
-    return result
+    return [result, parseInt(result, 2)]
   }
 
   function BinaryGenerator() {
@@ -19,7 +19,7 @@ define(['react'], function (React) {
       <button onClick={() => setNumbers([])}>Pastro</button>
       <hr />
       <ol>
-        {numbers.map((num, i) => <li key={i}>{num}</li>)}
+        {numbers.map(([bin, dec], i) => <li key={i}>{bin} ({dec})</li>)}
       </ol>
     </div>
   }
