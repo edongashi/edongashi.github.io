@@ -14,11 +14,12 @@ define(['react'], function (React) {
     const [length, setLength] = useState(8)
     const [numbers, setNumbers] = useState([randomNumber(length)])
     return <div>
+      <h3>Gjenerator i numrave binar</h3>
+      <button onClick={() => setNumbers([...numbers, randomNumber(length)])}>Gjenero</button>
+      <button onClick={() => setNumbers([])}>Pastro</button>
       <ol>
         {numbers.map((num, i) => <li key={i}>{num}</li>)}
       </ol>
-      <button onClick={() => setNumbers([...numbers, randomNumber(length)])}>Gjenero</button>
-      <button onClick={() => setNumbers([])}>Pastro</button>
     </div>
   }
 
