@@ -35,3 +35,9 @@ Në rast se keni probleme me repository private vlen të përmendet që GitHub o
 ## Linqe
 
 - [gitignore.io](https://gitignore.io/)
+
+---
+
+## Vegla
+
+- [Dekriptori i kodit të Cezarit](/app?id=yk4brq4nykn4hlocxxbixqudyobf5q5wazwmhggcwdbyqa6dxbvcobt5azxtoni)
