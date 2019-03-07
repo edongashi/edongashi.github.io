@@ -206,6 +206,12 @@ Specifikimi i listës së instruksioneve që mund të ekzekutojnë procesorët q
 
 ---
 
+**Furnizuesi i rrymës (PSU)** - kthen rrymën alternative në rrymë njëkahore për komponentet e kompjuterit.
+
+![](http://cdn.pctronic.com.py/imgs/i/800x600-3-c-80-0-0-fff/r/up/produtos//1/4/5/4/xtech_fonte_atx_500w_20328.png) <!-- .element: style="max-height:400px;border:none;" -->
+
+---
+
 **Motherboard (pllaka amë)**
 
 ![](https://usercontent1.hubstatic.com/6328700_f1024.jpg) <!-- .element: style="max-height:480px;border:none;" -->
@@ -325,6 +331,10 @@ Northbridge zakonisht ka nevojë për ftohje për shkak të clockut më të shpe
 **RAM Memoria** - ruan kodin dhe të dhënat.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/d/db/Swissbit_2GB_PC2-5300U-555.jpg) <!-- .element: style="max-height:400px;border:none;" -->
+
+---
+
+![](memory-cell.jpg) <!-- .element: style="max-height:460px;border:none;" -->
 
 ---
 
