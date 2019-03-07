@@ -334,7 +334,7 @@ Northbridge zakonisht ka nevojë për ftohje për shkak të clockut më të shpe
 
 ---
 
-![](memory-cell.jpg) <!-- .element: style="max-height:460px;border:none;" -->
+![](/lendet/arkitektura-kompjutereve/memory-cell.jpg) <!-- .element: style="max-height:460px;border:none;" -->
 
 ---
 
