@@ -441,13 +441,13 @@ Clocku matet përmes periodës ose përmes frekuencës (psh. 2 GHz).
 Nëse për kryerjen e një pune nevojitet një numër i caktuar i takteve të procesorit $n_\text{takteve}$, atëherë koha totale për kryerjen e punës shprehet përmes:
 
 $$
-t_\text{CPU}=n_\text{takteve} \times T_{clock} \tag{4}
+t_\text{CPU}=n_\text{takteve} \times T_\text{clock} \tag{4}
 $$
 
 ose
 
 $$
-t_\text{CPU}= \frac{n_\text{takteve}}{f_{clock}}
+t_\text{CPU}=\frac{n_\text{takteve}}{f_\text{clock}}
 $$
 
 ---
@@ -457,7 +457,7 @@ Përveç numrit të takteve mund të masin numrin e instruksioneve të ekzekutua
 Nëse e dimë $n_\text{takteve}$ dhe IC, mund ta llogarisim numrin mesatar të takteve të clockuit për instruksion (CPI).
 
 $$
-\text{CPI}=\frac{n_{takteve}}{\text{IC}} \tag{5}
+\text{CPI}=\frac{n_\text{takteve}}{\text{IC}} \tag{5}
 $$
 
 ---
@@ -465,16 +465,16 @@ $$
 Prej formulës (4) dhe (5) nxerrim:
 
 $$
-t_\text{CPU}=\text{IC} \times \text{CPI} \times T_{clock} \tag{6}
+t_\text{CPU}=\text{IC} \times \text{CPI} \times T_\text{clock} \tag{6}
 $$
 
 ---
 
 Ekuacioni (6) tregon se koha e ekzekutimit të programit varet nga:
 
-- Numri i instruksioneve në program
-- Instruksionet që ekzekuton procesori për takt
-- Perioda e clockut (ose frekuenca)
+- Numri i instruksioneve në program (IC)
+- Numri i takteve të nevojshme për të ekzekutuar instruksionet (CPI)
+- Perioda e clockut $T_\text{clock}$
 
 ---
 
