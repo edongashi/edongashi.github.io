@@ -473,7 +473,7 @@ $$
 Ekuacioni (6) tregon se koha e ekzekutimit të programit varet nga:
 
 - Numri i instruksioneve në program (IC)
-- Numri i takteve të nevojshme për të ekzekutuar instruksionet (CPI)
+- Numri i takteve të clockut për instruksion (CPI)
 - Perioda e clockut $T_\text{clock}$
 
 ---
