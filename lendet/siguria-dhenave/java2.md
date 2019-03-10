@@ -149,7 +149,7 @@ $$
 
 Bashkësia e të gjithë çelësave të mundshëm për një algoritëm kriptografik.
 
-Në kodin e Cezarit $|S|=25$. Pse?
+Në kodin e Cezarit $\mid S \mid=25$. Pse?
 
 ---
 
