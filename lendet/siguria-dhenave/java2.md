@@ -288,13 +288,13 @@ Merret një fjalë si çelës dhe fillohen të mbushet matrica nga lart majtas m
 
 **Shembull:** Çelësi SIGURIA:
 
-<table>
-<tr><td><strong>S</strong></td><td><strong>I/J</strong></td><td><strong>G</strong></td><td><strong>U</strong></td><td><strong>R</strong></td></tr>
-<tr><td><strong>A</strong></td><td>B</td><td>C</td><td>D</td><td>E</td></tr>
-<tr><td>F</td><td>H</td><td>K</td><td>L</td><td>M</td></tr>
-<tr><td>N</td><td>O</td><td>P</td><td>Q</td><td>T</td></tr>
-<tr><td>V</td><td>W</td><td>X</td><td>Y</td><td>Z</td></tr>
-<table>
+```text
+S  I/J  G   U   R
+A   B   C   D   E
+F   H   K   L   M
+N   O   P   Q   T
+V   W   X   Y   Z
+```
 
 ---
 
