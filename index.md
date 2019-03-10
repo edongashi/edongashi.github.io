@@ -9,7 +9,6 @@ suppresshooks: true
 
 - [Siguria e të Dhënave](/lendet/siguria-dhenave)
 - [Arkitektura e Kompjuterëve](/lendet/arkitektura-kompjutereve)
-- [Visual Computing](/lendet/visual-computing)
 
 ### Linqe
 
