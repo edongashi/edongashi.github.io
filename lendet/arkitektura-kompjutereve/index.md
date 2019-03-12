@@ -18,7 +18,8 @@ suppresshooks: true
 
 ## Materiali
 
-1. [Hyrje](/lendet/arkitektura-kompjutereve/hyrje)
+1. [Hyrje](/lendet/arkitektura-kompjutereve/java1)
+2. [Sistemet numerike](/lendet/arkitektura-kompjutereve/java2)
 
 ---
 
