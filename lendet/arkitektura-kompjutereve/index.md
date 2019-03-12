@@ -9,10 +9,11 @@ suppresshooks: true
 
 ## Orari i ushtrimeve
 
-| Grupi | Dita    | Ora         | Salla |
-| ----- | ------- | ----------- | ----- |
-| 1A    | E enjte | 10:00-11:30 | 615   |
-| 1B    | E enjte | 11:30-13:00 | 615   |
+| Grupi   | Dita    | Ora         | Salla         |
+| ------- | ------- | ----------- | ------------- |
+| 1A      | E enjte | 10:00-11:30 | 615           |
+| 1B      | E enjte | 11:30-13:00 | 615           |
+| E/AKR/T | E enjte | 16:00-17:30 | Kabinetet 600 |
 
 ---
 
