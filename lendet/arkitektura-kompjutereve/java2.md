@@ -390,7 +390,7 @@ $$
 
 $$
 \begin{array}{c}
-             & \tiny{ } & \tiny{ } & \tiny{2} & \tiny{ } \\
+             & \tiny{ } & \tiny{ } & \tiny{2} & \tiny{ } \\[-.5em]
              & \tiny{ } & \tiny{0} & \tiny{0} & \tiny{2} \\
              & 0        & 1        & 1        & 0        \\
 \kern-0.5em- & 0        & 0        & 1        & 1        \\
