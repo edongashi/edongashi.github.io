@@ -59,10 +59,10 @@ $$
 **Shembull:** Shndërrimi i numrit $10101_2$ në decimal.
 
 $$
-\begin{array}{rcl}
-10101_2 & = & (1\times2^4 + 0\times2^3 + 1\times2^2 + 0\times2^1 + 1\times2^1)_{10} \\
-10101_2 & = & (16 + 0 + 4 + 0 + 1)_{10} \\
-10101_2 & = & 21_{10} \\
+\begin{array}{cl}
+& 10101_2 = (1\times2^4 + 0\times2^3 + 1\times2^2 + 0\times2^1 + 1\times2^1)_{10} \\
+& 10101_2 = (16 + 0 + 4 + 0 + 1)_{10} \\
+& 10101_2 = 21_{10} \\
 \end{array}
 $$
 
