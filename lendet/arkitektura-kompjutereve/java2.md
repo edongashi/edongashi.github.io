@@ -29,8 +29,8 @@ Numri $1234$ shprehet si shuma e shifrës shumëzuar për fuqinë e $10$ varësi
 
 $$
 \begin{array}{rl}
-& (1\times1000) + (2\times100) + (3\times10) + (4\times1) \\
-= &(1\times10^3) + (2\times10^2) + (3\times10^1)  + (4\times1^0) \\
+& (1{\times}1000) + (2{\times}100) + (3{\times}10) + (4{\times}1) \\
+= &(1{\times}10^3) + (2{\times}10^2) + (3{\times}10^1)  + (4{\times}1^0) \\
 = &1000 + 200 + 30 + 1 \\
 = &1234
 \end{array}
@@ -60,7 +60,7 @@ $$
 
 $$
 \begin{array}{l}
-10101_2 = (1\cdot2^4 + 0\cdot2^3 + 1\cdot2^2 + 0\cdot2^1 + 1\cdot2^1)_{10} \\
+10101_2 = (1{\cdot}2^4 + 0{\cdot}2^3 + 1{\cdot}2^2 + 0{\cdot}2^1 + 1{\cdot}2^0)_{10} \\
 10101_2 = (16 + 0 + 4 + 0 + 1)_{10} \\
 10101_2 = 21_{10} \\
 \end{array}
