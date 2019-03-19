@@ -71,7 +71,7 @@ Kur numri paraqet zero, në formatin float kemi zero pozitive dhe zero negative 
 
 Vlera e eksponentit nuk paraqet numër të zakonshëm binar, por vlerë të **shtyrë (biased)** për një vlerë fikse.
 
-Zakonisht $\text{bias}=(2^{k-1}-1)$, ku $k$ - numri i bitave të numrit. Në float kjo vlerë është 127, që dmth vlerat efektive tërhiqen nga $0\dots 255$ në $-127\dots 128$. Pse?
+Zakonisht $\text{bias}=(2^{k-1}-1)$, ku $k$ - numri i bitave. Në float kjo vlerë është 127, që dmth vlerat efektive tërhiqen nga $[0\dots 255]$ në $[-127\dots 128]$. Pse?
 
 ---
 
