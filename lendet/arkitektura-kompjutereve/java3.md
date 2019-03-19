@@ -25,7 +25,7 @@ $$
 $$
 
 - Shenja e numrit (pozitive ose negative)
-- $S$ - significand (thyesa)
+- $S$ - significand (fraksioni)
 - $B$ - baza numerike
 - $E$ - eksponenti (pozitiv ose negativ)
 
@@ -38,7 +38,7 @@ Duke përdorur formën $\pm S \times B^{\pm E}$ presjen e lëvizim duke kontroll
 $$
 2.76 \times 10^{15} \\
 1.50 \times 10^{-3} \\
-4 \times 10^{2}
+4.00 \times 10^{2}
 $$
 
 ---
@@ -67,11 +67,11 @@ Kur numri paraqet zero, në formatin float kemi zero pozitive dhe zero negative 
 
 ---
 
-**Eksponenti** $E$ paraqet eksponentin e 2-shit që i shumëzohet thyesës. Në single-precision mban $k=8$ bita.
+**Eksponenti** $E$ paraqet eksponentin e 2-shit që i shumëzohet thyesës. Në single-precision ka $k=8$ bita.
 
 Vlera e eksponentit nuk paraqet numër të zakonshëm binar, por vlerë të **shtyrë (biased)** për një vlerë fikse.
 
-Zakonisht $\text{bias}=2^{k-1}-1$, ku $k$ - numri i bitave të numrit. Në float kjo vlerë është 127.
+Zakonisht $\text{bias}=(2^{k-1}-1)$, ku $k$ - numri i bitave të numrit. Në float kjo vlerë është 127, që dmth vlerat efektive tërhiqen nga $0\dots 255$ në $-127\dots 128$. Pse?
 
 ---
 
