@@ -111,6 +111,26 @@ Numri i formës $\pm S \times B^{\pm E}$ mund të paraqitet përmes komponenteve
 
 ---
 
+**Detyrë:** Të konvertohen numrat binar në ekuivalentët e tyre decimal:
+
+$$
+1.1010 \times 2^{-2} \tag{1}
+$$
+
+$$
+0.101101 \times 2^{1} \tag{2}
+$$
+
+$$
+1.111001 \times 2^{3} \tag{3}
+$$
+
+$$
+0.1 \times 2^{6} \tag{4}
+$$
+
+---
+
 Standardi IEEE 754 është forma më e zakonshme e paraqitjes së numrave me presje të lëvizshme. Numri paraqitet si bashkësi e 32 bitave (single-precision) dhe 64 bitave (double-precision).
 
 ![](/lendet/arkitektura-kompjutereve/IEEE_754.png) <!-- .element: style="max-height:400px;border:none;" -->
@@ -174,7 +194,7 @@ $$
 
 Për të shmangur paraqitjet e ndryshme të vlerës së njejtë rekomandohet **normalizimi** i numrit.
 
-**Numri i normalizuar** është numri i cili ka shifrën e rëndësisë më të madhe jo-zero.
+**Numër i normalizuar** është numri i cili ka shifrën e rëndësisë më të madhe jo-zero.
 
 Për një numër binar themi që është i normalizuar atëherë kur biti më i rëndësishëm është 1.
 
