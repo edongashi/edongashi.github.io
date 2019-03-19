@@ -11,7 +11,7 @@ Shtrohet pyetja si duhet të paraqiten numrat jo të plotë?
 Nëse paraqesim numrat si dy komponente - të majtë dhe të djathtë të presjes, kemi formatin:
 
 $$
-bbbb.bbbb
+bbbb\;.\;bbbb
 $$
 
 Ky format ka probleme pasi që nuk mund të paraqesë numra shumë të mëdhenj ose shumë të vegjël.
@@ -77,7 +77,7 @@ $$
 
 ---
 
-Problemi i presjes fikse mund të tejkalohet duke i paraqitur numrat në formë shkencore të formës:
+Problemi i presjes fikse mund të tejkalohet duke i paraqitur numrat në format shkencor të formës:
 
 $$
 \pm S \times B^{\pm E}
@@ -131,7 +131,7 @@ $$
 
 ---
 
-Standardi IEEE 754 është forma më e zakonshme e paraqitjes së numrave me presje të lëvizshme. Numri paraqitet si bashkësi e 32 bitave (single-precision) dhe 64 bitave (double-precision).
+**Standardi IEEE 754** është forma më e zakonshme e paraqitjes së numrave me presje të lëvizshme. Numri paraqitet si bashkësi e 32 bitave (single-precision) dhe 64 bitave (double-precision).
 
 ![](/lendet/arkitektura-kompjutereve/IEEE_754.png) <!-- .element: style="max-height:400px;border:none;" -->
 
@@ -168,7 +168,7 @@ $$
 
 ---
 
-**Significand (fraksioni)** $S$ paraqet pjesën numerike me presje fikse e cila shumëzohet për $2^E$.
+**Significand (fraksioni)** $S$ paraqet pjesën numerike me presje fikse e cila shumëzohet për $2^\pm E$.
 
 Më herët është hasur termi *mantissa* për $S$, por më nuk preferohet përdorimi i saj.
 
@@ -235,7 +235,7 @@ Pasi që numri ruhet në formë të normalizuar, gjithmonë dihet që pjesa e pl
 Për këtë arsye në IEEE 754 nuk ruhet numri në të majtë të presjes. Të gjithë 23 bitat përdorën për ta paraqitur një numër në intervalin gjysmë të hapur $[1,2)$.
 
 $$
-1.b_22 b_21 b_20 \dots b_0
+1.b_{22} b_{21} b_{20} \dots b_{0}
 $$
 
 ---
@@ -248,3 +248,43 @@ $$
 - Baza - gjithmonë 2.
 
 ![](/lendet/arkitektura-kompjutereve/IEEE_754.png) <!-- .element: style="max-height:400px;border:none;" -->
+
+---
+
+**Detyrë:** Të paraqiten numrat decimal sipas formatit IEEE 754:
+
+$$
+42.78125_{10} \tag{1}
+$$
+
+$$
+5.625_{10} \tag{2}
+$$
+
+$$
+44.25_{10} \tag{3}
+$$
+
+$$
+5.0_{10} \tag{3}
+$$
+
+---
+
+**Detyrë:** Të konvertohet numri i formatit IEEE 754 në ekuivalentin decimal:
+
+$$
+0\;10000010\;10001010000000000000000_2 \tag{1}
+$$
+
+$$
+1\;10000000\;00000000000000000000000_2 \tag{2}
+$$
+
+$$
+1\;10001010\;01001110010110000000000_2 \tag{3}
+$$
+
+$$
+0\;10000010\;10010000000000000000000_2 \tag{4}
+$$
