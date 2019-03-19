@@ -18,7 +18,66 @@ Ky format ka probleme pasi që nuk mund të paraqesë numra shumë të mëdhenj 
 
 ---
 
-Problemi i tillë mund të tejkalohet duke i paraqitur numrat në formë shkencore të formës:
+**Konvertimi binar - decimal**
+
+Konvertimi binar-decimal për pjesën e plotë është i njejtë, ndërsa për pjesën pas presjes fuqitë merren negative.
+
+$$
+\dots \;\overbrace{1}^{2^{3}}\;\overbrace{1}^{2^{2}}\;\overbrace{0}^{2^{1}}\;\overbrace{0}^{2^{0}}\;.\;\overbrace{0}^{2^{-1}}\;\overbrace{1}^{2^{-2}}\;\overbrace{0}^{2^{-3}}\;\overbrace{1}^{2^{-4}} \dots
+$$
+
+---
+
+**Detyrë:** Të konvertohen numrat binar në ekuivalentët e tyre decimal:
+
+$$
+1001.01010110_2 \tag{1}
+$$
+
+$$
+0111.11000101_2 \tag{2}
+$$
+
+$$
+0011.10001001_2 \tag{3}
+$$
+
+$$
+1011.01000101_2 \tag{4}
+$$
+
+---
+
+**Konvertimi decimal - binar**
+
+- Pjesa e plotë - pjestojmë me 2 duke marrur mbetjen. Numri lexohet nga poshtë-lart.
+- Pjesa pas presjes - shumëzojmë me 2 duke marrur pjesën e plotë. Numri lexohet nga lart-poshtë.
+
+Procesi për pjesën pas presjes mund të ndërpritet pas një numri të caktuar të hapave. Kjo shkakton humbje të saktësisë por kursim të bitave.
+
+---
+
+**Detyrë:** Të konvertohen numrat decimal në ekuivalentët e tyre binar:
+
+$$
+11.5625_{10} \tag{1}
+$$
+
+$$
+19.125_{10} \tag{2}
+$$
+
+$$
+1.3_{10} \tag{3}
+$$
+
+$$
+23.75_{10} \tag{4}
+$$
+
+---
+
+Problemi i presjes fikse mund të tejkalohet duke i paraqitur numrat në formë shkencore të formës:
 
 $$
 \pm S \times B^{\pm E}
@@ -89,7 +148,7 @@ $$
 
 ---
 
-**Significand (fraksioni, argumenti)** $S$ paraqet pjesën numerike me presje e cila shumëzohet për $2^E$.
+**Significand (fraksioni)** $S$ paraqet pjesën numerike me presje fikse e cila shumëzohet për $2^E$.
 
 Më herët është hasur termi *mantissa* për $S$, por më nuk preferohet përdorimi i saj.
 
@@ -115,7 +174,7 @@ $$
 
 Për të shmangur paraqitjet e ndryshme të vlerës së njejtë rekomandohet **normalizimi** i numrit.
 
-**Numri i normalizuar** është numri tek i cili shifra e rëndësisë më të madhe nuk është zero.
+**Numri i normalizuar** është numri i cili ka shifrën e rëndësisë më të madhe jo-zero.
 
 Për një numër binar themi që është i normalizuar atëherë kur biti më i rëndësishëm është 1.
 
@@ -128,3 +187,44 @@ Në këtë rast numri binar i normalizuar ka formën:
 $$
 \pm 1.bbb\dots b \times 2^{\pm E}
 $$
+
+---
+
+**Detyrë:** Të normalizohen numrat e dhënë binar:
+
+$$
+101.11010 \times 2^{2} \tag{1}
+$$
+
+$$
+00001101 \times 2^{-1} \tag{2}
+$$
+
+$$
+0.111100 \times 2^{-5} \tag{3}
+$$
+
+$$
+111010.01 \times 2^{4} \tag{4}
+$$
+
+---
+
+Pasi që numri ruhet në formë të normalizuar, gjithmonë dihet që pjesa e plotë ka vlerën 1.
+
+Për këtë arsye në IEEE 754 nuk ruhet numri në të majtë të presjes. Të gjithë 23 bitat përdorën për ta paraqitur një numër në intervalin gjysmë të hapur $[1,2)$.
+
+$$
+1.b_22 b_21 b_20 \dots b_0
+$$
+
+---
+
+**Përmbledhje për IEEE 754**
+
+- Shenja - 1 bit (0=pozitive, 1=negative)
+- Fraksioni - 23 bit për pjesën pas presjes $1.bbb\dots$ (nuk ruhet 1-shi).
+- Eksponenti - numër i plotë 8 bitsh i rritur për 127.
+- Baza - gjithmonë 2.
+
+![](/lendet/arkitektura-kompjutereve/IEEE_754.png) <!-- .element: style="max-height:400px;border:none;" -->
