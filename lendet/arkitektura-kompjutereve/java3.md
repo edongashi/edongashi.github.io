@@ -271,7 +271,7 @@ $$
 
 ---
 
-**Detyrë:** Të konvertohet numri i formatit IEEE 754 në ekuivalentin decimal:
+**Detyrë:** Të konvertohen numrat e formatit IEEE 754 në ekuivalentët decimal:
 
 $$
 0\;10000010\;10001010000000000000000_2 \tag{1}
