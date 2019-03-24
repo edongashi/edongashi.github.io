@@ -21,6 +21,7 @@ suppresshooks: true
 
 1. [Hyrje](/lendet/arkitektura-kompjutereve/java1)
 2. [Sistemet numerike](/lendet/arkitektura-kompjutereve/java2)
+2. [Numrat me presje të lëvizshme](/lendet/arkitektura-kompjutereve/java3)
 
 ---
 
