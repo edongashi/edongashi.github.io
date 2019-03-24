@@ -7,7 +7,7 @@
 Llojet:
 
 - Block cipher - punon në blloqe bitash.
-- Stream cipher - punon në nivel të bitit.
+- Stream cipher - punon në nivel të bitave.
 
 ---
 
@@ -135,6 +135,6 @@ Klasa [DESCryptoServiceProvider](https://docs.microsoft.com/en-us/dotnet/api/sys
 
 ---
 
-`CreateEncryptor` dhe `CreateDecryptor` kthejnë një `ICryptoTransform` i cili kryen operacionet mbi blloqe.
+`CreateEncryptor` dhe `CreateDecryptor` kthejnë një [ICryptoTransform](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.icryptotransform) i cili kryen operacionet mbi blloqe.
 
-Nëse punojmë me stream të bajtave kemi mundësi t'i lidhim streamat tonë me `CryptoStream` i cili inicializohet me ndonjë `ICryptoTransform`.
+Nëse punojmë me stream të bajtave kemi mundësi t'i lidhim streamat tonë me [CryptoStream](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.cryptostream) i cili inicializohet me ndonjë `ICryptoTransform`.
