@@ -29,7 +29,7 @@ Algoritmi i mirë i enkriptimit e humb sa më shumë strukturën e plaintextit g
 **DES Algoritmi** (Data Encryption Standard)
 
 - Algoritëm simetrik me çelësa 64-bit (56-bit efektiv).
-- Hapësira e çelësave e vogël për standarded e sotme. ($2^{56}$)
+- Hapësira e çelësave e vogël për standardet e sotme. ($2^{56}$)
 - Block cipher me 64-bit blloqe.
 - 16 raunde të Feistel cikleve - 16 nënçelësa 48-bitësh.
 
