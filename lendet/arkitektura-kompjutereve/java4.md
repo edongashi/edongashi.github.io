@@ -12,7 +12,7 @@ Nëse përdorim 32 bita përmes 2-komplementit, kemi mundësi t'i paraqesim $2^{
 
 Nëse përdorim IEEE 754 formatin për të përafruar numra real, kemi mundësi të paraqesim intervalet:
 
-- Numrat negativ: $-(-2-2^{-23}\times 2^{128}) \;\dots\; {-2}^{-127}$
+- Numrat negativ: $-(-2-2^{-23})\times 2^{128})\;\dots\; {-2}^{-127}$
 - Numrat pozitiv: $2^{-127} \;\dots\; (2 - 2^{-23}) \times 2^{128}$
 
 ![](/lendet/arkitektura-kompjutereve/float32.png) <!-- .element: style="max-height:300px;border:none;" -->
@@ -23,9 +23,9 @@ Nëse përdorim IEEE 754 formatin për të përafruar numra real, kemi mundësi 
 
 5 regjione mbesin të pa paraqitura:
 
-1. Numrat negativ më të vegjël se $-(-2-2^{-23}\times 2^{128})$ - overflow negativ.
+1. Numrat negativ më të vegjël se $-(-2-2^{-23})\times 2^{128}$ - overflow negativ.
 2. Numrat negativ më të mëdhenj se ${-2}^{-127}$ - underflow negativ.
-3. Zeroja
+3. Zeroja.
 4. Numrat pozitiv më të vegjël se $2^{-127}$ - underflow pozitiv.
 5. Numrat pozitiv më të mëdhenj se $(2 - 2^{-23}) \times 2^{128}$ - oferflow pozitiv.
 
