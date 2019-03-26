@@ -1,4 +1,4 @@
-# Numrat me presje të lëvizshme
+# Numrat me pikë të lëvizshme
 
 ---
 
@@ -131,7 +131,7 @@ $$
 
 ---
 
-**Standardi IEEE 754** është forma më e zakonshme e paraqitjes së numrave me presje të lëvizshme. Numri paraqitet si bashkësi e 32 bitave (single-precision) dhe 64 bitave (double-precision).
+**Standardi IEEE 754** është forma më e zakonshme e paraqitjes së numrave me pikë të lëvizshme. Numri paraqitet si bashkësi e 32 bitave (single-precision) dhe 64 bitave (double-precision).
 
 ![](/lendet/arkitektura-kompjutereve/IEEE_754.png) <!-- .element: style="max-height:400px;border:none;" -->
 
@@ -174,7 +174,7 @@ Më herët është hasur termi *mantissa* për $S$, por më nuk preferohet përd
 
 ---
 
-Numri i njejtë me presje të lëvizshme mund të shprehet në forma të ndryshme.
+Numri i njejtë me pikë të lëvizshme mund të shprehet në forma të ndryshme.
 
 **Detyrë:** Të vërtetohet që numrat në vijim janë ekuivalent:
 

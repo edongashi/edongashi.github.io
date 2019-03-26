@@ -1,4 +1,4 @@
-# Aritmetika e numrave me presje të lëvizshme
+# Aritmetika e numrave me pikë të lëvizshme
 
 ---
 
@@ -41,7 +41,7 @@ Underflow mund të përafrohet me zero prandaj nuk paraqet aq humbje sa overflow
 
 ---
 
-Numrat e paraqitur me presje të lëvizshme nuk kanë shpërndarje uniforme.
+Numrat e paraqitur me pikë të lëvizshme nuk kanë shpërndarje uniforme.
 
 Vlerat e mundshme janë më të shpeshta më afër origjinës ndërsa rrallohen në amplituda të mëdhaja.
 
@@ -60,7 +60,7 @@ Për një madhësi fikse bitash, zmadhimi i precizitetin e ulë shtrirjen dhe e 
 
 ---
 
-Standardi IEEE 754 definon numrat me presje të lëvizshme në dy madhësi:
+Standardi IEEE 754 definon numrat me pikë të lëvizshme në dy madhësi:
 
 1. 32-bitëshe - single precision (8 eksponenti, 23 fraksioni).
 2. 64-bitëshe - double precision (11 bit eksponenti, 52 bit fraksioni).
@@ -119,13 +119,13 @@ NaN përdoret për të paraqitur ndonjë gabim të ndodhur gjatë operacioneve.
 
 ---
 
-## Aritmetika e numrave me presje të lëvizshme
+## Aritmetika e numrave me pikë të lëvizshme
 
 ---
 
 **Mbledhja dhe zbritja**
 
-Te numrat me presje të lëvizshme, procesi i mbledhjes/zbritjes është më kompleks se i shumëzimit/pjesëtimit.
+Te numrat me pikë të lëvizshme, procesi i mbledhjes/zbritjes është më kompleks se i shumëzimit/pjesëtimit.
 
 Algoritmi i mbledhjes/zbritjes:
 
@@ -264,6 +264,40 @@ Gjatë operacioneve rezultati del me më shumë bita sesa operandët. Bitat shte
 Ekzistojnë 4 mënyra rrumbullakësimi:
 
 1. Rrumbullakëso te më i afërti numër i paraqitshëm.
-2. Rrumbullakëso në drejtim të $+\inf$.
-3. Rrumbullakëso në drejtim të $-\inf$.
+2. Rrumbullakëso në drejtim të $+\infty$.
+3. Rrumbullakëso në drejtim të $-\infty$.
 4. Rrumbullakëso në drejtim të zeros.
+
+---
+
+**Standardi IEEE 754 për aritmetikën e numrave me pikë të lëvizshme** i definon disa relacione në aspekt me rrumbullakësimin, infinitin, NaN, numrat e denomalizuar.
+
+---
+
+**Infiniti**
+
+Çdo numër i fundëm $x$ i cili nuk është $\pm \infty$ e plotëson relacionin e krahasimit:
+
+$$
+-\infty < x < +\infty
+$$
+
+Si dhe cilido operacion i mbledhjes/zbritjes së $x$ me vlerën $\pm\infty$ e jep $\pm\infty$.
+
+---
+
+**Quiet NaN dhe Signaling NaN**
+
+- **NaN sinjalizues** paraqet një gabim gjatë veprimeve i cili lajmëron gabim.
+- **NaN i heshtur** paraqet një gabim i cili vazhdon veprimet pa lajmëruar gabim.
+
+---
+
+**NaN i heshtur** ndodh kur kemi:
+
+- Operacion mbi NaN sinjalizues.
+- $(\pm\infty)+(\mp\infty)$ ose $(\pm\infty)-(\pm\infty)$
+- $0\times\infty$
+- $\frac{0}{0}$ ose $\frac{\infty}{\infty}$
+- $x \;\%\; 0$ ose $\infty \;\%\; y$
+- $\sqrt{x}, \quad x < 0$
