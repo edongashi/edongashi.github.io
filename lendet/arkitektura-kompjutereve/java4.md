@@ -1,4 +1,4 @@
-# Numrat me presje të lëvizshme
+# Aritmetika e numrave me presje të lëvizshme
 
 ---
 
