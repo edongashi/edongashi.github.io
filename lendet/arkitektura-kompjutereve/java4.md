@@ -75,7 +75,7 @@ Këto formate përdoren për operacione të ndërmjetshme matematikore për ta m
 
 **Parametrat e IEEE 754 numrave**
 
-![](/lendet/arkitektura-kompjutereve/ieee754_spec.png) <!-- .element: style="max-height:640px;border:none;" -->
+![](/lendet/arkitektura-kompjutereve/ieee754_spec.png) <!-- .element: style="max-height:600px;border:none;" -->
 
 ---
 
@@ -115,7 +115,7 @@ NaN përdoret për të paraqitur ndonjë gabim të ndodhur gjatë operacioneve.
 
 ---
 
-![](/lendet/arkitektura-kompjutereve/ieee754_values.png) <!-- .element: style="max-height:640px;border:none;" -->
+![](/lendet/arkitektura-kompjutereve/ieee754_values.png) <!-- .element: style="max-height:600px;border:none;" -->
 
 ---
 
@@ -132,7 +132,7 @@ Algoritmi i mbledhjes/zbritjes:
 1. Kontrollo për zero.
 2. Përputhi fraksionet.
 3. Mbledhi ose zbriti fraksionet.
-4. Normalizoje rezultatin.
+4. Normalizo rezultatin.
 
 ---
 
@@ -159,7 +159,7 @@ Për çdo cikël shtyhet fraksioni djathtas dhe rritet eksponenti për 1 deri sa
 Fraksionet mbledhen duke marrë parasysh shenjat e tyre.
 
 - Në rast se shuma del 0, rezultati del 0.
-- Në rast se kemi overflow për 1 shifër, rritet eksponenti për 1 dhe shtyhet fraksioni djathtas për 1.
+- Në rast se kemi overflow për 1 shifër, rritet eksponenti për 1 dhe shtyhet fraksioni djathtas për 1 pozitë.
 
 Nëse kemi tejkalim të eksponentit konsiderohet si gabim dhe operacioni ndalohet.
 
@@ -173,8 +173,97 @@ Përfundimisht rrumbullakësohet rezultati dhe kthehet.
 
 ---
 
-![](/lendet/arkitektura-kompjutereve/ieee754_addsub.png) <!-- .element: style="max-height:640px;border:none;" -->
+![](/lendet/arkitektura-kompjutereve/ieee754_addsub.png) <!-- .element: style="max-height:600px;border:none;" -->
 
 ---
 
-![](/lendet/arkitektura-kompjutereve/ieee754_muldiv.png) <!-- .element: style="max-height:640px;border:none;" -->
+**Shumëzimi dhe pjesëtimi**
+
+Shumëzimi/pjesëtimi janë më të thjeshta se mbledhja/zbritja.
+
+---
+
+**Shumëzimi**
+
+1. Kontrollo për zero.
+2. Mbledhi eksponentët.
+3. Shumëzo fraksionet.
+4. Normalizo rezultatin.
+
+---
+
+**Faza 1: Testimi për zero**
+
+Nëse ndonjëri operand gjatë shumëzimit është zero, atëherë i gjithë rezultati është zero.
+
+---
+
+**Faza 2: Mbledhja e eksponentëve**
+
+Mbledhen eksponentët dhe i zbritet shtyerja (bias) për shkak të dyfishimit.
+
+$$
+\overbrace{(X + B)}^{E_X} + \overbrace{(Y + B)}^{E_Y} - B = (X + Y) + B
+$$
+
+Nëse kemi tejkalim të intervalit valid atëherë kemi gabim.
+
+---
+
+**Faza 3: Shumëzimi i fraksioneve**
+
+Shumëzohen fraksionet duke marrë parasysh shenjat e tyre.
+
+Shumëzimi është sikur i numrave të plotë.
+
+---
+
+**Faza 4: Normalizimi**
+
+Gjatë shumëzimit të fraksioneve rezultati del dyfish në gjatësi, me 2 shifra të pjesës së plotë.
+
+Nëse biti më i madh del 1 atëherë shtyhet presja për 1 pozitë majtas duke e rritur eksponentin për 1.
+
+Përfundimisht rrumbullakësohet rezultati në bitat e rezervuar për fraksionin dhe kthehet.
+
+---
+
+![](/lendet/arkitektura-kompjutereve/ieee754_mul.png) <!-- .element: style="max-height:600px;border:none;" -->
+
+---
+
+**Pjesëtimi**
+
+1. Kontrollo për zero.
+2. Zbrit eksponentët.
+3. Pjesëto fraksionet.
+4. Normalizo rezultatin.
+
+$$
+\overbrace{(X + B)}^{E_X} - \overbrace{(Y + B)}^{E_Y} + B = (X - Y) + B
+$$
+
+---
+
+![](/lendet/arkitektura-kompjutereve/ieee754_div.png) <!-- .element: style="max-height:600px;border:none;" -->
+
+---
+
+Siç u cek, gjatë përputhjes së eksponentëve fraksionet duhet të shtyhen djathtas, me ç'rast ndodh humbja e bitave të vegjël.
+
+Zakonisht ALU ka më shumë bita sesa që ruhen në fraksion. Këta bita shtohen si zero në të djathtë dhe quhen **guard bita**.
+
+Guard bitat e zvogëlojnë humbjen gjatë procesit të shtyerjes dhe të shumëzimit.
+
+---
+
+**Rrumbullakësimi**
+
+Gjatë operacioneve rezultati del me më shumë bita sesa operandët. Bitat shtesë duhet të mënjanohen duke i rrumbullakësuar.
+
+Ekzistojnë 4 mënyra rrumbullakësimi:
+
+1. Rrumbullakëso te më i afërti numër i paraqitshëm.
+2. Rrumbullakëso në drejtim të $+\inf$.
+3. Rrumbullakëso në drejtim të $-\inf$.
+4. Rrumbullakëso në drejtim të zeros.
