@@ -12,7 +12,7 @@ Nëse përdorim 32 bita përmes 2-komplementit, kemi mundësi t'i paraqesim $2^{
 
 Nëse përdorim IEEE 754 formatin për të përafruar numra real, kemi mundësi të paraqesim intervalet:
 
-- Numrat negativ: $-(-2-2^{-23})\times 2^{128})\;\dots\; {-2}^{-127}$
+- Numrat negativ: $-(2-2^{-23})\times 2^{128})\;\dots\; {-2}^{-127}$
 - Numrat pozitiv: $2^{-127} \;\dots\; (2 - 2^{-23}) \times 2^{128}$
 
 ![](/lendet/arkitektura-kompjutereve/float32.png) <!-- .element: style="max-height:300px;border:none;" -->
