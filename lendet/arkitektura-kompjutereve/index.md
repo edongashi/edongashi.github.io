@@ -7,6 +7,10 @@ suppresshooks: true
 
 # Arkitektura e Kompjuterëve
 
+## Njoftim për E/AKR/T
+
+Për shkaqe shëndetësore zhvendoset mësimi për grupin E/AKR/T nga data 28/03 në datën 01/04 (e hënë) nga ora 15:30.
+
 ## Orari i ushtrimeve
 
 | Grupi   | Dita    | Ora         | Salla         |
