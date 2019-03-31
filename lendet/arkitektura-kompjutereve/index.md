@@ -25,7 +25,8 @@ Për shkaqe shëndetësore zhvendoset mësimi për grupin E/AKR/T nga data 28/03
 
 1. [Hyrje](/lendet/arkitektura-kompjutereve/java1)
 2. [Sistemet numerike](/lendet/arkitektura-kompjutereve/java2)
-2. [Numrat me presje të lëvizshme](/lendet/arkitektura-kompjutereve/java3)
+3. [Numrat me pikë të lëvizshme](/lendet/arkitektura-kompjutereve/java3)
+4. [Aritmetika e numrave me pikë të lëvizshme](/lendet/arkitektura-kompjutereve/java4)
 
 ---
 

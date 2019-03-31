@@ -34,6 +34,7 @@ Në rast se keni probleme me repository private vlen të përmendet që GitHub o
 1. [Steganografia](/lendet/siguria-dhenave/java1)
 2. [Teknikat klasike të enkriptimit](/lendet/siguria-dhenave/java2)
 3. [Algoritmet simetrike](/lendet/siguria-dhenave/java3)
+4. [Algoritmet asimetrike](/lendet/siguria-dhenave/java4)
 
 [Kodi i ushtrimeve](https://github.com/edongashi/data-security-2019)
 
