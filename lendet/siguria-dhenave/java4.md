@@ -144,3 +144,9 @@ function expmod(a, b, n) {
   return result
 }
 ```
+
+---
+
+Kriptografia asimetrike është shumëfish më e ngadalshme sesa ajo simetrike.
+
+Për këtë arsye shpesh algoritmi asimetrik përdorët vetëm për enkriptimin e një çelësi simetrik, përmes së cilit enkriptohet pjesa tjetër e mesazhit.
