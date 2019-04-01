@@ -112,7 +112,7 @@ Gjatë ruajtjes së çelësit privat, shpesh ruhen edhe vlerat:
 
 **Sulmimi i RSA** kërkon gjetjen e eksponentit privat $d$.
 
-Për ta gjetur $d$ duhet të zbërthehet numri $n$ në prodhimin e dy numrave të thjeshtë $p$ dhe $q$. Ky problem është np-complete, prandaj nuk ka mënyrë të lehtë të zbërthimit.
+Për ta gjetur $d$ duhet të zbërthehet numri $n$ në prodhimin e dy numrave të thjeshtë $p$ dhe $q$. Ende nuk ekziston ndonjë algoritëm për zgjidhjen efikase të këtij problemi.
 
 ---
 
