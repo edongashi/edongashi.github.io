@@ -2,7 +2,7 @@
 
 ---
 
-Nëse përdorim 32 bita përmes 2-komplementit, kemi mundësi t'i paraqesim $2^{32}$ kombinime në intervalin $-2^{-31} \dots 2^{31}-1$.
+Nëse përdorim 32 bita përmes 2-komplementit, kemi mundësi t'i paraqesim $2^{32}$ kombinime në intervalin $-2^{31} \dots 2^{31}-1$.
 
 ![](/lendet/arkitektura-kompjutereve/int32.png) <!-- .element: style="max-height:300px;border:none;" -->
 
@@ -23,7 +23,7 @@ Nëse përdorim IEEE 754 formatin për të përafruar numra real, kemi mundësi 
 
 5 regjione mbesin të pa paraqitura:
 
-1. Numrat negativ më të vegjël se $-(-2-2^{-23})\times 2^{128}$ - overflow negativ.
+1. Numrat negativ më të vegjël se $-(2-2^{-23})\times 2^{128}$ - overflow negativ.
 2. Numrat negativ më të mëdhenj se ${-2}^{-127}$ - underflow negativ.
 3. Zeroja.
 4. Numrat pozitiv më të vegjël se $2^{-127}$ - underflow pozitiv.
@@ -81,7 +81,7 @@ Këto formate përdoren për operacione të ndërmjetshme matematikore për ta m
 
 **Paraqitja e numrave të normalizuar**
 
-Vlerat e eksponentit $1-254$ për single dhe $1-2046$ për double përdoren për ta paraqitur numrin e normalizuar të ndryshëm nga zero.
+Vlerat e eksponentit $1\dots 254$ për single dhe $1\dots 2046$ për double përdoren për ta paraqitur numrin e normalizuar të ndryshëm nga zero.
 
 ---
 
