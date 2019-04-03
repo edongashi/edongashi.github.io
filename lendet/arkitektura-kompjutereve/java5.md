@@ -184,7 +184,7 @@ Për gjenerim të adresave përdoren kombinimet në tabelën e mëposhtme.
 
 Nga secila kolonë mund të marrim (opsionalisht) nga një element dhe t'i mbledhim së bashku.
 
-![](/lendet/arkitektura-kompjutereve/8086_registers.png) <!-- .element: style="max-height:300px;border:none;" -->
+![](/lendet/arkitektura-kompjutereve/8086_addressing.png) <!-- .element: style="max-height:300px;border:none;" -->
 
 ---
 
