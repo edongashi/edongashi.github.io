@@ -97,7 +97,7 @@ Përdoret për veprime aritmetikore dhe logjike. Në 8086 nuk jemi të obliguar 
 
 **BX (BH/BL)** - regjistri bazë
 
-Përdoret për të ruajtur adresat bazë gjatë qasjes në memorie.
+Përdoret për të ruajtur shtesat (offset) e adresave gjatë qasjes në memorie.
 
 ---
 
@@ -115,7 +115,7 @@ Përdoret për rezultatet e shumëzimit dhe pjesëtimit dhe specifikim të porte
 
 **SI** - source index regjistri
 
-Përdoret si pointer për adresim në të dhëna.
+Përdoret si pointer për adresim në të dhëna, shpesh për operacione me stringje.
 
 Llogaritet si shtesa (offset) e adresës që gjendet në `DS`.
 
@@ -123,7 +123,7 @@ Llogaritet si shtesa (offset) e adresës që gjendet në `DS`.
 
 **DI** - destination index regjistri
 
-Përdoret si pointer për adresim në të dhëna.
+Përdoret si pointer për adresim në të dhëna, shpesh për operacione me stringje.
 
 Llogaritet si shtesa (offset) e adresës që gjendet në `ES`.
 
@@ -156,6 +156,52 @@ Përdorën gjatë llogaritjes së adresave për qasje në memorie.
 
 ---
 
+Gjatë adresimit përdorim këto terme:
+
+Vlerat e adresës që gjenden në segment regjistrat `CS`, `DS`, `SS`, `ES` quhen **segment**.
+
+Vlerat e adresës që gjendet në regjistrat e përgjithshëm `BX`, `SI`, `DI`, `BP` quhen **offset** (shtesë).
+
+---
+
+Gjatë qasjes në memorie adresa llogaritet duke shumëzuar vlerën e segment regjistrit me `10h` (segmenti) dhe duke e mbledhur vlerën rezultuese me vlerën e regjistrit të përgjithshëm (offsetin).
+
+Adresat e fituara njihen si **adresa efektive**.
+
+---
+
+Aritmetika me adresa bëhet për qëllim të qasjes në më shumë adresa sesa vetëm 16 bit (madhësia e regjistrave).
+
+Procesorët pasardhës (32-bit dhe 64-bit) nuk kanë nevojë për operacione të tilla pasi që regjistrat kanë hapësirë të mjaftueshme për të paraqitur numër më të madh të adresave ($2^{32}$ dhe $2^{64}$).
+
+---
+
+**Detyrë:** Supozohet se në segment regjistër gjendet vlera `0AB45h` dhe në regjistër të përgjitshëm gjendet vlera `00023h`. Të llogaritet adresa efektive që paraqesin këta regjistra.
+
+---
+
+Për gjenerim të adresave përdoren kombinimet në tabelën e mëposhtme.
+
+Nga secila kolonë mund të marrim (opsionalisht) nga një element dhe t'i mbledhim së bashku.
+
+![](/lendet/arkitektura-kompjutereve/8086_registers.png) <!-- .element: style="max-height:300px;border:none;" -->
+
+---
+
+Relacionet e përgjithshme regjistër-segment:
+
+- `BX` me `DS`
+- `SI` me `DS`
+- `DI` me `ES`
+- `BP` me `SS`
+
+Relacionet speciale:
+
+- `IP` me `CS`
+- `SP` me `SS`.
+
+---
+
 **Regjistrat special të 8086**
 
 - IP - instruction pointer, paraqet shtesën (offset) e `CS` segmentit për ta adresuar instruksionin aktual.
@@ -176,3 +222,90 @@ Përdorën gjatë llogaritjes së adresave për qasje në memorie.
 - Interrupt enable flag (IF) - lejimi i interrupteve të jashtme.
 - Direction Flag (DF) - drejtimi i disa operacioneve.
 - Overflow Flag (OF) - kur kemi signed overflow.
+
+---
+
+**Programimi në gjuhë të asamblerit**
+
+Sikur në gjuhët tjera programuese, programet shkruhen si listë e urdhërave.
+
+Programi fillon ekzekutimin nga lart-poshtë dhe kur mbaron kthen kontrollën te sistemi operativ.
+
+---
+
+Programet zakonisht fillohen me direktivën `ORG 100h`.
+
+`ORG` (origin) nuk është urdhër por direktivë që i tregon asamblerit të fillojë shkruarjen e kodit të makinës nga një shtesë e caktuar në segmentin aktual.
+
+Kjo për shkak që programet e vjetra .COM kanë nisur ekzekutimin nga offseti `0x100`.
+
+---
+
+Komentet shkruhen duke filluar me pikëpresje. Gjithçka pas `;` injorohet nga asambleri.
+
+---
+
+Urdhëri `RET` bën kthimin nga nënprogrami, ngjashëm me urdhërin `return` të gjuhëve të larta.
+
+---
+
+Programi minimal:
+
+```asm
+ORG 100h
+RET
+```
+
+që është ekuivalent me programin në gjuhën C:
+
+```c
+void main() {
+  return;
+}
+```
+
+---
+
+Urdhëri `MOV` është i ngjashëm me operatorin e barazimit `=` në gjuhë të larta programuese.
+
+`MOV DST, SRC` merr vlerën nga burimi `SRC` dhe e ruan në destinacionin `DST`.
+
+Kjo mund të ilustrohet me pseudokodin:
+
+```c
+DST = SRC
+```
+
+---
+
+Programi në vijim ruan vlerën heksadecimale `0x1234` në regjistrin `AX` dhe pastaj mbyllet:
+
+```asm
+ORG 100h
+MOV AX, 01234h
+RET
+```
+
+Pseudokodi në C:
+
+```c
+void main() {
+  AX = 0x1234;
+  return;
+}
+```
+
+---
+
+Programi që shfaq shkronjën `A` në ekran:
+
+```asm
+ORG 100h ; directive required for a COM program.
+MOV AX, 0B800h ; set AX to hexadecimal value of B800h.
+MOV DS, AX ; copy value of AX to DS.
+MOV CL, 'A' ; set CL to ASCII code of 'A', it is 41h.
+MOV CH, 01011111b ; set CH to binary value.
+MOV BX, 15Eh ; set BX to 15Eh.
+MOV [BX], CX ; copy contents of CX to memory at B800:015E
+RET ; returns to operating system.
+```
