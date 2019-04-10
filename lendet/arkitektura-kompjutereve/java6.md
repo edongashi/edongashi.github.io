@@ -167,7 +167,7 @@ Në dokumentacion hasim shprehjet **REG**, **SREG**, **immediate**, **memory**.
 
 ---
 
-**REG** paraqet një regjistër të përgjithshëm nga lista e mëposhtme.
+**REG** paraqet një regjistër të përgjithshëm nga lista e mëposhtme:
 
 `AX`, `BX`, `CX`, `DX`, `AH`, `AL`, `BL`, `BH`, `CH`, `CL`, `DH`, `DL`, `DI`, `SI`, `BP`, `SP`.
 
