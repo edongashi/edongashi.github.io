@@ -153,7 +153,7 @@ MOV DST, SRC
 
 ---
 
-**Karakteristikat e MOV**:
+**Karakteristikat e MOV**
 
 - Burimi mund të jetë vlerë imediate, regjister i përgjithshëm, ose lokacion memorik.
 - Destinacioni mund të jetë regjistër i përgjithshëm ose lokacion memorik.
