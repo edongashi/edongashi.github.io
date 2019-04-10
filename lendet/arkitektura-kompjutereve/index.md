@@ -28,6 +28,7 @@ Për shkaqe shëndetësore zhvendoset mësimi për grupin E/AKR/T nga data 28/03
 3. [Numrat me pikë të lëvizshme](/lendet/arkitektura-kompjutereve/java3)
 4. [Aritmetika e numrave me pikë të lëvizshme](/lendet/arkitektura-kompjutereve/java4)
 5. [Bazat e programimit në gjuhë të ulëta](/lendet/arkitektura-kompjutereve/java5)
+6. [Adresimet dhe instruksioni MOV](/lendet/arkitektura-kompjutereve/java6)
 
 ---
 
