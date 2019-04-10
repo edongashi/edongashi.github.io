@@ -251,7 +251,7 @@ Urdhëri `RET` bën kthimin nga nënprogrami, ngjashëm me urdhërin `return` t�
 
 Programi minimal:
 
-```asm
+```x86asm
 ORG 100h
 RET
 ```
@@ -280,7 +280,7 @@ DST = SRC
 
 Programi në vijim ruan vlerën heksadecimale `0x1234` në regjistrin `AX` dhe pastaj mbyllet:
 
-```asm
+```x86asm
 ORG 100h
 MOV AX, 01234h
 RET
@@ -299,7 +299,7 @@ void main() {
 
 Programi që shfaq shkronjën `A` në ekran:
 
-```asm
+```x86asm
 ORG 100h ; directive required for a COM program.
 MOV AX, 0B800h ; set AX to hexadecimal value of B800h.
 MOV DS, AX ; copy value of AX to DS.

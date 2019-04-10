@@ -35,7 +35,7 @@ int main()
 
 Kodi i tillë nuk mund të kuptohet nga procesori, prandaj duhet të përkthehet në një gjuhë të kuptueshme nga makina:
 
-```assembly
+```x86asm
 _main:
 pushl   %ebpz
 movl    %esp, %ebp
