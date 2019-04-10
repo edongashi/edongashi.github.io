@@ -216,7 +216,7 @@ Përmbledhje e operandëve valid:
 
 Në emulator një regjion i veçantë i memories është i rezervuar për video.
 
-Hapësira për video memorien fillon nga vlera `0800h`
+Hapësira për video memorien fillon nga vlera `B8000h`
 
 ---
 
@@ -225,11 +225,70 @@ Programi që shfaq shkronjën `A` në ekran:
 ```x86asm
 ORG 100h
 MOV AX, 0B800h
-MOV DI, 0
+MOV DI, 0h
 MOV DS, AX
 MOV CL, 'A'
 MOV CH, 01011111b
 MOV BX, 0h
 MOV [BX+DI], CX
 RET
+```
+
+---
+
+**Detyrë:** Të shkruhet emri juaj në pamje të emulatorit duke filluar nga një shtyerje të caktuar.
+
+---
+
+**Detyrë:** Të llogariten adresat efektive për paraqitjet e mëposhtme:
+
+$$
+\texttt{D15A:599A} \tag{1}
+$$
+
+$$
+\texttt{09A7:06CF} \tag{2}
+$$
+
+$$
+\texttt{ACCF:AB08} \tag{3}
+$$
+
+$$
+\texttt{4594:63F1} \tag{4}
+$$
+
+---
+
+**Detyrë:** Të tregohet se ku do të ruhet shënimi dhe çfarë vlere do ta ketë pas ekzekutimit të kodit:
+
+```x86asm
+MOV AX, 10h        ; 1
+MOV DS, AX         ; 2
+MOV [02h], 03h     ; 3
+MOV AX, 03h        ; 4
+MOV CX, 02h        ; 5
+MOV BX, AX         ; 6
+MOV DI, AX         ; 7
+MOV [BX], CX       ; 8
+MOV [BX+DI-1], 15h ; 9
+MOV [DI+1], BX     ; 10
+```
+
+---
+
+**Detyrë:** Të tregohet se çfarë operandi janë shprehjet në vijim (REG, SREG, memory, immediate):
+
+```x86asm
+AX
+SI
+[0AB12h]
+DS
+0A3h
+[DI+3]
+BX
+[BX]
+0AF05h
+[BX-03h]
+DI
 ```
