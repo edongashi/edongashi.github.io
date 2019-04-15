@@ -7,9 +7,17 @@ suppresshooks: true
 
 # Arkitektura e Kompjuterëve
 
-## Njoftim për E/AKR/T
+## Testi i parë vlerësues (Kompjuterika)
 
-Për shkaqe shëndetësore zhvendoset mësimi për grupin E/AKR/T nga data 28/03 në datën 01/04 (e hënë) nga ora 15:30.
+Testi i parë organizohet të shtunën (20/04/2019) nga ora 10:00 në njërin nga amfiteatrat.
+
+Testi është obligativ (18% të notës) dhe përfshin detyra nga temat:
+
+- Shndërrimet mes sistemeve numerike.
+- Paraqitja e numrave me dhe pa shenjë.
+- Veprimet aritmetike $+, -, \times, \div$ dhe logjike $\land, \lor, \oplus, \neg$ me numra të plotë binar.
+- Shndërrimi decimal/ieee754 float dhe anasjelltas.
+- Qasja në memorie dhe adresimi.
 
 ## Orari i ushtrimeve
 
