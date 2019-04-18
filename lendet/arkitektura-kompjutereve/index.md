@@ -9,7 +9,7 @@ suppresshooks: true
 
 ## Testi i parë vlerësues (Kompjuterika)
 
-Testi i parë organizohet të shtunën (20/04/2019) nga ora 10:00 në njërin nga amfiteatrat. Ushtrimet e dates 18/04 nuk do të mbahen për shkak të zhvendosjes (për grupet e kompjuterikës).
+Testi i parë organizohet të shtunën (20/04/2019) nga ora 12:30 në njërin nga amfiteatrat. Ushtrimet e dates 18/04 nuk do të mbahen për shkak të zhvendosjes (për grupet e kompjuterikës).
 
 Testi është obligativ (18% të notës) dhe përfshin detyra nga temat:
 
