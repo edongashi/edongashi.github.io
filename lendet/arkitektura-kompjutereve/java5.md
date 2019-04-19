@@ -225,6 +225,12 @@ Relacionet speciale:
 
 ---
 
+**Carry Flag** ndezet nëse kemi bartje nga MSB gjatë mbledhjes.
+
+**Overflow Flag** ndezet nëse mbledhja e dy numrave pozitiv jep numër negativ ose mbledhja e dy numrave negativ jep numër pozitiv.
+
+---
+
 **Programimi në gjuhë të asamblerit**
 
 Sikur në gjuhët tjera programuese, programet shkruhen si listë e urdhërave.
