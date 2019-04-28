@@ -9,15 +9,7 @@ suppresshooks: true
 
 ## Testi i parë vlerësues (Kompjuterika)
 
-Testi i parë organizohet të shtunën (20/04/2019) nga ora 12:30 në njërin nga amfiteatrat. Ushtrimet e dates 18/04 nuk do të mbahen për shkak të zhvendosjes (për grupet e kompjuterikës).
-
-Testi është obligativ (18% të notës) dhe përfshin detyra nga temat:
-
-- Shndërrimet mes sistemeve numerike.
-- Paraqitja e numrave me dhe pa shenjë.
-- Veprimet aritmetike $+, -, \times, \div$ dhe logjike $\land, \lor, \oplus, \neg$ me numra të plotë binar.
-- Shndërrimi decimal/ieee754 float dhe anasjelltas.
-- Qasja në memorie dhe adresimi.
+Klikoni këtu për të hapur rezultatet e testit të parë vlerësues. Orari i konsultimeve do të shpallet së shpejti.
 
 ## Orari i ushtrimeve
 
