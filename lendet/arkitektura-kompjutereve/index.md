@@ -9,7 +9,7 @@ suppresshooks: true
 
 ## Testi i parë vlerësues (Kompjuterika)
 
-Klikoni këtu për të hapur rezultatet e testit të parë vlerësues. Orari i konsultimeve do të shpallet së shpejti.
+Klikoni [këtu](/lendet/arkitektura-kompjutereve/testi1) për të hapur rezultatet e testit të parë vlerësues. Orari i konsultimeve do të shpallet së shpejti.
 
 ## Orari i ushtrimeve
 
