@@ -29,6 +29,7 @@ Klikoni [këtu](/lendet/arkitektura-kompjutereve/testi1) për të hapur rezultat
 4. [Aritmetika e numrave me pikë të lëvizshme](/lendet/arkitektura-kompjutereve/java4)
 5. [Bazat e programimit në gjuhë të ulëta](/lendet/arkitektura-kompjutereve/java5)
 6. [Adresimet dhe instruksioni MOV](/lendet/arkitektura-kompjutereve/java6)
+7. [Variablat dhe interruptet](/lendet/arkitektura-kompjutereve/java7)
 
 ---
 
