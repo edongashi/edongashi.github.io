@@ -4,7 +4,7 @@ noslides: true
 
 # Rezultatet e testit të parë vlerësues
 
-Orari i konsultimeve do të shpallet së shpejti.
+Konsultimet do të mbahen të premten (03/05/2019) nga ora 12:00.
 
 | ID           | Pikët (Max 18) |
 | ------------ | -------------- |
