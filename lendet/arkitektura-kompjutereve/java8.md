@@ -281,7 +281,7 @@ $$
 
 ---
 
-**DIV** paraqet shumëzim **pa shenjë**.
+**DIV** paraqet pjesëtim **pa shenjë**.
 
 Kur operandi është **bajt**:
 
@@ -303,7 +303,7 @@ $$
 
 ---
 
-**IDIV** paraqet shumëzim **me shenjë**.
+**IDIV** paraqet pjesëtim **me shenjë**.
 
 Kur operandi është **bajt**:
 
