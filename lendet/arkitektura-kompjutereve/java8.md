@@ -92,6 +92,17 @@ Kur mbaron procedura urdhëri `RET` kthehet te adresa e ruajtur në stack.
 
 **Detyrë:** Të shkruhet programi i cili lexon 3 numra të plotë dhe pastaj i shfaq ata.
 
+```text
+Jepni vleren a: 15
+Jepni vleren b: -2
+Jepni vleren c: 3
+
+Keni shtypur vlerat:
+a = 15
+b = -2
+c = 3
+```
+
 ---
 
 ## Instruksionet logjike dhe aritmetike
@@ -357,6 +368,13 @@ memory
 ---
 
 **Detyrë:** Të lexohen nga tastiera brinjët e drejtkëndëshit, pastaj të llogariten perimetri dhe sipërfaqja (në variabla), dhe të shfaqen në ekran.
+
+```text
+Jepni brinjen a: 5
+Jepni brinjen b: 3
+Perimetri i drejtkendeshit: 16
+Siperfaqja e drejtkendeshit: 15
+```
 
 ---
 
