@@ -7,6 +7,10 @@ suppresshooks: true
 
 # Arkitektura e Kompjuterëve
 
+## Linku për grupet (A/E/T)
+
+Klikoni [këtu](https://docs.google.com/spreadsheets/d/10ijKqxnF67oQgOoO146o7kW0IzDpBwNFsBtWC6CrI8g/edit?usp=sharing) për t'i regjistruar anëtarët e grupit (vetëm për drejtimet A/E/T).
+
 ## Testi i parë vlerësues (Kompjuterika)
 
 Klikoni [këtu](/lendet/arkitektura-kompjutereve/testi1) për të hapur rezultatet e testit të parë vlerësues. Konsultimet do të mbahen të premten (03/05/2019) nga ora 12:00.
@@ -30,6 +34,7 @@ Klikoni [këtu](/lendet/arkitektura-kompjutereve/testi1) për të hapur rezultat
 5. [Bazat e programimit në gjuhë të ulëta](/lendet/arkitektura-kompjutereve/java5)
 6. [Adresimet dhe instruksioni MOV](/lendet/arkitektura-kompjutereve/java6)
 7. [Variablat dhe interruptet](/lendet/arkitektura-kompjutereve/java7)
+8. [Instruksionet aritmetike dhe logjike](/lendet/arkitektura-kompjutereve/java8)
 
 ---
 

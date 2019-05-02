@@ -1,4 +1,4 @@
-# Veprimet aritmetike dhe logjike
+# Instruksionet aritmetike dhe logjike
 
 ---
 
