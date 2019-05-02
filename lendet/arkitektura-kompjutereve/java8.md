@@ -407,5 +407,5 @@ $$
 $$
 
 $$
-((a \lor \lnot b) + 5) \land 125 \tag{3}
+((a \lor \lnot b) + 5) \land 174 \tag{3}
 $$
