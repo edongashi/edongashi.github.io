@@ -361,9 +361,27 @@ memory
 
 **Detyrë:** Të deklarohet variabla $shuma=0$, dhe të lexohen pesë numrat e ardhshëm nga tastiera. Secili numër i lexuar t'i shtohet shumës.
 
+```text
+Jepni numer: 3
+Jepni numer: 1
+Jepni numer: 2
+Jepni numer: 7
+Jepni numer: 4
+Totali: 17
+```
+
 ---
 
 **Detyrë:** Të lexohen numrat e plotë $a$ dhe $b$ nga tastiera, dhe pastaj t'iu ndërrohen vlerat mes veti.
+
+```text
+Shtypni a: 10
+Shtypni b: 3
+Para nderrimit:
+a = 10, b = 3
+Pas nderrimit:
+a = 3, b = 10
+```
 
 ---
 
