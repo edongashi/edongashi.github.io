@@ -7,6 +7,10 @@ suppresshooks: true
 
 # Siguria e të Dhënave
 
+## Njoftim për të hënën (13/05/2019)
+
+Ushtrimet e 13/05/2019 do të mbahen nga ora 10:00 për të dy grupet. Grupet që kanë mbetur pa e mbrojtur projektin e parë të paraqiten nga ora 12:30.
+
 ## Mbrojtja e projektit të parë
 
 Mbrojtja e projektit të parë do të bëhet të premten, më 10/05/2019. Në [këtë link](https://docs.google.com/spreadsheets/d/1ifBqKw1TupBgrfNpo8wd-Aa8CXEB0lwmOYDeKp70ZEY/edit?usp=sharing) e plotësoni grupin dhe orarin e mbrojtjes për projektin e parë (në intervale 15 minutëshe).
