@@ -7,9 +7,11 @@ suppresshooks: true
 
 # Arkitektura e Kompjuterëve
 
-## Linku për grupet (A/E/T)
+## Punimi seminarik (A/E/T)
 
-Klikoni [këtu](https://docs.google.com/spreadsheets/d/10ijKqxnF67oQgOoO146o7kW0IzDpBwNFsBtWC6CrI8g/edit?usp=sharing) për t'i regjistruar anëtarët e grupit (vetëm për drejtimet A/E/T).
+Në [këtë link](https://docs.google.com/spreadsheets/d/10ijKqxnF67oQgOoO146o7kW0IzDpBwNFsBtWC6CrI8g/edit?usp=sharing) gjeni temat për punimin seminarik për grupet e ndara të drejtimeve (A/E/T). Afati i dorëzimit është 23.05.2019.
+
+Projekti vlerësohet me 15 pikë dhe duhet të jetë konform [këtij shablloni](lendet/arkitektura-kompjutereve/Template_AK_2019.doc).
 
 ## Testi i parë vlerësues (Kompjuterika)
 
