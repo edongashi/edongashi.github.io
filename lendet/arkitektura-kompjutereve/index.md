@@ -37,6 +37,7 @@ Klikoni [këtu](/lendet/arkitektura-kompjutereve/testi1) për të hapur rezultat
 6. [Adresimet dhe instruksioni MOV](/lendet/arkitektura-kompjutereve/java6)
 7. [Variablat dhe interruptet](/lendet/arkitektura-kompjutereve/java7)
 8. [Instruksionet aritmetike dhe logjike](/lendet/arkitektura-kompjutereve/java8)
+9. [Kërcimet, procedurat, stack](/lendet/arkitektura-kompjutereve/java9)
 
 ---
 
