@@ -46,6 +46,14 @@ Klikoni [këtu](/lendet/arkitektura-kompjutereve/testi1) për të hapur rezultat
 7. [Variablat dhe interruptet](/lendet/arkitektura-kompjutereve/java7)
 8. [Instruksionet aritmetike dhe logjike](/lendet/arkitektura-kompjutereve/java8)
 9. [Kërcimet, procedurat, stack](/lendet/arkitektura-kompjutereve/java9)
+10. Keshimi
+    - [Cache Memory](https://www.gatevidyalay.com/cache-memory/)
+    - [Mapping Techniques](https://www.gatevidyalay.com/cache-mapping-cache-mapping-techniques/)
+    - [Direct Mapping](https://www.gatevidyalay.com/direct-mapping-cache-mapping/)
+    - [Direct Mapping Detyra](https://www.gatevidyalay.com/direct-mapping-cache-practice-problems/)
+    - [Fully Associative Mapping Detyra](https://www.gatevidyalay.com/fully-associative-cache-practice-problems/)
+    - [Set Associative Mapping](https://www.gatevidyalay.com/set-associative-mapping-cache-mapping/)
+    - [Set Associative Mapping Detyra](https://www.gatevidyalay.com/set-associative-mapping-practice-problems/)
 
 ---
 
