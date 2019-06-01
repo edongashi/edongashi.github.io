@@ -7,7 +7,7 @@ suppresshooks: true
 
 [Pretty Good Privacy (PGP)](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) është një vegël shumë e përdorur për funksione kriptografike sikur enkriptimi/nënshkrimi i emailave, fajllave, disqeve etj.
 
-Për detyrën e tretë duhet ta përdorni PGP për të gjeneruar një çelës publik të cilin duhet ta ngarkoni në GitHub (në repository ku keni 2 projektet tjera).
+Për detyrën e tretë duhet ta përdorni PGP për të gjeneruar një çelës publik të cilin duhet ta ngarkoni në GitHub (në repository ku i keni 2 projektet tjera).
 
 Çelësin e krijuar e përdorni për ta nënshkruar në clearsign një tekst që mban ndonjë fakt rreth juve. Tekstin bashkë me nënshkrimin e dërgoni në email adresën e asistentit përkatës (arbnor.halili@uni-pr.edu, edon.gashi@uni-pr.edu).
 
