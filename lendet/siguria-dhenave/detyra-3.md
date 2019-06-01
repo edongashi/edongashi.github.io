@@ -20,7 +20,7 @@ Detyra është individuale dhe duhet të plotësohen këto kritere për t'u vler
 
 ## Referenca
 
-Një vegël që mund ta përdorni është GNU Privacy Guard (GPG) e cila vie e instaluar në Linux, ndërsa në Windows instalohet bashkë me GIT Bash ose mund të instalohet si e pavarur nga faqja e GPG.
+Një vegël që mund ta përdorni është GNU Privacy Guard (GPG) e cila vie e instaluar në Linux, ndërsa në Windows instalohet bashkë me Git Bash ose mund të instalohet si e pavarur nga faqja e GPG.
 
 GPG ofron komanda si `--gen-key`, `--clearsign`, `--export`, etj.
 
