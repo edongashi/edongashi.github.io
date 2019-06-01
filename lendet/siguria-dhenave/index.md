@@ -7,9 +7,9 @@ suppresshooks: true
 
 # Siguria e të Dhënave
 
-## Njoftim për të hënën (27/05/2019)
+## Grupet e projekteve
 
-Për shkak të kompenzimit të orëve të humbura në ushtrimet e të hënës (27/05/2019) do të zhvillohen dy njësi nga ora 10:00 deri në ora 13:00 për të dyja grupet.
+Në [këtë link](https://docs.google.com/spreadsheets/d/1ifBqKw1TupBgrfNpo8wd-Aa8CXEB0lwmOYDeKp70ZEY/edit?usp=sharing) gjeni grupet për projekte.
 
 ---
 
