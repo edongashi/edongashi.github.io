@@ -25,7 +25,9 @@ Vlerat në bold i merrni për projektin tuaj nga lista pas përshkrimit.
 
 Të gjitha kërkesat që klienti i dërgon te serveri i autorizimit duhet të jenë të enkriptuara me CBC DES. Skema e mesazheve duhet të jetë: `base64(<IV>+rsa(<KEY>)+des(<MSG>))`, ku `<IV>` dhe `<KEY>` gjenerohen rastësisht (duke thirrur crypto API për gjenerim të sigurt të vlerave random). Çelësi simetrik `<KEY>` duhet të enkriptohet me çelësin publik të serverit të autorizimit. Të gjitha përgjigjet e kthyera nga serveri duhet të jenë të enkriptuara me çelësin e njejtë (`<KEY>`) të formës `base64(<IV'>+des(<MSG>))` ku `<IV'>` është vlerë tjetër e rastit. Simboli `+` paraqet vargëzimin e bajtave.
 
-# Grupi 1 (Ass. Edon Gashi)
+---
+
+## Grupi 1 (Ass. Edon Gashi)
 
 | Grupi | Protokoli | Baza e shënimeve | Shfrytëzuesi | Çelësi publik | Nënshkrimi |
 | ----- | --------- | ---------------- | ------------ | ------------- | ---------- |
@@ -62,7 +64,9 @@ Të gjitha kërkesat që klienti i dërgon te serveri i autorizimit duhet të je
 | 31    | UDP       | MYSQL            | Student      | X.509         | JWT        |
 | 32    | UDP       | JSON             | Punëtor      | X.509         | XML        |
 
-# Grupi 2 (Ass. Arbnor Halili)
+---
+
+## Grupi 2 (Ass. Arbnor Halili)
 
 | Grupi | Protokoli | Baza e shënimeve | Shfrytëzuesi | Çelësi publik | Nënshkrimi |
 | ----- | --------- | ---------------- | ------------ | ------------- | ---------- |
