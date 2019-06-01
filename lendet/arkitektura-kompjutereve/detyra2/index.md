@@ -1,3 +1,8 @@
+---
+noslides: true
+suppresshooks: true
+---
+
 # Detyra e dytë nga lënda Arkitekturë e Kompjuterëve (A/E/T)
 
 1. [Grupi 1](/lendet/arkitektura-kompjutereve/detyra2/detyra2_gr1.pdf)

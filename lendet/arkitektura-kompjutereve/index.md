@@ -7,19 +7,9 @@ suppresshooks: true
 
 # Arkitektura e Kompjuterëve
 
-## Prezentimi i punimeve (A/E/T)
+## Detyra e dytë (A/E/T)
 
-Termini i parë për prezentim të projekteve është të hënën (27/05) nga ora 15:30. Termini i dytë është të enjten (30/05) ora 16:00. Grupet vullnetare mund të prezentojnë të parët, pas grupeve vullnetare thirren grupet me renditje te rastit (random). Prezenca e të gjithë studentëve është e obligueshme në të dyja terminet, pavaresisht a ka mbaruar mbrojtja e grupit apo jo.
-
-Prezentimi përfshin një hyrje dhe shpjegim te shkurter në temen që keni diskutuar në punim. Mënyra e prezentimit nuk ju percaktohet (slajde, ilustrime, etj). Kufizimi i vetëm është koha maksimale nga 9 minuta për secilin grup (3 për student). Nëse keni slajde ose materiale tjera të nevojshme i dërgoni paraprakisht në email.
-
-Pengimi i çfarëdollojshëm i prezentimeve të grupeve tjera ndëshkohet ashpërsisht. Pyetjet dhe diskutimet (me vend) shpërblehen me pike shtesë të vijushmerisë.
-
-## Punimi seminarik (A/E/T)
-
-Në [këtë link](https://docs.google.com/spreadsheets/d/10ijKqxnF67oQgOoO146o7kW0IzDpBwNFsBtWC6CrI8g/edit?usp=sharing) gjeni temat për punimin seminarik për grupet e ndara të drejtimeve (A/E/T). Afati i dorëzimit është 23.05.2019.
-
-Projekti vlerësohet me 15 pikë dhe duhet të jetë konform [këtij shablloni](/lendet/arkitektura-kompjutereve/Template_AK_2019.doc).
+Në [këtë link](/lendet/arkitekture-kompjutereve/detyra2) gjeni përshkrimin e detyrës së dytë vlerësuese për grupet (A/E/T). Grupet janë të njejtat sikur të projektit të parë. Në [këtë link](https://docs.google.com/spreadsheets/d/10ijKqxnF67oQgOoO146o7kW0IzDpBwNFsBtWC6CrI8g/edit?usp=sharing) gjeni grupet e ndara për projektet (A/E/T).
 
 ## Testi i parë vlerësues (Kompjuterika)
 
