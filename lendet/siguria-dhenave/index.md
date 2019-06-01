@@ -7,9 +7,9 @@ suppresshooks: true
 
 # Siguria e të Dhënave
 
-## Grupet e projekteve
+## Projekti i dytë
 
-Në [këtë link](https://docs.google.com/spreadsheets/d/1ifBqKw1TupBgrfNpo8wd-Aa8CXEB0lwmOYDeKp70ZEY/edit?usp=sharing) gjeni grupet për projekte.
+Në [këtë link](/lendet/siguria-dhenave/detyra-2) gjeni përshkrimin e detyrës së dytë vlerësuese ([shkarko në pdf](/lendet/siguria-dhenave/detyra_2.pdf)). Në [këtë link](https://docs.google.com/spreadsheets/d/1ifBqKw1TupBgrfNpo8wd-Aa8CXEB0lwmOYDeKp70ZEY/edit?usp=sharing) gjeni grupet për projekte (të njejtat me detyrën 1).
 
 ---
 
