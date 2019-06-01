@@ -11,7 +11,7 @@ Për detyrën e tretë duhet ta përdorni PGP për të gjeneruar një çelës pu
 
 Çelësin e krijuar e përdorni për ta nënshkruar në clearsign një tekst që mban ndonjë fakt rreth juve. Tekstin bashkë me nënshkrimin e dërgoni në email adresën e asistentit përkatës (arbnor.halili@uni-pr.edu, edon.gashi@uni-pr.edu).
 
-Detyra është individuale dhe duhet të plotësohen këto kritere për tu vlerësuar:
+Detyra është individuale dhe duhet të plotësohen këto kritere për t'u vlerësuar:
 
 1. Çelësi publik duhet të jetë krijuar në emrin dhe email adresën tuaj.
 2. Çelësi publik duhet të jetë i ngarkuar në GitHub në repository ku gjenden projektet e kaluara.
