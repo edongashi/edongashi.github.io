@@ -45,9 +45,7 @@ NbSZiuIAN8pC
       }
     }
 
-    const keys = data.keys
-    const message = data.message
-    const verification = data.verification
+    const { keys, message, verification } = data
     const signature = verification.signatures && verification.signatures[0]
     if (!signature) {
       return {
