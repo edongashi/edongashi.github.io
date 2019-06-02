@@ -40,9 +40,16 @@ psq4cxU2pUwcZSnLte/6usnE0g==
 -----END PGP PUBLIC KEY BLOCK-----`
 
   function formatVerification(data) {
-    console.log(data)
-    const { keys, message, verification } = data
-    const [signature] = verification.signatures
+    if (!data) {
+      return {
+        state: 'initial'
+      }
+    }
+
+    const keys = data.keys
+    const message = data.message
+    const verification = data.verification
+    const signature = verification.signatures && verification.signatures[0]
     if (!signature) {
       return {
         state: 'error',
