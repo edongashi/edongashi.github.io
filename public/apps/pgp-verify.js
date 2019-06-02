@@ -163,7 +163,7 @@ NbSZiuIAN8pC
             </thead>
             <tbody>
               <tr>
-                <td>{signature.valid}</td>
+                <td>{signature.valid.toString()}</td>
                 <td>{signature.created}</td>
                 <td>{signature.keyid}</td>
               </tr>
@@ -179,8 +179,8 @@ NbSZiuIAN8pC
             </thead>
             <tbody>
               {keys.map((k, i) => (<tr key={i}>
-                <td>k.keyid</td>
-                <td>k.user</td>
+                <td>{k.keyid}</td>
+                <td>{k.user}</td>
               </tr>))}
             </tbody>
           </table>
