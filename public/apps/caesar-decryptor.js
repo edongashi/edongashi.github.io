@@ -4,25 +4,6 @@ define([
   '/public/js/use-debounce.js'
 ], function (React, predict, { useDebounce }) {
   const { useState, useEffect, useMemo } = React
-
-  function useDebounce(value, delay) {
-    const [debouncedValue, setDebouncedValue] = useState(value)
-
-    useEffect(
-      () => {
-        const handler = setTimeout(() => {
-          setDebouncedValue(value)
-        }, delay)
-        return () => {
-          clearTimeout(handler)
-        }
-      },
-      [value, delay]
-    )
-
-    return debouncedValue
-  }
-
   const maxSize = { maxWidth: '20%', width: '20%' }
 
   function CaesarDecryptor() {
