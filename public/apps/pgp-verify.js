@@ -1,9 +1,8 @@
 define([
   'react',
   'openpgp',
-  '/public/js/react-json-viewer.js',
   '/public/js/use-debounce.js'
-], function (React, openpgp, JSONViewer, { useDebounce }) {
+], function (React, openpgp, { useDebounce }) {
   const { useState, useEffect } = React
 
   const initialMessage = `-----BEGIN PGP SIGNED MESSAGE-----
@@ -153,11 +152,40 @@ NbSZiuIAN8pC
           Gabim: {stringifyError(info.error)}
         </div>
       case 'verified':
+        const { signature, keys } = info
         return <div>
           <h3>Të dhënat e nënshkrimit</h3>
-          <JSONViewer json={info.signature} />
+          <table>
+            <thead>
+              <tr>
+                <th>valid</th>
+                <th>created</th>
+                <th>keyid</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{signature.valid}</td>
+                <td>{signature.created}</td>
+                <td>{signature.keyid}</td>
+              </tr>
+            </tbody>
+          </table>
           <h3>Çelësat</h3>
-          <JSONViewer json={info.keys} />
+          <table>
+            <thead>
+              <tr>
+                <th>keyid</th>
+                <th>user</th>
+              </tr>
+            </thead>
+            <tbody>
+              {keys.map((k, i) => (<tr key={i}>
+                <td>k.keyid</td>
+                <td>k.user</td>
+              </tr>))}
+            </tbody>
+          </table>
         </div>
       case 'initial':
       default:
