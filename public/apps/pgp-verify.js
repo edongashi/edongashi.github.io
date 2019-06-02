@@ -59,17 +59,17 @@ psq4cxU2pUwcZSnLte/6usnE0g==
 
     return {
       state: 'verified',
-      verification: {
+      signature: {
         valid: signature.valid,
         created: message.signature.packets[0].created.toGMTString(),
-        keyid: signature.keyid.toHex(),
-        keys: keys.map(k =>
-          ({
-            keyid: k.keyPacket.keyid.toHex(),
-            users: k.users.map(u => u.userId.userid || u.userId.email || u.userId.name || '?')
-          })
-        )
-      }
+        keyid: signature.keyid.toHex()
+      },
+      keys: keys.map(k =>
+        ({
+          keyid: k.keyPacket.keyid.toHex(),
+          users: k.users.map(u => u.userId.userid || u.userId.email || u.userId.name || '?')
+        })
+      )
     }
   }
 
@@ -154,9 +154,9 @@ psq4cxU2pUwcZSnLte/6usnE0g==
       case 'verified':
         return <div>
           <h3>Të dhënat e nënshkrimit</h3>
-          <JSONViewer json={signature} />
+          <JSONViewer json={info.signature} />
           <h3>Çelësat</h3>
-          <JSONViewer json={keys} />
+          <JSONViewer json={info.keys} />
         </div>
       case 'initial':
       default:
