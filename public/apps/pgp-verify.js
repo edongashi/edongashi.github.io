@@ -42,7 +42,7 @@ psq4cxU2pUwcZSnLte/6usnE0g==
   function formatVerification(data) {
     console.log(data)
     const { keys, message, verification } = data
-    const [signature] = verification.signatures[0]
+    const [signature] = verification.signatures
     if (!signature) {
       return {
         state: 'error',
