@@ -11,6 +11,8 @@ suppresshooks: true
 
 Në [këtë link](/lendet/arkitektura-kompjutereve/detyra2) gjeni përshkrimin e detyrës së dytë vlerësuese për grupet (A/E/T). Grupet janë të njejtat sikur të projektit të parë. Në [këtë link](https://docs.google.com/spreadsheets/d/10ijKqxnF67oQgOoO146o7kW0IzDpBwNFsBtWC6CrI8g/edit?usp=sharing) gjeni grupet e ndara për projektet (A/E/T).
 
+Afati i fundit i dorëzimit është të dielën, 09.06.2019, ora 23:59. Zgjidhjet duhet të diskutohen dhe të paraqiten në një dokument me shabllonin e detyrës së parë. Kodi mund të përfshihet brenda dokumentit ose të shtohet si shtesë e ndarë me praprashtesën `.asm`.
+
 ## Testi i parë vlerësues (Kompjuterika)
 
 Klikoni [këtu](/lendet/arkitektura-kompjutereve/testi1) për të hapur rezultatet e testit të parë vlerësues. Konsultimet do të mbahen të premten (03/05/2019) nga ora 12:00.
