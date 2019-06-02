@@ -60,7 +60,7 @@ psq4cxU2pUwcZSnLte/6usnE0g==
     return {
       state: 'verified',
       signature: {
-        valid: signature.valid,
+        valid: !!signature.valid,
         created: message.signature.packets[0].created.toGMTString(),
         keyid: signature.keyid.toHex()
       },
