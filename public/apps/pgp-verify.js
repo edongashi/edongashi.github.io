@@ -39,6 +39,24 @@ psq4cxU2pUwcZSnLte/6usnE0g==
 =ogSl
 -----END PGP PUBLIC KEY BLOCK-----`
 
+  function formatVerification(data) {
+    console.log(data)
+    const { key, message, verification } = data
+    const [signature] = verificed.signatures[0]
+    if (!signature) {
+      return {
+        state: 'error',
+        error: 'Nuk u gjet nënshkrimi i mesazhit'
+      }
+    }
+
+    return {
+      state: 'verified',
+      valid: signature.valid
+      key: signature.keyid.toHex()
+    }
+  }
+
   function usePgpDetails(message, pubkey) {
     const [info, setInfo] = useState({
       state: 'initial'
@@ -59,18 +77,19 @@ psq4cxU2pUwcZSnLte/6usnE0g==
 
         async function verify() {
           try {
+            const key = await openpgp.key.readArmored(pubkey)
             const options = {
               message: await openpgp.cleartext.readArmored(message),
-              publicKeys: (await openpgp.key.readArmored(pubkey)).keys
+              publicKeys: key.keys
             }
 
             const verification = await openpgp.verify(options)
             if (!aborted) {
-              console.log(verification)
-              setInfo({
-                state: 'verified',
+              setInfo(formatVerification({
+                message: options.message,
+                key,
                 verification
-              })
+              }))
             }
           } catch (error) {
             if (!aborted) {
