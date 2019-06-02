@@ -203,14 +203,14 @@ NbSZiuIAN8pC
       <h3>Verifkuesi i PGP nënshkrimit</h3>
       <label>Teksti i nënshkruar</label>
       <textarea
-        rows={16}
+        rows={14}
         style={textareaStyle}
         value={messageVolatile}
         onChange={e => setMessage(e.target.value)} />
       <br />
       <label>Çelësi publik</label>
       <textarea
-        rows={16}
+        rows={14}
         style={textareaStyle}
         value={pubkeyVolatile}
         onChange={e => setPubkey(e.target.value)} />
