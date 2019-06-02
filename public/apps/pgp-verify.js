@@ -128,11 +128,11 @@ psq4cxU2pUwcZSnLte/6usnE0g==
     }
   }
 
-  function CaesarDecryptor() {
+  function PgpVerify() {
     const [messageVolatile, setMessage] = useState(initialMessage)
     const [pubkeyVolatile, setPubkey] = useState(initialSignature)
-    const message = useDebounce(messageVolatile, 500)
-    const pubkey = useDebounce(pubkeyVolatile, 500)
+    const [message] = useDebounce(messageVolatile, 500)
+    const [pubkey] = useDebounce(pubkeyVolatile, 500)
     const info = usePgpDetails(message, pubkey)
     return <div>
       <h3>Verifkuesi i PGP nënshkrimit</h3>
@@ -154,6 +154,6 @@ psq4cxU2pUwcZSnLte/6usnE0g==
     </div>
   }
 
-  CaesarDecryptor.title = 'Verifkuesi i PGP nënshkrimit'
-  return CaesarDecryptor
+  PgpVerify.title = 'Verifkuesi i PGP nënshkrimit'
+  return PgpVerify
 })

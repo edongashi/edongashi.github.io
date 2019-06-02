@@ -9,7 +9,7 @@ define([
   function CaesarDecryptor() {
     const [cipherText, setCipherText] = useState('')
     const debouncedCipherText = useDebounce(cipherText, 500)
-    const plainText = useMemo(() => predict(debouncedCipherText), [debouncedCipherText])
+    const [plainText] = useMemo(() => predict(debouncedCipherText), [debouncedCipherText])
     return <div>
       <h3>Dekriptori i Kodit të Cezarit</h3>
       <textarea
