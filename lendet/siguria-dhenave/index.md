@@ -52,4 +52,5 @@ Në [këtë link](/lendet/siguria-dhenave/detyra-3) gjeni përshkrimin e detyrë
 
 ## Vegla
 
+- Verifkuesi i PGP nënshkrimit](/app?id=ljxmhj6dwajmhagcuhb27qu5glbytq44be5xcllgaz6f2)
 - [Dekriptori i kodit të Cezarit](/app?id=yk4brq4nykn4hlocxxbixqudyobf5q5wazwmhggcwdbyqa6dxbvcobt5azxtoni)
