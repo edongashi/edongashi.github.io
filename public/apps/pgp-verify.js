@@ -41,7 +41,7 @@ psq4cxU2pUwcZSnLte/6usnE0g==
 
   function formatVerification(data) {
     console.log(data)
-    const { key, message, verification } = data
+    const { keys, message, verification } = data
     const [signature] = verification.signatures[0]
     if (!signature) {
       return {
@@ -86,17 +86,17 @@ psq4cxU2pUwcZSnLte/6usnE0g==
 
         async function verify() {
           try {
-            const key = await openpgp.key.readArmored(pubkey)
+            const keys = (await openpgp.key.readArmored(pubkey)).keys
             const options = {
               message: await openpgp.cleartext.readArmored(message),
-              publicKeys: key.keys
+              publicKeys: keys
             }
 
             const verification = await openpgp.verify(options)
             if (!aborted) {
               setInfo(formatVerification({
                 message: options.message,
-                key,
+                keys,
                 verification
               }))
             }
