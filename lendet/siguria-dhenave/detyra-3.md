@@ -18,6 +18,8 @@ Detyra është individuale dhe duhet të plotësohen këto kritere për t'u vler
 3. Çelësi privat në asnjë mënyrë nuk guxon të publikohet.
 4. Nënshkrimi i mesazhit duhet të jetë valid në kuadër të çelësit tuaj publik.
 
+Në [këtë link](https://edongashi.github.io/app?id=ljxmhj6dwajmhagcuhb27qu5glbytq44be5xcllgaz6f2) mund ta testoni nënshkrimin dhe çelësin publik.
+
 ## Referenca
 
 Një vegël që mund ta përdorni është GNU Privacy Guard (GPG) e cila vie e instaluar në Linux, ndërsa në Windows instalohet bashkë me Git Bash ose mund të instalohet si e pavarur nga faqja e GPG.
@@ -34,14 +36,14 @@ Listën e plotë të komandave e gjeni përmes `gpg --help`.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-Pershendetje nga Filan Fisteku, student i FIEK.
+Pershendetje nga FIEK!
 -----BEGIN PGP SIGNATURE-----
 
-iJwEAQECAAYFAlzykJgACgkQ7K/qKlCiAHd1PgP/f4pCjZSx6Lt59SmpP9FhKqZF
-AbYd42kHdS3a6USAgCKNQe51ruHKIJILHqleYto9tPe7yNU5YNwwMDXTwnWV8Bvk
-iSW7O86m44QHsLUUpnNVBYMqg10eoZsfsDyoZWo5ANHhR+gcjAyZBh2B9i2DKEe0
-5AuHFge5yH/d8Pf529I=
-=x0kl
+iJwEAQECAAYFAlzz7GUACgkQBpJaWrMCCxjzugP/V2WaLShf6IU5ZF028G7rpeB8
+IoWP5x7fpkzacnVrdan0Iw5/ze5nxb12GFuhzgQQhDHtry6LPqqs/TkRJbSDaoSS
+Y3C+zkY+hCRymTy6Q1gva3ceAGlHUSChuNJevZsk+mt6f8Kz3ea1UQ++94XLlg12
+D5sPSQmauwM63SLjcaA=
+=mzAh
 -----END PGP SIGNATURE-----
 ```
 
@@ -52,21 +54,21 @@ iSW7O86m44QHsLUUpnNVBYMqg10eoZsfsDyoZWo5ANHhR+gcjAyZBh2B9i2DKEe0
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
-mI0EXPKQdwEEAOe7LAcxhvAvkPPRbFrWr3IYVIP93g2Cu73jTMOIJtaqzr3i2LuK
-8FttqMn9IIq8lOgIjvuZVjLpyBbpzObjRd6bjRzZBylCwKMS48yIo43AHGxggzJj
-wH25Lsl133OaPZjwZjpMkp3SIBk0MeJgfnUpcFnADF9O/kcFZUWAfuh7ABEBAAG0
-LEVkb24gR2FzaGkgKHNpZ3VyaWEpIDxlZG9uLmdhc2hpQHVuaS1wci5lZHU+iL4E
-EwECACgFAlzykHcCGwMFCQAnjQAGCwkIBwMCBhUIAgkKCwQWAgMBAh4BAheAAAoJ
-EOyv6ipQogB3vckD/2s6UqN9U0m2VdlWjxGPDD/f2jcHU5z7fZ8LbIROg0VEwsE3
-UcOo7PEyDFlDHTfi+8h2+hSD9HMpaV9VYTG6F9DBeapfgazPshPMOw1pLgODeJIU
-4Cjk4FVebOTdirsKUJn/IWQITNN4/Og3TCeFjudfxw5xXQ1yGPlNk/7yJ5/uuI0E
-XPKQdwEEAKzK3VIaRgckE+HF+vZ61hDXJnMd2ex8YcPEL4ijsIr2Avv35hbeyZTL
-NuJN9ZhGmeKRx8HbgnE4iQtazVXU0Pcp6mOzC2Ygx/l0UgKwWD3QMLd+GXOaPNEr
-CaYpkmxgkmy7YIddwclz3pDm9iBraAVFBUapT7c4f8DoA688DSyFABEBAAGIpQQY
-AQIADwUCXPKQdwIbDAUJACeNAAAKCRDsr+oqUKIAd+FlBACAvV91CahTkemq4fWJ
-qx9GrggPds0uQY/UF8s11K39wuUvW8oCZCTaBkYE0T6szBqY8pB/gOx8blg7/tST
-Zy7JnHXUzCYwU+YJIBMBvr6jO3z7DdejnepmWQlKnINa5iQKjj5XW8HyVJyECqLP
-psq4cxU2pUwcZSnLte/6usnE0g==
-=ogSl
+mI0EXPPsKAEEAMJynCP1s0PzG4hvV55uQ7ZiVp7NiK5FoQoMZVR0T+tME93CIe4H
+k5QgnTZllJaurKkKTjBcxdxKHEmAkzxoqX8EoxF+JZor4kn3QGvr1xOfXz8v5TQQ
+9fjQ75MlJGUHWtR6glsMM8gLG2smD++EEkBYKMVXzcvM9IMtcyN5so+7ABEBAAG0
+IkVkb24gR2FzaGkgPGVkb24uZ2FzaGlAdW5pLXByLmVkdT6IvgQTAQIAKAUCXPPs
+KAIbAwUJACeNAAYLCQgHAwIGFQgCCQoLBBYCAwECHgECF4AACgkQBpJaWrMCCxhG
+KgP9GnNIZ89zTMjqqwcdgFWCQrUbVb4MKsaWdVh5BwOjeVYbe+vSVQE52ZtMLHxk
+zH1xA4bl/1TVip67ewz0ysf+v1xds3mvMtnGEJKUuIGAFjLo194shisoT9zoS7dl
+Jv1oCOdl7RooeBADLdMFawhC3cvwN/lD0U0KD3CmDE4PMai4jQRc8+woAQQA2k4d
+Br37/o0YWPe92fq4HDmekY5FuOeADADllwgkZ2wzLa6B8W4A6ck3Eftj78B7UBAV
+gHg45JPUoYlIKMiYieCeTNOTWXafsH1vNIRELdMkTwmoNtgjqCfg8123twvyKVVO
+o+dpW8QrpePEO7WsPzd7kukC3MC2tvk3y5DodpcAEQEAAYilBBgBAgAPBQJc8+wo
+AhsMBQkAJ40AAAoJEAaSWlqzAgsYjvQD/jOn8hAENNx5EGFstQM3FsdYwx8OVnrb
+t5hwjdOQpNf3Yf6xFjjIsUsDiKkiy+INCH7uu+fa4Lp5JT7ryEfgJWPg0rjqSKA/
+OdtGpmz2nPiogOxBCiOpg/iBP+j++G8dzHZ6+mj43rnelDxLLpMvxXqXqV3T33ch
+NbSZiuIAN8pC
+=uST/
 -----END PGP PUBLIC KEY BLOCK-----
 ```
