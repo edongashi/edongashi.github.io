@@ -52,7 +52,7 @@ psq4cxU2pUwcZSnLte/6usnE0g==
 
     return {
       state: 'verified',
-      valid: signature.valid
+      valid: signature.valid,
       key: signature.keyid.toHex()
     }
   }
