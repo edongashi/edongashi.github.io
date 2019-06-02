@@ -139,8 +139,8 @@ psq4cxU2pUwcZSnLte/6usnE0g==
 
   function VerificationStatus({ info }) {
     switch (info.state) {
-      console.error(info.error)
       case 'error':
+        console.error(info.error)
         return <div>
           Gabim: {stringifyError(info.error)}
         </div>
