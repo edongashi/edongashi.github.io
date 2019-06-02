@@ -1,4 +1,8 @@
-define(['react', '/public/js/nn-predict.js'], function (React, predict) {
+define([
+  'react',
+  '/public/js/nn-predict.js',
+  '/public/js/use-debounce.js'
+], function (React, predict, { useDebounce }) {
   const { useState, useEffect, useMemo } = React
 
   function useDebounce(value, delay) {
@@ -13,7 +17,7 @@ define(['react', '/public/js/nn-predict.js'], function (React, predict) {
           clearTimeout(handler)
         }
       },
-      [value]
+      [value, delay]
     )
 
     return debouncedValue
