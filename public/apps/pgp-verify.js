@@ -199,7 +199,7 @@ NbSZiuIAN8pC
     const [message] = useDebounce(messageVolatile, 500)
     const [pubkey] = useDebounce(pubkeyVolatile, 500)
     const info = usePgpDetails(message, pubkey)
-    return <div style={{ marginBottom: '32px' }}>
+    return <div style={{ marginBottom: '48px' }}>
       <h3>Verifkuesi i PGP nënshkrimit</h3>
       <label>Teksti i nënshkruar</label>
       <textarea
