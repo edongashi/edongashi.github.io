@@ -64,12 +64,13 @@ psq4cxU2pUwcZSnLte/6usnE0g==
         created: message.signature.packets[0].created.toGMTString(),
         keyid: signature.keyid.toHex()
       },
-      keys: keys.map(k =>
-        ({
+      keys: keys.map(k => {
+        const user = k.users[0] && k.users[0].userId || { userid: '?' }
+        return ({
           keyid: k.keyPacket.keyid.toHex(),
-          users: k.users.map(u => u.userId.userid || u.userId.email || u.userId.name || '?')
+          user: user.userid || user.email || user.name || '?'
         })
-      )
+      })
     }
   }
 
