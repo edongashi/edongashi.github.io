@@ -103,6 +103,58 @@ b = -2
 c = 3
 ```
 
+--
+
+```x86asm
+INCLUDE 'emu8086.inc'
+ORG 100h
+
+PRINT 'Jepni vleren a: '
+CALL SCAN_NUM
+MOV VAR_A, CX
+PRINTN ''
+
+PRINT 'Jepni vleren b: '
+CALL SCAN_NUM
+MOV VAR_B, CX
+PRINTN ''
+
+PRINT 'Jepni vleren c: '
+CALL SCAN_NUM
+MOV VAR_C, CX
+PRINTN ''
+PRINTN ''
+
+PRINTN 'Keni shtypur vlerat:'
+
+PRINT 'a = '
+MOV AX, VAR_A
+CALL PRINT_NUM
+PRINTN ''
+
+PRINT 'b = '
+MOV AX, VAR_B
+CALL PRINT_NUM
+PRINTN ''
+
+PRINT 'c = '
+MOV AX, VAR_C
+CALL PRINT_NUM
+PRINTN ''
+
+RET
+
+DEFINE_SCAN_NUM
+DEFINE_PRINT_NUM
+DEFINE_PRINT_NUM_UNS
+
+VAR_A DW ?
+VAR_B DW ?
+VAR_C DW ?
+
+END
+```
+
 ---
 
 ## Instruksionet logjike dhe aritmetike
@@ -214,6 +266,79 @@ $$
 a \lor b \tag{4}
 $$
 
+--
+
+```x86asm
+INCLUDE 'emu8086.inc'
+ORG 100h
+
+PRINT 'Shtyp a: '
+CALL SCAN_NUM
+MOV VAR_A, CX
+PRINTN ''
+
+PRINT 'Shtyp b: '
+CALL SCAN_NUM
+MOV VAR_B, CX
+PRINTN ''
+
+MOV AX, VAR_A
+MOV BX, VAR_B
+ADD AX, BX
+MOV VAR_SHUMA, AX
+
+MOV AX, VAR_A
+SUB AX, BX
+MOV VAR_NDRYSHIMI, AX
+
+MOV AX, VAR_A
+AND AX, BX
+MOV VAR_DHE, AX
+
+MOV AX, VAR_A
+OR AX, BX
+MOV VAR_OSE, AX
+
+PRINTN ''
+PRINTN '=== Rezultatet ==='
+
+PRINT 'a + b = '
+MOV AX, VAR_SHUMA
+CALL PRINT_NUM
+PRINTN ''
+
+PRINT 'a - b = '
+MOV AX, VAR_NDRYSHIMI
+CALL PRINT_NUM
+PRINTN ''
+
+PRINT 'a ^ b = '
+MOV AX, VAR_DHE
+CALL PRINT_NUM_UNS
+PRINTN ''
+
+PRINT 'a v b = '
+MOV AX, VAR_OSE
+CALL PRINT_NUM_UNS
+PRINTN ''
+
+RET
+
+DEFINE_SCAN_NUM
+DEFINE_PRINT_NUM
+DEFINE_PRINT_NUM_UNS
+
+VAR_A DW ?
+VAR_B DW ?
+
+VAR_SHUMA DW ?
+VAR_NDRYSHIMI DW ?
+VAR_DHE DW ?
+VAR_OSE DW ?
+
+END
+```
+
 ---
 
 **Detyrë:** Të lexohen nga tastiera dy numra $a$ dhe $b$ dhe të vrojtohen relacionet (përmes ALU flags):
@@ -233,6 +358,39 @@ $$
 $$
 a = 0, a > 0, a < 0 \tag{4}
 $$
+
+--
+
+```x86asm
+INCLUDE 'emu8086.inc'
+ORG 100h
+
+PRINT 'Jepni vleren a: '
+CALL SCAN_NUM
+MOV VAR_A, CX
+PRINTN ''
+
+PRINT 'Jepni vleren b: '
+CALL SCAN_NUM
+MOV VAR_B, CX
+PRINTN ''
+
+MOV AX, VAR_A
+MOV BX, VAR_B
+
+CMP AX, BX
+; CMP AX, 0
+
+RET
+
+DEFINE_SCAN_NUM
+
+VAR_A DW ?
+VAR_B DW ?
+VAR_C DW ?
+
+END
+```
 
 ---
 
@@ -338,6 +496,69 @@ $$
 $$
 a \bmod b \tag{3}
 $$
+
+--
+
+```x86asm
+INCLUDE 'emu8086.inc'
+ORG 100h
+
+PRINT 'Shtyp a: '
+CALL SCAN_NUM
+MOV VAR_A, CL
+PRINTN ''
+
+PRINT 'Shtyp b: '
+CALL SCAN_NUM
+MOV VAR_B, CL
+PRINTN ''
+
+MOV AH, 0
+MOV BH, 0
+MOV AL, VAR_A
+MOV BL, VAR_B
+
+MUL BL
+MOV VAR_PRODHIMI, AX
+
+MOV AH, 0
+MOV AL, VAR_A
+DIV BL
+MOV VAR_HERESI, AL
+MOV VAR_MBETJA, AH
+
+PRINT 'a x b = '
+MOV AX, VAR_PRODHIMI
+CALL PRINT_NUM
+PRINTN ''
+
+PRINT 'a / b = '
+MOV AH, 0
+MOV AL, VAR_HERESI
+CALL PRINT_NUM
+PRINTN ''
+
+PRINT 'a % b = '
+MOV AH, 0
+MOV AL, VAR_MBETJA
+CALL PRINT_NUM
+PRINTN ''
+
+RET
+
+DEFINE_SCAN_NUM
+DEFINE_PRINT_NUM
+DEFINE_PRINT_NUM_UNS
+
+VAR_A DB ?
+VAR_B DB ?
+
+VAR_PRODHIMI DW ?
+VAR_HERESI DB ?
+VAR_MBETJA DB ?
+
+END
+```
 
 ---
 
