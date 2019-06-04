@@ -222,6 +222,7 @@ NbSZiuIAN8pC
       <br />
       <button onClick={() => setMessage(normalize(messageVolatile))}>Normalizo newline</button>
       <br />
+      <br />
       <label>Çelësi publik</label>
       <textarea
         rows={14}
