@@ -217,7 +217,8 @@ NbSZiuIAN8pC
         rows={14}
         style={textareaStyle}
         value={messageVolatile}
-        onChange={e => setMessage(e.target.value)} />
+        onChange={e => setMessage(e.target.value)}
+        spellCheck={false} />
       <br />
       <button onClick={() => setMessage(normalize(messageVolatile))}>Normalizo newline</button>
       <br />
@@ -226,7 +227,8 @@ NbSZiuIAN8pC
         rows={14}
         style={textareaStyle}
         value={pubkeyVolatile}
-        onChange={e => setPubkey(e.target.value)} />
+        onChange={e => setPubkey(e.target.value)}
+        spellCheck={false} />
       <hr />
       <VerificationStatus info={info} />
     </div>
