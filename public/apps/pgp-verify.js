@@ -195,7 +195,10 @@ NbSZiuIAN8pC
 
   function normalize(msg) {
     if (typeof msg === 'string') {
-      return msg.replace(/(?<!(?:-----|Hash:.*?))\r?\n\r?\n/gm, '\n')
+      return msg
+        .replace(/(\r?\n)(\s*\r?\n)+/gm, '\n')
+        .replace(/^Hash:(.+)$/m, 'Hash:$1\n')
+        .replace(/-----BEGIN PGP SIGNATURE-----/m, '$&\n')
     } else {
       return ''
     }
