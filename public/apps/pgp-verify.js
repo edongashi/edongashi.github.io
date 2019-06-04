@@ -195,7 +195,7 @@ NbSZiuIAN8pC
 
   function normalize(msg) {
     if (typeof msg === 'string') {
-      return msg.replace(/\r?\n\r?\n/gm, '\n')
+      return msg.replace(/(?<!(?:-----|Hash:.*?))\r?\n\r?\n/gm, '\n')
     } else {
       return ''
     }
