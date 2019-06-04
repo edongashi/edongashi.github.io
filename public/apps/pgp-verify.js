@@ -193,6 +193,14 @@ NbSZiuIAN8pC
     }
   }
 
+  function normalize(msg) {
+    if (typeof msg === 'string') {
+      return msg.replace(/\r?\n\r?\n/gm, '\n')
+    } else {
+      return ''
+    }
+  }
+
   function PgpVerify() {
     const [messageVolatile, setMessage] = useState(initialMessage)
     const [pubkeyVolatile, setPubkey] = useState(initialSignature)
@@ -207,6 +215,8 @@ NbSZiuIAN8pC
         style={textareaStyle}
         value={messageVolatile}
         onChange={e => setMessage(e.target.value)} />
+      <br />
+      <button onClick={() => setMessage(normalize(messageVolatile))}>Normalizo newline</button>
       <br />
       <label>Çelësi publik</label>
       <textarea
