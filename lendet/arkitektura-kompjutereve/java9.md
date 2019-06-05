@@ -232,6 +232,60 @@ ENDP
 
 **Detyrë:** Të lexohen dy numra nga tastiera. Të tregohet cili është më i madh ose a janë të barabartë.
 
+--
+
+```x86asm
+INCLUDE 'emu8086.inc'
+
+NEWLINE MACRO
+PRINTN ''
+ENDM
+
+READNUM MACRO DST
+PUSH CX
+CALL SCAN_NUM
+MOV DST, CX
+POP CX
+ENDM
+
+ORG 100h
+
+PRINT 'Shtypni nr A: '
+READNUM NUM_A
+NEWLINE
+
+PRINT 'Shtypni nr B: '
+READNUM NUM_B
+NEWLINE
+
+MOV AX, NUM_A
+MOV BX, NUM_B
+CMP AX, BX
+
+JL me_vogel  ; if a < b
+JE baraz     ; else if a = b
+JMP me_madhe ; else
+
+me_vogel:
+PRINT 'A < B'
+JMP fundi
+
+baraz:
+PRINT 'A = B'
+JMP fundi
+
+me_madhe:
+PRINT 'A > B'
+
+fundi:
+RET
+
+NUM_A DW ?
+NUM_B DW ?
+
+DEFINE_SCAN_NUM
+```
+
 ---
 
 **Detyrë:** Të lexohet nga tastiera një numër i plotë $x$. Të llogaritet dhe të shfaqet vlera $y$ sipas funksionit:
@@ -243,9 +297,109 @@ x - 5 & \text{kur}\; x > 3
 \end{cases}
 $$
 
+--
+
+```x86asm
+INCLUDE 'emu8086.inc'
+
+NEWLINE MACRO
+PRINTN ''
+ENDM
+
+READNUM MACRO DST
+PUSH CX
+CALL SCAN_NUM
+MOV DST, CX
+POP CX
+ENDM
+
+ORG 100h
+
+PRINT 'Shtyp numrin x: '
+READNUM NUM_X
+NEWLINE
+MOV AX, NUM_X
+CMP AX, 3
+JG me_madhe
+me_vogel:
+MOV BX, -4
+IMUL BX
+ADD AX, 3
+MOV NUM_Y, AX
+JMP fundi
+
+me_madhe:
+SUB AX, 5
+MOV NUM_Y, AX
+
+fundi:
+PRINT 'Numri y: '
+MOV AX, NUM_Y
+CALL PRINT_NUM
+RET
+
+NUM_X DW ?
+NUM_Y DW ?
+
+DEFINE_SCAN_NUM
+DEFINE_PRINT_NUM
+DEFINE_PRINT_NUM_UNS
+```
+
 ---
 
 **Detyrë:** Të shkruhet programi i cili shfaq numrat tek nga $1$ deri $n$.
+
+--
+
+```x86asm
+INCLUDE 'emu8086.inc'
+
+NEWLINE MACRO
+PRINTN ''
+ENDM
+
+READNUM MACRO DST
+PUSH CX
+CALL SCAN_NUM
+MOV DST, CX
+POP CX
+ENDM
+
+ORG 100h
+
+PRINT 'Shtyp numrin n: '
+READNUM N
+NEWLINE
+
+MOV CX, 1
+loop:
+TEST CX, 1
+JZ next
+
+tek:
+MOV AX, CX
+CALL PRINT_NUM
+PRINT ' '
+
+next:
+INC CX
+CMP CX, N
+JLE loop
+
+; for (c = 1; c <= n; c++) {
+;   if (c & 1 != 0) {
+;     print (c)
+;   }
+; }
+
+RET
+
+N DW ?
+DEFINE_SCAN_NUM
+DEFINE_PRINT_NUM
+DEFINE_PRINT_NUM_UNS
+```
 
 ---
 
@@ -265,6 +419,101 @@ $$
 4. Të gjendet minimumi dhe maksimumi.
 5. Të gjendet shuma e numrave tek dhe çift.
 6. Të gjendet shuma e elementit të parë dhe të fundit.
+
+--
+
+```x86asm
+INCLUDE 'emu8086.inc'
+
+ORG 100h
+
+PRINT 'Numrat:'
+MOV BX, 0
+loop1:
+MOV AH, 0
+MOV AL, VARGU[BX] ; [VARGU + BX]
+PRINT ' '
+CALL PRINT_NUM
+INC BX
+CMP BX, N
+JL loop1
+
+PRINTN ''
+MOV BX, 0
+loop2:
+MOV AL, VARGU[BX]
+ADD SHUMA, AL
+INC BX
+CMP BX, N
+JL loop2
+
+PRINT 'Shuma: '
+MOV AH, 0
+MOV AL, SHUMA
+CALL PRINT_NUM
+
+PRINTN ''
+MOV BX, 0
+loop3:
+MOV AL, VARGU[BX]
+CMP AL, 5
+JB me_vogel_5
+; >= 5
+INC NR_ELEMENTEVE
+me_vogel_5:
+INC BX
+CMP BX, N
+JL loop3
+
+PRINT 'Nr elementeve >= 5: '
+MOV AH, 0
+MOV AL, NR_ELEMENTEVE
+CALL PRINT_NUM
+
+MOV AL, VARGU[0]
+MOV MAKSIMUMI, AL
+MOV MINIMUMI, AL
+MOV BX, 1
+loop4:
+MOV AL, VARGU[BX]
+CMP AL, MAKSIMUMI
+JBE me_vogel_se_max
+MOV MAKSIMUMI, AL
+me_vogel_se_max:
+
+CMP AL, MINIMUMI
+JAE me_madhe_se_min
+MOV MINIMUMI, AL
+me_madhe_se_min:
+
+INC BX
+CMP BX, N
+JL loop4
+
+PRINTN ''
+PRINT 'Minimumi: '
+MOV AH, 0
+MOV AL, Minimumi
+CALL PRINT_NUM
+
+PRINTN ''
+PRINT 'Maksimumi: '
+MOV AH, 0
+MOV AL, Maksimumi
+CALL PRINT_NUM
+PRINTN ''
+
+RET
+
+SHUMA DB 0
+NR_ELEMENTEVE DB 0
+MINIMUMI DB ?
+MAKSIMUMI DB ?
+VARGU DB 7, 2, 5, 6, 1, 10, 3
+N EQU 7
+DEFINE_PRINT_NUM
+DEFINE_PRINT_NUM_UNS
+```
 
 ---
 
