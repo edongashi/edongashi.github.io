@@ -7,6 +7,10 @@ suppresshooks: true
 
 # Arkitektura e Kompjuterëve
 
+## Mbrojtja e projektit të dytë (A/E/T)
+
+Në [këtë link](https://docs.google.com/spreadsheets/d/10ijKqxnF67oQgOoO146o7kW0IzDpBwNFsBtWC6CrI8g/edit?usp=sharing) gjeni terminet për mbrojtjen e detyrës së dytë për drejtimet A/E/T.
+
 ## Detyra e dytë (A/E/T)
 
 Në [këtë link](/lendet/arkitektura-kompjutereve/detyra2) gjeni përshkrimin e detyrës së dytë vlerësuese për grupet (A/E/T). Grupet janë të njejtat sikur të projektit të parë. Në [këtë link](https://docs.google.com/spreadsheets/d/10ijKqxnF67oQgOoO146o7kW0IzDpBwNFsBtWC6CrI8g/edit?usp=sharing) gjeni grupet e ndara për projektet (A/E/T).
