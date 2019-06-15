@@ -7,6 +7,10 @@ suppresshooks: true
 
 # Arkitektura e Kompjuterëve
 
+## Testi i dytë vlerësues (Kompjuterika)
+
+Testi i dytë vlerësues mbahet të hënen 17/06/2019 nga ora 17:30.
+
 ## Mbrojtja e projektit të dytë (A/E/T)
 
 Në [këtë link](https://docs.google.com/spreadsheets/d/10ijKqxnF67oQgOoO146o7kW0IzDpBwNFsBtWC6CrI8g/edit?usp=sharing) gjeni terminet për mbrojtjen e detyrës së dytë për drejtimet A/E/T.
