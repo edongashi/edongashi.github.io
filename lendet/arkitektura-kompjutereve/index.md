@@ -9,7 +9,7 @@ suppresshooks: true
 
 ## Testi i dytë vlerësues (Kompjuterika)
 
-Klikoni [këtu](/lendet/arkitektura-kompjutereve/testi2) për të hapur rezultatet e testit të parë vlerësues. Konsultimet do të mbahen të enjten (27/06/2019) nga ora 12:00.
+Klikoni [këtu](/lendet/arkitektura-kompjutereve/testi2) për të hapur rezultatet e testit të dytë vlerësues. Konsultimet do të mbahen të enjten (27/06/2019) nga ora 12:00.
 
 ## Testi i dytë vlerësues (Kompjuterika)
 
