@@ -7,26 +7,14 @@ suppresshooks: true
 
 # Gjuhë Programuese
 
-## Llogaritja e notës finale
+## Orari i mësimit
 
-Për notë kaluese duhet ta keni përfunduar provimin me së paku 50% ose dy kolokviumet me së paku 50% të pikëve. Pastaj nota finale llogaritet sipas tabelës së mëposhtme:
-
-Nota|Pikët
--:|:-
-10|90+
-9|80-89
-8|70-79
-7|60-69
-6|50-59
-5|Përfundi 50
-
-Ku pikët llogariten sipas formulës:
-
-$$
-\underbrace{V_L}_{10} + \underbrace{V_U}_{10} + \underbrace{D_1}_{15} + \underbrace{D_2}_{15} + \big[\underbrace{K_1K_2}_{25+25} \lor \underbrace{P}_{50} \big]
-$$
-
----
+| Grupi | Dita      | Ora         | Salla |
+| ----- | --------- | ----------- | ----- |
+| 1A'   | E hënë    | 09:30-11:00 | 615   |
+| 1A"   | E hënë    | 11:00-12:30 | 615   |
+| 1B'   | E mërkurë | 12:00-13:30 | 615   |
+| 1B"   | E mërkurë | 10:30-12:00 | 615   |
 
 ## Materiali
 
@@ -66,3 +54,22 @@ $$
 - [SoloLearn](https://www.sololearn.com/Course/CPlusPlus/) - Kurs online në C++.
 - [cplusplus.com](http://www.cplusplus.com/doc/tutorial/) - Materiale mësimore për gjuhën C++.
 - [cpp.sh](http://cpp.sh/) - Testo programe të C++ në ueb.
+
+## Llogaritja e notës finale
+
+Për notë kaluese duhet ta keni përfunduar provimin me së paku 50% ose dy kolokviumet me së paku 50% të pikëve. Pastaj nota finale llogaritet sipas tabelës së mëposhtme:
+
+| Nota | Pikët       |
+| ---: | :---------- |
+|   10 | 90+         |
+|    9 | 80-89       |
+|    8 | 70-79       |
+|    7 | 60-69       |
+|    6 | 50-59       |
+|    5 | Përfundi 50 |
+
+Ku pikët llogariten sipas formulës:
+
+$$
+\underbrace{V_L}_{10} + \underbrace{V_U}_{10} + \underbrace{D_1}_{15} + \underbrace{D_2}_{15} + \big[\underbrace{K_1K_2}_{25+25} \lor \underbrace{P}_{50} \big]
+$$

@@ -7,8 +7,7 @@ suppresshooks: true
 
 ### Lëndët
 
-- [Siguria e të Dhënave](/lendet/siguria-dhenave)
-- [Arkitektura e Kompjuterëve](/lendet/arkitektura-kompjutereve)
+- [Gjuhë Programuese](/lendet/gjuhe-programuese)
 
 ### Linqe
 
@@ -17,5 +16,6 @@ suppresshooks: true
 
 ### Arkiva
 
-- [Gjuhë Programuese](/lendet/gjuhe-programuese)
+- [Siguria e të Dhënave](/lendet/siguria-dhenave)
+- [Arkitektura e Kompjuterëve](/lendet/arkitektura-kompjutereve)
 - [Inxhinieri Softuerike](/lendet/inxhinieri-softuerike)
