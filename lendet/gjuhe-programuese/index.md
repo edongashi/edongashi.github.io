@@ -7,6 +7,10 @@ suppresshooks: true
 
 # Gjuhë Programuese
 
+## Detyra e parë vlerësuese
+
+Në [këtë link](https://docs.google.com/spreadsheets/d/1_PQOPyWK8_f9gZSfIWowjE2ZVdPiiL1r8rb81jiv_l8/edit?usp=sharing) gjenden oraret e detyrës së parë vlerësuese. Ju lutem të regjistroheni në orarin që ju konvenon ashtu që mos të ketë zhvendosje të studentëve gjatë mbajtjes së detyrës.
+
 ## Orari i mësimit
 
 | Grupi | Dita      | Ora         | Salla |
