@@ -66,7 +66,8 @@ Në pamjen `USER SETTINGS` shkruajmë këtë konfigurim:
 ```json
 {
   "code-runner.runInTerminal": true,
-  "code-runner.preserveFocus": false
+  "code-runner.preserveFocus": false,
+  "code-runner.saveFileBeforeRun": true
 }
 ```
 
