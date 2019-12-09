@@ -7,9 +7,9 @@ suppresshooks: true
 
 # Gjuhë Programuese
 
-## Detyra e parë vlerësuese
+## Kolokviumi i parë
 
-Në [këtë link](https://docs.google.com/spreadsheets/d/1_PQOPyWK8_f9gZSfIWowjE2ZVdPiiL1r8rb81jiv_l8/edit?usp=sharing) gjenden oraret e detyrës së parë vlerësuese. Ju lutem të regjistroheni në orarin që ju konvenon ashtu që mos të ketë zhvendosje të studentëve gjatë mbajtjes së detyrës.
+Kolokviumi i parë mbahet të enjten (12/12/2019) nga ora 17:00.
 
 ## Orari i mësimit
 
