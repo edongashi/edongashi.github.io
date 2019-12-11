@@ -9,7 +9,7 @@ suppresshooks: true
 
 ## Kolokviumi i parë
 
-Kolokviumi i parë mbahet të enjten (12/12/2019) nga ora 17:00.
+Kolokviumi i parë mbahet të enjten (12/12/2019) nga ora 16:00.
 
 ## Orari i mësimit
 
