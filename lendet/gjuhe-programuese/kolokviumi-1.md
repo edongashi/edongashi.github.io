@@ -1,3 +1,7 @@
+---
+noslides: true
+---
+
 # Rezultatet e kolokviumit 1
 
 Në vazhdim gjeni rezultatet e kolokviumit të parë.
