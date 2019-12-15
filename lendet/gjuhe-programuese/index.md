@@ -9,7 +9,7 @@ suppresshooks: true
 
 ## Rezultatet e kolokviumit të parë
 
-Klikoni [këtu](lendet/gjuhe-programuese/kolokviumi-1) për të hapur rezultatet e kolokviumit të parë.
+Klikoni [këtu](/lendet/gjuhe-programuese/kolokviumi-1) për të hapur rezultatet e kolokviumit të parë.
 Konsultimet do të mbahen pas orarit të ushtrimeve gjatë javës 16-20 dhjetor.
 
 ---
