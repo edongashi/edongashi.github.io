@@ -3,6 +3,7 @@
 Në vazhdim gjeni rezultatet e kolokviumit të parë.
 Punimet me 8 ose më pak pikë nuk figurojnë në listë.
 Konsultimet do të mbahen pas orarit të ushtrimeve gjatë javës 16-20 dhjetor.
+Pragu i kalueshmërisë është 50% (12.5 pikë).
 
 | ID           | Pikët (max 25) |
 | ------------ | ----- |
