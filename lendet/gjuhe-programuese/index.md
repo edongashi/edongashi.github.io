@@ -7,18 +7,12 @@ suppresshooks: true
 
 # Gjuhë Programuese
 
-## Kolokviumi i parë
+## Rezultatet e kolokviumit të parë
 
-Kolokviumi i parë mbahet të enjten (12/12/2019) nga ora 16:00.
+Klikoni [këtu](lendet/gjuhe-programuese/kolokviumi-1) për të hapur rezultatet e kolokviumit të parë.
+Konsultimet do të mbahen pas orarit të ushtrimeve gjatë javës 16-20 dhjetor.
 
-## Orari i mësimit
-
-| Grupi | Dita      | Ora         | Salla |
-| ----- | --------- | ----------- | ----- |
-| 1A'   | E enjte   | 11:30-13:00 | 615   |
-| 1A"   | E hënë    | 11:00-12:30 | 615   |
-| 1B'   | E mërkurë | 14:15-15:45 | 615   |
-| 1B"   | E mërkurë | 10:30-12:00 | 615   |
+---
 
 ## Materiali
 
@@ -44,20 +38,29 @@ Kolokviumi i parë mbahet të enjten (12/12/2019) nga ora 16:00.
 - [Kuptimi i 'void'](/lendet/gjuhe-programuese/void)
 - [C++ përmes VS Code](/lendet/gjuhe-programuese/vs-code)
 
----
-
 ## Kuize dhe detyra
 
 - [Kuizi 1](/lendet/gjuhe-programuese/kuiz1)
 - [Përmbledhje detyrash](/lendet/gjuhe-programuese/detyra)
-
----
 
 ## Linqe
 
 - [SoloLearn](https://www.sololearn.com/Course/CPlusPlus/) - Kurs online në C++.
 - [cplusplus.com](http://www.cplusplus.com/doc/tutorial/) - Materiale mësimore për gjuhën C++.
 - [cpp.sh](http://cpp.sh/) - Testo programe të C++ në ueb.
+
+---
+
+## Orari i mësimit
+
+| Grupi | Dita      | Ora         | Salla |
+| ----- | --------- | ----------- | ----- |
+| 1A'   | E enjte   | 11:30-13:00 | 615   |
+| 1A"   | E hënë    | 11:00-12:30 | 615   |
+| 1B'   | E mërkurë | 14:15-15:45 | 615   |
+| 1B"   | E mërkurë | 10:30-12:00 | 615   |
+
+---
 
 ## Llogaritja e notës finale
 
