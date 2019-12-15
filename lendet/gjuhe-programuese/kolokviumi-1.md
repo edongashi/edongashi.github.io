@@ -4,7 +4,7 @@ Në vazhdim gjeni rezultatet e kolokviumit të parë.
 Punimet me 8 ose më pak pikë nuk figurojnë në listë.
 Konsultimet do të mbahen pas orarit të ushtrimeve gjatë javës 16-20 dhjetor.
 
-| ID           | Pikët |
+| ID           | Pikët (max 25) |
 | ------------ | ----- |
 | 190714100129 | 25    |
 | 190714100076 | 24.5  |
