@@ -45,7 +45,6 @@ Konsultimet do të mbahen pas orarit të ushtrimeve gjatë javës 16-20 dhjetor.
 
 ## Linqe
 
-- [SoloLearn](https://www.sololearn.com/Course/CPlusPlus/) - Kurs online në C++.
 - [cplusplus.com](http://www.cplusplus.com/doc/tutorial/) - Materiale mësimore për gjuhën C++.
 - [cpp.sh](http://cpp.sh/) - Testo programe të C++ në ueb.
 
