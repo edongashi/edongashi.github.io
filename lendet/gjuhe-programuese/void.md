@@ -107,6 +107,7 @@ Kur funksioni nuk kthen asgjë, atëherë ai përdorët vetëm si urdhër, e jo 
 **void** nuk paska as tip e as vlerë, prandaj nuk është shprehje!
 
 ```cpp
+int x = shfaqPiket(73); // gabim: shfaqPiket nuk kthen rezultat!
 cout << shfaqPiket(25); // gabim: shfaqPiket nuk kthen rezultat!
 ```
 
