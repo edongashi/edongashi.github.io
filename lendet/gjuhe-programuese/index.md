@@ -7,6 +7,10 @@ suppresshooks: true
 
 # Gjuhë Programuese
 
+## Rezultatet e kolokviumit të dytë
+
+Klikoni [këtu](https://docs.google.com/spreadsheets/d/1_qaZ63PPEAAuwSahBfDvDuTqojp4IWChmTqzenBlpvQ/edit?usp=sharing) për të hapur rezultatet e kolokviumit të dytë. Rishikimi i fletoreve mund të bëhet të premten më datë 17/01 nga ora 16:30 deri në ora 17:00 në kabinetin 615.
+
 ## Rezultatet e kolokviumit të parë
 
 Klikoni [këtu](/lendet/gjuhe-programuese/kolokviumi-1) për të hapur rezultatet e kolokviumit të parë.
