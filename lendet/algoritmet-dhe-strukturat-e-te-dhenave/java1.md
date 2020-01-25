@@ -40,11 +40,11 @@ int z = -2;
 
 ---
 
-Variablat lokale alokohen në memorien e funksionit aktual -- stack memoria.
+Variablat lokale alokohen në memorien e funksionit aktual – stack memoria.
 
 Ato nuk shihen nga jashtë, si dhe humbasin në momentin qe mbyllet blloku i funksionit (stack frame).
 
-Variablat lokale janë adresat memorike në një distancë fikse ndaj stack pointerit aktual.
+Variablat lokale janë adresa memorike në një distancë fikse ndaj stack pointerit aktual.
 
 ---
 
@@ -427,15 +427,131 @@ int main() {
 
 Kur kemi thirrje përmes referencës:
 
-- Nuk kopjohet vlera e argumentit, por adresa e tij -- parametri bëhet alias i argumentit.
-- Argumenti duhet të jetë l-value -- nuk mund të kemi alias në r-value.
+- Nuk kopjohet vlera e argumentit, por adresa e tij – parametri bëhet alias i argumentit.
+- Argumenti duhet të jetë l-value – nuk mund të kemi alias në r-value.
 - Nëse ndryshon vlera e argumentit, ndryshimet barten në bllokun thirrës.
 
 ---
 
-**Detyrë:** Të shkruhet funksioni `llogarit` i cili e llogaritë shumën dhe prodhimin
+**Detyrë:** Të shkruhet funksioni `llogarit` i cili e llogarit shumën dhe prodhimin
 nga `1` deri në `n`, dhe rezultatet i vendos në parametrat referent `s` dhe `p`.
 
 ```cpp
 void llogarit(int n, int &s, int &p);
+```
+
+---
+
+**Kthimi përmes referencës**
+
+Një funksion poashtu mund të kthejë l-value përmes referencës.
+
+```cpp
+int& elementi(int *v, int i) {
+  return v[i];
+}
+
+int main() {
+  int vargu[5] = { 7, 4, 5, 8, 2 };
+  elementi(vargu, 3) = -1;
+  cout << vargu[3]; // shfaqet -1
+  return 0;
+}
+```
+
+---
+
+**Kujdes:** Vlerat lokale nuk guxojnë të kthehen, pasi që kanë jetëgjatësi vetëm në bllokun aktual.
+
+```cpp
+int &alfa() {
+  int n = 5;
+  return n; // gabim
+}
+```
+
+---
+
+Dërgimi dhe kthimi sipas referencës mund të bëhet edhe përmes pointerëve.
+
+Në funksion i dërgojmë dhe i kthejmë adresat e parametrave dhe rezultateve:
+
+```cpp
+int* elementi(int *v, int i) {
+  return &v[i]; // ose v+i
+}
+```
+
+---
+
+**Detyrë:** Të shkruhet funksioni `llogarit` i cili e llogarit shumën dhe prodhimin
+nga `1` deri në `n`, dhe rezultatet i vendos në adresat e pointerëve `*s` dhe `*p`.
+
+```cpp
+void llogarit(int n, int *s, int *p);
+```
+
+---
+
+## Detyra shtesë
+
+---
+
+<!-- .slide: style="font-size:0.8em;" -->
+
+**Detyrë**
+
+- Të deklarohet struktura `Drejtkendeshi`.
+- Të shkruhet funksioni `lexo()`, i cili dinamikisht alokon një drejtkëndësh dhe e mbush me vlera nga tastiera.
+- Në `main` të krijohet një varg prej `n` drejtkëndëshave (`n` të lexohet nga tastiera). Të mbushet vargu nga tastiera përmes funksionit `lexo`.
+- Të gjendet sipërfaqja totale e të gjithë drejtkëndëshave (përmes funksionit `siperfaqja`).
+- Të lirohen të gjitha resurset e alokuara.
+
+--
+
+```cpp
+#include <iostream>
+using namespace std;
+
+struct Drejtkendeshi { int a; int b; };
+
+Drejtkendeshi* lexo() {
+  int a, b;
+  cout << "Shtyp a: ";
+  cin >> a;
+  cout << "Shtyp b: ";
+  cin >> b;
+  return new Drejtkendeshi { a, b };
+}
+
+int siperfaqja(Drejtkendeshi *d) {
+  return d->a * d->b;
+}
+
+int main() {
+  int n;
+  cout << "Jepni numrin e drejtkendeshave: ";
+  cin >> n;
+  Drejtkendeshi **drejtkendeshat = new Drejtkendeshi*[n];
+  for (int i = 0; i < n; i++) {
+    cout << "Drejtkendeshi " << (i + 1) << endl;
+    drejtkendeshat[i] = lexo();
+  }
+
+  int s = 0;
+  for (int i = 0; i < n; i++) {
+    s += siperfaqja(drejtkendeshat[i]);
+  }
+
+  cout << "Siperfaqja totale: " << s;
+
+  for (int i = 0; i < n; i++) {
+    // Lirimi i alokimeve individuale.
+    delete drejtkendeshat[i];
+  }
+
+  // Lirimi i vargut te pointerëve.
+  delete[] drejtkendeshat;
+  return 0;
+}
 ```
