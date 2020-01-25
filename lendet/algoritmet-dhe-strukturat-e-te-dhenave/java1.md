@@ -280,7 +280,7 @@ Pointerët mund të adresojnë edhe tipe komplekse.
 
 Qasja në anëtarët bëhet përmes operatorit `->`.
 
-```
+```cpp
 struct Drejtkendeshi { int gjeresia; int lartesia; };
 
 int main() {
@@ -464,7 +464,7 @@ int main() {
 **Kujdes:** Vlerat lokale nuk guxojnë të kthehen, pasi që kanë jetëgjatësi vetëm në bllokun aktual.
 
 ```cpp
-int &alfa() {
+int& alfa() {
   int n = 5;
   return n; // gabim
 }
@@ -474,13 +474,13 @@ int &alfa() {
 
 Dërgimi dhe kthimi sipas referencës mund të bëhet edhe përmes pointerëve.
 
-Në funksion i dërgojmë dhe i kthejmë adresat e parametrave dhe rezultateve:
-
 ```cpp
 int* elementi(int *v, int i) {
   return &v[i]; // ose v+i
 }
 ```
+
+Faktikisht, forma përmes `&` përkthehet nga kompajlleri në ekuivalentën e saj me pointerë.
 
 ---
 
@@ -550,7 +550,7 @@ int main() {
     delete drejtkendeshat[i];
   }
 
-  // Lirimi i vargut te pointerëve.
+  // Lirimi i vargut të pointerëve.
   delete[] drejtkendeshat;
   return 0;
 }
