@@ -16,7 +16,7 @@ Memoria është një varg bajtash ku ruhen shënime.
 
 Secili bajt i memories ka një adresë unike.
 
-![](java1/img2.png)
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java1/img2.png)
 
 ---
 
@@ -36,7 +36,7 @@ int y = 3;
 int z = -2;
 ```
 
-![](java1/img1.png)
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java1/img1.png)
 
 ---
 
@@ -90,7 +90,7 @@ Operatori `*x` për cilindo pointer `x` njihet si **operator i dereferencimit**.
 
 Është dhënë memoria në vazhdim si dhe pointeri `x` i cili ka vlerën 3.
 
-![](java1/img3.png)
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java1/img3.png)
 
 ---
 
@@ -103,7 +103,7 @@ cout << *(vargu + 3); // shfaqet 7
 cout << vargu[3];     // shfaqet 7
 ```
 
-![](java1/img4.png)
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java1/img4.png)
 
 ---
 
