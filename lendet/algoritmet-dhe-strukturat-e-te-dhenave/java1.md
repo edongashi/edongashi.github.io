@@ -48,7 +48,7 @@ Variablat lokale janë adresat memorike në një distancë fikse ndaj stack poin
 
 ---
 
-## Pointerët
+## Pointerët dhe referencat
 
 ---
 
@@ -66,7 +66,7 @@ double *y;
 
 ---
 
-Pointeri është thjeshtë një variabël numerike që mban një adresë.
+Pointeri është thjeshtë një variabël numerike që mban një adresë (32-bit ose 64-bit).
 
 Kjo vlerë mund t'i nënshtrohet llogaritjeve aritmetikore si çdo integer tjetër.
 
@@ -115,7 +115,7 @@ int v[5] = { 3, 2, 1, 5, 6 };
 
 Shprehjet `v[i]` dhe `*(v+i)` janë ekuivalente.
 
-Shprehjet `v[0]`, `*v`, `*(v+0)` janë ekuivalente,
+Shprehjet `v[0]`, `*v`, `*(v+0)` janë ekuivalente.
 
 ---
 
@@ -187,8 +187,185 @@ Shprehja `*x` tregon vlerën që gjendet në atë adresë, dmth. vlerën e shën
 int a = 5;
 int b = 8;
 int *x = &a;
-int *y = (*x % 2 == 0) ? (&a) : (&b);
+int *y = ((*x) % 2 == 0) ? (&a) : (&b);
 cout << *x + *y;
+```
+
+---
+
+**Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
+
+```cpp
+int a = 4;
+int b = *(&a);
+cout << b;
+```
+
+---
+
+**Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
+
+```cpp
+int v[5] = { -2, 5, 3, 1, 2 };
+int *ptr = v + 1;
+cout << ptr[0] + ptr[2];
+```
+
+---
+
+**Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
+
+```cpp
+int v[5] = { -2, 5, 3, 1, 2 };
+int *ptr = v + 2;
+int *a = &ptr[-1];
+int *b = &v[3];
+(*a)++;
+*b = ptr[-2];
+cout << v[0] + v[1] + v[2] + v[3] + v[4];
+```
+
+---
+
+**Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
+
+```cpp
+int v[5] = { -2, 5, 3, 1, 2 };
+int *ptr = v;
+int a = *(ptr++);
+int b = *ptr;
+cout << a + b;
+```
+
+---
+
+**Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
+
+```cpp
+int a = 1, b = 2, c = 3;
+int *x = &a, *y = &b, *z = &c;
+y = z;
+z = x;
+x = y;
+cout << *x << ", " << *y << ", " << *z;
+```
+
+---
+
+**Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
+
+```cpp
+int a = 1, b = 2, c = 3;
+int *x = &a, *y = &b, *z = &c;
+int *v[3] = { x, y, z };
+cout << *(ptr[1]);
+```
+
+---
+
+**Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
+
+```cpp
+int a = 4, b = 5;
+int *x = &a, *y = &b;
+int **ptr = (a > b) ? (&x) : (&y);
+cout << **ptr;
+```
+
+---
+
+**Pointerët në struktura**
+
+Pointerët mund të adresojnë edhe tipe komplekse.
+
+Qasja në anëtarët bëhet përmes operatorit `->`.
+
+```
+struct Drejtkendeshi { int gjeresia; int lartesia; };
+
+int main() {
+  Drejtkendeshi a = { 3, 4 };
+  Drejtkendeshi *ptr = &a;
+  cout << "Gjeresia: " << (*ptr).gjeresia << endl;
+  cout << "Lartesia: " << ptr->lartesia << endl;
+  return 0;
+}
+```
+
+---
+
+### Memoria dinamike
+
+Shpesh nuk e dimë sa hapësirë na nevojitet për shënime, psh. gjatësia e vargut.
+
+Me operatorin `new` kërkojmë nga sistemi operativ një bllok të memories me madhësi të dëshiruar.
+
+---
+
+Rezultati i `new` është një **pointer** për bllokun e bajtave të alokuar në **heap**.
+
+**Heap memoria** është memorie e procesit e cila jeton më gjatë sesa blloku i funksionit.
+
+---
+
+Sintaksa: `new tipi` për një element, `new tipi[n]` për varg.
+Rezultati i operacionit është pointer `*tipi`.
+
+**Shembull:** Alokimi dinamik i një vargu:
+
+```cpp
+int n;
+cout << "Sa elemente i deshironi ne varg? ";
+cin >> n;
+int *vargu = new int[n];
+// vargu[0], vargu[1], ... vargu[n - 1]
+```
+
+---
+
+**Shembull:** Alokimi dinamik i një strukture:
+
+```cpp
+struct Drejtkendeshi { int gjeresia; int lartesia; };
+
+Drejtkendeshi* krijo(int a, int b) {
+  Drejtkendeshi *rez = new Drejtkendeshi;
+  rez->gjeresia = a;
+  rez->lartesia = b;
+  return rez;
+}
+
+int main() {
+  Drejtkendeshi *x = krijo(2, 3);
+  cout << x->lartesia;
+  return 0;
+}
+```
+
+---
+
+Operatori `new` është i rrezikshëm, pasi që memoria e alokuar nuk fshihet vetvetiu (edhe pas përfundimit të bllokut aktual).
+
+Fshirja e memories së alokuar dinamikisht bëhet përmes `delete` (një element) dhe `delete[]` (varg).
+
+---
+
+**Shembull:** Alokimi dinamik për variablën `n` dhe vargun `vargu[n]`, dhe pastaj fshierja e tyre:
+
+```cpp
+int main() {
+  int *n = new int;
+  cout << "Sa elemente i deshironi ne varg? ";
+  cin >> *n;
+  int *vargu = new int[*n];
+
+  // ... kryejmë llogaritje
+
+  // pastrojmë memorien
+  delete n;
+  delete[] vargu;
+  return 0;
+}
 ```
 
 ---
@@ -204,7 +381,7 @@ b = 3;
 cout << a; // shfaqet 3
 ```
 
-Aliasi `b` ka lokacion memorik të njejtë me variablën `a`, prandaj paraqesin të njejtin shënim.
+Aliasi `b` ka lokacion memorik të njëjtë me variablën `a`, prandaj paraqesin të njëjtin shënim.
 
 ---
 
@@ -243,7 +420,7 @@ int main() {
 
 **Bartja përmes vlerës dhe referencës**
 
-- Parametrat normale të funksioneve në C++ janë pass-by-value (përmes kopjimit).
+- Parametrat e zakonshëm të funksioneve në C++ janë pass-by-value (përmes kopjimit).
 - Nëse i deklarojmë si parametra referent, atëherë thirrja bëhet pass-by-reference (përmes adresës).
 
 ---
@@ -253,3 +430,12 @@ Kur kemi thirrje përmes referencës:
 - Nuk kopjohet vlera e argumentit, por adresa e tij -- parametri bëhet alias i argumentit.
 - Argumenti duhet të jetë l-value -- nuk mund të kemi alias në r-value.
 - Nëse ndryshon vlera e argumentit, ndryshimet barten në bllokun thirrës.
+
+---
+
+**Detyrë:** Të shkruhet funksioni `llogarit` i cili e llogaritë shumën dhe prodhimin
+nga `1` deri në `n`, dhe rezultatet i vendos në parametrat referent `s` dhe `p`.
+
+```cpp
+void llogarit(int n, int &s, int &p);
+```
