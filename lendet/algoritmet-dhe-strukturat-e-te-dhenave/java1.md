@@ -497,6 +497,12 @@ void llogarit(int n, int *s, int *p);
 
 ---
 
+**Detyrë:** Të shkruhet funksioni `swap(a, b)` në variantin me pointerë dhe me referenca.
+
+Të thirren te dy variantet nga `main` dhe të vrojtohen dallimet sintaksore.
+
+---
+
 <!-- .slide: style="font-size:0.8em;" -->
 
 **Detyrë**
