@@ -306,6 +306,8 @@ Rezultati i `new` është një **pointer** për bllokun e bajtave të alokuar n�
 
 **Heap memoria** është memorie e procesit e cila jeton më gjatë sesa blloku i funksionit.
 
+Zakonisht pointerët nuk na nevojiten për vlera lokale, por për vlera në heap.
+
 ---
 
 Sintaksa: `new tipi` për një element, `new tipi[n]` për varg.
@@ -341,6 +343,14 @@ int main() {
   return 0;
 }
 ```
+
+---
+
+Stack quajmë memorien statike të bllokut të funksionit.
+
+Heap quajmë memorien e përbashkët të procesit.
+
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java1/img5.png)
 
 ---
 
@@ -500,6 +510,10 @@ void llogarit(int n, int *s, int *p);
 **Detyrë:** Të shkruhet funksioni `swap(a, b)` në variantin me pointerë dhe me referenca.
 
 Të thirren te dy variantet nga `main` dhe të vrojtohen dallimet sintaksore.
+
+---
+
+**Detyrë:** Të shkruhet funksioni `kopjo(v[], n)` i cili kopjon një varg dhe kthen një pointer për kopjen e vargut.
 
 ---
 
