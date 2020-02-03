@@ -206,8 +206,8 @@ cout << b;
 **Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
 
 ```cpp
-int v[5] = { -2, 5, 3, 1, 2 };
-int *ptr = v + 1;
+double v[5] = { -2, 5.3, 3, 1, 2.2 };
+double *ptr = v + 1;
 cout << ptr[0] + ptr[2];
 ```
 
@@ -258,7 +258,7 @@ cout << *x << ", " << *y << ", " << *z;
 int a = 1, b = 2, c = 3;
 int *x = &a, *y = &b, *z = &c;
 int *v[3] = { x, y, z };
-cout << *(ptr[1]);
+cout << *(v[1]);
 ```
 
 ---
@@ -414,8 +414,8 @@ Referencat mund t'i përdorim në parametra të funksioneve.
 ```cpp
 void nderro(int &a, int &b) {
   int temp = a;
-  b = a;
-  a = temp;
+  a = b;
+  b = temp;
 }
 
 int main() {
