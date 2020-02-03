@@ -1,0 +1,283 @@
+## Algoritmet dhe Strukturat e të Dhënave - Java 2
+
+---
+
+## Klasat
+
+Supozojmë një strukturë të të dhënave `Pika` e cila paraqet dyshen `(x,y)` në rrafshin kartezian:
+
+```cpp
+struct Pika {
+  double x;
+  double y;
+};
+```
+
+---
+
+Shpesh kemi funksione të cilat ndërveprojnë me këtë strukturë:
+
+```cpp
+bool baraz(Pika p1, Pika p2) {
+  return p1.x == p2.x && p1.y == p2.y;
+}
+```
+
+---
+
+```cpp
+double distanca(Pika p1, Pika p2) {
+  return sqrt(
+    pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2)
+  );
+}
+```
+
+---
+
+```cpp
+double distanca_nga_qendra(Pika p) {
+  return sqrt(pow(p.x, 2) + pow(p.y, 2));
+}
+```
+
+---
+
+```cpp
+string toString(Pika p) {
+  stringstream ss;
+  ss << "(" << p.x << ", " << p.y << ")";
+  return ss.str();
+}
+```
+
+---
+
+```cpp
+Pika konstrukto(double x, double y) {
+  Pika p = { x, y };
+  return p;
+}
+```
+
+---
+
+```cpp
+Pika p1 = konstrukto(6.0, 3.5);
+Pika p2 = konstrukto(4.2, 7.1);
+
+cout << "Distanca mes pikes p1=" << toString(p1)
+      << " dhe pikes p2=" << toString(p2)
+      << " eshte d=" << distanca(p1, p2)
+      << endl;
+
+if (baraz(p1, p2)) {
+  cout << "Pikat jane te barabarta.";
+} else {
+  cout << "Pikat jane te ndryshme.";
+}
+```
+
+---
+
+Stili i tillë i programimit njihet si programim procedural.
+
+Ekziston një stil tjetër i programimit i cili grupon të dhënat dhe funksionet mbi to në një njësi të vetme që quhet **klasë**.
+
+Stili i programimit me klasa quhet programimi i orientuar në objekte (POO).
+
+---
+
+## Programimi i orientuar në objekte
+
+Klasa përshkruan strukturën e të dhënave si dhe ofron funksione të cilat veprojnë mbi ato të dhëna.
+
+Të dhënat e klasës njihen si **fusha** ndërsa funksionet e klasës njihen si **metoda**.
+
+---
+
+Të dhënat e klasës deklarohen sikur te strukturat:
+
+```cpp
+class Pika {
+  double x;
+  double y;
+};
+```
+
+Realisht, në C++ nuk ka dallim teknik ndërmjet strukturës dhe klasës.
+
+---
+
+### Kontrollimi i qasjes (private, public)
+
+Fushat **private** mund të lexohen vetëm nga funksionet brenda klasës.
+
+Fushat **publike** mund të lexohen nga cilido bllok.
+
+---
+
+```cpp
+class Pika {
+  public:  double x;
+  private: double y;
+};
+
+int main() {
+  Pika p;
+  p.x = 5.0; // OK
+  p.y = 3.5; // Gabim, ndalohet leximi nga blloku i jashtëm
+  return 0;
+}
+```
+
+---
+
+Në disa raste dëshirojmë t'i mbajmë fushat **private** me qëllim të ndalimit të qasjes nga blloqet e jashtme.
+
+Kjo është një veçori kritike për arritjen e **enkapsulimit**.
+
+---
+
+Nëse nuk ceket, klasat e kanë qasjen e nënkuptuar private, ndërsa strukturat e kanë publike.
+
+Nuk ka dallim tjetër ndëmjet strukturave dhe klasave.
+
+---
+
+Funksionet e klasës deklarohen bashkë me të dhënat:
+
+```cpp
+class Pika {
+private:
+  double x;
+  double y;
+
+public:
+  double distanca_nga_qendra() {
+    return sqrt(pow(x, 2) + pow(y, 2));
+  }
+};
+```
+
+---
+
+Thirrja e metodës bëhet përmes operatorit të qasjes sikur te fushat:
+
+```cpp
+Pika p = ...;
+
+cout << p.distanca_nga_qendra();
+```
+
+Në këtë rast funksioni i merr vlerat e pikës `p`.
+
+---
+
+```cpp
+class Pika {
+  private: double x, y;
+  public:  bool baraz(Pika tjeter) {
+    return x == tjeter.x && tjeter.y == tjeter.y;
+  }
+};
+
+int main() {
+  Pika p1 = ..., p2 = ...;
+  if (p1.baraz(p2)) cout << "Te njejta";
+  else              cout << "Te ndryshme";
+  return 0;
+}
+```
+
+---
+
+Vini re se si parametri i parë i funksionit sikur `p1` në `baraz(p1,p2)` tash bëhet implicit duke marrë formën `p1.baraz(p2)`.
+
+Argumenti implicit që paraqet referencën kontekstuale të objektit aktual në POO quhet `this`.
+
+---
+
+Vlera kontekstuale `this` është pointer për variablën (objektin) aktual.
+
+```cpp
+class Personi {
+private:
+  string emri;
+  int mosha;
+
+public:
+  void shtyp_infot() {
+    cout << "Emri: "  << this->emri  << endl;
+    cout << "Mosha: " << this->mosha << endl;
+  }
+};
+```
+
+---
+
+Nëse kemi 2 variabla `p1` dhe `p2`, me funksione të zakonshme kemi shënuar:
+
+```cpp
+shtyp_infot(p1);
+shtyp_infot(p2);
+```
+
+Me metoda (stili i POO) e shënojmë:
+
+```cpp
+p1.shtyp_infot();
+p2.shtyp_infot();
+```
+
+---
+
+Edhe pse po duket që thirrja `p1.shtyp_infot()` nuk po merr parametra,
+ajo realisht e mban referencën e variablës `p1` gjatë thirrjes së funksionit.
+
+Thirrjet `p1.shtyp_infot()` dhe `p2.shtyp_infot()` japin rezultate të ndryshme
+pasi që ekzekutohen në kontekste të ndryshme.
+
+---
+
+### Konstruktorët
+
+Variablat tipi i të cilave është klasë i quajmë **objekte** ose **instanca**.
+
+Konstruktori është një funksion i veçantë i cili thirret gjatë krijimit të instancës.
+
+Zakonisht përdoren për të inicializuar gjendjen e klasës duke i dhënë vlera fushave.
+
+---
+
+Konstruktori shkruhet si metodë e cila e ka emrin e klasës dhe nuk ka tip kthimi.
+
+```cpp
+class Pika {
+private:
+  double x;
+  double y;
+
+public:
+  Pika(double x, double y) {
+    this->x = x;
+    this->y = y;
+  }
+};
+```
+
+Konstruktorët mund të mbingarkohen.
+
+---
+
+Kontruktori thirret gjatë krijimit të instancës.
+
+Thirrjet e mëposhtme janë ekuivalente:
+
+```cpp
+int main() {
+  Pika p1 = Pika(2.5, 3);
+  Pika p2(2.5, 3);
+  return 0;
+}
+```
