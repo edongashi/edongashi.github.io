@@ -1,4 +1,4 @@
-## Algoritmet dhe Strukturat e të Dhënave - Java 2
+## Algoritmet dhe Strukturat e të Dhënave – Java 2
 
 ---
 

@@ -1,4 +1,4 @@
-## Algoritmet dhe Strukturat e të Dhënave - Java 1
+## Algoritmet dhe Strukturat e të Dhënave – Java 1
 
 Edon Gashi
 
@@ -171,7 +171,7 @@ cout << *ptr; // shfaqet 5
 
 ---
 
-**Përmbledhje - pointerët**
+**Përmbledhje – pointerët**
 
 Deklarimi `int *x = &a` tregon që kemi një pointer `x` për një shënim `a` të tipit `int`.
 

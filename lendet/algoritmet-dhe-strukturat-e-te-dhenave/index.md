@@ -13,7 +13,7 @@ suppresshooks: true
 
 1. [Pointeret, referencat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java1)
 2. [Klasat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java2)
-3. Tipet e gjeneralizuara, funksionet anonime
+3. [Tipet e gjeneralizuara, funksionet anonime](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java3)
 4. Array listat, listat e lidhura
 5. Big-O, funksionet e rendit të lartë
 6. Stack, Queue
