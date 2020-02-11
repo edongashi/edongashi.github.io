@@ -2,8 +2,6 @@
 
 ---
 
-Deklarimi implicit përmes **auto**.
-
 Shpesh kompajlleri e kupton llojin e variablës prej vlerës së inicializuar nga ana e djathtë.
 
 Në këto raste variablën mund ta deklarojmë si **auto**.
@@ -82,7 +80,7 @@ function<bool(int)> eshte_cift = [](int x) -> bool {
 Ose shkurtimisht:
 
 ```cpp
-auto eshte_cift = [](int x) { return x % 2 == 0; }
+auto eshte_cift = [](int x) { return x % 2 == 0; };
 ```
 
 ---
@@ -245,6 +243,7 @@ int main() {
   char ptr2[3] = { 'a', 'b', 'c' };
   Varg<int>  v1 = {ptr1, 4};
   Varg<char> v2 = {ptr2, 3};
+  return 0;
 }
 ```
 
@@ -349,21 +348,99 @@ int main() {
   int nr_plote[5] = { 1, 3, -2, 5, 4 };
   double nr_presje[3] = { 1.5, 2.3, 4.0 };
   string stringjet[4] = { "Pershendetje", " ", "bote", "!" };
+
   cout << shuma(nr_plote, 5) << endl;
   cout << shuma(nr_presje, 3) << endl;
   cout << shuma(stringjet, 4) << endl;
+
+  return 0;
 }
 ```
 
 ---
 
-Të shkruhet funksioni i rendit të lartë `bool ekziston(T[], n, bool(T))` i cili e teston vargun nëse ndonjëri nga elementet e tij plotësojnë predikatin e dhënë.
+Në shumë gjuhë lambdat shënohen me sintaksen shigjetë: $x => \text{trupi}(x)$.
+
+Në C++ mund ta imitojmë me `#define`:
+
+```cpp
+#define lambda(arg, expr) [](auto arg) { return (expr); }
+
+lambda(x, x * x) // x => x * x
+```
+
+Interpretohet si transformim $x \Rightarrow x^2$.
+
+---
+
+Tipin `function<U(T)>` mund ta shkruajmë edhe si:
+
+```cpp
+template<typename T, typename U>
+using func = function<U(T)>;
+```
+
+Psh. tipi `func<int,bool>` paraqet funksionin që merr një `int` dhe kthen një `bool`.
+
+```cpp
+func<int, bool> eshte_cift = lambda(x, x % 2 == 0);
+```
+
+---
+
+**Detyrë:** Të shkruhet funksioni i rendit të lartë `shuma(n,f)` i cili e llogarit shumën $\sum{f(i)}$ për $i\in 1\dots n$.
+
+$$
+\text{shuma}(n, f) = \sum_{i=1}^{n}{f(i)}
+$$
+
+--
+
+```cpp
+#include <iostream>
+#include <functional>
+#define lambda(arg, expr) [](auto arg) { return (expr); }
+using namespace std;
+
+template<typename T, typename U>
+using func = function<U(T)>;
+
+int shuma(int n, func<int, int> f) {
+  int s = 0;
+  for (int i = 1; i <= n; i++) {
+    s += f(i);
+  }
+
+  return s;
+}
+
+int main() {
+  int n;
+  cout << "Shtyp n: ";
+  cin >> n;
+
+  // Sintaksa e zakonshme
+  cout << shuma(n, [](int i) { return 3 * i + 2; }) << endl;
+  cout << shuma(n, [](int x) { return x * x; }) << endl;
+
+  // Macro
+  cout << shuma(n, lambda(i, 3 * i + 2)) << endl;
+  cout << shuma(n, lambda(x, x * x)) << endl;
+
+  return 0;
+}
+```
+
+---
+
+**Detyrë:** Të shkruhet funksioni i rendit të lartë `bool ekziston(T[], n, func<T,bool> f)` i cili e teston vargun nëse ndonjëri nga elementet e tij plotësojnë predikatin e dhënë.
 
 --
 
 ```cpp
 #include <iostream>
 #include <string>
+#define lambda(arg, expr) [](auto arg) { return (expr); }
 using namespace std;
 
 // Fatkeqësisht nuk mund ta shprehim F si function<bool(T)>
@@ -381,12 +458,11 @@ bool ekziston(T vargu[], int n, F kushti) {
 
 int main() {
   int v[5] = { 1, 3, -2, 5, 4 };
-  cout << ekziston(v, 5, [](int x) { return x > 12; }) << endl;
-  cout << ekziston(v, 5, [](int x) { return x % 2 == 0; }) << endl;
+  cout << ekziston(v, 5, lambda(x, x > 12)) << endl;
+  cout << ekziston(v, 5, lambda(x, x % 2 == 0)) << endl;
 
   string stringjet[3] = { "abc", "tekst i gjate", "123" };
-  auto tekst_gjate = [](string s) { return s.length() > 10; };
-  cout << ekziston(stringjet, 3, tekst_gjate) << endl;
+  cout << ekziston(stringjet, 3, lambda(s, s.length() > 10)) << endl;
 
   return 0;
 }
