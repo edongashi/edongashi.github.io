@@ -34,9 +34,9 @@ Këto shprehje nuk janë doemos të lidhura me ndonjë identifikator.
 
 ---
 
-Funksioni si shprehje e ka tipin **function<U(T)>**.
+Funksioni si shprehje e ka tipin `function<U(T)>`.
 
-Ky funksion merr një argument **T** dhe kthen një vlerë **U**.
+Ky funksion merr një argument `T` dhe kthen një vlerë `U`.
 
 Ky tip gjendet në headerin `<functional>`.
 
@@ -45,7 +45,7 @@ Ky tip gjendet në headerin `<functional>`.
 Sintaksa për lambda shprehje:
 
 ```cpp
-[konteksti](tipi_arg1 arg1, tipi_arg2 arg2, ...) -> tipi_kthyes {
+[konteksti](tipi1 arg1, tipi2 arg2, ...) -> tipi_kthyes {
   ...
   return ...;
 }
@@ -364,7 +364,7 @@ Në shumë gjuhë lambdat shënohen me sintaksen shigjetë: $x => \text{trupi}(x
 Në C++ mund ta imitojmë me `#define`:
 
 ```cpp
-#define lambda(arg, expr) [](auto arg) { return (expr); }
+#define lambda(arg, expr) ([](auto arg) { return (expr); })
 
 lambda(x, x * x) // x => x * x
 ```
@@ -399,7 +399,7 @@ $$
 ```cpp
 #include <iostream>
 #include <functional>
-#define lambda(arg, expr) [](auto arg) { return (expr); }
+#define lambda(arg, expr) ([](auto arg) { return (expr); })
 using namespace std;
 
 template<typename T, typename U>
@@ -440,7 +440,7 @@ int main() {
 ```cpp
 #include <iostream>
 #include <string>
-#define lambda(arg, expr) [](auto arg) { return (expr); }
+#define lambda(arg, expr) ([](auto arg) { return (expr); })
 using namespace std;
 
 // Fatkeqësisht nuk mund ta shprehim F si function<bool(T)>
