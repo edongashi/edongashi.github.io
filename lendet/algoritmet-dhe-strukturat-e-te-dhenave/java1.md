@@ -55,13 +55,13 @@ Variablat lokale janë adresa memorike në një distancë fikse ndaj stack point
 **Pointerët** janë variabla të tipit integer të cilat mbajnë një adresë.
 Zakonisht në atë adresë ruhet ndonjë vlerë e tipit të caktuar, psh. `int`, `double`, etj.
 
-Deklarimi i pointerit: `tipi *emri`.
+Deklarimi i pointerit: `tipi* emri`.
 
 Kodi në vazhdim i deklaron dy pointerë `x` dhe `y`.
 
 ```cpp
-int *x;
-double *y;
+int* x;
+double* y;
 ```
 
 ---
@@ -71,9 +71,9 @@ Pointeri është thjeshtë një variabël numerike që mban një adresë (32-bit
 Kjo vlerë mund t'i nënshtrohet llogaritjeve aritmetikore si çdo integer tjetër.
 
 ```cpp
-int *x;
+int* x;
 x = 4; // sa për demonstrim
-int *y;
+int* y;
 y = x + 1; // merr vlerën 5
 ```
 
@@ -137,8 +137,8 @@ cout << s;
 
 ```cpp
 int vargu[4] = { 3, 7, 1, -2 };
-int *ptr1 = vargu + 1;
-int *ptr2 = vargu + 3;
+int* ptr1 = vargu + 1;
+int* ptr2 = vargu + 3;
 cout << *ptr1 + *(ptr2 - 1);
 ```
 
@@ -165,7 +165,7 @@ Ky operator kthen një pointer për adresën memorike ku gjendet shprehja.
 
 ```cpp
 int a = 5;
-int *ptr = &a;
+int* ptr = &a;
 cout << *ptr; // shfaqet 5
 ```
 
@@ -186,8 +186,8 @@ Shprehja `*x` tregon vlerën që gjendet në atë adresë, dmth. vlerën e shën
 ```cpp
 int a = 5;
 int b = 8;
-int *x = &a;
-int *y = ((*x) % 2 == 0) ? (&a) : (&b);
+int* x = &a;
+int* y = ((*x) % 2 == 0) ? (&a) : (&b);
 cout << *x + *y;
 ```
 
@@ -207,7 +207,7 @@ cout << b;
 
 ```cpp
 double v[5] = { -2, 5.3, 3, 1, 2.2 };
-double *ptr = v + 1;
+double* ptr = v + 1;
 cout << ptr[0] + ptr[2];
 ```
 
@@ -217,9 +217,9 @@ cout << ptr[0] + ptr[2];
 
 ```cpp
 int v[5] = { -2, 5, 3, 1, 2 };
-int *ptr = v + 2;
-int *a = &ptr[-1];
-int *b = &v[3];
+int* ptr = v + 2;
+int* a = &ptr[-1];
+int* b = &v[3];
 (*a)++;
 *b = ptr[-2];
 cout << v[0] + v[1] + v[2] + v[3] + v[4];
@@ -231,7 +231,7 @@ cout << v[0] + v[1] + v[2] + v[3] + v[4];
 
 ```cpp
 int v[5] = { -2, 5, 3, 1, 2 };
-int *ptr = v;
+int* ptr = v;
 int a = *(ptr++);
 int b = *ptr;
 cout << a + b;
@@ -257,7 +257,7 @@ cout << *x << ", " << *y << ", " << *z;
 ```cpp
 int a = 1, b = 2, c = 3;
 int *x = &a, *y = &b, *z = &c;
-int *v[3] = { x, y, z };
+int* v[3] = { x, y, z };
 cout << *(v[1]);
 ```
 
@@ -267,8 +267,8 @@ cout << *(v[1]);
 
 ```cpp
 int a = 4, b = 5;
-int *x = &a, *y = &b;
-int **ptr = (a > b) ? (&x) : (&y);
+int* x = &a, *y = &b;
+int** ptr = (a > b) ? (&x) : (&y);
 cout << **ptr;
 ```
 
@@ -285,7 +285,7 @@ struct Drejtkendeshi { int gjeresia; int lartesia; };
 
 int main() {
   Drejtkendeshi a = { 3, 4 };
-  Drejtkendeshi *ptr = &a;
+  Drejtkendeshi* ptr = &a;
   cout << "Gjeresia: " << (*ptr).gjeresia << endl;
   cout << "Lartesia: " << ptr->lartesia << endl;
   return 0;
@@ -319,7 +319,7 @@ Rezultati i operacionit është pointer `*tipi`.
 int n;
 cout << "Sa elemente i deshironi ne varg? ";
 cin >> n;
-int *vargu = new int[n];
+int* vargu = new int[n];
 // vargu[0], vargu[1], ... vargu[n - 1]
 ```
 
@@ -331,14 +331,14 @@ int *vargu = new int[n];
 struct Drejtkendeshi { int gjeresia; int lartesia; };
 
 Drejtkendeshi* krijo(int a, int b) {
-  Drejtkendeshi *rez = new Drejtkendeshi;
+  Drejtkendeshi* rez = new Drejtkendeshi;
   rez->gjeresia = a;
   rez->lartesia = b;
   return rez;
 }
 
 int main() {
-  Drejtkendeshi *x = krijo(2, 3);
+  Drejtkendeshi* x = krijo(2, 3);
   cout << x->lartesia;
   return 0;
 }
@@ -364,10 +364,10 @@ Fshirja e memories së alokuar dinamikisht bëhet përmes `delete` (një element
 
 ```cpp
 int main() {
-  int *n = new int;
+  int* n = new int;
   cout << "Sa elemente i deshironi ne varg? ";
   cin >> *n;
-  int *vargu = new int[*n];
+  int* vargu = new int[*n];
 
   // ... kryejmë llogaritje
 
@@ -380,13 +380,27 @@ int main() {
 
 ---
 
+**Null pointeri**
+
+Ndonjëherë na duhet të tregojmë që pointeri nuk paraqet asnjë lokacion memorik.
+
+Në këto raste vlera e pointerit e merr vleren 0, që zakonisht quhet `NULL`.
+
+```cpp
+int* x = NULL; // nuk ka vlerë.
+```
+
+NULL pointeri nuk mund të dereferencohet.
+
+---
+
 ## Referencat
 
-Nëse kemi një l-value `a`, atëherë mund të krijojmë një alias për `a` përmes deklarimit `tipi &b = a`.
+Nëse kemi një l-value `a`, atëherë mund të krijojmë një alias për `a` përmes deklarimit `tipi& b = a`.
 
 ```cpp
 int a = 5;
-int &b = a;
+int& b = a;
 b = 3;
 cout << a; // shfaqet 3
 ```
@@ -399,8 +413,8 @@ Aliasi `b` ka lokacion memorik të njëjtë me variablën `a`, prandaj paraqesin
 
 ```cpp
 int a = 2;
-int *ptr = &a;
-int &b = a;
+int* ptr = &a;
+int& b = a;
 *ptr = 3;
 cout << b;
 ```
@@ -412,7 +426,7 @@ Sikur te pointerët, simboli `&` te deklarimi i referencës ka kuptim tjetër me
 Referencat mund t'i përdorim në parametra të funksioneve.
 
 ```cpp
-void nderro(int &a, int &b) {
+void nderro(int& a, int& b) {
   int temp = a;
   a = b;
   b = temp;
@@ -457,7 +471,7 @@ void llogarit(int n, int &s, int &p);
 Një funksion poashtu mund të kthejë l-value përmes referencës.
 
 ```cpp
-int& elementi(int *v, int i) {
+int& elementi(int* v, int i) {
   return v[i];
 }
 
@@ -485,7 +499,7 @@ int& alfa() {
 Dërgimi dhe kthimi sipas referencës mund të bëhet edhe përmes pointerëve.
 
 ```cpp
-int* elementi(int *v, int i) {
+int* elementi(int* v, int i) {
   return &v[i]; // ose v+i
 }
 ```
@@ -498,7 +512,7 @@ Faktikisht, forma përmes `&` përkthehet nga kompajlleri në ekuivalentën e sa
 nga `1` deri në `n`, dhe rezultatet i vendos në adresat e pointerëve `*s` dhe `*p`.
 
 ```cpp
-void llogarit(int n, int *s, int *p);
+void llogarit(int n, int* s, int* p);
 ```
 
 ---
@@ -552,7 +566,7 @@ int main() {
   int n;
   cout << "Jepni numrin e drejtkendeshave: ";
   cin >> n;
-  Drejtkendeshi **drejtkendeshat = new Drejtkendeshi*[n];
+  Drejtkendeshi** drejtkendeshat = new Drejtkendeshi*[n];
   for (int i = 0; i < n; i++) {
     cout << "Drejtkendeshi " << (i + 1) << endl;
     drejtkendeshat[i] = lexo();

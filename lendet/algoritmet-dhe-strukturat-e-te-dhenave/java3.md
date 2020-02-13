@@ -433,6 +433,14 @@ int main() {
 
 ---
 
+**Detyrë:** Të gjeneralizohet detyra e kaluar për një varg të tipeve të klasës monoid.
+
+Ky gjeneralizim së pari i pasqyron (mapon) të dhënat me një funksion $f$, dhe pastaj i kombinon (redukton).
+
+Teknika e mapimit dhe reduktimit (MapReduce) ka përdorim të gjerë në praktikë.
+
+---
+
 **Detyrë:** Të shkruhet funksioni i rendit të lartë `bool ekziston(T[], n, func<T,bool> f)` i cili e teston vargun nëse ndonjëri nga elementet e tij plotësojnë predikatin e dhënë.
 
 --
@@ -466,4 +474,13 @@ int main() {
 
   return 0;
 }
+```
+
+---
+
+**Detyrë:** Të shkruhet funksioni i rendit të lartë `bind` i cili e kthen rezultatin e thirrjes
+`f(*t)` vetëm kur argumenti `t` nuk është `NULL`. Në rastet tjera të kthehet `NULL` pointer i tipit `U*`.
+
+```cpp
+U* bind(T* t, Func<T, U*> f)
 ```
