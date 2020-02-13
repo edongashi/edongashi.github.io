@@ -542,6 +542,16 @@ int main() {
   double* sqrt_b = bind(b, f);
   double* sqrt_c = bind(c, f);
 
+  // Shtyp një vlerë që ekziston.
+  auto print = [](double x) -> void* {
+    cout << x << endl;
+    return NULL;
+  };
+
+  bind(sqrt_a, print); // shtypet sepse ekziston
+  bind(sqrt_b, print); // nuk shtypet
+  bind(sqrt_c, print); // nuk shtypet
+
   if (sqrt_a != NULL) {
     cout << "sqrt(a) = " << *sqrt_a << endl;
     delete sqrt_a;
