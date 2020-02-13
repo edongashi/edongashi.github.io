@@ -274,6 +274,11 @@ cout << **ptr;
 
 ---
 
+**Detyrë:** Të shkruhet funksioni i cili e llogarit shumën e vargut të numrave me presje dhjetore.
+Parametri i vargut të shkruhet si pointer.
+
+---
+
 **Pointerët në struktura**
 
 Pointerët mund të adresojnë edhe tipe komplekse.
@@ -311,7 +316,7 @@ Zakonisht pointerët nuk na nevojiten për vlera lokale, por për vlera në heap
 ---
 
 Sintaksa: `new tipi` për një element, `new tipi[n]` për varg.
-Rezultati i operacionit është pointer `*tipi`.
+Rezultati i operacionit është pointer `tipi*`.
 
 **Shembull:** Alokimi dinamik i një vargu:
 
@@ -396,7 +401,7 @@ NULL pointeri nuk mund të dereferencohet.
 
 ## Referencat
 
-Nëse kemi një l-value `a`, atëherë mund të krijojmë një alias për `a` përmes deklarimit `tipi& b = a`.
+Nëse kemi një l-value `a`, atëherë mund ta krijojmë një alias për `a` përmes deklarimit `tipi& b = a`.
 
 ```cpp
 int a = 5;

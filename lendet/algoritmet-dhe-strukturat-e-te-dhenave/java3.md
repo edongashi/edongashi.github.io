@@ -283,6 +283,10 @@ int main() {
 
 ---
 
+**Detyrë:** Të shkruhet funksioni `swap(T& a, T& b)` i cili i ndërron vendet e dy variablave të tipit `T`.
+
+---
+
 **Specializimi i template**
 
 Nganjëherë implementimi i përgjitshëm nuk përputhet për një tip specifik.
@@ -478,9 +482,90 @@ int main() {
 
 ---
 
+Në C++ është e vështirë të shprehen tipet mbi tipe.
+
+Për një tip funksioni `F` të aplikuar me një parameter `T`,
+tipin kthyes mund t'ia nënkuptojmë (infer) përmes tipit të mapuar `Result<F,T>`.
+
+```cpp
+template<typename F, typename T>
+using Result = typename result_of<F&(T&)>::type;
+```
+
+---
+
 **Detyrë:** Të shkruhet funksioni i rendit të lartë `bind` i cili e kthen rezultatin e thirrjes
 `f(*t)` vetëm kur argumenti `t` nuk është `NULL`. Në rastet tjera të kthehet `NULL` pointer i tipit `U*`.
 
 ```cpp
 U* bind(T* t, Func<T, U*> f)
+```
+
+--
+
+```cpp
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+template<typename F, typename T>
+using Result = typename result_of<F&(T&)>::type;
+
+template<typename F, typename T>
+using DerefResult = typename remove_pointer<Result<F, T>>::type;
+
+template<typename T, typename F, typename U = DerefResult<F, T>>
+// F :: T -> U*
+U* bind(T* t, F f) {
+  if (t != NULL) {
+    U* rez = f(*t);
+    return rez;
+  } else {
+    return NULL;
+  }
+}
+
+int main() {
+  auto f = [](int x) -> double* {
+    if (x < 0) {
+      return NULL;
+    } else {
+      return new double { sqrt(x) };
+    }
+  };
+
+  int* a = new int { 9 };
+  int* b = new int { -1 };
+  int* c = NULL;
+
+  double* sqrt_a = bind(a, f);
+  double* sqrt_b = bind(b, f);
+  double* sqrt_c = bind(c, f);
+
+  if (sqrt_a != NULL) {
+    cout << "sqrt(a) = " << *sqrt_a << endl;
+    delete sqrt_a;
+  } else {
+    cout << "sqrt(a) = NULL" << endl;
+  }
+
+  if (sqrt_b != NULL) {
+    cout << "sqrt(b) = " << *sqrt_b << endl;
+    delete sqrt_b;
+  } else {
+    cout << "sqrt(b) = NULL" << endl;
+  }
+
+  if (sqrt_c != NULL) {
+    cout << "sqrt(c) = " << *sqrt_c << endl;
+    delete sqrt_c;
+  } else {
+    cout << "sqrt(c) = NULL" << endl;
+  }
+
+  delete a;
+  delete b;
+
+  return 0;
+}
 ```
