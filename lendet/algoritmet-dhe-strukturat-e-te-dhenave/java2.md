@@ -80,11 +80,11 @@ if (baraz(p1, p2)) {
 
 ---
 
-Stili i tillë i programimit njihet si programim procedural.
+Stili i tillë i programimit njihet si **programim procedural**.
 
 Ekziston një stil tjetër i programimit i cili grupon të dhënat dhe funksionet mbi to në një njësi të vetme që quhet **klasë**.
 
-Stili i programimit me klasa quhet programimi i orientuar në objekte (POO).
+Stili i programimit me klasa quhet **programimi i orientuar në objekte (POO)**.
 
 ---
 
@@ -109,7 +109,7 @@ Realisht, në C++ nuk ka dallim teknik ndërmjet strukturës dhe klasës.
 
 ---
 
-### Kontrollimi i qasjes (private, public)
+**Kontrollimi i qasjes (private, public)**
 
 Fushat **private** mund të lexohen vetëm nga funksionet brenda klasës.
 
@@ -281,3 +281,131 @@ int main() {
   return 0;
 }
 ```
+
+---
+
+Konstruktori më së shpeshti përdoret për të vendosur vlera në fusha.
+
+```cpp
+class Studenti {
+private:
+  int mosha;
+  double notaMesatare;
+public:
+  Studenti(int mosha, double notaMesatare) {
+    this->mosha = mosha;
+    this->notaMesatare = notaMesatare;
+  }
+}
+```
+
+Vini re që mbishkrimin e identifikatorëve e tejkalojmë përmes qasjes eksplicite me `this`.
+
+---
+
+**Copy constructor**
+
+Në C++ secila klasë ka një konstruktor special për kopjim të objektit.
+
+Zakonisht kjo mund të shkaktojë sjellje të papritura, prandaj shpesh do ta ndalojmë.
+
+```cpp
+class Studenti {
+public:
+  // Konstruktori i kopjimit.
+  Studenti(Studenti const&) { ... }
+  // Operatori i shoqërimit.
+  Studenti& operator=(Studenti const&) { ... }
+};
+```
+
+---
+
+**Destruktori** është bllok kodi që thirret:
+
+- Kur tipi i alokuar në stack del nga scope.
+- Kur fshihet pointeri për objektin e alokuar dinamikisht.
+
+Zakonisht përdoret për lirim të resurseve.
+
+---
+
+Shkruhet në formën `~Klasa() { ... }`.
+
+Nuk merr parametra e as nuk kthen asgjë.
+
+```cpp
+class Klasa {
+private:
+  int* data;
+
+public:
+  Klasa() { // Konstruktori
+    this->data = new int { 0 };
+  }
+
+  ~Klasa() { // Destruktori
+    delete this->data;
+  }
+};
+```
+
+---
+
+**Enkapsulimi i fushave private**
+
+Zakonisht e kontrollojmë qasjen në fusha me dy metoda publike `getX()` dhe `setX(x)`.
+
+```cpp
+class Studenti {
+private:
+  int mosha;
+
+public:
+  int getMosha() {
+    return this->mosha;
+  }
+
+  void setMosha(int mosha) {
+    this->mosha = mosha;
+  }
+};
+```
+
+---
+
+**Detyrë:** Të shkruhet klasa `Studenti` e cila ka:
+
+- Fushat private `emri`, `mbiemri`, `mosha`, `notat[5]`
+- Konstruktor që inicializon fushat.
+- Metodën `nota(i)` e cila merr notën në pozitën `i`.
+- Metodën `notaMesatare()`.
+- Metodën `emriPlote()` e cila kthen emrin dhe mbiemrin e bashkuar.
+- Metodën `shtyp()` e cila i shtyp në ekran të dhënat e studentit.
+
+---
+
+**Detyrë:** Të shkruhet klasa `Pika` e cila ka:
+
+- Fushat private `x` dhe `y` (nr. real).
+- Konstruktorin inicializues `Pika(x,y)` dhe metodat mbështjellëse të fushave.
+- Metodën `distanca(Pika tjeter)`.
+- Metodën `shtyp()` që shtyp në ekran kordinatat në formën `(x,y)`, psh. `(4,3)`.
+
+---
+
+**Detyrë:** Të shkruhet klasa `Rrethi` e cila ka:
+
+- Fushat private `rrezja` (nr. real) dhe `qendra` (e tipit `Pika` nga detyra e kaluar).
+- Konstruktorin `Rrethi(qendra,rrezja)`.
+- Metodat `siperfaqja()` dhe `perimetri()`.
+- Metodën `distanca(Rrethi tjeter)` e cila e llogarit distancën mes qendrave të rrathëve.
+- Metodën `shtyp()` që shtyp në ekran qendrën dhe rrezen e rrethit.
+
+---
+
+**Detyrë:** Të krijohet një varg me 5 instanca të tipit `Rrethi` nga detyra e kaluar.
+
+- Të mbushet ky varg me objekte të inicializuara sipas dëshirës.
+- Të gjendet rrethi me sipërfaqen më të madhe dhe të ruhet adresa e tij në një pointer.
+- Të shtypet në ekran rrethi i adresuar nga pointeri përmes metodës `shtyp()`.

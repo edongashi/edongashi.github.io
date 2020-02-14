@@ -538,9 +538,9 @@ int main() {
   int* b = new int { -1 };
   int* c = NULL;
 
-  double* sqrt_a = bind(a, f);
-  double* sqrt_b = bind(b, f);
-  double* sqrt_c = bind(c, f);
+  double* sqrt_a = bind(a, f); // 3
+  double* sqrt_b = bind(b, f); // NULL
+  double* sqrt_c = bind(c, f); // NULL
 
   // Shtyp një vlerë që ekziston.
   auto print = [](double x) -> void* {
@@ -552,27 +552,9 @@ int main() {
   bind(sqrt_b, print); // nuk shtypet
   bind(sqrt_c, print); // nuk shtypet
 
-  if (sqrt_a != NULL) {
-    cout << "sqrt(a) = " << *sqrt_a << endl;
-    delete sqrt_a;
-  } else {
-    cout << "sqrt(a) = NULL" << endl;
-  }
-
-  if (sqrt_b != NULL) {
-    cout << "sqrt(b) = " << *sqrt_b << endl;
-    delete sqrt_b;
-  } else {
-    cout << "sqrt(b) = NULL" << endl;
-  }
-
-  if (sqrt_c != NULL) {
-    cout << "sqrt(c) = " << *sqrt_c << endl;
-    delete sqrt_c;
-  } else {
-    cout << "sqrt(c) = NULL" << endl;
-  }
-
+  delete sqrt_a;
+  delete sqrt_b; // no-op
+  delete sqrt_c; // no-op
   delete a;
   delete b;
 

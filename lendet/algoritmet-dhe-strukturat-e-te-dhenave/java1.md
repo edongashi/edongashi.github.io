@@ -173,7 +173,7 @@ cout << *ptr; // shfaqet 5
 
 **Përmbledhje – pointerët**
 
-Deklarimi `int *x = &a` tregon që kemi një pointer `x` për një shënim `a` të tipit `int`.
+Deklarimi `int* x = &a` tregon që kemi një pointer `x` për një shënim `a` të tipit `int`.
 
 Shprehja `x` tregon adresën ku gjendet shënimi `a`.
 
@@ -267,7 +267,7 @@ cout << *(v[1]);
 
 ```cpp
 int a = 4, b = 5;
-int* x = &a, *y = &b;
+int *x = &a, *y = &b;
 int** ptr = (a > b) ? (&x) : (&y);
 cout << **ptr;
 ```
@@ -351,9 +351,9 @@ int main() {
 
 ---
 
-Stack quajmë memorien statike të bllokut të funksionit.
+**Stack** quajmë memorien statike të bllokut të funksionit.
 
-Heap quajmë memorien e përbashkët të procesit.
+**Heap** quajmë memorien e përbashkët të procesit.
 
 ![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java1/img5.png)
 
@@ -490,6 +490,20 @@ int main() {
 
 ---
 
+**Referencat konstante**
+
+Shpesh bartjen e bëjmë përmes referencës për ta evituar kopjimin që vie me bartjen përmes vlerës.
+
+Deklarimi i variablës/parametrit si `const tipi&` mundëson krijimin e një aliasi të pandryshueshëm.
+
+```cpp
+void funksioni(const int& x) {
+  const int &y = x;
+}
+```
+
+---
+
 **Kujdes:** Vlerat lokale nuk guxojnë të kthehen, pasi që kanë jetëgjatësi vetëm në bllokun aktual.
 
 ```cpp
@@ -526,7 +540,7 @@ void llogarit(int n, int* s, int* p);
 
 ---
 
-**Detyrë:** Të shkruhet funksioni `swap(a, b)` në variantin me pointerë dhe me referenca.
+**Detyrë:** Të shkruhet funksioni `swap(a,b)` në variantin me pointerë dhe me referenca.
 
 Të thirren te dy variantet nga `main` dhe të vrojtohen dallimet sintaksore.
 
