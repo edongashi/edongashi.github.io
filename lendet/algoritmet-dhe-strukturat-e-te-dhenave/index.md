@@ -11,7 +11,7 @@ suppresshooks: true
 
 ## Materiali
 
-1. [Pointeret, referencat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java1)
+1. [Pointerët, referencat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java1)
 2. [Klasat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java2)
 3. [Tipet e gjeneralizuara, funksionet anonime](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java3)
 4. Array listat, listat e lidhura
