@@ -7,8 +7,6 @@ suppresshooks: true
 
 # Inxhinieri Softuerike
 
----
-
 ## Materiale
 
 ### Specifikimi teknik

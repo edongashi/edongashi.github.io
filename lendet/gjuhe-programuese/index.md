@@ -7,17 +7,6 @@ suppresshooks: true
 
 # Gjuhë Programuese
 
-## Rezultatet e kolokviumit të dytë
-
-Klikoni [këtu](https://docs.google.com/spreadsheets/d/1_qaZ63PPEAAuwSahBfDvDuTqojp4IWChmTqzenBlpvQ/edit?usp=sharing) për të hapur rezultatet e kolokviumit të dytë. Rishikimi i fletoreve mund të bëhet të premten më datë 17/01 nga ora 16:30 deri në ora 17:00 në kabinetin 615.
-
-## Rezultatet e kolokviumit të parë
-
-Klikoni [këtu](/lendet/gjuhe-programuese/kolokviumi-1) për të hapur rezultatet e kolokviumit të parë.
-Konsultimet do të mbahen pas orarit të ushtrimeve gjatë javës 16-20 dhjetor.
-
----
-
 ## Materiali
 
 1. [Hyrje në C++](/lendet/gjuhe-programuese/java1)
@@ -51,17 +40,6 @@ Konsultimet do të mbahen pas orarit të ushtrimeve gjatë javës 16-20 dhjetor.
 
 - [cplusplus.com](http://www.cplusplus.com/doc/tutorial/) - Materiale mësimore për gjuhën C++.
 - [cpp.sh](http://cpp.sh/) - Testo programe të C++ në ueb.
-
----
-
-## Orari i mësimit
-
-| Grupi | Dita      | Ora         | Salla |
-| ----- | --------- | ----------- | ----- |
-| 1A'   | E enjte   | 11:30-13:00 | 615   |
-| 1A"   | E hënë    | 11:00-12:30 | 615   |
-| 1B'   | E mërkurë | 14:15-15:45 | 615   |
-| 1B"   | E mërkurë | 10:30-12:00 | 615   |
 
 ---
 

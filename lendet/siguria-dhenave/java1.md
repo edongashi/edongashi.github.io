@@ -1,3 +1,0 @@
-# Steganografia
-
-Së shpejti...

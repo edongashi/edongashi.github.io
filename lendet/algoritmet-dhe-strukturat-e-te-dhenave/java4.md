@@ -28,3 +28,30 @@ Dy implementime kryesore të listave janë:
 ![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/img1.png)
 
 ---
+
+Operacionet themelore që ofrojnë listat:
+
+- Leximi i elementeve
+- Shtimi i elementeve
+- Zëvendësimi i elementeve
+- Largimi i elementeve
+
+---
+
+## Array Lista
+
+Strukturë që mban një varg
+
+---
+
+<!-- .slide: style="font-size:0.8em;" -->
+
+| Operacioni                  | Array List | Linked List     |
+| --------------------------- | ---------- | --------------- |
+| Leximi i rastit             | shpejtë    | ngadalshëm      |
+| Shtimi në fund              | shpejtë    | varet nga impl. |
+| Shtimi në fillim            | ngadalshëm | shpejtë         |
+| Shtimi në pozita të rastit  | ngadalshëm | mesatare        |
+| Fshirja në fund             | shpejtë    | varet nga impl. |
+| Fshirja në fillim           | ngadalshëm | shpejtë         |
+| Fshirja në pozita të rastit | ngadalshëm | mesatare        |

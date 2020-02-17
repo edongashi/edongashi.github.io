@@ -7,38 +7,6 @@ suppresshooks: true
 
 # Arkitektura e Kompjuterëve
 
-## Testi i dytë vlerësues (Kompjuterika)
-
-Klikoni [këtu](/lendet/arkitektura-kompjutereve/testi2) për të hapur rezultatet e testit të dytë vlerësues. Konsultimet do të mbahen të enjten (27/06/2019) nga ora 12:00.
-
-## Testi i dytë vlerësues (Kompjuterika)
-
-Testi i dytë vlerësues mbahet të hënen 17/06/2019 nga ora 17:30.
-
-## Mbrojtja e projektit të dytë (A/E/T)
-
-Në [këtë link](https://docs.google.com/spreadsheets/d/10ijKqxnF67oQgOoO146o7kW0IzDpBwNFsBtWC6CrI8g/edit?usp=sharing) gjeni terminet për mbrojtjen e detyrës së dytë për drejtimet A/E/T.
-
-## Detyra e dytë (A/E/T)
-
-Në [këtë link](/lendet/arkitektura-kompjutereve/detyra2) gjeni përshkrimin e detyrës së dytë vlerësuese për grupet (A/E/T). Grupet janë të njejtat sikur të projektit të parë. Në [këtë link](https://docs.google.com/spreadsheets/d/10ijKqxnF67oQgOoO146o7kW0IzDpBwNFsBtWC6CrI8g/edit?usp=sharing) gjeni grupet e ndara për projektet (A/E/T).
-
-Afati i fundit i dorëzimit është të dielën, 09.06.2019, ora 23:59. Zgjidhjet duhet të diskutohen dhe të paraqiten në një dokument me shabllonin e detyrës së parë. Kodi mund të përfshihet brenda dokumentit ose të shtohet si shtesë e ndarë me praprashtesën `.asm`.
-
-## Testi i parë vlerësues (Kompjuterika)
-
-Klikoni [këtu](/lendet/arkitektura-kompjutereve/testi1) për të hapur rezultatet e testit të parë vlerësues. Konsultimet do të mbahen të premten (03/05/2019) nga ora 12:00.
-
-## Orari i ushtrimeve
-
-| Grupi   | Dita    | Ora         | Salla         |
-| ------- | ------- | ----------- | ------------- |
-| 1A      | E enjte | 10:00-11:30 | 615           |
-| 1B      | E enjte | 11:30-13:00 | 615           |
-| E/AKR/T | E enjte | 16:00-17:30 | Kabinetet 600 |
-
----
-
 ## Materiali
 
 1. [Hyrje](/lendet/arkitektura-kompjutereve/java1)

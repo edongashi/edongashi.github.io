@@ -7,8 +7,6 @@ suppresshooks: true
 
 # Algoritmet dhe Strukturat e të Dhënave
 
----
-
 ## Materiali
 
 1. [Pointerët, referencat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java1)
@@ -26,11 +24,11 @@ suppresshooks: true
 
 ## Orari i mësimit
 
-| Grupi | Dita      | Ora         | Salla |
-| ----- | --------- | ----------- | ----- |
-| | | | 615 |
-| | | | 615 |
-| | | | 615 |
+| Grupi | Dita | Ora | Salla |
+| ----- | ---- | --- | ----- |
+|       |      |     | 615   |
+|       |      |     | 615   |
+|       |      |     | 615   |
 
 ---
 
