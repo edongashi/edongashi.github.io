@@ -24,11 +24,11 @@ suppresshooks: true
 
 ## Orari i mësimit
 
-| Grupi | Dita | Ora | Salla |
-| ----- | ---- | --- | ----- |
-|       |      |     | 615   |
-|       |      |     | 615   |
-|       |      |     | 615   |
+| Grupi   | Dita     | Ora         | Salla |
+| ------- | -------- | ----------- | ----- |
+| 1A'     | E hënë   | 09:00-10:30 | 615   |
+| 2B'     | E premte | 14:00-15:30 | 616   |
+| 2B"+4B' | E premte | 15:45-17:15 | 621   |
 
 ---
 
