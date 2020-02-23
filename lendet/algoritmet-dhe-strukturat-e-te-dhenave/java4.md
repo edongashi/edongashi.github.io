@@ -25,7 +25,7 @@ Dy implementime kryesore të listave janë:
 - Listat përmes vargjeve – **array list**.
 - Listat me nyje të lidhura – **linked list**.
 
-![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/img1.png)
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/lists.png)
 
 ---
 
@@ -40,7 +40,64 @@ Operacionet themelore që ofrojnë listat:
 
 ## Array Lista
 
-Strukturë që mban një varg
+Strukturë që mban një varg në të cilin ruhen elementet në formë të njëpasnjëshme.
+
+---
+
+**Leximi i elementit në pozitën `i`**
+
+Merr elementin në indeksin `i` të vargut.
+
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/array-read.png) <!-- .element: style="border:none;" -->
+
+---
+
+**Zëvendësimi i elementit në pozitën `i`**
+
+Vendose elementin e ri në indeksin `i` të vargut.
+
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/array-write.png) <!-- .element: style="border:none;" -->
+
+---
+
+**Shtimi i elementit në fund**
+
+Vendos elementin në pozitën `n`.
+
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/array-push.png) <!-- .element: style="border:none;" -->
+
+---
+
+**Shtimi i elementit në pozitën `i`**
+
+Krijo hapësirë për elementin duke i shtyer elementet e mbetura në të djathtë.
+
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/array-insert.png) <!-- .element: style="border:none;" -->
+
+---
+
+**Largimi i elementit në fund**
+
+Largoje elementin nga pozita `n-1`.
+
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/array-pop.png) <!-- .element: style="border:none;" -->
+
+---
+
+**Largimi i elementit në pozitën `i`**
+
+Zhvendosi elementet e mbetura në të majtë.
+
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/array-remove.png ) <!-- .element: style="border:none;" -->
+
+---
+
+**Tejkalimi i madhësisë së vargut**
+
+Nëse për shkak të një operacioni shtimi tejkalohet madhësia e vargut,
+duhet ta krijojmë një varg të ri me madhësi dyfishe të së vjetrit.
+
+Të gjitha elementet kopjohen në vargun e ri, e pastaj kryhet operacioni.
 
 ---
 
