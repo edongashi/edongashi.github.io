@@ -345,6 +345,7 @@ Drejtkendeshi* krijo(int a, int b) {
 int main() {
   Drejtkendeshi* x = krijo(2, 3);
   cout << x->lartesia;
+  delete x;
   return 0;
 }
 ```
@@ -490,6 +491,17 @@ int main() {
 
 ---
 
+**Kujdes:** Vlerat lokale nuk guxojnë të kthehen, pasi që kanë jetëgjatësi vetëm në bllokun aktual.
+
+```cpp
+int& alfa() {
+  int n = 5;
+  return n; // gabim
+}
+```
+
+---
+
 **Referencat konstante**
 
 Shpesh bartjen e bëjmë përmes referencës për ta evituar kopjimin që vie me bartjen përmes vlerës.
@@ -499,17 +511,6 @@ Deklarimi i variablës/parametrit si `const tipi&` mundëson krijimin e një ali
 ```cpp
 void funksioni(const int& x) {
   const int &y = x;
-}
-```
-
----
-
-**Kujdes:** Vlerat lokale nuk guxojnë të kthehen, pasi që kanë jetëgjatësi vetëm në bllokun aktual.
-
-```cpp
-int& alfa() {
-  int n = 5;
-  return n; // gabim
 }
 ```
 

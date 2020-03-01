@@ -418,3 +418,18 @@ public:
 - Të mbushet ky varg me objekte të inicializuara sipas dëshirës.
 - Të gjendet rrethi me sipërfaqen më të madhe dhe të ruhet adresa e tij në një pointer.
 - Të shtypet në ekran rrethi i adresuar nga pointeri përmes metodës `shtyp()`.
+
+---
+
+<!-- .slide: style="font-size:0.8em;" -->
+
+**Detyrë:** Të shkruhet klasa `NumerKompleks` me veçoritë private
+`re` dhe `im` si dhe anëtarët në vijim:
+
+- Konstruktorin `NumerKompleks(re,im)`
+- Metodat `shto(k)`, `zbrit(k)`, `shumezo(k)`, ku `k` është `NumerKompleks`.
+- Mbingarkimet `shto(re,im)`, `zbrit(re,im)`, `shumezo(re,im)`.
+- Metodat `shtyp()`, `toString()`.
+
+Në `main` të deklarohen disa instanca të tipit
+`NumerKompleks` dhe të kryhen llogaritje të ndryshme.
