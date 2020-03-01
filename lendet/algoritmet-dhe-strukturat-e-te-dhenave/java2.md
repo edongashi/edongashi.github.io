@@ -2,6 +2,15 @@
 
 ---
 
+## Përsëritje
+
+- Çfarë janë pointerët?
+- Në cilat raste na nevojiten?
+- Kur na nevojitet alokimi dinamik?
+- Ku dallojnë thirrjet përmes vlerës dhe referencës?
+
+---
+
 ## Klasat
 
 Supozojmë një strukturë të të dhënave `Pika` e cila paraqet dyshen `(x,y)` në rrafshin kartezian:
