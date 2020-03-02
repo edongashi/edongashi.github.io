@@ -20,6 +20,10 @@ suppresshooks: true
 9. Grafet
 10. Sortimi, algoritmet e kërkimit
 
+## Projektet
+
+1. [Pointerët dhe Referencat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/projekti1)
+
 ---
 
 ## Orari i mësimit
