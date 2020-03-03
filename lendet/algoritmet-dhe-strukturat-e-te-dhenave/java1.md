@@ -386,6 +386,19 @@ int main() {
 
 ---
 
+Disa shkurtesa për inicializim të vlerave gjatë alokimit dinamik:
+
+```cpp
+Drejtkendeshi* d1 = new Drejtkendeshi { 3, 4 };
+
+Drejtkendeshi* d2 = new Drejtkendeshi;
+*d2 = { 5, 6 };
+
+int* x = new int { 21 };
+```
+
+---
+
 **Null pointeri**
 
 Ndonjëherë na duhet të tregojmë që pointeri nuk paraqet asnjë lokacion memorik.
