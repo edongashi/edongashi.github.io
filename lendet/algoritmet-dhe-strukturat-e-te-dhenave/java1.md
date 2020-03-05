@@ -564,6 +564,18 @@ Të thirren te dy variantet nga `main` dhe të vrojtohen dallimet sintaksore.
 
 ---
 
+**Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
+
+```cpp
+int v1[3] = { 1, 2, 3 };
+int v2[3] = { 4, 5, 6 };
+int *x = v1, *y = v2;
+int **z = &(*x > *y ? x : y);
+cout << 2 * *(*z + 1);
+```
+
+---
+
 <!-- .slide: style="font-size:0.8em;" -->
 
 **Detyrë**

@@ -11,6 +11,30 @@
 
 ---
 
+**Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
+
+```cpp
+int v[4] = { 6, 2, 7, 4 };
+
+cout << *(v + 1) + 1;
+```
+
+---
+
+**Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
+
+```cpp
+int v1[3] = { 1, 2, 3 };
+
+int v2[3] = { 4, 5, 6 };
+
+int *p[2] = { v1, v2 };
+
+cout << 2 * *(*(p + 1) + 1);
+```
+
+---
+
 ## Klasat
 
 Supozojmë një strukturë të të dhënave `Pika` e cila paraqet dyshen `(x,y)` në rrafshin kartezian:
