@@ -12,15 +12,15 @@ suppresshooks: true
 1. [Pointerët, referencat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java1)
 2. [Klasat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java2)
 3. [Tipet e gjeneralizuara, funksionet anonime](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java3)
-4. Big-O, funksionet e rendit të lartë
-5. Stack
-6. Queue
-7. Listat
-8. Hash tabelat
-9. Pemët
-10. Grafet
-11. Sortimi
-12. Algoritmet e kërkimit
+4. Array listat
+5. Big-O, funksionet e rendit të lartë
+6. Stack
+7. Queue
+8. Listat e lidhura
+9. Hash tabelat
+10. Pemët
+11. Grafet
+12. Sortimi, algoritmet e kërkimit
 
 ## Projektet
 
