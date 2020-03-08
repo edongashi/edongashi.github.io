@@ -2,12 +2,77 @@
 
 ---
 
+Kur mund të themi që dy objekte janë të njejta?
+
+- Kur kanë karakteristikat identike, apo
+- Kur gjenden në adresën e njejtë?
+
+Nuk ka përgjigje definitive për këtë pyetje – varet nga konteksti i përdorimit.
+
+---
+
+Shpesh do të dizajnojmë tipe të cilat nuk kemi dëshirë të kopjohen në mënyrë implicite.
+
+Për këtë arsye e ndalojmë operatorin `=` dhe konstruktorin `T(T&)` me `delete`:
+
+```cpp
+class Studenti {
+private:
+  // Konstruktori i kopjimit.
+  Studenti(const Studenti&) = delete;
+  // Operatori i shoqërimit.
+  Studenti& operator=(const Studenti&) = delete;
+};
+```
+
+---
+
+Tipet që nuk mund të kopjohen mund të bartën vetëm përmes referencës. Pse?
+
+---
+
+Në C++ 11 është shtuar një tip i ri i referencës – referencat në R-Values.
+
+Shënohet ngjashëm me referencat e zakonshme:
+
+```cpp
+void funksioni(Tipi&& rval) {
+  ...
+}
+```
+
+---
+
+**Move constructori** mundëson bartjen e vlerave nga një R-Value të përkohshme në objektin e anës së majtë.
+
+```cpp
+class Studenti {
+public:
+  // Konstruktori i kopjimit.
+  Studenti(const Studenti&& tjeter) { ... }
+};
+```
+
+Kjo na nevojitet për të përdorur tipet e alokuara statikisht me semantika të referencës.
+
+---
+
+Pra, për një tip referent i vendosim këto kushtëzime:
+
+- Nuk lejohen kopjime implicite.
+- E bartim vetëm përmes referencës.
+- E kthejmë vetëm përmes referencës, ose
+- E kthejmë përmes shkëmbimit (lëvizjes).
+
+---
+
 <!-- .slide: style="font-size:0.8em;" -->
 
 **Detyrë:** Të shkruhet klasa `Varg` me anëtarët:
 
 - Fushat private `data` e tipit `int*` dhe `n` e tipit `int`.
 - Konstruktorin `Varg(*data, n)` i cili i inicializon fushat përmes kopjimit.
+- Konstruktorët për ndalim të kopjes por lejim të lëvizjes.
 - Destruktorin `~Varg()` i cili e liron memorien `data`.
 - Funksionin `at(i)` i cili e kthen elementin në pozitën `i`.
 - Funksionin `length()` i cili e kthen gjatësinë e vargut.
@@ -101,7 +166,7 @@ int main() {
 
 **Specializimi i template**
 
-Nganjëherë implementimi i përgjitshëm nuk përputhet për një tip specifik.
+Nganjëherë implementimi i përgjithshëm nuk përputhet për një tip specifik.
 
 Përmes specializimit mund të mbishkruajmë implementimin bazë.
 
@@ -495,11 +560,11 @@ int main() {
 Në C++ është e vështirë të shprehen tipet mbi tipe.
 
 Për një tip funksioni `F` të aplikuar me një parameter `T`,
-tipin kthyes mund t'ia nënkuptojmë (infer) përmes tipit të mapuar `Result<F,T>`.
+tipin kthyes mund t'ia nënkuptojmë (infer) përmes tipit të mapuar `result<F,T>`.
 
 ```cpp
 template<typename F, typename T>
-using Result = typename result_of<F&(T&)>::type;
+using result = typename result_of<F&(T&)>::type;
 ```
 
 ---
@@ -518,7 +583,7 @@ Ky funksion së pari i pasqyron (mapon) të dhënat me një funksion $f$, dhe pa
 `f(*t)` vetëm kur argumenti `t` nuk është `NULL`. Në rastet tjera të kthehet `NULL` pointer i tipit `U*`.
 
 ```cpp
-U* bind(T* t, Func<T, U*> f)
+U* bind(T* t, func<T, U*> f)
 ```
 
 --
@@ -529,12 +594,12 @@ U* bind(T* t, Func<T, U*> f)
 using namespace std;
 
 template<typename F, typename T>
-using Result = typename result_of<F&(T&)>::type;
+using result = typename result_of<F&(T&)>::type;
 
 template<typename F, typename T>
-using DerefResult = typename remove_pointer<Result<F, T>>::type;
+using deref_result = typename remove_pointer<result<F, T>>::type;
 
-template<typename T, typename F, typename U = DerefResult<F, T>>
+template<typename T, typename F, typename U = deref_result<F, T>>
 // F :: T -> U*
 U* bind(T* t, F f) {
   if (t != NULL) {

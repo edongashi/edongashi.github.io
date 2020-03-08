@@ -346,9 +346,9 @@ Zakonisht kjo mund të shkaktojë sjellje të papritura, prandaj shpesh do ta nd
 class Studenti {
 public:
   // Konstruktori i kopjimit.
-  Studenti(Studenti const&) { ... }
+  Studenti(const Studenti&) { ... }
   // Operatori i shoqërimit.
-  Studenti& operator=(Studenti const&) { ... }
+  Studenti& operator=(const Studenti&) { ... }
 };
 ```
 
