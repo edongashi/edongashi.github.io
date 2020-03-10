@@ -31,6 +31,16 @@ Tipet që nuk mund të kopjohen mund të bartën vetëm përmes referencës. Pse
 
 ---
 
+**Semantikat e lëvizjes**
+
+Lëvizja e objektit nënkupton bartjen e pronësisë së resurseve që i menaxhon te një objekt tjetër.
+
+Kjo është më efikase sesa kopjimi i thellë.
+
+Objekti burimor e "humb" pronësinë duke ia pamundësuar lirimin e resurseve në destruktor.
+
+---
+
 Në C++ 11 është shtuar një tip i ri i referencës – referencat në R-Values.
 
 Shënohet ngjashëm me referencat e zakonshme:
@@ -48,12 +58,12 @@ void funksioni(Tipi&& rval) {
 ```cpp
 class Studenti {
 public:
-  // Konstruktori i kopjimit.
-  Studenti(const Studenti&& tjeter) { ... }
+  // Konstruktori i lëvizjes.
+  Studenti(Studenti&& tjeter) { ... }
 };
 ```
 
-Kjo na nevojitet për të përdorur tipet e alokuara statikisht me semantika të referencës.
+Kjo na nevojitet për të shmangur kopjimin e tipeve e referente të alokuara statikisht.
 
 ---
 
@@ -61,7 +71,7 @@ Pra, për një tip referent i vendosim këto kushtëzime:
 
 - Nuk lejohen kopjime implicite.
 - E bartim vetëm përmes referencës.
-- E kthejmë vetëm përmes referencës, ose
+- E kthejmë përmes referencës, ose
 - E kthejmë përmes shkëmbimit (lëvizjes).
 
 ---
