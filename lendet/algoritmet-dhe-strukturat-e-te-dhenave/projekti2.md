@@ -54,7 +54,7 @@ Të deklarohet klasa `Data` me anëtarët:
 
 ## Kërkesa 4
 
-Të deklarohet struktura `Shfrytezuesi` me anëtarët:
+Të deklarohet klasa `Shfrytezuesi` me anëtarët:
 
 - Fushat private  `emri`, `mbiemri`, `email`, `fjalekalimi`,
 - Konstruktorin inicializues `Shfrytezuesi(emri, mbiemri, email, fjalekalimi)`.
