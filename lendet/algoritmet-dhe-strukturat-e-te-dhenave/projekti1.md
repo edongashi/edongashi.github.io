@@ -67,17 +67,4 @@ Secila kërkesë mban 1/4 të pikëve totale dhe llogaritja e totalit bëhet duk
 
 ## Dorëzimi
 
-Dorëzimi do të bëhet në email adresën **edon.gashi@uni-pr.edu** me titull: `ASDH/P1 Emri Mbiemri` para datës **13/03/2020 23:59**.
-
-Formati dhe mediumi i punimit nuk është i përcaktuar. Tregojeni kreativitetin tuaj.
-
-Disa metoda të mundshme:
-
-- Një link për një gist ([https://gist.github.com](https://gist.github.com)) me fajlla `.md` dhe/ose `.cpp`.
-- Një `.pdf` dokument i formatuar sipas dëshirës tuaj i bashkëngjitur në email.
-- Një link për repository në GitHub. Këtë repository mund ta ripërdorni për detyrat e ardhshme.
-
-**Me rëndësi:** Diku në detyrë, qoftë në koment të kodit ose në përshkrim, duhet ta përfshini këtë deklaratë (mos harroni ta vendosni emrin tuaj):
-
-> Unë, \<Emri Mbiemri\>, po deklaroj që jam autori origjinal dhe i vetëm i materialit në të gjitha dokumentet e përfshira në kuadër të kësaj detyre.
-> Me këtë dorëzim po e vërtetoj që i kam kuptuar në nivel të kënaqshëm njësitë përkatëse të kërkesave për të cilat kam ofruar zgjidhje në materialet e përfshira.
+Dorëzimi do të bëhet përmes Google Classroom.

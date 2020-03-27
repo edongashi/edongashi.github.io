@@ -74,12 +74,4 @@ Secila kërkesë mban 1/4 të pikëve totale dhe llogaritja e totalit bëhet duk
 
 ## Dorëzimi
 
-Dorëzimi do të bëhet në email adresën **edon.gashi@uni-pr.edu** me titull: `ASDH/P2 Emri Mbiemri` para datës **20/03/2020 23:59**.
-
-Formati dhe mediumi i punimit nuk është i përcaktuar. Tregojeni kreativitetin tuaj.
-
-Disa metoda të mundshme:
-
-- Një link për një gist ([https://gist.github.com](https://gist.github.com)) me fajlla `.md` dhe/ose `.cpp`.
-- Një `.pdf` dokument i formatuar sipas dëshirës tuaj i bashkëngjitur në email.
-- Një link për repository në GitHub. Këtë repository mund ta ripërdorni për detyrat e ardhshme.
+Dorëzimi do të bëhet përmes Google Classroom.
