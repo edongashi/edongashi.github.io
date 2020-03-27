@@ -101,7 +101,7 @@ Të gjitha elementet kopjohen në vargun e ri, e pastaj kryhet operacioni.
 
 ---
 
-**Detyrë:** Të shkruhet një version i thjeshtë i klasës array list e cila mban një varg të numrave të plotë.
+**Detyrë:** Të shkruhet një version i thjeshtë i klasës `ArrayList` e cila mban një varg të numrave të plotë.
 
 Kapaciteti maksimal i listës të jetë numër fiks, psh. 100.
 
