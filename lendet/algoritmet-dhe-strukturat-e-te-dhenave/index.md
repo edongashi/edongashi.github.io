@@ -13,7 +13,7 @@ suppresshooks: true
 2. [Klasat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java2)
 3. [Tipet e gjeneralizuara, funksionet anonime](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java3)
 4. [Array listat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4)
-5. Big-O, funksionet e rendit të lartë
+5. [Big-O, funksionet e rendit të lartë](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java5)
 6. Stack
 7. Queue
 8. Listat e lidhura
