@@ -18,7 +18,7 @@ Për çdo $n > n_0$ ku $n_0$ është konstante e fundme.
 Shkallët e rritjes për dy funksione mund t'i vlerësojmë me limitin e mëposhtëm:
 
 $$
-\lim_{x\to+\infty}\frac{f(n)}{g(n)} \tag{1}
+\lim_{n\to+\infty}\frac{f(n)}{g(n)} \tag{1}
 $$
 
 Ekzistojnë 3 raste të mundshme varësisht nga vlera e shprehjes $(1)$.
@@ -28,7 +28,7 @@ Ekzistojnë 3 raste të mundshme varësisht nga vlera e shprehjes $(1)$.
 Rasti 1:
 
 $$
-\lim_{x\to+\infty}\frac{f(n)}{g(n)} = 0
+\lim_{n\to+\infty}\frac{f(n)}{g(n)} = 0
 $$
 
 Në këtë rast funksioni $f$ ka shkallë të rritjes më të ulët sesa funksioni $g$.
@@ -38,7 +38,7 @@ Në këtë rast funksioni $f$ ka shkallë të rritjes më të ulët sesa funksio
 Rasti 2:
 
 $$
-\lim_{x\to+\infty}\frac{f(n)}{g(n)} = C \quad \text{ku}\ 0<C<+\infty
+\lim_{n\to+\infty}\frac{f(n)}{g(n)} = C \quad \text{ku}\ 0<C<+\infty
 $$
 
 Në këtë rast funksioni $f$ ka shkallë të rritjes të njejtë me funksionin $g$.
@@ -48,7 +48,7 @@ Në këtë rast funksioni $f$ ka shkallë të rritjes të njejtë me funksionin 
 Rasti 3:
 
 $$
-\lim_{x\to+\infty}\frac{f(n)}{g(n)} = +\infty
+\lim_{n\to+\infty}\frac{f(n)}{g(n)} = +\infty
 $$
 
 Në këtë rast funksioni $f$ ka shkallë të rritjes më të lartë sesa funksioni $g$.
@@ -59,7 +59,7 @@ Mund të themi që një funksion $f(n)$ i takon bashkësisë $O(g(n))$
 nëse vlera e shprehjes $(1)$ del e fundme.
 
 $$
-\lim_{x\to+\infty}\frac{f(n)}{g(n)} < +\infty\ \Rightarrow\ f \in \textrm{O}(g(n))
+\lim_{n\to+\infty}\frac{f(n)}{g(n)} < +\infty\ \Rightarrow\ f \in \textrm{O}(g(n))
 $$
 
 Pra për dallim nga $\textrm{o}(g(n))$ (Little-O), Big-O lejon që
