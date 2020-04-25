@@ -27,6 +27,7 @@ suppresshooks: true
 1. [Pointerët dhe Referencat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/projekti1)
 2. [Klasat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/projekti2)
 3. [Array listat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/projekti3)
+4. [Stack, queue, listat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/projekti4)
 
 ---
 
