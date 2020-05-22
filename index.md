@@ -13,7 +13,7 @@ suppresshooks: true
 ### Linqe
 
 - [Blogu](/blog)
-- [Discord](https://discord.gg/HQsT3PJ)
+- [Discord](https://discord.gg/bw6yGq8)
 
 ### Arkiva
 
