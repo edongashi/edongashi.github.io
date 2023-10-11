@@ -1,6 +1,6 @@
 ---
 title: Inxhinieri Softuerike
-sidebar: true
+sidebar: false
 noslides: true
 suppresshooks: true
 ---

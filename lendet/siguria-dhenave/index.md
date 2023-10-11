@@ -1,6 +1,6 @@
 ---
 title: Siguria e të Dhënave
-sidebar: true
+sidebar: false
 noslides: true
 suppresshooks: true
 ---

@@ -1,6 +1,6 @@
 ---
 title: Arkitektura e Kompjuterëve
-sidebar: true
+sidebar: false
 noslides: true
 suppresshooks: true
 ---

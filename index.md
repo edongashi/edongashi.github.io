@@ -7,8 +7,7 @@ suppresshooks: true
 
 ### Lëndët
 
-- [Algoritmet dhe Strukturat e të Dhënave](/lendet/algoritmet-dhe-strukturat-e-te-dhenave)
-- [Siguria e të Dhënave](/lendet/siguria-dhenave)
+- [Gjuhë Programuese](/lendet/gjuhe-programuese)
 
 ### Linqe
 
@@ -17,6 +16,7 @@ suppresshooks: true
 
 ### Arkiva
 
-- [Gjuhë Programuese](/lendet/gjuhe-programuese)
+- [Algoritmet dhe Strukturat e të Dhënave](/lendet/algoritmet-dhe-strukturat-e-te-dhenave)
+- [Siguria e të Dhënave](/lendet/siguria-dhenave)
 - [Arkitektura e Kompjuterëve](/lendet/arkitektura-kompjutereve)
 - [Inxhinieri Softuerike](/lendet/inxhinieri-softuerike)

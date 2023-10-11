@@ -1,6 +1,6 @@
 ---
 title: Algoritmet dhe Strukturat e të Dhënave
-sidebar: true
+sidebar: false
 noslides: true
 suppresshooks: true
 ---
