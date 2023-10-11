@@ -16,12 +16,12 @@ suppresshooks: true
 sipërfaqen dhe perimetrin e drejtkëndëshit dhe i vendos rezultatet në adresat e dërguara si parametra.
 
 4\. Të shkruhet funksioni `&anetari(Drejtkendeshi&, int x)` i cili për vlera jonegative të `x`
-kthen një referencë për gjerësine `a` e drejtkëndëshit, ndërsa për vlera negative kthen lartësinë `b`.
+kthen një referencë për gjerësinë `a` e drejtkëndëshit, ndërsa për vlera negative kthen lartësinë `b`.
 
 5\. Në `main` të deklarohen variablat përkatëse dhe të demonstrohen të gjitha funksionet.
 
 6\. Gjatë demonstrimit të funksionit `anetari` të lexohet ndonjëra brinjë dhe të mbishkruhet.
-Të vertetohet mbishkrimi duke i shfaqur përsëri vlerat në ekran.
+Të vërtetohet mbishkrimi duke i shfaqur përsëri vlerat në ekran.
 
 ---
 

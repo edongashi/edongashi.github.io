@@ -17,7 +17,7 @@ edon.gashi@uni-pr.edu
 
 ### Discord
 
-[FIEK në Discord](https://discord.gg/HQsT3PJ)
+[FIEK në Discord](https://discord.gg/83fAWDV5Hq)
 
 ---
 
