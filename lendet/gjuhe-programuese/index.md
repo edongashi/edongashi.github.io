@@ -7,6 +7,13 @@ suppresshooks: true
 
 # Gjuhë Programuese
 
+## Orari
+
+| Grupi    | Dita      | Ora         | Salla |
+| -------- | --------- | ----------- | ----- |
+| 2A", 2B" | E hënë    | 11:30-13:00 | 615   |
+| 1B', 1B" | E mërkurë | 11:00-12:30 | 615   |
+
 ## Materiali
 
 1. [Hyrje në C++](/lendet/gjuhe-programuese/java1)
@@ -45,7 +52,7 @@ suppresshooks: true
 
 ## Llogaritja e notës finale
 
-Për notë kaluese duhet ta keni përfunduar provimin me së paku 50% ose dy kolokviumet me së paku 50% të pikëve. Pastaj nota finale llogaritet sipas tabelës së mëposhtme:
+Për notë kaluese duhet ta keni përfunduar provimin me së paku 50% ose dy kolokviumet me së paku 50% të pikëve. Pastaj, nota finale llogaritet sipas tabelës së mëposhtme:
 
 | Nota | Pikët       |
 | ---: | :---------- |

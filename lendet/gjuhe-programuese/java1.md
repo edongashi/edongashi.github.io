@@ -8,6 +8,18 @@ edongashi.github.io
 
 ---
 
+[edongashi.github.io](https://edongashi.github.io)
+
+![](/lendet/gjuhe-programuese/java1/edongashi.github.io.png) <!-- .element: style="max-height:600px" -->
+
+---
+
+[Discord (discord.gg/83fAWDV5Hq)](https://discord.gg/83fAWDV5Hq)
+
+![](/lendet/gjuhe-programuese/java1/discord.png) <!-- .element: style="max-height:600px" -->
+
+---
+
 ### Kompjuteri
 
 Pajisje e cila kryen punë të dobishme.
@@ -185,7 +197,7 @@ Mënyra e dytë për komente
 int main() {
   /* Ky koment shtrihet
   në disa rreshta. */
-  return 0;  
+  return 0;
 }
 ```
 
@@ -390,13 +402,13 @@ Mire se vini.
 
 Ekzistojnë disa karaketere tjera speciale. Karakteret që fillojnë me `\` kanë kuptim të veçantë.
 
-Karakteri|Kuptimi
--|-
-`\n`|Rresht i ri
-`\t`|Tab
-`\'`|Thonjëza e njëfishtë
-`\"`|Thonjëza e dyfishtë
-`\\`|Vetë karakteri \\
+| Karakteri | Kuptimi              |
+| --------- | -------------------- |
+| `\n`      | Rresht i ri          |
+| `\t`      | Tab                  |
+| `\'`      | Thonjëza e njëfishtë |
+| `\"`      | Thonjëza e dyfishtë  |
+| `\\`      | Vetë karakteri \\    |
 
 Dhe tjera...
 
@@ -431,13 +443,13 @@ Siç po shihet më lartë, mund të lidhen operatorët `<<` njëri pas tjetrit.
 
 Ekzistojnë disa lloje të të dhënave. Kryesoret:
 
-Emri|Përshkrimi|Shembuj
----|---|---
-int|Numër i plotë|$-2,\,0,\,3,\,15$
-float|Numër me presje|$-1.2,\,0.0,\,3.5$
-char|Karakter i vetëm|$\texttt{'a'},\,\texttt{'b'},\,\texttt{'\n'}$
-string|Varg i karaktereve (tekst)|$\texttt{"Pershendetje"}$
-bool|Vlerë e vërtetësisë|$\texttt{true},\,\texttt{false}$
+| Emri   | Përshkrimi                 | Shembuj                                       |
+| ------ | -------------------------- | --------------------------------------------- |
+| int    | Numër i plotë              | $-2,\,0,\,3,\,15$                             |
+| float  | Numër me presje            | $-1.2,\,0.0,\,3.5$                            |
+| char   | Karakter i vetëm           | $\texttt{'a'},\,\texttt{'b'},\,\texttt{'\n'}$ |
+| string | Varg i karaktereve (tekst) | $\texttt{"Pershendetje"}$                     |
+| bool   | Vlerë e vërtetësisë        | $\texttt{true},\,\texttt{false}$              |
 
 ---
 
@@ -535,7 +547,7 @@ Press any key to continue...
 1. Shkojmë te `File > Open > Project/Solution`.
 2. E kërkojmë shtegun e projektit tonë.
 3. Brenda dosjes së projektit, e zgjedhim `.sln` fajllin i cili mban emrin e projektit.
-4. Shtypim `Open` dhe na hapet projekti. 
+4. Shtypim `Open` dhe na hapet projekti.
 
 ---
 
