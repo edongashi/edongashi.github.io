@@ -60,9 +60,7 @@ Gjuha e makinës është varg i njësheve dhe zerove.
 Secili program ka:
 
 1. Pikën e nisjes **main**
-2. Hyrjen dhe daljen standarde*
-
-*(standard input / standard output)
+2. Hyrjen dhe daljen standarde
 
 ---
 
@@ -77,7 +75,7 @@ Kur përfundon ekzekutimi i **main**, programi kthen një numër për ta treguar
 - Vlera **0** tregon që nuk ka pasur gabim
 - Vlerat **tjera** tregojnë që ka pasur gabim
 
-Shumicën e rasteve do ta vendosni statusin **0**.
+Shumicën e rasteve do ta vendosim statusin **0**.
 
 ---
 
@@ -207,15 +205,16 @@ Kjo mënyrë e lejon komentin të shtrihet në disa rreshta.
 
 ---
 
-### Hyrja dhe dalja standarde
+### Hyrja dhe dalja
 
 Më herët u cek që programi ka **hyrjen** dhe **daljen** standarde.
 
-**Hyrja** mundëson leximin e informacionit.
+**Hyrja** mundëson leximin e informacionit/tekstit.
 
-**Dalja** mundëson shkruarjen e informacionit.
+**Dalja** mundëson shkruarjen e informacionit/tekstit.
 
-Anglisht: **standard input** dhe **standard output**.
+Zakonisht hyrja dhe dalja janë të lidhura me dritaren e terminalit.
+Hyrja jepet përmes tastierës.
 
 ---
 
@@ -253,7 +252,7 @@ $$
 \textit{standard input}\xrightarrow{lexo} x
 $$
 
-Merr nga standard input dhe vendose në $x$.
+Teksti i lexuar nga tastiera ruhet në $x$.
 
 ---
 
@@ -269,7 +268,7 @@ $$
 \textit{standard output}\xleftarrow{shkruaj}\text{"Pershendetje"}
 $$
 
-Shkruaj tekstin "Pershendetje" në standard output.
+Teksti "Pershendetje" shfaqet në ekran.
 
 ---
 
@@ -316,7 +315,7 @@ int main() {
 }
 ```
 
-Programi i sipërm mund të shënohet si më poshtë
+Programi i sipërm mund të shënohet si më poshtë:
 
 ```cpp
 #include <iostream>
@@ -548,6 +547,10 @@ Press any key to continue...
 2. E kërkojmë shtegun e projektit tonë.
 3. Brenda dosjes së projektit, e zgjedhim `.sln` fajllin i cili mban emrin e projektit.
 4. Shtypim `Open` dhe na hapet projekti.
+
+---
+
+Për një qasje alternative, shiko [C++ përmes VS Code](/lendet/gjuhe-programuese/vs-code).
 
 ---
 
