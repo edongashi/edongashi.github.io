@@ -10,13 +10,13 @@ edongashi.github.io
 
 [edongashi.github.io](https://edongashi.github.io)
 
-![](/lendet/gjuhe-programuese/java1/edongashi.github.io.png) <!-- .element: style="max-height:600px" -->
+![](/lendet/gjuhe-programuese/java1/edongashi.github.io.png)
 
 ---
 
-[Discord (discord.gg/83fAWDV5Hq)](https://discord.gg/83fAWDV5Hq)
+Discord ([discord.gg/83fAWDV5Hq](https://discord.gg/83fAWDV5Hq))
 
-![](/lendet/gjuhe-programuese/java1/discord.png) <!-- .element: style="max-height:600px" -->
+![](/lendet/gjuhe-programuese/java1/discord.png)
 
 ---
 
