@@ -165,7 +165,7 @@ Me kohën do të mësojmë urdhëra tjerë.
 
 ```cpp
 int main() {
-  // Rreshti në vijim kthen statusin 0
+  // Rreshti në vijim kthen statusin 0.
   return 0;
 }
 ```
@@ -180,8 +180,8 @@ Mënyra e parë është me `//`
 
 ```cpp
 int main() {
-  return 0; // Ky tekst injorohet nga kompajlleri
-  // Edhe ky tekst injorohet
+  return 0; // Ky tekst injorohet nga kompajlleri.
+  // Edhe ky tekst injorohet.
 }
 ```
 
@@ -380,6 +380,10 @@ Teksti në shembujt e kaluar u fut në thonjëza.
 
 Kjo është e nevojshme për ta dalluar urdhërin nga teksti i zakonshëm.
 
+```cpp
+cout << "return 0;"; // Çfarë shfaqet në ekran?
+```
+
 ---
 
 Në tekst që shkruhet në kod, nuk kemi mundësi të vendosim rresht të ri duke shtypur enter.
@@ -416,11 +420,11 @@ Dhe tjera...
 Shembull
 
 ```cpp
-// Importo librarine iostream
+// Importo librarinë iostream.
 #include <iostream>
 using namespace std;
 
-// Pika hyrese e programit
+// Pika hyrëse e programit.
 int main() {
   cout << "Rreshti i pare" << "\n" << "Rreshti i dyte";
   return 0;
