@@ -11,8 +11,8 @@ suppresshooks: true
 
 | Grupi    | Dita      | Ora         | Salla |
 | -------- | --------- | ----------- | ----- |
+| 1B', 1B" | E hënë    | 10:00-11:30 | 615   |
 | 2A", 2B" | E hënë    | 11:30-13:00 | 615   |
-| 1B', 1B" | E mërkurë | 11:00-12:30 | 615   |
 
 ## Materiali
 
