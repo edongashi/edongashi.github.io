@@ -16,6 +16,8 @@ suppresshooks: true
 | 2A", 2B" | E hënë    | 08:00-09:30 | 615   |
 | 1B', 1B" | E mërkurë | 11:00-12:30 | 615   |
 
+---
+
 ## Materiali
 
 1. [Hyrje në C++](/lendet/gjuhe-programuese/java1)
