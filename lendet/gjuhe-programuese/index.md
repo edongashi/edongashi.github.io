@@ -9,10 +9,12 @@ suppresshooks: true
 
 ## Orari
 
+**Kujdes:** Vini re që orari ka ndryshuar, dhe mund të ndryshojë përsëri deri sa të stabilizohen oraret zyrtare.
+
 | Grupi    | Dita      | Ora         | Salla |
 | -------- | --------- | ----------- | ----- |
-| 1B', 1B" | E hënë    | 10:00-11:30 | 615   |
-| 2A", 2B" | E hënë    | 11:30-13:00 | 615   |
+| 2A", 2B" | E hënë    | 08:00-09:30 | 615   |
+| 1B', 1B" | E mërkurë | 11:00-12:30 | 615   |
 
 ## Materiali
 
