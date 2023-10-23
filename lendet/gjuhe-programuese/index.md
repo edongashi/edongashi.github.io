@@ -7,22 +7,26 @@ suppresshooks: true
 
 # Bazat e Programimit
 
+## Njoftime
+
+Ju lutem të gjithë studentëve që kanë laptopë ta kenë të gatshëm ndonjë editor për të shkruajtur dhe ekzekutuar programe.
+Për instruksionet se si duhet të konfigurohet VS Code, [klikoni këtu](/lendet/gjuhe-programuese/vs-code).
+
 ## Orari
 
-**Kujdes:** Vini re se orari ka ndryshuar, dhe mund të ndryshojë përsëri deri sa të stabilizohen oraret zyrtare.
+**Kujdes:** Vini re se orari ka ndryshuar, dhe mund të ndryshojë përsëri deri sa të stabilizohen terminet nëpër kabinete.
 
-| Grupi    | Dita      | Ora         | Salla |
-| -------- | --------- | ----------- | ----- |
-| 2A", 2B" | E hënë    | 08:00-09:30 | 615   |
-| 1B', 1B" | E mërkurë | 11:00-12:30 | 615   |
+| Grupi        | Dita       | Ora             | Salla   |
+| ------------ | ---------- | --------------- | ------- |
+| 1B', 1B"     | E mërkurë  | 11:00-12:30     | 615     |
+| 2A", 2B"     | E enjte    | 15:00-16:30     | 615     |
+| ~~2A", 2B"~~ | ~~E hënë~~ | ~~08:00-09:30~~ | ~~615~~ |
 
 ---
 
 ## Materiali
 
 1. [Hyrje në C++](/lendet/gjuhe-programuese/java1)
-
----
 
 ## Artikuj
 

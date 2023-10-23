@@ -31,8 +31,6 @@ Në shiritin për kërkim e shkruajmë `C++`, dhe instalojmë `C/C++` si në pam
 
 ![](/lendet/gjuhe-programuese/vs-code/screen-3.png)
 
-Pas instalimit e shtypim butonin `Reload to Activate`.
-
 ---
 
 <!-- .slide: style="font-size:0.8em" -->
@@ -42,8 +40,6 @@ Pas instalimit e shtypim butonin `Reload to Activate`.
 Në shiritin për kërkim e shkruajmë `code runner`, dhe instalojmë `Code Runner` si në pamjen në vijim:
 
 ![](/lendet/gjuhe-programuese/vs-code/screen-4.png)
-
-Pas instalimit e shtypim butonin `Reload to Activate`.
 
 ---
 
@@ -55,19 +51,20 @@ Pas instalimit e shtypim butonin `Reload to Activate`.
     - `View > Command Palette`
     - `Ctrl+Shift+P`
     - `F1`
-2. E shkruajmë settings dhe zgjedhim opsionin `Preferences: Open Settings (JSON)`, si në pamjen e mëposhtme:
+2. E shkruajmë settings dhe zgjedhim opsionin `Preferences: Open User Settings (JSON)`, si në pamjen e mëposhtme:
 
 ![](/lendet/gjuhe-programuese/vs-code/screen-5.png)
 
 ---
 
-Në pamjen `USER SETTINGS` shkruajmë këtë konfigurim:
+Në settings e shkruajmë këtë konfigurim:
 
 ```json
 {
   "code-runner.runInTerminal": true,
   "code-runner.preserveFocus": false,
-  "code-runner.saveFileBeforeRun": true
+  "code-runner.saveFileBeforeRun": true,
+  "C_Cpp.debugShortcut": false
 }
 ```
 
@@ -85,10 +82,9 @@ Hapi tjetër është instalimi i kompajllerit MinGW.
 
 **Instalimi i MinGW në Windows**
 
-1. Vizitojmë faqen [mingw.org](http://www.mingw.org/) dhe shkojmë te [Downloads](https://osdn.net/projects/mingw/releases/)
-2. Klikojmë `mingw-get-setup.exe` si në pamjen vijuese.
-3. Hapim setup dhe ndjekim hapat e instalimit.
-4. Pas instalimit shtypim `Continue`.
+1. Vizitojmë faqen e [mingw](https://sourceforge.net/projects/mingw/) dhe e shtypim Download si në foton vijuese.
+2. Hapim setup që e shkarkuam dhe ndjekim hapat e instalimit.
+3. Pas instalimit shtypim `Continue`.
 
 ![](/lendet/gjuhe-programuese/vs-code/screen-7.png)
 
