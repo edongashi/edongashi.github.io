@@ -1,5 +1,5 @@
 ---
-title: Gjuhë Programuese
+title: Bazat e Programimit
 sidebar: true
 noslides: true
 suppresshooks: true

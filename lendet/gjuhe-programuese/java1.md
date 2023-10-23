@@ -1,4 +1,4 @@
-## Gjuhë Programuese - Java 1
+## Bazat e Programimit - Java 1
 
 Edon Gashi
 

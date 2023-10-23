@@ -7,7 +7,7 @@ suppresshooks: true
 
 ### Lëndët
 
-- [Gjuhë Programuese](/lendet/gjuhe-programuese)
+- [Bazat e Programimit](/lendet/gjuhe-programuese)
 
 ### Linqe
 
