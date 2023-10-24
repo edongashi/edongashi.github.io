@@ -1,8 +1,8 @@
-title:            edongashi
-tagline:          'Shënimet e ushtrimeve'
-description:      'Shënimet e ushtrimeve për Inxhinieri Kompjuterike'
-url:              https://edongashi.github.io
-google_analytics: UA-126221132-1
-lang:             sq
-paginate_path:    "/blog/page:num/"
-paginate:         3
+title:         edongashi
+tagline:       'Shënimet e ushtrimeve'
+description:   'Shënimet e ushtrimeve për Inxhinieri Kompjuterike'
+url:           https://edongashi.github.io
+analytics:     G-B7RYXP02L4
+lang:          sq
+paginate_path: "/blog/page:num/"
+paginate:      3
