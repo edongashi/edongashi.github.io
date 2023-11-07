@@ -28,12 +28,12 @@ Në librarinë `<iomanip>` (input output manipulators) ekzistojnë disa manipula
 
 <!-- .slide: style="font-size: 0.7em" -->
 
-Manipulatori|Alternativa|Kuptimi
--|-|-
-setw(n)|cout.width(n)|Shkruaj rezultatin në `n` karaktere, duke shtuar karaktere mbushëse (mostra) nëse ka nevojë.
-setfill(c)|cout.fill(c)|Hapësirat e shtuara mbushi me karakterin `c` - mostrën.
-setprecision(n)|cout.precision(n)|Kufizo numrat me presje në `n` shifra.
-setbase(base)|-|Vendos bazën e numrave të shtypur.
+| Manipulatori    | Alternativa       | Kuptimi                                                                                      |
+| --------------- | ----------------- | -------------------------------------------------------------------------------------------- |
+| setw(n)         | cout.width(n)     | Shkruaj rezultatin në `n` karaktere, duke shtuar karaktere mbushëse (mostra) nëse ka nevojë. |
+| setfill(c)      | cout.fill(c)      | Hapësirat e shtuara mbushi me karakterin `c` - mostrën.                                      |
+| setprecision(n) | cout.precision(n) | Kufizo numrat me presje në `n` shifra.                                                       |
+| setbase(base)   | -                 | Vendos bazën e numrave të shtypur.                                                           |
 
 ---
 
@@ -66,7 +66,7 @@ Na shfaqet:
 Supozojmë që streami (`cout`) ka precizitetin $n$. Kemi tri lloje të shfaqjes së numrave me presje.
 
 1. default - kufizohet dalja në `n` shifra total (para dhe pas presjes).
-2. **`std::fixed`** - kufizohet dalja në `n` shifra pas presjes. 
+2. **`std::fixed`** - kufizohet dalja në `n` shifra pas presjes.
 3. **`std::scientific`** - kufizohet dalja në `n` shifra pas presjes, ndërsa pjesa e plotë gjithmonë është 1 shifrore. Eksponenti përdoret për ta lëvizur presjen.
 
 ---
@@ -160,13 +160,13 @@ int main() {
 
 Këta operatorë krahasojnë shprehjet dhe kthejnë vlerë booleane.
 
-Operatori|Kuptimi
--|-
-`a == b`|A janë të barabarta ana e majtë dhe e djathtë?
-`a > b`|A është ana e majtë më e madhe se ana e djathtë?
-`a >= b`|A është ana e majtë më e madhe ose baraz me anën e djathtë?
-`a < b`|A është ana e majtë më e vogël se ana e djathtë?
-`a <= b`|A është ana e majtë më e vogël ose baraz me anën e djathtë?
+| Operatori | Kuptimi                                                     |
+| --------- | ----------------------------------------------------------- |
+| `a == b`  | A janë të barabarta ana e majtë dhe e djathtë?              |
+| `a > b`   | A është ana e majtë më e madhe se ana e djathtë?            |
+| `a >= b`  | A është ana e majtë më e madhe ose baraz me anën e djathtë? |
+| `a < b`   | A është ana e majtë më e vogël se ana e djathtë?            |
+| `a <= b`  | A është ana e majtë më e vogël ose baraz me anën e djathtë? |
 
 ---
 
@@ -174,11 +174,11 @@ Operatori|Kuptimi
 
 Veprojnë me **shprehje booleane**.
 
-Operatori|Kuptimi
--|-
-`a && b`|Kthen `true` kur **`a` dhe `b`** janë true.
-`a ∣∣ b`|Kthen `true` kur **`a` ose `b`** janë true.
-`!a`|Kthen të **kundërtën e `a`**.
+| Operatori | Kuptimi                                     |
+| --------- | ------------------------------------------- |
+| `a && b`  | Kthen `true` kur **`a` dhe `b`** janë true. |
+| `a ∣∣ b`  | Kthen `true` kur **`a` ose `b`** janë true. |
+| `!a`      | Kthen të **kundërtën e `a`**.               |
 
 ---
 
@@ -244,7 +244,7 @@ if (kushti) {
 
 Nëse vlen **kushti**, ekzekutohet **blloku1**, nëse nuk vlen, ekzekutohet **blloku2**.
 
-Nuk ka mundësi të ekzekutohen të dy blloqet përnjëheri - ose njëra ose tjetra.
+Nuk ka mundësi të ekzekutohen të dy blloqet njëkohësisht - ose njëra ose tjetra.
 
 ---
 
@@ -381,20 +381,20 @@ if (kushti1) {
 }
 ```
 
-Ekzekutohet blloku i parë i cili përmbush kushtin përkatës. Nëse asnjëri kusht nuk përmbushet ekzekutohet blloku 4.
+Ekzekutohet blloku i parë i cili përmbush kushtin përkatës. Nëse asnjëri kusht nuk përmbushet, ekzekutohet blloku 4.
 
 ---
 
 **Detyrë:** Të caktohet dhe të shfaqet nota varësisht nga numri i pikëve sipas tabelës:
 
-Nota|Pikët
--|-
-10|90+
-9|80-89
-8|70-79
-7|60-69
-6|50-59
-5|Përfundi 50
+| Nota | Pikët       |
+| ---- | ----------- |
+| 10   | 90+         |
+| 9    | 80-89       |
+| 8    | 70-79       |
+| 7    | 60-69       |
+| 6    | 50-59       |
+| 5    | Përfundi 50 |
 
 --
 

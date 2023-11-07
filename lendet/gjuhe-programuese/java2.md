@@ -383,7 +383,7 @@ Shënohet me simbolin **`=`** (baraz)
 
 ---
 
-Shprehja e anës së majtë dhe e anës së djathtë duhet ta kenë tipin e njejtë.
+Shprehja e anës së majtë dhe e anës së djathtë duhet ta kenë tipin e njëjtë.
 
 ```cpp
 int a;

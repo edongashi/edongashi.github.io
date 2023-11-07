@@ -27,6 +27,8 @@ Për instruksionet se si duhet të konfigurohet VS Code, [klikoni këtu](/lendet
 ## Materiali
 
 1. [Hyrje në C++](/lendet/gjuhe-programuese/java1)
+2. [Tipet dhe variablat](/lendet/gjuhe-programuese/java2)
+3. [Formatimi, kushtëzimet, bllok diagramet](/lendet/gjuhe-programuese/java3)
 
 ## Artikuj
 
