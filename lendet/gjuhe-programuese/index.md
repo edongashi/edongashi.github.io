@@ -9,18 +9,36 @@ suppresshooks: true
 
 ## Njoftime
 
-Detyra e parë vlerësuese mbahet në javën e 11-15 dhjetorit, gjatë orarit të zakonshëm të ushtrimeve.
-Në fillim të orës duhet të paraqiten të gjithë studentët, dhe pastaj kordinohemi për t'u ndarë në dy nën-grupe me termine 30-40 minutëshe.
-Ju lutem t'i merrni laptopët me veti. Për instruksionet se si duhet të konfigurohet VS Code, [klikoni këtu](/lendet/gjuhe-programuese/vs-code).
+Rezultatet kaluese (12.5 pikë ose më shumë) të kolokviumit të parë i gjeni në vijim.
+Vetëm këtyre studentëve iu lejohet nënshtrimi në kolokviumin e dytë.
+Konsultimet mbahen pas orarit të zakonshëm të ushtrimeve.
 
-Data dhe ora e kolokviumit të parë do të publikohet së shpejti.
+| ID           | Piket |
+| ------------ | ----- |
+| 230758100013 | 25    |
+| 230756100044 | 25    |
+| 230756100063 | 24.5  |
+| 230756100024 | 24.5  |
+| 230756100134 | 21.5  |
+| 230756100035 | 20    |
+| 230757100101 | 19    |
+| 230756100072 | 18    |
+| 230756100056 | 17.5  |
+| 230757100074 | 16.5  |
+| 230758100059 | 15.5  |
+| 230758100021 | 15    |
+| 230756100018 | 14.5  |
+| 230718100014 | 14    |
+| 230757100019 | 13.5  |
+| 230757100051 | 13    |
+| 230718100049 | 12.5  |
 
 ## Orari
 
-| Grupi        | Dita       | Ora             | Salla   |
-| ------------ | ---------- | --------------- | ------- |
-| 1B', 1B"     | E mërkurë  | 11:00-12:30     | 615     |
-| 2A", 2B"     | E enjte    | 15:00-16:30     | 615     |
+| Grupi    | Dita      | Ora         | Salla |
+| -------- | --------- | ----------- | ----- |
+| 1B', 1B" | E mërkurë | 11:00-12:30 | 615   |
+| 2A", 2B" | E enjte   | 15:00-16:30 | 615   |
 
 ---
 
