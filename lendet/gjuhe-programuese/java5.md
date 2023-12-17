@@ -9,16 +9,15 @@
 **Detyrë:** Çfarë do të shtypet kur ekzekutohet ky kod?
 
 ```cpp
-#include <iostream> 
+#include <iostream>
 using namespace std;
-int main()
-{
-  int x=2, y=3, a=3, b=2, g;
-  bool s,t;
-  if ((3*x+2*y) < (a+3*b)) s=true; else s=false;
-  if ((y>(2*x)) && (x<=(2*y))) t=true; else t=false;
-  g=(a>(2*b)) ? (3*a+b) : (a+2*b);
-  cout<<"s="<<s<<", t="<<t<<", g="<<g<<endl;
+int main() {
+  int x = 2, y = 3, a = 3, b = 2, g;
+  bool s, t;
+  if ((3 * x + 2 * y) < (a + 3 * b)) s = true; else s = false;
+  if ((y > (2 * x)) && (x <= (2 * y))) t = true; else t = false;
+  g = (a > (2 * b)) ? (3 * a + b) : (a + 2 * b);
+  cout << "s=" << s << ", t=" << t << ", g=" << g << endl;
   return 0;
 }
 ```
@@ -38,8 +37,7 @@ s=0, t=0, g=7
 #include <iostream>
 #include <iomanip>
 using namespace std;
-int main()
-{
+int main() {
   float x = 2, a = 4, b = 3, g;
   if ((2 * b) > a)
     if (x > (2 * b))
@@ -48,10 +46,7 @@ int main()
       g = x + 3;
   else
     g = b + 3 * x;
-  cout << "\nRezultati g="
-       << setw(5)
-       << g
-       << "\n";
+  cout << "\nRezultati g=" << setw(5) << g << "\n";
   return 0;
 }
 ```
@@ -171,11 +166,11 @@ int main() {
     P *= i;
     i++;
   }
-  
+
   z = S + P;
   cout << "z = " << z << endl;
 
-  return 0;  
+  return 0;
 }
 ```
 
@@ -215,7 +210,7 @@ for (inicializimi; kushti; avansimi) {
 int S = 0;
 int i = 1; // a
 while (i <= n) { // b
-  S += i; 
+  S += i;
   i++; // c
 }
 ```
@@ -277,7 +272,7 @@ Blloku është i garantuar të ekzekutohet së paku një herë.
 
 **while** vs. **do while**:
 
-![](https://i.redd.it/6wksqjmmyw321.jpg)  <!-- .element: style="max-height:400px;border:none;" -->
+![](https://i.redd.it/6wksqjmmyw321.jpg) <!-- .element: style="max-height:400px;border:none;" -->
 
 ---
 
@@ -358,7 +353,7 @@ int main()
 
 --
 
-1) Rezultati në ekran.
+1. Rezultati në ekran.
 
 ```text
 c=xx-24
@@ -367,11 +362,11 @@ c=xx-24
 
 --
 
-2) Kushti do të testohet 6 herë.
+2. Kushti do të testohet 6 herë.
 
 --
 
-3) Me unazën `while`:
+3. Me unazën `while`:
 
 ```cpp
 #include <iostream>
@@ -681,7 +676,7 @@ int main() {
   int nr_sekret = rand() % 100 + 1;
 
   int provat = 0;
-  while (true)  { 
+  while (true)  {
     provat++;
 
     int n;

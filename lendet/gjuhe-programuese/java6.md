@@ -252,7 +252,7 @@ int main() {
   for (int i = 0; i < n; i++) {
     cin >> v[i];
   }
-  
+
   int max = v[0];
   for (int i = 1; i < n; i++) {
     if (v[i] > max) {
@@ -280,7 +280,7 @@ int main() {
   for (int i = 0; i < n; i++) {
     cin >> v[i];
   }
-  
+
   int min = v[0];
   for (int i = 1; i < n; i++) {
     if (v[i] < min) {
@@ -308,7 +308,7 @@ int main() {
   for (int i = 0; i < n; i++) {
     cin >> v[i];
   }
-  
+
   for (int i = 1; i < n; i += 2) {
     cout << v[i] << endl;
   }
@@ -332,7 +332,7 @@ int main() {
   for (int i = 0; i < n; i++) {
     cin >> v[i];
   }
-  
+
   for (int i = 0; i < n / 2; i++) {
     int temp = v[n - 1 - i];
     v[n - 1 - i] = v[i];
@@ -390,7 +390,7 @@ int main() {
   const int n = 5;
   double v[n] = { 2.5, 1.7, 3.2, 7.5, 11.3 };
   double v2[n];
-  
+
   for (int i = 0; i < n; i++) {
     v2[i] = v[i];
   }
@@ -411,7 +411,7 @@ int main() {
   const int n = 5;
   double v[n] = { 2.5, 1.7, 3.2, 7.5, 11.3 };
   double v2[n];
-  
+
   for (int i = 0; i < n; i++) {
     v2[i] = -v[i];
   }

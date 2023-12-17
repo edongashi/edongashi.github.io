@@ -1,4 +1,4 @@
-# Gjuhë Programuese - Java 8
+# Gjuhë Programuese - Java 7
 
 ---
 
@@ -44,12 +44,12 @@ Matrica është varg dy-dimenzional - me rreshta dhe kolona.
 Nga matematika, matricat janë struktura të formës:
 
 $$
-A_{m,n} = 
+A_{m,n} =
 \begin{pmatrix}
 a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
 a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
 \vdots  & \vdots  & \ddots & \vdots  \\
-a_{m,1} & a_{m,2} & \cdots & a_{m,n} 
+a_{m,1} & a_{m,2} & \cdots & a_{m,n}
 \end{pmatrix}
 $$
 
@@ -58,12 +58,12 @@ $$
 Në C++, rreshtat dhe kolonat fillojnë me indeksin $0$:
 
 $$
-A_{m,n} = 
+A_{m,n} =
 \begin{pmatrix}
 a_{0,0} & a_{0,1} & \cdots & a_{0,n-1} \\
 a_{1,0} & a_{1,1} & \cdots & a_{1,n-1} \\
 \vdots  & \vdots  & \ddots & \vdots  \\
-a_{m-1,0} & a_{m-1,1} & \cdots & a_{m-1,n-1} 
+a_{m-1,0} & a_{m-1,1} & \cdots & a_{m-1,n-1}
 \end{pmatrix}
 $$
 
@@ -226,7 +226,7 @@ int main() {
 Matrica nuk ekziston në realitet! Ajo ruhet si varg i gjatë i elementeve në memorie.
 
 $$
-A_{2,3} = 
+A_{2,3} =
 \begin{pmatrix}
 a_{0,0} & a_{0,1} & a_{0,2} \\
 a_{1,0} & a_{1,1} & a_{1,2} \\
@@ -236,8 +236,8 @@ $$
 Në memorie ruhet si:
 
 $$
-V_6 = \lbrace 
-\overbrace{a_{0,0}, a_{0,1}, a_{0,2}}^{\text{Rreshti 1}}, 
+V_6 = \lbrace
+\overbrace{a_{0,0}, a_{0,1}, a_{0,2}}^{\text{Rreshti 1}},
 \overbrace{a_{1,0}, a_{1,1}, a_{1,2}}^{\text{Rreshti 2}}
 \rbrace
 $$
@@ -286,7 +286,7 @@ int main()
   const int m = 3;
   const int n = 4;
   int A[m][n];
-  
+
   // Mbushja
   for (int i = 0; i < m; i++) {
     for (int j = 0; j < n; j++) {
@@ -352,14 +352,13 @@ int main() {
 
 Matrica e formës $A_{n,n}$ quhet matricë katrore e madhësisë $n$.
 
-
 $$
-A_{n,n} = 
+A_{n,n} =
 \begin{pmatrix}
 a_{0,0} & a_{0,1} & \cdots & a_{0,n-1} \\
 a_{1,0} & a_{1,1} & \cdots & a_{1,n-1} \\
 \vdots  & \vdots  & \ddots & \vdots  \\
-a_{n-1,0} & a_{n-1,1} & \cdots & a_{n-1,n-1} 
+a_{n-1,0} & a_{n-1,1} & \cdots & a_{n-1,n-1}
 \end{pmatrix}
 $$
 
@@ -420,7 +419,7 @@ int main()
 {
   const int n = 5;
   int A[n][n];
-  
+
   // Mbushja
   for (int i = 0; i < n; i++) {
     for (int j = 0; j < n; j++) {
@@ -485,7 +484,7 @@ int main()
     }
   }
 
-  
+
   cout << "Pas sortimit: ";
   for (int i = 0; i < n; i++) {
     cout << " " << v[i];

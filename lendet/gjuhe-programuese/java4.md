@@ -299,13 +299,13 @@ switch (dita) {
 
 **Detyrë:** Të lexohen dy numra dhe një karakter. Varësisht nga karakteri, të llogaritet:
 
-Karakteri|Shprehja
----|---
-`+`|`a + b`
-`-`|`a - b`
-`*`|`a * b`
-`/`|`a / b`
-`%`|`a % b`
+| Karakteri | Shprehja |
+| --------- | -------- |
+| `+`       | `a + b`  |
+| `-`       | `a - b`  |
+| `*`       | `a * b`  |
+| `/`       | `a / b`  |
+| `%`       | `a % b`  |
 
 --
 
@@ -530,9 +530,9 @@ int main() {
 1. Të lexohet numri i pikëve $p$ nga tastiera.
 2. Nëse `cin.eof() == true` të mbyllet programi.
 3. Të shqyrtohet vlera e $p$:
-    - Nëse $p<0$ të mbyllet programi.
-    - Nëse $p\geq 50$ të shfaqet "Kalon provimin."
-    - Nëse $p<50$ të shfaqet "Nuk kalon provimin.".
+   - Nëse $p<0$ të mbyllet programi.
+   - Nëse $p\geq 50$ të shfaqet "Kalon provimin."
+   - Nëse $p<50$ të shfaqet "Nuk kalon provimin.".
 4. Kthehu te hapi 1.
 
 **Bonus:** Të shfaqet nota varësisht nga pikët.
@@ -549,7 +549,7 @@ int main() {
   lexo:
   cin >> p;
   if (!cin.eof() && p > 0) {
-    cout << (p >= 50 ? "Kalon provimin." : "Nuk kalon provimin.") 
+    cout << (p >= 50 ? "Kalon provimin." : "Nuk kalon provimin.")
          << endl;
     goto lexo;
   }

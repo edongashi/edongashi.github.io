@@ -79,7 +79,7 @@ Po mësojmë gjuhën programuese "C++".
 using namespace std;
 
 int main() {
-  cout << "P\x89rsh\x89ndetje!" 
+  cout << "P\x89rsh\x89ndetje!"
        << endl
        << endl
        << "Po m\x89sojm\x89 gjuh\x89n programuese \"C++\".";
@@ -130,13 +130,13 @@ Ndahen në dy kategori kryesore:
 
 Numrat e plotë (integer) **me shenjë**:
 
-Tipi|Madhësia|Vlerat
----|---|---:
-`char`|1 bajt|`-128` deri `127`
-`short int`|2 bajt|`-32768` deri `32767`
-`int`|4 bajt|`-2147483648` deri `2147483647`
-`long int`|4 bajt|`-2147483648` deri `2147483647`
-`long long int`|8 bajt|`-9223372036854775808` deri `9223372036854775807`
+| Tipi            | Madhësia |                                            Vlerat |
+| --------------- | -------- | ------------------------------------------------: |
+| `char`          | 1 bajt   |                                 `-128` deri `127` |
+| `short int`     | 2 bajt   |                             `-32768` deri `32767` |
+| `int`           | 4 bajt   |                   `-2147483648` deri `2147483647` |
+| `long int`      | 4 bajt   |                   `-2147483648` deri `2147483647` |
+| `long long int` | 8 bajt   | `-9223372036854775808` deri `9223372036854775807` |
 
 ---
 
@@ -144,23 +144,23 @@ Tipi|Madhësia|Vlerat
 
 Numrat e plotë (integer) **pa shenjë**:
 
-Tipi|Madhësia|Vlerat
----|---|---:
-`unsigned char`|1 bajt|`0` deri `255`
-`unsigned short int`|2 bajt|`0` deri `65535`
-`unsigned int`|4 bajt|`0` deri `4294967295`
-`unsigned long int`|4 bajt|`0` deri `4294967295`
-`unsigned long long int`|8 bajt|`0` deri `18446744073709551615`
+| Tipi                     | Madhësia |                          Vlerat |
+| ------------------------ | -------- | ------------------------------: |
+| `unsigned char`          | 1 bajt   |                  `0` deri `255` |
+| `unsigned short int`     | 2 bajt   |                `0` deri `65535` |
+| `unsigned int`           | 4 bajt   |           `0` deri `4294967295` |
+| `unsigned long int`      | 4 bajt   |           `0` deri `4294967295` |
+| `unsigned long long int` | 8 bajt   | `0` deri `18446744073709551615` |
 
 ---
 
 Numrat me presje - floating-point
 
-Tipi|Madhësia|Preciziteti
----|---|---:
-`float`|4 bajt|7 shifra
-`double`|8 bajt|15-16 shifra
-`long double`|16 bajt|28-29 shifra
+| Tipi          | Madhësia |  Preciziteti |
+| ------------- | -------- | -----------: |
+| `float`       | 4 bajt   |     7 shifra |
+| `double`      | 8 bajt   | 15-16 shifra |
+| `long double` | 16 bajt  | 28-29 shifra |
 
 ---
 
@@ -175,28 +175,28 @@ Shpesh përdorën këto terme:
 
 Ka vetëm dy vlera - **saktë**/**pasaktë**, **po**/**jo**, **1**/**0**.
 
-Tipi|Madhësia|Vlerat
----|---|---
-bool|1 bajt|`true` ose `false`
+| Tipi | Madhësia | Vlerat             |
+| ---- | -------- | ------------------ |
+| bool | 1 bajt   | `true` ose `false` |
 
 ---
 
 ## Tipet tekstuale
 
-Emri|Madhësia
----|---
-char|1 bajt
-char16_t|2 bajt
-char32_t|4 bajt
-string|Pacaktuar
+| Emri     | Madhësia  |
+| -------- | --------- |
+| char     | 1 bajt    |
+| char16_t | 2 bajt    |
+| char32_t | 4 bajt    |
+| string   | Pacaktuar |
 
 ---
 
 **String** paraqet vargun e karaktereve deri te karakteri terminues `\0`
 
-0  |1  |2  |3  |4
-:-:|:-:|:-:|:-:|:-:
-`'D'`|`'i'`|`'t'`|`'a'`|`'\0'`
+|   0   |   1   |   2   |   3   |   4    |
+| :---: | :---: | :---: | :---: | :----: |
+| `'D'` | `'i'` | `'t'` | `'a'` | `'\0'` |
 
 ---
 
@@ -337,7 +337,7 @@ int main() {
   cin  >> c;
 
   cout << endl << "Keni shtypur vlerat:" << endl;
-  
+
   cout << "a = " << a << endl
        << "b = " << b << endl
        << "c = " << c << endl;
@@ -475,13 +475,13 @@ double a = 10.0;
 double b = 4.0;
 ```
 
-Veprimi|Operatori|Shprehja|Rezultati
--|:-:|:-:|--:
-Mbledhja|`+`|`a + b`|`14.0`
-Zbritja|`-`|`a - b`|`6.0`
-Shumëzimi|`*`|`a * b`|`40.0`
-Pjesëtimi|`/`|`a / b`|`2.5`
-Modulimi|`%`|`a % b`|`2.0`
+| Veprimi   | Operatori | Shprehja | Rezultati |
+| --------- | :-------: | :------: | --------: |
+| Mbledhja  |    `+`    | `a + b`  |    `14.0` |
+| Zbritja   |    `-`    | `a - b`  |     `6.0` |
+| Shumëzimi |    `*`    | `a * b`  |    `40.0` |
+| Pjesëtimi |    `/`    | `a / b`  |     `2.5` |
+| Modulimi  |    `%`    | `a % b`  |     `2.0` |
 
 ---
 
@@ -541,7 +541,7 @@ int main() {
   cout << "Jepni vleren c: ";
   cin  >> c;
   cout << endl;
-  
+
   m = (a + b + c) / 3.0;
   cout << "Vlera mesatare: " << m << endl;
 
@@ -570,7 +570,7 @@ using namespace std;
 
 int main() {
   int a, b, S, P;
-  
+
   cout << "Jepni brinjen a: ";
   cin  >> a;
   cout << "Jepni brinjen b: ";
@@ -578,7 +578,7 @@ int main() {
 
   P = 2 * (a + b);
   S = a * b;
-  
+
   cout << "Perimetri i drejtkendeshit: " << P << endl;
   cout << "Siperfaqja e drejtkendeshit: " << S << endl;
 
@@ -592,12 +592,12 @@ int main() {
 
 Kur e përfshijmë headerin `<math.h>`, na mundësohet thirrja e funksioneve matematikore sikur:
 
-Funskioni|Emri|Shembull|Interpretimi
--|-|-|:-:
-Rrënja katrore|`sqrt`|`sqrt(16)`|$\sqrt{16}$
-Ngritja në fuqi|`pow`|`pow(2, 4)`|$2^4$
-Sinusi|`sin`|`sin(0)`|$\sin{(0_\text{rad})}$
-Kosinusi|`cos`|`cos(3.14)`|$\cos{(\pi_\text{rad})}$
+| Funskioni       | Emri   | Shembull    |       Interpretimi       |
+| --------------- | ------ | ----------- | :----------------------: |
+| Rrënja katrore  | `sqrt` | `sqrt(16)`  |       $\sqrt{16}$        |
+| Ngritja në fuqi | `pow`  | `pow(2, 4)` |          $2^4$           |
+| Sinusi          | `sin`  | `sin(0)`    |  $\sin{(0_\text{rad})}$  |
+| Kosinusi        | `cos`  | `cos(3.14)` | $\cos{(\pi_\text{rad})}$ |
 
 Dhe tjera...
 
@@ -694,13 +694,13 @@ Shpesh kemi nevojë ta zmadhojmë ose zvogëlojmë një variabël për një vler
 
 ---
 
-Shkurtesa|Kuptimi
-:-:|:-:
-`a += x`|`a = a + x`
-`a -= x`|`a = a - x`
-`a *= x`|`a = a * x`
-`a /= x`|`a = a / x`
-`a %= x`|`a = a % x`
+| Shkurtesa |   Kuptimi   |
+| :-------: | :---------: |
+| `a += x`  | `a = a + x` |
+| `a -= x`  | `a = a - x` |
+| `a *= x`  | `a = a * x` |
+| `a /= x`  | `a = a / x` |
+| `a %= x`  | `a = a % x` |
 
 ---
 
@@ -726,12 +726,12 @@ Vlera e b: 1
 
 Shkurtesat për inkrement dhe dekrement.
 
-Shkurtesa|Kuptimi
-:-:|:-
-`a++`|Ktheje `a`, pastaj rrite për `1`.
-`++a`|Rrite `a` për `1`, pastaj ktheje.
-`a--`|Ktheje `a`, pastaj zvogëloje për `1`.
-`--a`|Zvogëloje `a` për `1`, pastaj ktheje.
+| Shkurtesa | Kuptimi                               |
+| :-------: | :------------------------------------ |
+|   `a++`   | Ktheje `a`, pastaj rrite për `1`.     |
+|   `++a`   | Rrite `a` për `1`, pastaj ktheje.     |
+|   `a--`   | Ktheje `a`, pastaj zvogëloje për `1`. |
+|   `--a`   | Zvogëloje `a` për `1`, pastaj ktheje. |
 
 ---
 
@@ -852,7 +852,7 @@ int main() {
   cin  >> b;
 
   cout << "Para nderrimit:"
-       << "a = " << a 
+       << "a = " << a
        << ", b = " << b << endl;
 
   temp = a;
@@ -860,7 +860,7 @@ int main() {
   b = temp;
 
   cout << "Pas nderrimit:"
-       << "a = " << a 
+       << "a = " << a
        << ", b = " << b << endl;
 
   return 0;

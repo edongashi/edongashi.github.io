@@ -122,7 +122,6 @@ $$
 \overbrace{\color{red}{\texttt{int}}}^{\text{tipi i bllokut}}\texttt{ main() { ... }}
 $$
 
-
 **int** - Shkurtesë për **integer** (shqip: numër i plotë)
 
 Tregon që main (programi) kthen një numër të plotë - **error code**.
@@ -483,8 +482,8 @@ Ekzistojnë disa lloje të të dhënave. Kryesoret:
 6. Te lokacioni i projektit, e zgjedhim dosjen ku dëshirojmë ta ruajmë projektin. Këtë e bëjmë duke shtypur butonin `Browse...`.
 7. E shtypim `OK`.
 8. Na shfaqet dritarja për të konfiguruar projektin.
-    - E zgjedhim opsionin `Empty Project`
-    - Tek `Application type` e zgjedhim `Console Application`
+   - E zgjedhim opsionin `Empty Project`
+   - Tek `Application type` e zgjedhim `Console Application`
 9. Shtypim `OK`.
 
 ---
@@ -494,7 +493,7 @@ Ekzistojnë disa lloje të të dhënave. Kryesoret:
 ## Krijimi i fajllit burimor
 
 1. Pasi ta kemi hapur projektin, në anën e djathtë e shohim `Solution Explorer`.
-    - Nëse nuk e shohim, shkojmë te `View > Solution Explorer` për ta shfaqur.
+   - Nëse nuk e shohim, shkojmë te `View > Solution Explorer` për ta shfaqur.
 2. Te projekti ynë, i shohim katër dosje. Dosjen `Source Files` e hapim me tastin e djathtë, dhe shkojmë te `Add > New Item...`.
 3. Na hapet menyja për krijimin e fajllave. E zgjedhim `C++ File (.cpp)`, dhe ia lëmë emrin sipas dëshirës, psh `programi.cpp`. E shtypim `Add`.
 4. Te dosja `Source Files` na shfaqet fajlli i sapo-krijuar. E klikojmë dy herë dhe na shfaqet editori.
@@ -529,11 +528,11 @@ Press any key to continue...
 ## Ekzekutimi i programit
 
 1. Shkojmë te `Debug > Start Without Debugging`.
-    - Këtë veprim mund ta bëjmë edhe duke shtypur `Ctrl+F5`.
+   - Këtë veprim mund ta bëjmë edhe duke shtypur `Ctrl+F5`.
 2. Nëse kodi është në rregull, programi kompajllohet dhe shfaqet dritarja e aplikacionit.
 3. Nëse kemi gabime, na del një njoftim që programi nuk ka mundur të kompajllohet. E shtypim `No` për t'u kthyer te editori.
 4. Rikthehemi te editori dhe korigjojmë gabimet.
-    - Dritarja `Error List` na ndihmon në gjetjen e gabimeve. Gabimet mund t'i klikojmë dy herë me tastin e majtë për të na dërguar te rreshti i kodit tek i cili gjendet problemi.
+   - Dritarja `Error List` na ndihmon në gjetjen e gabimeve. Gabimet mund t'i klikojmë dy herë me tastin e majtë për të na dërguar te rreshti i kodit tek i cili gjendet problemi.
 5. Pasi t'i kemi korigjuar gabimet, kthehemi te hapi 1.
 
 ---
@@ -541,7 +540,7 @@ Press any key to continue...
 ## Mbyllja e projektit
 
 1. Shkojmë te `File > Close Solution`.
-    - Nëse kemi ndryshime të paruajtura, na pyet nëse dëshirojmë t'i ruajmë para se ta mbyllim projektin.
+   - Nëse kemi ndryshime të paruajtura, na pyet nëse dëshirojmë t'i ruajmë para se ta mbyllim projektin.
 
 ---
 
