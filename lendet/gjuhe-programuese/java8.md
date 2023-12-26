@@ -12,7 +12,7 @@ Deri tani kemi përdorur vetëm funksionin **main**.
 
 ---
 
-Funksioni është diçka që transformon **hyrjet** në **daljet**.
+Në matematikë, funksioni është diçka që transformon **hyrjet** në **daljet**.
 
 $$
 \begin{array}{rcl}
@@ -30,19 +30,6 @@ Funksioni $y = f(x)$ merr një parametër $x$, e transformon sipas rregullës $f
 
 ---
 
-Funksioni ka **domenin** dhe **rangun**.
-
-$$
-\begin{array} {ccrcl}
-f(x) = x^2 & : & \mathbb{Z} & \rightarrow & \mathbb{Z}^+ \\ \\
-g(a,b) = a + b & : & \mathbb{Z} \times \mathbb{Z} & \rightarrow & \mathbb{Z} \\ \\
-h(a,b) = \dfrac{a}{b} & : & \mathbb{Z} \times (\mathbb{Z} \setminus \lbrace 0 \rbrace) & \rightarrow & \mathbb{R} \\ \\
-\sin(x) & : & \mathbb{R} & \rightarrow & [-1, 1]
-\end{array}
-$$
-
----
-
 **Shembull:** Funksioni **katrori** merr një numër të plotë dhe kthen katrorin e tij.
 
 $$
@@ -54,16 +41,6 @@ $$
 x & \Rightarrow & x^2
 \end{array}
 $$
-
----
-
-Funksioni `katrori` i shkruar formalisht:
-
-$$
-f(x) = x^2 \quad : \quad \mathbb{Z} \rightarrow \mathbb{Z}
-$$
-
-Interpretimi: **merr** një numër $x \in \mathbb{Z}$ dhe **kthe** një numër $x^2 \in \mathbb{Z}$.
 
 ---
 
@@ -137,7 +114,7 @@ Raste të veçanta të funksioneve janë ato që nuk marrin asnjë vlerë ose nu
 
 Në këtë rast funksioni nuk është transformim i të dhënave, por është një sekuencë e urdhërave me qëllim të kryerjes së ndonjë pune.
 
-Këto sekuenca njihen si **nënprograme**, **procedura**, ose **subrutina**. 
+Këto sekuenca njihen si **nënprograme**, **procedura**, ose **subrutina**.
 
 ---
 
@@ -146,7 +123,7 @@ Mungesa e tipit pranues ose kthyes quhet **void**.
 Void ka kuptimin e "vrimës" - mungon tipi.
 
 ```cpp
-void pershendeteBoten(void) {
+void shtyp_pershendetjen(void) {
   cout << "Pershendetje Bote!";
 }
 ```
@@ -156,6 +133,8 @@ Funksioni i mësipërm as nuk merr vlera e as nuk kthen vlera. Procedurat përdo
 ---
 
 Përmes funksioneve krijojmë "komanda" të cilat mund t'i ripërdorim.
+
+Poashtu, është praktikë e mirë ta ndajmë kodin e gjatë në seksione më të vogla dhe më të lexueshme.
 
 ---
 
@@ -262,7 +241,7 @@ int main() {
 
 ---
 
-**Detyrë:** Të shkruhet funksioni `kaKaluar(p)` i cili merr numrin e pikëve $p$ (`int`) dhe kthen nëse kalohet provimi me ato pikë ($p \geq 50$).
+**Detyrë:** Të shkruhet funksioni `ka_kaluar(p)` i cili merr numrin e pikëve $p$ (`int`) dhe kthen nëse kalohet provimi me ato pikë ($p \geq 50$).
 
 **Ndihmesë:** Tipi i kthimit duhet të jetë `bool`.
 
@@ -272,7 +251,7 @@ int main() {
 #include <iostream>
 using namespace std;
 
-bool kaKaluar(int p) {
+bool ka_kaluar(int p) {
   if (p >= 50) {
     return true;
   } else {
@@ -281,13 +260,13 @@ bool kaKaluar(int p) {
 }
 
 int main() {
-  if (kaKaluar(60)) {
+  if (ka_kaluar(60)) {
     cout << "Studenti 1 kalon." << endl;
   } else {
     cout << "Studenti 1 nuk kalon." << endl;
   }
-  
-  if (kaKaluar(35)) {
+
+  if (ka_kaluar(35)) {
     cout << "Studenti 2 kalon." << endl;
   } else {
     cout << "Studenti 2 nuk kalon." << endl;
@@ -299,7 +278,7 @@ int main() {
 
 ---
 
-**Detyrë:** Të shkruhet procedura `lexoDheMbledh()` e cila lexon dy numra nga tastiera dhe kthen shumën e tyre.
+**Detyrë:** Të shkruhet procedura `lexo_dhe_mbledh()` e cila lexon dy numra nga tastiera dhe kthen shumën e tyre.
 
 --
 
@@ -307,7 +286,7 @@ int main() {
 #include <iostream>
 using namespace std;
 
-int lexoDheMbledh() {
+int lexo_dhe_mbledh() {
   int a, b;
   cin >> a;
   cin >> b;
@@ -315,21 +294,11 @@ int lexoDheMbledh() {
 }
 
 int main() {
-  int shuma = lexoDheMbledh();
+  int shuma = lexo_dhe_mbledh();
   cout << "Shuma: " << shuma << endl;
   return 0;
 }
 ```
-
----
-
-Funksioni quhet "i pastër" (pure) nëse nuk shkakton efekte anësore.
-
-- Funksione të pastra: `faktorieli(n)`, `shuma(n)`, `kaKaluar(p)`.
-- `lexoDheMbledh()` është i papastër pasi që lexon nga `cin`.
-- `pershendeteBoten()` është i papastër pasi që shfaq në `cout`.
-
-Funksionet e pastra gjithmonë marrin parametra dhe kthejnë vlera.
 
 ---
 
@@ -372,7 +341,7 @@ int main() {
 
 ---
 
-**Detyrë:** Të shkruhet funksioni `clamp(v,min,max)` i cili e kufizon vlerën $v$ në intervalin $[\textit{min},\textit{max}]$.
+**Detyrë:** Të shkruhet funksioni `clamp(v,min,max)` i cili e kufizon vlerën $v$ në intervalin $[\textit{min},\textit{max}]$ dhe e kthen atë.
 
 --
 
@@ -439,7 +408,7 @@ int main() {
 
 ---
 
-**Detyrë:** Të shkruhet funksionet `eshteCift(x)` dhe `eshteTek(x)` qe tregojnë nëse $x$ është çift/tek.
+**Detyrë:** Të shkruhet funksionet `eshte_cift(x)` dhe `eshte_tek(x)` qe tregojnë nëse $x$ është çift/tek.
 
 --
 
@@ -447,14 +416,14 @@ int main() {
 #include <iostream>
 using namespace std;
 
-bool eshteCift(int nr) {
+bool eshte_cift(int nr) {
   return nr % 2 == 0;
 }
 
-bool eshteTek(int nr) {
-  // E kthen te kunderten e eshteCift-it.
-  // (kur nuk eshte cift atehere eshte tek)
-  return !eshteCift(nr);
+bool eshte_tek(int nr) {
+  // E kthen te kunderten e eshte_cift-it.
+  // (Kur nuk eshte cift atehere eshte tek.)
+  return !eshte_cift(nr);
 }
 
 int main() {
@@ -462,11 +431,11 @@ int main() {
   cout << "Shtypni numrin: ";
   cin >> nr;
 
-  if (eshteCift(nr)) {
+  if (eshte_cift(nr)) {
     cout << "Numri i dhene eshte cift." << endl;
   }
 
-  if (eshteTek(nr)) {
+  if (eshte_tek(nr)) {
     cout << "Numri i dhene eshte tek." << endl;
   }
 

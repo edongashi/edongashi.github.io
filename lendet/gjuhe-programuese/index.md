@@ -51,6 +51,7 @@ Konsultimet mbahen pas orarit të zakonshëm të ushtrimeve.
 5. [Unazat](/lendet/gjuhe-programuese/java5)
 6. [Vargjet](/lendet/gjuhe-programuese/java6)
 7. [Matricat](/lendet/gjuhe-programuese/java7)
+8. [Funksionet](/lendet/gjuhe-programuese/java8)
 
 ## Artikuj
 
@@ -89,14 +90,6 @@ $$
 
 Dokumentet në vijim nuk janë përditësuar ende.
 
-1. [Hyrje në C++](/lendet/gjuhe-programuese/java1)
-2. [Tipet dhe variablat](/lendet/gjuhe-programuese/java2)
-3. [Formatimi, kushtëzimet, bllok diagramet](/lendet/gjuhe-programuese/java3)
-4. [Shprehjet e kushtëzuara, switch, goto](/lendet/gjuhe-programuese/java4)
-5. [Unazat](/lendet/gjuhe-programuese/java5)
-6. [Vargjet](/lendet/gjuhe-programuese/java6)
-7. [Matricat](/lendet/gjuhe-programuese/java7)
-8. [Funksionet](/lendet/gjuhe-programuese/java9)
 9. [Variablat lokale/globale](/lendet/gjuhe-programuese/java10)
 10. [Mbingarkimi i funksioneve, direktivat paraprocesorike](/lendet/gjuhe-programuese/java11)
 11. [Numërimet dhe strukturat](/lendet/gjuhe-programuese/java12)
