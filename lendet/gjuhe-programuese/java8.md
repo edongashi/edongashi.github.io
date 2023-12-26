@@ -1,4 +1,4 @@
-# Gjuhë Programuese - Java 9
+# Gjuhë Programuese - Java 8
 
 ---
 
@@ -24,7 +24,7 @@ $$
 
 ---
 
-Funksioni $y = f(x)$ merr një parametër $x$, e transformon sipas rregullës $f(x)$ dhe kthen një rezultat $y$.
+Funksioni $y = f(x)$ merr një parametër $x$, e transformon sipas rregullës $f(x)$, dhe kthen një rezultat $y$.
 
 ![](/lendet/gjuhe-programuese/java9/funksioni.png) <!-- .element: style="border:none" -->
 
@@ -334,7 +334,7 @@ int max(int a, int b) {
 }
 
 int main() {
-  cout << "max(3,5) = " << max(3,5) << endl;
+  cout << "max(3,5) = " << max(3, 5) << endl;
   return 0;
 }
 ```

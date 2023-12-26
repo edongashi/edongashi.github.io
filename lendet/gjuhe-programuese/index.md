@@ -52,6 +52,7 @@ Konsultimet mbahen pas orarit të zakonshëm të ushtrimeve.
 6. [Vargjet](/lendet/gjuhe-programuese/java6)
 7. [Matricat](/lendet/gjuhe-programuese/java7)
 8. [Funksionet](/lendet/gjuhe-programuese/java8)
+9. [Variablat lokale/globale](/lendet/gjuhe-programuese/java9)
 
 ## Artikuj
 
