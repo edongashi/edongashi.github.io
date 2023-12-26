@@ -109,14 +109,14 @@ Variablat që shihen nga të gjitha funksionet quhen **variabla globale**.
 ```cpp
 int S = 0;
 
-void rritShumen(int v) {
+void rrit_shumen(int v) {
   S += v;
 }
 
 int main() {
-  rritShumen(4);
+  rrit_shumen(4);
   cout << S << endl; // shfaqet 4
-  rritShumen(3);
+  rrit_shumen(3);
   cout << S << endl; // shfaqet 7
   return 0;
 }
