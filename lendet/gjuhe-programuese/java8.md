@@ -1,4 +1,4 @@
-# Gjuhë Programuese - Java 8
+# Bazat e Programimit - Java 8
 
 ---
 

@@ -1,4 +1,4 @@
-# Gjuhë Programuese - Java 3
+# Bazat e Programimit - Java 3
 
 ---
 

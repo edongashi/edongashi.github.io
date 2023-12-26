@@ -1,4 +1,4 @@
-# Gjuhë Programuese - Java 4
+# Bazat e Programimit - Java 4
 
 ---
 

@@ -1,4 +1,4 @@
-# Gjuhë Programuese - Java 5
+# Bazat e Programimit - Java 5
 
 ---
 

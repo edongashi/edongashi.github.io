@@ -1,4 +1,4 @@
-# Gjuhë Programuese - Java 7
+# Bazat e Programimit - Java 7
 
 ---
 

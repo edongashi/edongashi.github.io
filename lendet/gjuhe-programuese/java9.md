@@ -1,4 +1,4 @@
-# Gjuhë Programuese - Java 9
+# Bazat e Programimit - Java 9
 
 ---
 

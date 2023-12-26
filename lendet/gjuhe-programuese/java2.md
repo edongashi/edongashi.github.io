@@ -1,4 +1,4 @@
-# Gjuhë Programuese - Java 2
+# Bazat e Programimit - Java 2
 
 ---
 

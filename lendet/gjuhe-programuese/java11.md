@@ -1,4 +1,4 @@
-# Gjuhë Programuese - Java 11
+# Bazat e Programimit - Java 11
 
 ---
 
@@ -353,7 +353,7 @@ int main()
     { 3, 6, 2, 1 }
   };
 
-  cout << "Shuma e matrices: " 
+  cout << "Shuma e matrices: "
        << shuma(M, 3 /* nr rreshtave */)
        << endl;
   return 0;

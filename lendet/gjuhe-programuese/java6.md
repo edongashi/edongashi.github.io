@@ -1,4 +1,4 @@
-# Gjuhë Programuese - Java 6
+# Bazat e Programimit - Java 6
 
 ---
 

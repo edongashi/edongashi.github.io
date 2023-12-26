@@ -1,4 +1,4 @@
-# Gjuhë Programuese - Java 12
+# Bazat e Programimit - Java 12
 
 ---
 
@@ -303,7 +303,7 @@ enum Drejtimi {
 1. Të deklarohet numërimi `Muaji` i cili ka vlerat $\text{janar} = 1, \text{shkurt} = 2, \dots$
 2. Të deklarohet numërimi `Stina` e cila ka vlerat $\text{pranvere}, \text{vere}, \text{vjeshte}, \text{dimer}$
 3. Të shkruhet funksioni `merrStinen` i cili pranon një `Muaji` dhe kthen `Stina` e atij muajit.
-4. Të shkruhet funksioni `shfaqStinen` i cili pranon një `Stina` dhe e shfaq në ekran. 
+4. Të shkruhet funksioni `shfaqStinen` i cili pranon një `Stina` dhe e shfaq në ekran.
 5. Të thirren funksionet me $m=\text{prill}$
 
 --
@@ -655,7 +655,7 @@ int main()
 
 ---
 
-**Detyrë:** Të deklarohet struktura `Data`. 
+**Detyrë:** Të deklarohet struktura `Data`.
 
 1. Të shkruhet funksioni `konstrukto(viti, muaji, dita)` i cili krijon datën nga parametrat e dhënë.
 2. Të shkruhet funksioni `shtyp(d)` i cili shfaq datën.

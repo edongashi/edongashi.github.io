@@ -1,4 +1,4 @@
-# Gjuhë Programuese - Java 13
+# Bazat e Programimit - Java 13
 
 ---
 
@@ -264,7 +264,7 @@ using namespace std;
 struct drejtkendeshi {
   int a;
   int b;
-  
+
   int siperfaqja() {
     return a * b;
   }
@@ -334,7 +334,7 @@ int nota(rezultati r) {
 }
 
 double notaMesatare(notat n) {
-  return (nota(n.matematike) 
+  return (nota(n.matematike)
         + nota(n.fizike)
         + nota(n.baza)
         + nota(n.programim)
@@ -374,14 +374,14 @@ int main() {
   studenti.programim = {42, 58};
   studenti.zgjedhore = {95, 100};
 
-  cout << "Matematike me goje: " 
+  cout << "Matematike me goje: "
        << studenti.matematike.piketMeGoje
        << endl;
 
   cout << "Nota mesatare e studentit: "
        << notaMesatare(studenti)
        << endl;
-       
+
   cout << "Studenti ka kaluar kaq provime: "
        << provimeTeKaluara(studenti)
        << endl;
