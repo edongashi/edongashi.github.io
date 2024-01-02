@@ -6,7 +6,7 @@
 
 ---
 
-**Rikujtim:** Funksioni është një bllok i parametrizuar i urdhërave i cili mund të kthejë vlerë.
+**Rikujtim:** Funksioni është një bllok i parametrizuar i urdhërave i cili mund të kthejë rezultat.
 
 ```cpp
 int mbledh(int a, int b) {

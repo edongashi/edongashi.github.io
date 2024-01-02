@@ -1,4 +1,4 @@
-# Bazat e Programimit - Java 11
+# Bazat e Programimit - Java 10
 
 ---
 
@@ -6,7 +6,7 @@
 
 ---
 
-**Rikujtim:** Funksioni është një bllok i parametrizuar i urdhërave i cili mund të kthejë vlerë.
+**Rikujtim:** Funksioni është një bllok i parametrizuar i urdhërave i cili mund të kthejë rezultat.
 
 ```cpp
 int mbledh(int a, int b) {
@@ -20,26 +20,35 @@ $$
 
 ---
 
-Funksioni ka **domenin** dhe **rangun**.
+Secili funksion ka **parametrat** dhe **tipin kthyes**.
 
-- Domeni - cilat vlera i pranon funksioni?
-- Rangu - çfare vlera kthen funksioni?
+- Parametrat - çfarë vlera pranon funksioni?
+- Tipi kthyes - çfarë lloj rezultati kthen funksioni?
+
+Kur funksioni nuk kthen asgjë, e quajmë **void**.
 
 ---
 
-Funksioni në C++ nuk identifikohet vetëm nga **emri** por edhe nga **domeni**.
+Funksioni në C++ nuk identifikohet vetëm nga **emri**, por edhe nga **parametrat**.
 
-$$
-\text{max}(a \in \mathbb{Z}, b \in \mathbb{Z}) \in \mathbb{Z}
-$$
+```cpp
+int max(int a, int b);
+```
 
-dhe:
+dhe
 
-$$
-\text{max}(a \in \mathbb{Z}, b \in \mathbb{Z}, c \in \mathbb{Z}) \in \mathbb{Z}
-$$
+```cpp
+int max(int a, int b, int c);
+```
 
-janë të ndryshme, edhe pse kanë emër të njejtë.
+janë funksione të ndryshme, edhe pse kanë emër të njëjtë.
+
+---
+
+Pra, mund të kemi shumë funksione me të njëjtin emër derisa dallojnë për së paku nga njëra:
+
+- Numri i parametrave, ose
+- Tipet e parametrave
 
 ---
 
@@ -56,7 +65,21 @@ int max(int a, int b, int c) {
 }
 ```
 
-Kjo lejohet sepse funksionet kanë domen të ndryshëm, edhe pse emri është i njejti.
+Kjo lejohet sepse funksionet kanë parametra të ndryshëm, edhe pse emri është i njëjti.
+
+---
+
+```cpp
+int max(int a, int b) {
+  return a > b ? a : b;
+}
+
+double max(double a, double b) {
+  return a > b ? a : b;
+}
+```
+
+Edhe kodi i sipërm është valid, pasi që funksionet dallojnë për nga tipet e parametrave.
 
 ---
 
@@ -78,24 +101,48 @@ int shuma(int a, int b) {
 }
 ```
 
-Natyra e funksioneve `shuma` e llogaritë shumën e numrave `a` dhe `b`.
+Natyra e funksioneve `shuma` e llogarit shumën e numrave `a` dhe `b`.
 
 ---
 
-**Kujdes!** Funksioni nuk guxon të mbingarkohet vetëm përmes tipit kthyes:
+**Detyrë:** Çfarë shfaqet kur ekzekutohet ky kod?
+
+```cpp
+#include <iostream>
+
+int f(int x) {
+  return x + 3;
+}
+double f(double x) {
+  return 2 * x;
+}
+int main() {
+  std::cout << f((double)f(7));
+}
+```
+
+--
+
+```text
+20
+```
+
+---
+
+**Kujdes!** Funksioni nuk lejohet të mbingarkohet vetëm përmes tipit kthyes:
 
 ```cpp
 int shuma(int a, int b);
 double shuma(int a, int b); // Gabim!
 ```
 
-**Rikujtim:** Funksioni identifikohet nga **emri** dhe **parametrat** (domeni).
+**Rikujtim:** Funksioni identifikohet nga **emri** dhe **parametrat** (numri dhe/ose tipet).
 
 ---
 
 **Detyrë:** Të krijohet natyra e funksioneve `shuma`, ku funksionet marrin 2, 3, dhe 4 parametra të `int`.
 
-E njejta të përsëritet edhe për tipin `double`.
+E njëjta të përsëritet edhe për tipin `double`.
 
 --
 
@@ -184,7 +231,7 @@ Rreshtat që fillojnë me `#` njihen si urdhëra paraprocesorik.
 
 Urdhërat paraprocesorik ekzekutohen para se të fillojë kompajllimi i programit.
 
-Një urdhër i thjeshtë është `#DEFINE` i cili zëvendëson tekstin me diçka tjetër - sikur find and replace në programet tekstuale.
+Një urdhër i thjeshtë është `#define`, i cili zëvendëson tekstin me diçka tjetër - sikur find and replace në programet tekstuale.
 
 ---
 
@@ -232,7 +279,7 @@ int main() {
 
 ---
 
-Definimet shpesh përdoren për t'iu shoqëruar emra vlerave konstante numerike, psh PI.
+Definimet shpesh përdoren për t'iu shoqëruar emra vlerave konstante numerike, psh. PI.
 
 Përveç kësaj, definimet janë të përshtatshme për t'i dhënë kuptim numrave sipas nevojave tona.
 
@@ -297,6 +344,20 @@ int main() {
   cout << abs(2 - 3);
   return 0;
 }
+```
+
+---
+
+Një tjetër urdhër në C++ është `typedef`, e cila na mundëson të deklarojmë një alias për një tip.
+
+```cpp
+typedef int nrplote;
+```
+
+Nëse kemi deklarimin e sipërm, atëhere kodi në vazhdim është valid:
+
+```cpp
+nrplote x = 15;
 ```
 
 ---
@@ -378,7 +439,7 @@ using namespace std;
 #define PREMTE 5
 #define SHTUNE 6
 
-void shfaqDiten(int nr) {
+void shfaq_diten(int nr) {
   switch (nr) {
     case HENE:
       cout << "E hene";
@@ -411,7 +472,7 @@ int main() {
   int r;
   cout << "Jepni numrin e dites: ";
   cin >> r;
-  shfaqDiten(r);
+  shfaq_diten(r);
 }
 ```
 
@@ -475,7 +536,7 @@ Të shkruhen funksioni i cili llogarit produktin skalar të dy vargjeve.
 #include <iostream>
 using namespace std;
 
-int produktiSkalar(int a[], int b[], int n)
+int produkti_skalar(int a[], int b[], int n)
 {
   int s = 0;
   for (int i = 0; i < n; i++)
@@ -491,7 +552,7 @@ int main()
   const int n = 5;
   int a[n] = {1, 0, 1, 4, 7};
   int b[n] = {34, 7, 7, 5, 1};
-  cout << produktiSkalar(a, b, n) << endl;
+  cout << produkti_skalar(a, b, n) << endl;
   return 0;
 }
 ```
