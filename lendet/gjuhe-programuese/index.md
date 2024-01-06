@@ -52,6 +52,8 @@ Konsultimet mbahen pas orarit të zakonshëm të ushtrimeve.
 6. [Vargjet](/lendet/gjuhe-programuese/java6)
 7. [Matricat](/lendet/gjuhe-programuese/java7)
 8. [Funksionet](/lendet/gjuhe-programuese/java8)
+9. [Variablat lokale/globale](/lendet/gjuhe-programuese/java9)
+10. [Mbingarkimi i funksioneve, direktivat paraprocesorike](/lendet/gjuhe-programuese/java10)
 
 ## Artikuj
 
@@ -90,8 +92,6 @@ $$
 
 Dokumentet në vijim nuk janë përditësuar ende.
 
-- [Variablat lokale/globale](/lendet/gjuhe-programuese/java9)
-- [Mbingarkimi i funksioneve, direktivat paraprocesorike](/lendet/gjuhe-programuese/java10)
 - [Numërimet dhe strukturat](/lendet/gjuhe-programuese/java12)
 - [Ushtrime me struktura](/lendet/gjuhe-programuese/java13)
 - [Paradigmat programuese](/lendet/gjuhe-programuese/paradigmat-programuese)
