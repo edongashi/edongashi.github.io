@@ -54,6 +54,7 @@ Konsultimet mbahen pas orarit të zakonshëm të ushtrimeve.
 8. [Funksionet](/lendet/gjuhe-programuese/java8)
 9. [Variablat lokale/globale](/lendet/gjuhe-programuese/java9)
 10. [Mbingarkimi i funksioneve, direktivat paraprocesorike](/lendet/gjuhe-programuese/java10)
+11. [Numërimet dhe strukturat](/lendet/gjuhe-programuese/java11)
 
 ## Artikuj
 
@@ -92,7 +93,6 @@ $$
 
 Dokumentet në vijim nuk janë përditësuar ende.
 
-- [Numërimet dhe strukturat](/lendet/gjuhe-programuese/java11)
 - [Ushtrime me struktura](/lendet/gjuhe-programuese/java13)
 - [Paradigmat programuese](/lendet/gjuhe-programuese/paradigmat-programuese)
 - [Kuptimi i 'void'](/lendet/gjuhe-programuese/void)
