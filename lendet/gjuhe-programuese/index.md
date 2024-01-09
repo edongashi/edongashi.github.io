@@ -92,7 +92,7 @@ $$
 
 Dokumentet në vijim nuk janë përditësuar ende.
 
-- [Numërimet dhe strukturat](/lendet/gjuhe-programuese/java12)
+- [Numërimet dhe strukturat](/lendet/gjuhe-programuese/java11)
 - [Ushtrime me struktura](/lendet/gjuhe-programuese/java13)
 - [Paradigmat programuese](/lendet/gjuhe-programuese/paradigmat-programuese)
 - [Kuptimi i 'void'](/lendet/gjuhe-programuese/void)

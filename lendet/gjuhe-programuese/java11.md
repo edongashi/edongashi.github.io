@@ -130,19 +130,19 @@ int main() {
 
 ## Numërimet
 
-Numërim quajmë një bashkësi të vlerave.
+Numërim quajmë një bashkësi të vlerave (kategorive).
 
 ---
 
 Marrim ngjyrat e semaforit: kuqe, verdhë, gjelbër.
 
-Në program këtë e paraqitshim duke ia shoqëruar ngjyrës nga një vlerë numerike:
+Në program këtë e paraqitnim duke ia shoqëruar ngjyrës nga një vlerë numerike:
 
-Ngjyra|Kodi
--|-
-Kuqe|0
-Verdhë|1
-Gjelbër|2
+| Ngjyra  | Kodi |
+| ------- | ---- |
+| Kuqe    | 0    |
+| Verdhë  | 1    |
+| Gjelbër | 2    |
 
 ---
 
@@ -230,11 +230,11 @@ enum Ngjyra {
 
 Kur nuk ceket vlera, anëtari e merr vlerën e ardhshme të lirë pas anëtarit të kaluar.
 
-Kështu që `gjelber = 21`
+Kështu që `gjelber = 21`.
 
 ---
 
-**Shembull:** Rajonet e targave të Kosovës.
+**Shembull:** Rajonet e targave të Kosovës
 
 ```cpp
 enum Rajoni {
@@ -251,7 +251,7 @@ enum Rajoni {
 ---
 
 ```cpp
-void shfaqRajonin(Rajoni r) {
+void shfaq_rajonin(Rajoni r) {
   switch (r) {
     case Prishtine: cout << "Rajoni i Prishtines"; break;
     case Mitrovice: cout << "Rajoni i Mitrovices"; break;
@@ -262,12 +262,12 @@ void shfaqRajonin(Rajoni r) {
 
 ...
 
-shfaqRajonin(Peje);
+shfaq_rajonin(Peje);
 ```
 
 ---
 
-**Shembull:** Niveli i studimeve:
+**Shembull:** Niveli i studimeve
 
 ```cpp
 enum NiveliStudimeve {
@@ -281,18 +281,18 @@ enum NiveliStudimeve {
 
 ---
 
-**Shembull:** Drejtimet gjeografike:
+**Shembull:** Drejtimet gjeografike
 
 ```cpp
 enum Drejtimi {
-  Veri,
-  VeriLindje,
-  Lindje,
-  JugLindje,
-  Jug,
-  JugPerendim,
-  Perendim,
-  VeriPerendim
+  veri,
+  veri_lindje,
+  lindje,
+  jug_lindje,
+  jug,
+  jug_perendim,
+  perendim,
+  veri_perendim
 };
 ```
 
@@ -302,8 +302,8 @@ enum Drejtimi {
 
 1. Të deklarohet numërimi `Muaji` i cili ka vlerat $\text{janar} = 1, \text{shkurt} = 2, \dots$
 2. Të deklarohet numërimi `Stina` e cila ka vlerat $\text{pranvere}, \text{vere}, \text{vjeshte}, \text{dimer}$
-3. Të shkruhet funksioni `merrStinen` i cili pranon një `Muaji` dhe kthen `Stina` e atij muajit.
-4. Të shkruhet funksioni `shfaqStinen` i cili pranon një `Stina` dhe e shfaq në ekran.
+3. Të shkruhet funksioni `merr_stinen` i cili pranon një `Muaji` dhe kthen `Stina` e atij muajit.
+4. Të shkruhet funksioni `shfaq_stinen` i cili pranon një `Stina` dhe e shfaq në ekran.
 5. Të thirren funksionet me $m=\text{prill}$
 
 --
@@ -312,7 +312,7 @@ enum Drejtimi {
 #include <iostream>
 using namespace std;
 
-enum muaji
+enum Muaji
 {
   janar = 1,
   shkurt,
@@ -328,7 +328,7 @@ enum muaji
   dhjetor
 };
 
-enum stina
+enum Stina
 {
   pranvere,
   vjeshte,
@@ -336,7 +336,7 @@ enum stina
   dimer
 };
 
-stina merrStinen(muaji m)
+stina merr_stinen(muaji m)
 {
   switch (m)
   {
@@ -357,7 +357,7 @@ stina merrStinen(muaji m)
   }
 }
 
-void shfaqStinen(stina s)
+void shfaq_stinen(stina s)
 {
   switch (s)
   {
@@ -378,9 +378,9 @@ void shfaqStinen(stina s)
 
 int main()
 {
-  Muaji m = Prill;
-  Stina s = merrStinen(m);
-  shfaqStinen(s);
+  Muaji m = prill;
+  Stina s = merr_stinen(m);
+  shfaq_stinen(s);
   return 0;
 }
 ```
@@ -395,12 +395,12 @@ Struktura është një grupim logjik i variablave.
 
 Supozojmë që duhet ta plotësojmë një formular:
 
-Fusha|Vlera
--|-
-Emri|Filan
-Mbiemri|Fisteku
-Mosha|22
-Jeni student?|Po
+| Fusha         | Vlera   |
+| ------------- | ------- |
+| Emri          | Filan   |
+| Mbiemri       | Fisteku |
+| Mosha         | 22      |
+| Jeni student? | Po      |
 
 ---
 
@@ -410,12 +410,12 @@ Këto fusha paraqesin grupimin logjik për të dhënat personale të një `Perso
 
 Secila fushë e këtij grupimi ka një tip të të dhënave:
 
-Fusha|Tipi
--|-
-Emri|string
-Mbiemri|string
-Mosha|int
-Jeni student?|bool
+| Fusha         | Tipi   |
+| ------------- | ------ |
+| Emri          | string |
+| Mbiemri       | string |
+| Mosha         | int    |
+| Jeni student? | bool   |
 
 ---
 
@@ -423,10 +423,10 @@ Në C++ ky grup i të dhënave modelohet kështu:
 
 ```cpp
 struct Personi {
-  string Emri;
-  string Mbiemri;
-  int Mosha;
-  bool Student;
+  string emri;
+  string mbiemri;
+  int mosha;
+  bool student;
 };
 ```
 
@@ -436,10 +436,10 @@ Kur kemi nevojë të ruajmë të dhënat e një `Personi`, e deklarojmë një va
 
 ```cpp
 Personi p;
-p.Emri = "Filan";
-p.Mbiemri = "Fisteku";
-p.Mosha = 22;
-p.Student = true;
+p.emri = "Filan";
+p.mbiemri = "Fisteku";
+p.mosha = 22;
+p.student = true;
 ```
 
 ---
@@ -461,13 +461,13 @@ Strukturat përdorën kur kemi nevojë ta dërgojmë ose ta kthejmë një grup l
 
 ---
 
-**Shembull:** Struktura `Data` është grupim logjik i `Viti`, `Muaji`, `Dita`:
+**Shembull:** Struktura `Data` është grupim logjik i `viti`, `muaji`, `dita`:
 
 ```cpp
 struct Data {
-  int Dita;
-  int Muaji;
-  int Viti;
+  int dita;
+  int muaji;
+  int viti;
 };
 
 int main() {
@@ -477,11 +477,11 @@ int main() {
 
 ---
 
-Kur themi `Data d` nuk bëhet për ndonjë tip të thjeshtë si psh. `int` ose `double`, por për grupimin e tre numrave të plotë (`Dita`, `Muaji`, `Viti`):
+Kur themi `Data d` nuk bëhet për ndonjë tip të thjeshtë si psh. `int` ose `double`, por për grupimin e tre numrave të plotë (`dita`, `muaji`, `viti`):
 
-Dita|Muaji|Viti
-:-:|:-:|:-:
-17|02|2008
+| Dita | Muaji | Viti |
+| :--: | :---: | :--: |
+|  17  |  02   | 2008 |
 
 ---
 
@@ -494,7 +494,7 @@ Data sot() {
 }
 
 void shtyp(Data d) {
-  cout << d.Dita << "/" << d.Muaji << "/" << d.Viti;
+  cout << d.dita << "/" << d.muaji << "/" << d.viti;
 }
 
 int main() {
@@ -504,7 +504,7 @@ int main() {
 
 ---
 
-**Detyrë:** Të deklarohet struktura `Rezultati` me fushat `PiketShkrim`, `PiketGoje`. Të deklarohet një variabël e këtij tipi dhe të mbushet nga tastiera. Pastaj të tregohet a kalohet provimi me ato pikë.
+**Detyrë:** Të deklarohet struktura `Rezultati` me fushat `piket_shkrim`, `piket_goje`. Të deklarohet një variabël e këtij tipi dhe të mbushet nga tastiera. Pastaj të tregohet a kalohet provimi me ato pikë.
 
 --
 
@@ -514,19 +514,19 @@ using namespace std;
 
 struct Rezultati
 {
-  int PiketMeShkrim;
-  int PiketMeGoje;
+  int piket_shkrim;
+  int piket_goje;
 };
 
 int main()
 {
   Rezultati r;
   cout << "Shtypni piket me shkrim: ";
-  cin >> r.PiketMeShkrim;
+  cin >> r.piket_shkrim;
   cout << "Shtypni piket me goje: ";
-  cin >> r.PiketMeGoje;
+  cin >> r.piket_goje;
 
-  if (r.PiketMeShkrim >= 50 && r.PiketMeGoje >= 50)
+  if (r.piket_shkrim >= 50 && r.piket_goje >= 50)
   {
     cout << "Kalon";
   }
@@ -551,23 +551,23 @@ using namespace std;
 
 struct Rezultati
 {
-  int PiketMeShkrim;
-  int PiketMeGoje;
+  int piket_shkrim;
+  int piket_goje;
 };
 
 Rezultati lexo()
 {
   Rezultati r;
   cout << "Shtypni piket me shkrim: ";
-  cin >> r.PiketMeShkrim;
+  cin >> r.piket_shkrim;
   cout << "Shtypni piket me goje: ";
-  cin >> r.PiketMeGoje;
+  cin >> r.piket_goje;
   return r;
 }
 
 bool kalues(Rezultati r)
 {
-  if (r.PiketMeShkrim >= 50 && r.PiketMeGoje >= 50)
+  if (r.piket_shkrim >= 50 && r.piket_goje >= 50)
   {
     return true;
   }
@@ -597,7 +597,7 @@ int main()
 
 **Detyrë:** Të deklarohet struktura `NumerKompleks` me fushat `a` dhe `b` si dhe funksionet `mbledh`, `zbrit`, `shumezo`, `rrezja`, `kendi`.
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Complex_number_illustration.svg/223px-Complex_number_illustration.svg.png)  <!-- .element: style="border:none" -->
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Complex_number_illustration.svg/223px-Complex_number_illustration.svg.png) <!-- .element: style="border:none" -->
 
 --
 
@@ -743,7 +743,7 @@ struct Vetura
 {
   Marka marka;
   Ngjyra ngjyra;
-  int vitiProdhimit;
+  int viti_prodhimit;
   Transmisioni transmisioni;
 };
 
