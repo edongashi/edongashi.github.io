@@ -11,8 +11,10 @@ suppresshooks: true
 
 | Grupi    | Dita    | Ora         | Salla |
 | -------- | ------- | ----------- | ----- |
-| 1B', 1B" | E hëne  | 10:00-11:30 | 615   |
-| 2A", 2B" | E martë | 13:00-14:30 | 615   |
+| 1B', 1B" | E hënë  | 10:00-11:30 | 615   |
+| 2A", 2B" | E martë | 08:30-10:00 | 615   |
+
+**Për grupet 1B' dhe 1B":** ditët e festave i zëvendësojmë të premteve nga ora 09:30-11:00.
 
 ---
 

@@ -57,7 +57,7 @@ Zakonisht në atë adresë ruhet ndonjë vlerë e tipit të caktuar, psh. `int`,
 
 Deklarimi i pointerit: `tipi* emri`.
 
-Kodi në vazhdim i deklaron dy pointerë `x` dhe `y`.
+Kodi në vazhdim deklaron dy pointerë `x` dhe `y`.
 
 ```cpp
 int* x;
@@ -68,7 +68,7 @@ double* y;
 
 Pointeri është thjeshtë një variabël numerike që mban një adresë (32-bit ose 64-bit).
 
-Kjo vlerë mund t'i nënshtrohet llogaritjeve aritmetikore si çdo integer tjetër.
+Kjo vlerë mund t'i nënshtrohet llogaritjeve aritmetike si çdo integer tjetër.
 
 ```cpp
 int* x;
@@ -81,8 +81,8 @@ y = x + 1; // merr vlerën 5
 
 Nëse kemi një pointer `x` atëherë:
 
-- Shprehja `x` e jep vlerën pointerit `x` (adresën).
-- Shprehja `*x` e jep vlerën që gjendet në adresën `x`.
+- Shprehja `x` jep vlerën pointerit `x` (adresën).
+- Shprehja `*x` jep vlerën që gjendet në adresën `x`.
 
 Operatori `*x` për cilindo pointer `x` njihet si **operator i dereferencimit**.
 
@@ -173,7 +173,7 @@ cout << *ptr; // shfaqet 5
 
 **Përmbledhje – pointerët**
 
-Deklarimi `int* x = &a` tregon që kemi një pointer `x` për një shënim `a` të tipit `int`.
+Deklarimi `int* x = &a` tregon se kemi një pointer `x` për një shënim `a` të tipit `int`.
 
 Shprehja `x` tregon adresën ku gjendet shënimi `a`.
 
@@ -274,7 +274,7 @@ cout << **ptr;
 
 ---
 
-**Detyrë:** Të shkruhet funksioni i cili e llogarit shumën e vargut të numrave me presje dhjetore.
+**Detyrë:** Të shkruhet funksioni i cili llogarit shumën e vargut të numrave me presje dhjetore.
 Parametri i vargut të shkruhet si pointer.
 
 ---
@@ -301,7 +301,7 @@ int main() {
 
 ### Memoria dinamike
 
-Shpesh nuk e dimë sa hapësirë na nevojitet për shënime, psh. gjatësia e vargut.
+Shpesh nuk dimë sa hapësirë na nevojitet për shënime, psh. gjatësia e vargut.
 
 Me operatorin `new` kërkojmë nga sistemi operativ një bllok të memories me madhësi të dëshiruar.
 
@@ -438,7 +438,7 @@ int& b = a;
 cout << b;
 ```
 
-Sikur te pointerët, simboli `&` te deklarimi i referencës ka kuptim tjetër me operatorin e adresës `&a`.
+Sikur te pointerët, simboli `&` te deklarimi i referencës ka kuptim tjetër nga operatori i adresës `&a`.
 
 ---
 
@@ -476,7 +476,7 @@ Kur kemi thirrje përmes referencës:
 
 ---
 
-**Detyrë:** Të shkruhet funksioni `llogarit` i cili e llogarit shumën dhe prodhimin
+**Detyrë:** Të shkruhet funksioni `llogarit` i cili llogarit shumën dhe prodhimin
 nga `1` deri në `n`, dhe rezultatet i vendos në parametrat referent `s` dhe `p`.
 
 ```cpp
@@ -504,7 +504,7 @@ int main() {
 
 ---
 
-**Kujdes:** Vlerat lokale nuk guxojnë të kthehen, pasi që kanë jetëgjatësi vetëm në bllokun aktual.
+**Kujdes:** Vlerat lokale nuk lejohen të kthehen, pasi që kanë jetëgjatësi vetëm në bllokun aktual.
 
 ```cpp
 int& alfa() {
@@ -529,6 +529,24 @@ void funksioni(const int& x) {
 
 ---
 
+**Rregulla djathtë-majtë për const**
+
+Deklarimin e një tipi e lexojmë nga e djathta në të majtën.
+Fjala kyçe `const` aplikohet në të dhënën më të afërt të majtë që shohim.
+
+Përjashtim bën `const` e fundit në të majtë, me ç'rast e dhëna në të djathtë bëhet konstante.
+
+```cpp
+const int x;        // int konstant
+int const x;        // int konstant
+int *x;             // pointer në int
+int const *x;       // pointer në int konstant
+int *const x;       // pointer konstant në int
+const int *const x; // pointer konstant në int konstant
+```
+
+---
+
 Dërgimi dhe kthimi sipas referencës mund të bëhet edhe përmes pointerëve.
 
 ```cpp
@@ -541,7 +559,25 @@ Faktikisht, forma përmes `&` përkthehet nga kompajlleri në ekuivalentën e sa
 
 ---
 
-**Detyrë:** Të shkruhet funksioni `llogarit` i cili e llogarit shumën dhe prodhimin
+Shembulli i mëparshëm me referenca konstante:
+
+```cpp
+void funksioni(const int& x) {
+  const int &y = x;
+}
+```
+
+është ekuivalent me:
+
+```cpp
+void funksioni(const int* const x) {
+  const int* const y = x;
+}
+```
+
+---
+
+**Detyrë:** Të shkruhet funksioni `llogarit` i cili llogarit shumën dhe prodhimin
 nga `1` deri në `n`, dhe rezultatet i vendos në adresat e pointerëve `*s` dhe `*p`.
 
 ```cpp
