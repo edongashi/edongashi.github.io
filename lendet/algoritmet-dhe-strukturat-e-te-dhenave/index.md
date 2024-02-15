@@ -7,43 +7,37 @@ suppresshooks: true
 
 # Algoritmet dhe Strukturat e të Dhënave
 
-## Materiali
+## Orari i mësimit
 
-1. [Pointerët, referencat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java1)
-2. [Klasat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java2)
-3. [Tipet e gjeneralizuara, funksionet anonime](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java3)
-4. [Array listat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4)
-5. [Big-O, funksionet e rendit të lartë](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java5)
-6. Stack
-7. Queue
-8. Listat e lidhura
-9. Hash tabelat
-10. Pemët
-11. Grafet
-12. Sortimi, algoritmet e kërkimit
-
-## Projektet
-
-1. [Pointerët dhe Referencat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/projekti1)
-2. [Klasat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/projekti2)
-3. [Array listat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/projekti3)
-4. [Stack, queue, listat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/projekti4)
+| Grupi    | Dita    | Ora         | Salla |
+| -------- | ------- | ----------- | ----- |
+| 1B', 1B" | E hëne  | 10:00-11:30 | 615   |
+| 2A", 2B" | E martë | 13:00-14:30 | 615   |
 
 ---
 
-## Orari i mësimit
+## Materiali
 
-| Grupi | Dita    | Ora         | Salla |
-| ----- | ------- | ----------- | ----- |
-| 1A'   | E hënë  | 09:00-10:30 | 615   |
-| 4B'   | E hënë  | 10:30-12:00 | 615   |
-| 2B    | E martë | 12:00-13:30 | 615   |
+Do të publikohet gjatë semestrit.
+
+<!-- 1. [Pointerët, referencat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java1) -->
+<!-- 2. [Klasat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java2)
+2. [Tipet e gjeneralizuara, funksionet anonime](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java3)
+3. [Array listat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4)
+4. [Big-O, funksionet e rendit të lartë](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java5)
+5. Stack
+6. Queue
+7. Listat e lidhura
+8. Hash tabelat
+9. Pemët
+10. Grafet
+11. Sortimi, algoritmet e kërkimit -->
 
 ---
 
 ## Llogaritja e notës finale
 
-Për notë kaluese duhet ta keni përfunduar provimin me së paku 50% ose dy kolokviumet me së paku 50% të pikëve. Pastaj nota finale llogaritet sipas tabelës së mëposhtme:
+Për notë kaluese duhet ta keni përfunduar provimin me së paku 50% ose dy kolokviumet me së paku 50% të pikëve. Pastaj, nota finale llogaritet sipas tabelës së mëposhtme:
 
 | Nota | Pikët       |
 | ---: | :---------- |
