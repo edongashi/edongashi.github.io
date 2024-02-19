@@ -48,7 +48,7 @@ Variablat lokale janë adresa memorike në një distancë fikse ndaj stack point
 
 ---
 
-## Pointerët dhe referencat
+## Pointerët
 
 ---
 
@@ -79,7 +79,7 @@ y = x + 1; // merr vlerën 5
 
 ---
 
-Nëse kemi një pointer `x` atëherë:
+Nëse kemi një pointer `x`, atëherë:
 
 - Shprehja `x` jep vlerën pointerit `x` (adresën).
 - Shprehja `*x` jep vlerën që gjendet në adresën `x`.
@@ -107,7 +107,7 @@ cout << vargu[3];     // shfaqet 7
 
 ---
 
-Nëse kemi një pointer `v`, psh. në një varg.
+Nëse kemi një pointer `v`, psh. në një varg:
 
 ```cpp
 int v[5] = { 3, 2, 1, 5, 6 };
@@ -322,7 +322,7 @@ Rezultati i operacionit është pointer `tipi*`.
 
 ```cpp
 int n;
-cout << "Sa elemente i deshironi ne varg? ";
+cout << "Sa elemente deshironi ne varg? ";
 cin >> n;
 int* vargu = new int[n];
 // vargu[0], vargu[1], ... vargu[n - 1]
@@ -360,7 +360,7 @@ int main() {
 
 ---
 
-Operatori `new` është i rrezikshëm, pasi që memoria e alokuar nuk fshihet vetvetiu (edhe pas përfundimit të bllokut aktual).
+Operatori `new` është i rrezikshëm pasi që memoria e alokuar nuk fshihet vetvetiu (edhe pas përfundimit të bllokut aktual).
 
 Fshirja e memories së alokuar dinamikisht bëhet përmes `delete` (një element) dhe `delete[]` (varg).
 
@@ -371,7 +371,7 @@ Fshirja e memories së alokuar dinamikisht bëhet përmes `delete` (një element
 ```cpp
 int main() {
   int* n = new int;
-  cout << "Sa elemente i deshironi ne varg? ";
+  cout << "Sa elemente deshironi ne varg? ";
   cin >> *n;
   int* vargu = new int[*n];
 
@@ -413,190 +413,61 @@ NULL pointeri nuk mund të dereferencohet.
 
 ---
 
-## Referencat
+Funksionet lejohen të marrin si parametra pointerë të çfarëdoshëm.
 
-Nëse kemi një l-value `a`, atëherë mund ta krijojmë një alias për `a` përmes deklarimit `tipi& b = a`.
+Kur parametri është pointer, themi se po bartim shënimet përmes **referencës**.
 
-```cpp
-int a = 5;
-int& b = a;
-b = 3;
-cout << a; // shfaqet 3
-```
-
-Aliasi `b` ka lokacion memorik të njëjtë me variablën `a`, prandaj paraqesin të njëjtin shënim.
+Kur parametri nuk është pointer, themi se po bëjmë bartje përmes **vlerës** (kopjes).
 
 ---
 
-**Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
+**Shembull:** Bartja e parametrit `x` përmes vlerës:
 
 ```cpp
-int a = 2;
-int* ptr = &a;
-int& b = a;
-*ptr = 3;
-cout << b;
-```
+#include <iostream>
+using namespace std;
 
-Sikur te pointerët, simboli `&` te deklarimi i referencës ka kuptim tjetër nga operatori i adresës `&a`.
-
----
-
-Referencat mund t'i përdorim në parametra të funksioneve.
-
-```cpp
-void nderro(int& a, int& b) {
-  int temp = a;
-  a = b;
-  b = temp;
+void inkremento(int x) {
+  x = x + 1;
 }
 
 int main() {
-  int x = 3, y = 5;
-  nderro(x, y);
-  cout << x << ", " << y; // Shfaqet 5, 3
-  return 0;
+  int a = 5;
+  inkremento(a);
+  cout << a;
 }
 ```
 
 ---
 
-**Bartja përmes vlerës dhe referencës**
-
-- Parametrat e zakonshëm të funksioneve në C++ janë pass-by-value (përmes kopjimit).
-- Nëse i deklarojmë si parametra referent, atëherë thirrja bëhet pass-by-reference (përmes adresës).
-
----
-
-Kur kemi thirrje përmes referencës:
-
-- Nuk kopjohet vlera e argumentit, por adresa e tij – parametri bëhet alias i argumentit.
-- Argumenti duhet të jetë l-value – nuk mund të kemi alias në r-value.
-- Nëse ndryshon vlera e argumentit, ndryshimet barten në bllokun thirrës.
-
----
-
-**Detyrë:** Të shkruhet funksioni `llogarit` i cili llogarit shumën dhe prodhimin
-nga `1` deri në `n`, dhe rezultatet i vendos në parametrat referent `s` dhe `p`.
+**Shembull:** Bartja e parametrit `x` përmes referencës:
 
 ```cpp
-void llogarit(int n, int &s, int &p);
-```
+#include <iostream>
+using namespace std;
 
----
-
-**Kthimi përmes referencës**
-
-Një funksion poashtu mund të kthejë l-value përmes referencës.
-
-```cpp
-int& elementi(int* v, int i) {
-  return v[i];
+void inkremento(int *x) {
+  *x = *x + 1;
 }
 
 int main() {
-  int vargu[5] = { 7, 4, 5, 8, 2 };
-  elementi(vargu, 3) = -1;
-  cout << vargu[3]; // shfaqet -1
-  return 0;
+  int a = 5;
+  inkremento(&a);
+  cout << a;
 }
 ```
 
 ---
 
-**Kujdes:** Vlerat lokale nuk lejohen të kthehen, pasi që kanë jetëgjatësi vetëm në bllokun aktual.
+1. Funksionet nuk mund të kthejnë si rezultat pointer në variabla lokale.
+2. Në anën tjetër, kemi të drejtë të dërgojmë pointer në variabla lokale si argument.
+3. Funksionet lejohen të kthejnë pointer në heap.
 
-```cpp
-int& alfa() {
-  int n = 5;
-  return n; // gabim
-}
-```
-
----
-
-**Referencat konstante**
-
-Shpesh bartjen e bëjmë përmes referencës për ta evituar kopjimin që vie me bartjen përmes vlerës.
-
-Deklarimi i variablës/parametrit si `const tipi&` mundëson krijimin e një aliasi të pandryshueshëm.
-
-```cpp
-void funksioni(const int& x) {
-  const int &y = x;
-}
-```
-
----
-
-**Rregulla djathtë-majtë për const**
-
-Deklarimin e një tipi e lexojmë nga e djathta në të majtën.
-Fjala kyçe `const` aplikohet në të dhënën më të afërt të majtë që shohim.
-
-Përjashtim bën `const` e fundit në të majtë, me ç'rast e dhëna në të djathtë bëhet konstante.
-
-```cpp
-const int x;        // int konstant
-int const x;        // int konstant
-int *x;             // pointer në int
-int const *x;       // pointer në int konstant
-int *const x;       // pointer konstant në int
-const int *const x; // pointer konstant në int konstant
-```
-
----
-
-Dërgimi dhe kthimi sipas referencës mund të bëhet edhe përmes pointerëve.
-
-```cpp
-int* elementi(int* v, int i) {
-  return &v[i]; // ose v+i
-}
-```
-
-Faktikisht, forma përmes `&` përkthehet nga kompajlleri në ekuivalentën e saj me pointerë.
-
----
-
-Shembulli i mëparshëm me referenca konstante:
-
-```cpp
-void funksioni(const int& x) {
-  const int &y = x;
-}
-```
-
-është ekuivalent me:
-
-```cpp
-void funksioni(const int* const x) {
-  const int* const y = x;
-}
-```
-
----
-
-**Detyrë:** Të shkruhet funksioni `llogarit` i cili llogarit shumën dhe prodhimin
-nga `1` deri në `n`, dhe rezultatet i vendos në adresat e pointerëve `*s` dhe `*p`.
-
-```cpp
-void llogarit(int n, int* s, int* p);
-```
+Pse?
 
 ---
 
 ## Detyra shtesë
-
----
-
-**Detyrë:** Të shkruhet funksioni `swap(a,b)` në variantin me pointerë dhe me referenca.
-
-Të thirren te dy variantet nga `main` dhe të vrojtohen dallimet sintaksore.
-
----
-
-**Detyrë:** Të shkruhet funksioni `kopjo(v[], n)` i cili kopjon një varg dhe kthen një pointer për kopjen e vargut.
 
 ---
 
@@ -609,6 +480,10 @@ int *x = v1, *y = v2;
 int **z = &(*x > *y ? x : y);
 cout << 2 * *(*z + 1);
 ```
+
+---
+
+**Detyrë:** Të shkruhet funksioni `kopjo(v[], n)` i cili kopjon një varg dhe kthen një pointer në kopjen e vargut.
 
 ---
 
@@ -636,10 +511,10 @@ Drejtkendeshi* lexo() {
   cin >> a;
   cout << "Shtyp b: ";
   cin >> b;
-  return new Drejtkendeshi { a, b };
+  return new Drejtkendeshi{ a, b };
 }
 
-int siperfaqja(Drejtkendeshi *d) {
+int siperfaqja(Drejtkendeshi* d) {
   return d->a * d->b;
 }
 
