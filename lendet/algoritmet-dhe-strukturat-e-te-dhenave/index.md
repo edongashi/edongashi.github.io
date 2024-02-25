@@ -20,7 +20,7 @@ suppresshooks: true
 
 ## Materiali
 
-Do të publikohet gjatë semestrit.
+1. [Pointerët](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java1)
 
 <!-- 1. [Pointerët, referencat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java1) -->
 <!-- 2. [Klasat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java2)

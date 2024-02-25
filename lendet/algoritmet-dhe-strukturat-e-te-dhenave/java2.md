@@ -4,19 +4,26 @@
 
 ## Përsëritje
 
-- Çfarë janë pointerët?
-- Në cilat raste na nevojiten?
-- Kur na nevojitet alokimi dinamik?
-- Ku dallojnë thirrjet përmes vlerës dhe referencës?
+1. Dallimi ndërmjet `int x` dhe `int* x`?
+2. L-value dhe R-value?
+3. Operatorët `&` dhe `*`?
+4. Stack dhe heap?
+
+--
+
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java1/img5.png)
 
 ---
 
 **Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
 
 ```cpp
-int v[4] = { 6, 2, 7, 4 };
-
-cout << *(v + 1) + 1;
+int a = 5, b = 10;
+int* x = &a;
+int* y = &b;
+a++;
+*y += *x;
+cout << a << ", " << b;
 ```
 
 ---
@@ -24,436 +31,270 @@ cout << *(v + 1) + 1;
 **Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
 
 ```cpp
-int v1[3] = { 1, 2, 3 };
-
-int v2[3] = { 4, 5, 6 };
-
-int *p[2] = { v1, v2 };
-
-cout << 2 * *(*(p + 1) + 1);
+int v[3] = { 4, 1, 7};
+int x = *v;
+int* y = &x;
+*y = 5;
+cout << x << ", " << v[0];
 ```
 
 ---
 
-## Klasat
-
-Supozojmë një strukturë të të dhënave `Pika` e cila paraqet dyshen `(x,y)` në rrafshin kartezian:
+**Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
 
 ```cpp
-struct Pika {
-  double x;
-  double y;
-};
+int v[3] = { 4, 1, 7};
+int* x = v;
+int* y = v + 1;
+cout << *(x + *y + 1);
 ```
 
 ---
 
-Shpesh kemi funksione të cilat ndërveprojnë me këtë strukturë:
+**Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
 
 ```cpp
-bool baraz(Pika p1, Pika p2) {
-  return p1.x == p2.x && p1.y == p2.y;
-}
-```
-
----
-
-```cpp
-double distanca(Pika p1, Pika p2) {
-  return sqrt(
-    pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2)
-  );
-}
-```
-
----
-
-```cpp
-double distanca_nga_qendra(Pika p) {
-  return sqrt(pow(p.x, 2) + pow(p.y, 2));
-}
-```
-
----
-
-```cpp
-string toString(Pika p) {
-  stringstream ss;
-  ss << "(" << p.x << ", " << p.y << ")";
-  return ss.str();
-}
-```
-
----
-
-```cpp
-Pika konstrukto(double x, double y) {
-  Pika p = { x, y };
-  return p;
-}
-```
-
----
-
-```cpp
-Pika p1 = konstrukto(6.0, 3.5);
-Pika p2 = konstrukto(4.2, 7.1);
-
-cout << "Distanca mes pikes p1=" << toString(p1)
-      << " dhe pikes p2=" << toString(p2)
-      << " eshte d=" << distanca(p1, p2)
-      << endl;
-
-if (baraz(p1, p2)) {
-  cout << "Pikat jane te barabarta.";
-} else {
-  cout << "Pikat jane te ndryshme.";
-}
-```
-
----
-
-Stili i tillë i programimit njihet si **programim procedural**.
-
-Ekziston një stil tjetër i programimit i cili grupon të dhënat dhe funksionet mbi to në një njësi të vetme që quhet **klasë**.
-
-Stili i programimit me klasa quhet **programimi i orientuar në objekte (POO)**.
-
----
-
-## Programimi i orientuar në objekte
-
-Klasa përshkruan strukturën e të dhënave si dhe ofron funksione të cilat veprojnë mbi ato të dhëna.
-
-Të dhënat e klasës njihen si **fusha** ndërsa funksionet e klasës njihen si **metoda**.
-
----
-
-Të dhënat e klasës deklarohen sikur te strukturat:
-
-```cpp
-class Pika {
-  double x;
-  double y;
-};
-```
-
-Realisht, në C++ nuk ka dallim teknik ndërmjet strukturës dhe klasës.
-
----
-
-**Kontrollimi i qasjes (private, public)**
-
-Fushat **private** mund të lexohen vetëm nga funksionet brenda klasës.
-
-Fushat **publike** mund të lexohen nga cilido bllok.
-
----
-
-```cpp
-class Pika {
-  public:  double x;
-  private: double y;
-};
+struct Drejtkendeshi { int a; int b; };
 
 int main() {
-  Pika p;
-  p.x = 5.0; // OK
-  p.y = 3.5; // Gabim, ndalohet leximi nga blloku i jashtëm
+  Drejtkendeshi* d = new Drejtkendeshi{ 5, 3 };
+  int* brinja = &(d->a);
+  d->a = 7;
+  d->b = 6;
+  cout << *brinja;
+}
+```
+
+---
+
+**Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
+
+```cpp
+int* a = new int{ 5 };
+int* b = new int{ 3 };
+int* max = *a > *b ? a : b;
+*a = 6;
+*b = 8;
+a = b;
+cout << *max;
+```
+
+---
+
+**Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
+
+```cpp
+int* a = new int{ 5 };
+int* b = new int{ 3 };
+int** max = *a > *b ? &a : &b;
+*a = 6;
+*b = 8;
+a = b;
+cout << **max;
+```
+
+---
+
+## Referencat
+
+---
+
+Nëse kemi një l-value `a`, atëherë mund ta krijojmë një alias për `a` përmes deklarimit `tipi& b = a`.
+
+```cpp
+int a = 5;
+int& b = a;
+b = 3;
+cout << a; // shfaqet 3
+```
+
+Aliasi `b` ka lokacion memorik të njëjtë me variablën `a`, prandaj paraqesin të njëjtin shënim.
+
+---
+
+**Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
+
+```cpp
+int a = 2;
+int* ptr = &a;
+int& b = a;
+*ptr = 3;
+cout << b;
+```
+
+Sikur te pointerët, simboli `&` te deklarimi i referencës ka kuptim tjetër nga operatori i adresës `&a`.
+
+---
+
+Referencat mund t'i përdorim në parametra të funksioneve.
+
+```cpp
+void nderro(int& a, int& b) {
+  int temp = a;
+  a = b;
+  b = temp;
+}
+
+int main() {
+  int x = 3, y = 5;
+  nderro(x, y);
+  cout << x << ", " << y; // Shfaqet 5, 3
   return 0;
 }
 ```
 
 ---
 
-Në disa raste dëshirojmë t'i mbajmë fushat **private** me qëllim të ndalimit të qasjes nga blloqet e jashtme.
+**Bartja përmes vlerës dhe referencës**
 
-Kjo është një veçori kritike për arritjen e **enkapsulimit**.
-
----
-
-Nëse nuk ceket, klasat e kanë qasjen e nënkuptuar private, ndërsa strukturat e kanë publike.
-
-Nuk ka dallim tjetër ndëmjet strukturave dhe klasave.
+- Parametrat e zakonshëm të funksioneve në C++ janë pass-by-value (përmes kopjimit).
+- Nëse i deklarojmë si parametra referent, atëherë thirrja bëhet pass-by-reference (përmes adresës).
 
 ---
 
-Funksionet e klasës deklarohen bashkë me të dhënat:
+Kur kemi thirrje përmes referencës:
+
+- Nuk kopjohet vlera e argumentit, por adresa e tij – parametri bëhet alias i argumentit.
+- Argumenti duhet të jetë l-value – nuk mund të kemi alias në r-value.
+- Nëse ndryshon vlera e argumentit, ndryshimet barten në bllokun thirrës.
+
+---
+
+**Detyrë:** Të shkruhet funksioni `llogarit` i cili llogarit shumën dhe prodhimin
+nga `1` deri në `n`, dhe rezultatet i vendos në parametrat referent `s` dhe `p`.
 
 ```cpp
-class Pika {
-private:
-  double x;
-  double y;
-
-public:
-  double distanca_nga_qendra() {
-    return sqrt(pow(x, 2) + pow(y, 2));
-  }
-};
+void llogarit(int n, int &s, int &p);
 ```
 
 ---
 
-Thirrja e metodës bëhet përmes operatorit të qasjes sikur te fushat:
+**Kthimi përmes referencës**
+
+Një funksion poashtu mund të kthejë l-value përmes referencës.
 
 ```cpp
-Pika p = ...;
-
-cout << p.distanca_nga_qendra();
-```
-
-Në këtë rast funksioni i merr vlerat e pikës `p`.
-
----
-
-```cpp
-class Pika {
-  private: double x, y;
-  public:  bool baraz(Pika tjeter) {
-    return x == tjeter.x && tjeter.y == tjeter.y;
-  }
-};
+int& elementi(int* v, int i) {
+  return v[i];
+}
 
 int main() {
-  Pika p1 = ..., p2 = ...;
-  if (p1.baraz(p2)) cout << "Te njejta";
-  else              cout << "Te ndryshme";
+  int vargu[5] = { 7, 4, 5, 8, 2 };
+  elementi(vargu, 3) = -1;
+  cout << vargu[3]; // shfaqet -1
   return 0;
 }
 ```
 
 ---
 
-Vini re se si parametri i parë i funksionit sikur `p1` në `baraz(p1,p2)` tash bëhet implicit duke marrë formën `p1.baraz(p2)`.
-
-Argumenti implicit që paraqet referencën kontekstuale të objektit aktual në POO quhet `this`.
-
----
-
-Vlera kontekstuale `this` është pointer për variablën (objektin) aktual.
+**Kujdes:** Vlerat lokale nuk lejohen të kthehen, pasi që kanë jetëgjatësi vetëm në bllokun aktual.
 
 ```cpp
-class Personi {
-private:
-  string emri;
-  int mosha;
-
-public:
-  void shtyp_infot() {
-    cout << "Emri: "  << this->emri  << endl;
-    cout << "Mosha: " << this->mosha << endl;
-  }
-};
-```
-
----
-
-Nëse kemi 2 variabla `p1` dhe `p2`, me funksione të zakonshme kemi shënuar:
-
-```cpp
-shtyp_infot(p1);
-shtyp_infot(p2);
-```
-
-Me metoda (stili i POO) e shënojmë:
-
-```cpp
-p1.shtyp_infot();
-p2.shtyp_infot();
-```
-
----
-
-Edhe pse po duket që thirrja `p1.shtyp_infot()` nuk po merr parametra,
-ajo realisht e mban referencën e variablës `p1` gjatë thirrjes së funksionit.
-
-Thirrjet `p1.shtyp_infot()` dhe `p2.shtyp_infot()` japin rezultate të ndryshme
-pasi që ekzekutohen në kontekste të ndryshme.
-
----
-
-### Konstruktorët
-
-Variablat tipi i të cilave është klasë i quajmë **objekte** ose **instanca**.
-
-Konstruktori është një funksion i veçantë i cili thirret gjatë krijimit të instancës.
-
-Zakonisht përdoren për të inicializuar gjendjen e klasës duke i dhënë vlera fushave.
-
----
-
-Konstruktori shkruhet si metodë e cila e ka emrin e klasës dhe nuk ka tip kthimi.
-
-```cpp
-class Pika {
-private:
-  double x;
-  double y;
-
-public:
-  Pika(double x, double y) {
-    this->x = x;
-    this->y = y;
-  }
-};
-```
-
-Konstruktorët mund të mbingarkohen.
-
----
-
-Kontruktori thirret gjatë krijimit të instancës.
-
-Thirrjet e mëposhtme janë ekuivalente:
-
-```cpp
-int main() {
-  Pika p1 = Pika(2.5, 3);
-  Pika p2(2.5, 3);
-  return 0;
+int& alfa() {
+  int n = 5;
+  return n; // gabim
 }
 ```
 
 ---
 
-Konstruktori më së shpeshti përdoret për të vendosur vlera në fusha.
+**Referencat konstante**
+
+Shpesh bartjen e bëjmë përmes referencës për ta evituar kopjimin që vie me bartjen përmes vlerës.
+
+Deklarimi i variablës/parametrit si `const tipi&` mundëson krijimin e një aliasi të pandryshueshëm.
 
 ```cpp
-class Studenti {
-private:
-  int mosha;
-  double notaMesatare;
-public:
-  Studenti(int mosha, double notaMesatare) {
-    this->mosha = mosha;
-    this->notaMesatare = notaMesatare;
-  }
+void funksioni(const int& x) {
+  const int &y = x;
 }
 ```
 
-Vini re që mbishkrimin e identifikatorëve e tejkalojmë përmes qasjes eksplicite me `this`.
-
 ---
 
-**Copy constructor**
+**Rregulla djathtë-majtë për const**
 
-Në C++ secila klasë ka një konstruktor special për kopjim të objektit.
+Deklarimin e një tipi e lexojmë nga e djathta në të majtën.
+Fjala kyçe `const` aplikohet në të dhënën më të afërt të majtë që shohim.
 
-Zakonisht kjo mund të shkaktojë sjellje të papritura, prandaj shpesh do ta ndalojmë.
+Përjashtim bën `const` e fundit në të majtë, me ç'rast e dhëna në të djathtë bëhet konstante.
 
 ```cpp
-class Studenti {
-public:
-  // Konstruktori i kopjimit.
-  Studenti(const Studenti&) { ... }
-  // Operatori i shoqërimit.
-  Studenti& operator=(const Studenti&) { ... }
-};
+const int x;        // int konstant
+int const x;        // int konstant
+int *x;             // pointer në int
+int const *x;       // pointer në int konstant
+int *const x;       // pointer konstant në int
+const int *const x; // pointer konstant në int konstant
 ```
 
 ---
 
-**Destruktori** është bllok kodi që thirret:
+Dërgimi dhe kthimi sipas referencës mund të bëhet edhe përmes pointerëve.
 
-- Kur tipi i alokuar në stack del nga scope.
-- Kur fshihet pointeri për objektin e alokuar dinamikisht.
+```cpp
+int* elementi(int* v, int i) {
+  return &v[i]; // ose v+i
+}
+```
 
-Zakonisht përdoret për lirim të resurseve.
+Faktikisht, forma përmes `&` përkthehet nga kompajlleri në ekuivalentën e saj me pointerë.
 
 ---
 
-Shkruhet në formën `~Klasa() { ... }`.
-
-Nuk merr parametra e as nuk kthen asgjë.
+Shembulli i mëparshëm me referenca konstante:
 
 ```cpp
-class Klasa {
-private:
-  int* data;
+void funksioni(const int& x) {
+  const int &y = x;
+}
+```
 
-public:
-  Klasa() { // Konstruktori
-    this->data = new int { 0 };
-  }
+është ekuivalent me:
 
-  ~Klasa() { // Destruktori
-    delete this->data;
-  }
-};
+```cpp
+void funksioni(const int* const x) {
+  const int* const y = x;
+}
 ```
 
 ---
 
-**Enkapsulimi i fushave private**
-
-Zakonisht e kontrollojmë qasjen në fusha me dy metoda publike `getX()` dhe `setX(x)`.
+**Detyrë:** Të shkruhet funksioni `llogarit` i cili llogarit shumën dhe prodhimin
+nga `1` deri në `n`, dhe rezultatet i vendos në adresat e pointerëve `*s` dhe `*p`.
 
 ```cpp
-class Studenti {
-private:
-  int mosha;
-
-public:
-  int getMosha() {
-    return this->mosha;
-  }
-
-  void setMosha(int mosha) {
-    this->mosha = mosha;
-  }
-};
+void llogarit(int n, int* s, int* p);
 ```
 
 ---
 
-**Detyrë:** Të shkruhet klasa `Studenti` e cila ka:
-
-- Fushat private `emri`, `mbiemri`, `mosha`, `notat[5]`
-- Konstruktor që inicializon fushat.
-- Metodën `nota(i)` e cila merr notën në pozitën `i`.
-- Metodën `notaMesatare()`.
-- Metodën `emriPlote()` e cila kthen emrin dhe mbiemrin e bashkuar.
-- Metodën `shtyp()` e cila i shtyp në ekran të dhënat e studentit.
+## Detyra shtesë
 
 ---
 
-**Detyrë:** Të shkruhet klasa `Pika` e cila ka:
+**Detyrë:** Të shkruhet funksioni `swap(a,b)` në variantin me pointerë dhe me referenca.
 
-- Fushat private `x` dhe `y` (nr. real).
-- Konstruktorin inicializues `Pika(x,y)` dhe metodat mbështjellëse të fushave.
-- Metodën `distanca(Pika tjeter)`.
-- Metodën `shtyp()` që shtyp në ekran kordinatat në formën `(x,y)`, psh. `(4,3)`.
+Të thirren te dy variantet nga `main` dhe të vrojtohen dallimet sintaksore.
 
 ---
 
-**Detyrë:** Të shkruhet klasa `Rrethi` e cila ka:
+**Detyrë:** Të shkruhet funksioni `max(v,n)` i cili pranon si parametra një varg të numrave të plotë dhe madhësinë e tij.
 
-- Fushat private `rrezja` (nr. real) dhe `qendra` (e tipit `Pika` nga detyra e kaluar).
-- Konstruktorin `Rrethi(qendra,rrezja)`.
-- Metodat `siperfaqja()` dhe `perimetri()`.
-- Metodën `distanca(Rrethi tjeter)` e cila e llogarit distancën mes qendrave të rrathëve.
-- Metodën `shtyp()` që shtyp në ekran qendrën dhe rrezen e rrethit.
+Funksioni si rezultat kthen një referencë për elementin maksimal në varg.
 
 ---
 
-**Detyrë:** Të krijohet një varg me 5 instanca të tipit `Rrethi` nga detyra e kaluar.
-
-- Të mbushet ky varg me objekte të inicializuara sipas dëshirës.
-- Të gjendet rrethi me sipërfaqen më të madhe dhe të ruhet adresa e tij në një pointer.
-- Të shtypet në ekran rrethi i adresuar nga pointeri përmes metodës `shtyp()`.
+**Detyrë:** Të shkruhet funksioni `max(v,n)` sikur në detyrën paraprake, por duke kthyer pointer për elementin maksimal.
 
 ---
 
 <!-- .slide: style="font-size:0.8em;" -->
 
-**Detyrë:** Të shkruhet klasa `NumerKompleks` me veçoritë private
-`re` dhe `im` si dhe anëtarët në vijim:
+**Detyrë:**
 
-- Konstruktorin `NumerKompleks(re,im)`
-- Metodat `shto(k)`, `zbrit(k)`, `shumezo(k)`, ku `k` është `NumerKompleks`.
-- Mbingarkimet `shto(re,im)`, `zbrit(re,im)`, `shumezo(re,im)`.
-- Metodat `shtyp()`, `toString()`.
-
-Në `main` të deklarohen disa instanca të tipit
-`NumerKompleks` dhe të kryhen llogaritje të ndryshme.
+1. Të deklarohet struktura `Lista` me fushat `numrat[100]` dhe `nr_elemente`.
+2. Lista mban deri maksimalisht 100 elemente, por vetëm `nr_elemente` e para i konsiderojmë se kanë shënime.
+3. Të shkruhen funksionet `lexo(&lista,indeksi)`, `shto(&lista,numri)` dhe `zbraz(&lista)`.
+4. Në `main` të deklarohet një listë e zbrazët dhe të thirren funksionet e sipërme.
