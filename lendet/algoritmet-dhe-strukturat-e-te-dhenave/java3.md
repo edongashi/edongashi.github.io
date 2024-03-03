@@ -2,359 +2,20 @@
 
 ---
 
-Kur mund të themi që dy objekte janë të njejta?
+## Përsëritje
 
-- Kur kanë karakteristikat identike, apo
-- Kur gjenden në adresën e njejtë?
-
-Nuk ka përgjigje definitive për këtë pyetje – varet nga konteksti i përdorimit.
+- Çfarë janë pointerët?
+- Në cilat raste na nevojiten?
+- Kur na nevojitet alokimi dinamik?
+- Ku dallojnë thirrjet përmes vlerës dhe referencës?
 
 ---
 
-Shpesh do të dizajnojmë tipe të cilat nuk kemi dëshirë të kopjohen në mënyrë implicite.
-
-Për këtë arsye e ndalojmë operatorin `=` dhe konstruktorin `T(T&)` me `delete`:
+**Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
 
 ```cpp
-class Studenti {
-private:
-  // Konstruktori i kopjimit.
-  Studenti(const Studenti&) = delete;
-  // Operatori i shoqërimit.
-  Studenti& operator=(const Studenti&) = delete;
-};
-```
-
----
-
-Tipet që nuk mund të kopjohen mund të bartën vetëm përmes referencës. Pse?
-
----
-
-**Semantikat e lëvizjes**
-
-Lëvizja e objektit nënkupton bartjen e pronësisë së resurseve që i menaxhon te një objekt tjetër.
-
-Kjo është më efikase sesa kopjimi i thellë.
-
-Objekti burimor e "humb" pronësinë duke ia pamundësuar lirimin e resurseve në destruktor.
-
----
-
-Në C++ 11 është shtuar një tip i ri i referencës – referencat në R-Values.
-
-Shënohet ngjashëm me referencat e zakonshme:
-
-```cpp
-void funksioni(Tipi&& rval) {
-  ...
-}
-```
-
----
-
-**Move constructori** mundëson bartjen e vlerave nga një R-Value të përkohshme në objektin e anës së majtë.
-
-```cpp
-class Studenti {
-public:
-  // Konstruktori i lëvizjes.
-  Studenti(Studenti&& tjeter) { ... }
-};
-```
-
-Kjo na nevojitet për të shmangur kopjimin e tipeve e referente të alokuara statikisht.
-
----
-
-Pra, për një tip referent i vendosim këto kushtëzime:
-
-- Nuk lejohen kopjime implicite.
-- E bartim vetëm përmes referencës.
-- E kthejmë përmes referencës, ose
-- E kthejmë përmes shkëmbimit (lëvizjes).
-
----
-
-<!-- .slide: style="font-size:0.8em;" -->
-
-**Detyrë:** Të shkruhet klasa `Varg` me anëtarët:
-
-- Fushat private `data` e tipit `int*` dhe `n` e tipit `int`.
-- Konstruktorin `Varg(*data, n)` i cili i inicializon fushat përmes kopjimit.
-- Konstruktorët për ndalim të kopjes por lejim të lëvizjes.
-- Destruktorin `~Varg()` i cili e liron memorien `data`.
-- Funksionin `at(i)` i cili e kthen elementin në pozitën `i`.
-- Funksionin `length()` i cili e kthen gjatësinë e vargut.
-
----
-
-## Polimorfizmi parametrik
-
-Funksionet na kanë mundësuar të gjeneralizojmë logjikën për çfarëdo vlere të parametrit `x`.
-
-Ndonjëherë mund ta gjeneralizojmë një logjikë ose strukturë për çfarëdo tipi `T`.
-
----
-
-Funksioni që mund të aplikohet mbi tipe të ndryshme quhet funksion polimorfik.
-
-Struktura e të dhënave që mund të mbajë tipe të ndryshme quhet tip i të dhënave polimorfik.
-
----
-
-Në C++ gjeneralizimi i funksioneve dhe tipeve arrihet përmes **templates** (shablloneve).
-
-Sintaksa:
-
-```cpp
-template<typename T1, typename T2, typename TRez, ...>
-TRez funksioni(T1 arg1, T2 arg2, ...) {
-  ...
-}
-
-template<typename T>
-struct Tipi {
-  T fusha;
-};
-```
-
----
-
-**Shembull:** Struktura `Varg<T>` mban një varg dhe gjatësinë e saj për çfarëdo tipi `T`:
-
-```cpp
-template<typename T>
-struct Varg {
-  T* data;
-  int n;
-};
-
-int main() {
-  int ptr1[4] = { 1, 2, 3, 4 };
-  char ptr2[3] = { 'a', 'b', 'c' };
-  Varg<int>  v1 = {ptr1, 4};
-  Varg<char> v2 = {ptr2, 3};
-  return 0;
-}
-```
-
----
-
-Shumë tipe të ndryshme të të dhënave ndajnë natyrë të njejtë të sjelljes.
-
-Funksionet e gjeneralizuara e nxjerrin të përbashkët këtë logjikë.
-Në vend se të kemi shumë mbingarkime ndonjëherë mund ta kemi një funksion të vetëm.
-
----
-
-**Shembull:** Numrat, stringjet, dhe vargjet i takojnë klasës **monoid** për nga operatori i kombinimit (`+`).
-
-```cpp
-template<typename Monoid>
-Monoid kombino(Monoid a, Monoid b) {
-  return a + b;
-}
-
-int main() {
-  cout << kombino<int>(3, 5) << endl;
-  cout << kombino<double>(1.5, 2.0) << endl;
-  cout << kombino<string>("Pershendetje ", "bote!") << endl;
-  return 0;
-}
-```
-
----
-
-**Detyrë:** Të shkruhet funksioni `swap(T& a, T& b)` i cili i ndërron vendet e dy variablave të tipit `T`.
-
----
-
-**Detyrë:** Të gjeneralizohet tipi `Varg` ashtu që të mbajë çfarëdo tipi `T`, pra `Varg<T>`.
-
----
-
-**Specializimi i template**
-
-Nganjëherë implementimi i përgjithshëm nuk përputhet për një tip specifik.
-
-Përmes specializimit mund të mbishkruajmë implementimin bazë.
-
----
-
-**Shembull:** Booleanet formojnë monoid përmes operatorit **ose** dhe elementit njësi **false**.
-
-```cpp
-template<typename Monoid>
-Monoid njesia();
-
-template<typename Monoid>
-Monoid kombino(Monoid a, Monoid b) {
-  return a + b;
-}
-
-template<>
-bool njesia<bool>() { return false; }
-
-template<>
-bool kombino<bool>(bool a, bool b) {
-  return a || b;
-}
-```
-
----
-
-**Detyrë:** Të shkruhet funksioni `shuma` i cili e akumulon një varg `T[]` (ku T është monoid) në një rezultat të vetëm `T` përmes operatorit të kombinimit.
-
---
-
-```cpp
-#include <iostream>
-#include <string>
-using namespace std;
-
-template<typename Monoid>
-Monoid njesia();
-
-template<typename Monoid>
-Monoid kombino(Monoid a, Monoid b) {
-  return a + b;
-}
-
-template<> int njesia<int>() { return 0; }
-template<> double njesia<double>() { return 0.0; }
-template<> string njesia<string>() { return ""; }
-
-template<typename Monoid>
-Monoid shuma(Monoid vargu[], int n) {
-  Monoid acc = njesia<Monoid>();
-  for (int i = 0; i < n; i++) {
-    acc = kombino(acc, vargu[i]);
-  }
-
-  return acc;
-}
-
-int main() {
-  int nr_plote[5] = { 1, 3, -2, 5, 4 };
-  double nr_presje[3] = { 1.5, 2.3, 4.0 };
-  string stringjet[4] = { "Pershendetje", " ", "bote", "!" };
-
-  cout << shuma(nr_plote, 5) << endl;
-  cout << shuma(nr_presje, 3) << endl;
-  cout << shuma(stringjet, 4) << endl;
-
-  return 0;
-}
-```
-
----
-
-Shpesh kompajlleri e kupton llojin e variablës prej vlerës së inicializuar nga ana e djathtë.
-
-Në këto raste variablën mund ta deklarojmë si **auto**.
-
-```cpp
-auto x = 3;              // int
-auto y = 1.5;            // double
-auto z = "pershendetje"; // const char*
-```
-
----
-
-**Detyrë:** Të tregohen tipet e variablave në vijim.
-
-```cpp
-auto a = 5;
-auto b = a / 2.0;
-auto c = (b > 3.0);
-auto d = a % 2;
-auto e = (c ? 'x' : 'y');
-```
-
----
-
-## Funksionet anonime
-
-Kur një funksion përdoret si shprehje atëherë njihet si funksion anonim ose lambda shprehje.
-
-Këto shprehje nuk janë doemos të lidhura me ndonjë identifikator.
-
----
-
-Funksioni si shprehje e ka tipin `function<U(T)>`.
-
-Ky funksion merr një argument `T` dhe kthen një vlerë `U`.
-
-Ky tip gjendet në headerin `<functional>`.
-
----
-
-Sintaksa për lambda shprehje:
-
-```cpp
-[konteksti](tipi1 arg1, tipi2 arg2, ...) -> tipi_kthyes {
-  ...
-  return ...;
-}
-```
-
-Kur tipi kthyes është i nënkuptuar nga kompajlleri mund të mos shkruhet fare.
-
----
-
-**Shembull:** Lambda që teston a është argumenti çift.
-
-```cpp
-[](int x) -> bool { return x % 2 == 0; }
-```
-
-Ose shkurtimisht:
-
-```cpp
-[](int x) { return x % 2 == 0; }
-```
-
----
-
-Kur dëshirojmë ta përdorim një lambda zakonisht e lidhim për ndonjë variabël:
-
-```cpp
-function<bool(int)> eshte_cift = [](int x) -> bool {
-  return x % 2 == 0;
-};
-```
-
-Ose shkurtimisht:
-
-```cpp
-auto eshte_cift = [](int x) { return x % 2 == 0; };
-```
-
----
-
-Zakonisht jemi mësuar që variablat të mbajnë shënime. Në këto shembuj variablat po mbajnë funksione.
-
-Lambdat ruhen si instanca të tipeve speciale të quajtura **function object** ose **functor**.
-
----
-
-**Shembull:** Thirrja e funksionit anonim.
-
-```cpp
-#include <iostream>
-using namespace std;
-
-int main() {
-  auto eshte_cift = [](int x) { return x % 2 == 0; };
-
-  if (eshte_cift(2)) {
-    cout << "Numer cift." << endl;
-  } else {
-    cout << "Numer tek."  << endl;
-  }
-  return 0;
-}
+int v[4] = { 6, 2, 7, 4 };
+cout << *(v + 1) + 1;
 ```
 
 ---
@@ -362,297 +23,433 @@ int main() {
 **Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
 
 ```cpp
-auto funks1 = [](int x) { return x + 2; };
-auto funks2 = [](int x) { return x - 1; };
-auto f = (2 > 3) ? (funks1) : (funks2);
-cout << f(4);
+int v1[3] = { 1, 2, 3 };
+int v2[3] = { 4, 5, 6 };
+int *p[2] = { v1, v2 };
+cout << 2 * *(*(p + 1) + 1);
 ```
 
 ---
 
-**Detyrë:** Të deklarohen 3 lambda për veprimet:
+## Klasat
 
-- Katrori i numrit.
-- Vlera absolute e numrit.
-- Trefishi i numrit.
-
-Në `main` të lidhen këto vlera për variabla lokale dhe të thirren me ndonjë argument sipas dëshirës.
-
----
-
-Pasi që lambdat janë shprehje, ato mund të përdoren si parametra dhe vlera kthyese të funksioneve.
-
-Funksionet që pranojnë ose kthejnë funksione tjera njihen si **funksione të rendit të lartë**.
-
-Në të ardhmën do të mësojmë funksione të shpeshta si `map`, `filter`, `reduce`, `any`, `all`, etj.
-
----
-
-**Shembull:** Funksioni që teston a vlen një predikat për një argument të dhënë.
+Supozojmë një strukturë të të dhënave `Pika` e cila paraqet dyshën e numrave `(x,y)`:
 
 ```cpp
-void testo(int vlera, function<bool(int)> predikati) {
-  if (predikati(vlera)) {
-    cout << "Kushti vlen." << endl;
-  } else {
-    cout << "Kushti nuk vlen" << endl;
-  }
+struct Pika {
+  double x;
+  double y;
+};
+```
+
+---
+
+Shpesh kemi funksione të cilat ndërveprojnë me këtë strukturë:
+
+```cpp
+bool baraz(Pika p1, Pika p2) {
+  return p1.x == p2.x && p1.y == p2.y;
 }
-...
-testo(7, [](int x) { return x > 5; });
-testo(2, [](int x) { return x > 5; });
-testo(3, [](int x) { return x % 2 == 0; });
 ```
 
 ---
 
-**Shembull:** Funksioni që kompozon dy funksione:
-
 ```cpp
-typedef function<int(int)> fun;
-fun kompozo(fun f, fun g) {
-  return [f, g](int x) {
-    return f(g(x));
-  };
+double distanca(Pika p1, Pika p2) {
+  return sqrt(
+    pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2)
+  );
 }
-...
-fun h = kompozo(
-  [](int x) { return x + 3; },
-  [](int x) { return 2 * x; }
-);
-cout << h(6);
 ```
 
 ---
 
-**Konteksti i funksionit anonim**
-
-Trupi i lambdës mund të referencojë vlera nga blloku i deklarimit të saj.
-
-Kapja mund të bëhet përmes vlerës ose përmes referencës.
-
-Instanca e funksionit bashkë me rrethinën e saj (vlerat e kapura) njihet si **closure**.
-
----
-
-Kapja përmes vlerës dhe referencës:
-
 ```cpp
-int shtesa = 2;
-auto zmadho_val = [shtesa](int x)  { return x + shtesa; };
-auto zmadho_ref = [&shtesa](int x) { return x + shtesa; };
-shtesa++;
-cout << zmadho_val(5) << endl;
-cout << zmadho_ref(5) << endl;
-```
-
----
-
-Ekzistojnë dy sintaksa shkurtesë:
-
-- `[=]` i kap automatikisht vlerat e përdorura përmes **vlerës**.
-- `[&]` i kap automatikisht vlerat e përdorura përmes **referencës**.
-
----
-
-Në shumë gjuhë lambdat shënohen me sintaksen shigjetë: $x => \text{trupi}(x)$.
-
-Në C++ mund ta imitojmë me `#define`:
-
-```cpp
-#define lambda(arg, expr) ([](auto arg) { return (expr); })
-
-lambda(x, x * x) // x => x * x
-```
-
-Interpretohet si transformim $x \Rightarrow x^2$.
-
----
-
-Tipin `function<U(T)>` mund ta shkruajmë edhe si:
-
-```cpp
-template<typename T, typename U>
-using func = function<U(T)>;
-```
-
-Psh. tipi `func<int,bool>` paraqet funksionin që merr një `int` dhe kthen një `bool`.
-
-```cpp
-func<int, bool> eshte_cift = lambda(x, x % 2 == 0);
-```
-
----
-
-**Detyrë:** Të shkruhet funksioni i rendit të lartë `shuma(n,f)` i cili e llogarit shumën $\sum{f(i)}$ për $i\in 1\dots n$.
-
-$$
-\text{shuma}(n, f) = \sum_{i=1}^{n}{f(i)}
-$$
-
---
-
-```cpp
-#include <iostream>
-#include <functional>
-#define lambda(arg, expr) ([](auto arg) { return (expr); })
-using namespace std;
-
-template<typename T, typename U>
-using func = function<U(T)>;
-
-int shuma(int n, func<int, int> f) {
-  int s = 0;
-  for (int i = 1; i <= n; i++) {
-    s += f(i);
-  }
-
-  return s;
+double distanca_nga_qendra(Pika p) {
+  return sqrt(pow(p.x, 2) + pow(p.y, 2));
 }
+```
+
+---
+
+```cpp
+string toString(Pika p) {
+  stringstream ss;
+  ss << "(" << p.x << ", " << p.y << ")";
+  return ss.str();
+}
+```
+
+---
+
+```cpp
+Pika konstrukto(double x, double y) {
+  Pika p = { x, y };
+  return p;
+}
+```
+
+---
+
+```cpp
+Pika p1 = konstrukto(6.0, 3.5);
+Pika p2 = konstrukto(4.2, 7.1);
+
+cout << "Distanca mes pikes p1=" << toString(p1)
+      << " dhe pikes p2=" << toString(p2)
+      << " eshte d=" << distanca(p1, p2)
+      << endl;
+
+if (baraz(p1, p2)) {
+  cout << "Pikat jane te barabarta.";
+} else {
+  cout << "Pikat jane te ndryshme.";
+}
+```
+
+---
+
+Stili i tillë i programimit njihet si **programim procedural**.
+
+Ekziston një stil tjetër i programimit i cili grupon të dhënat dhe funksionet mbi to në një njësi të vetme që quhet **klasë**.
+
+Stili i programimit me klasa quhet **programimi i orientuar në objekte (POO)**.
+
+---
+
+## Programimi i orientuar në objekte
+
+Klasa përshkruan strukturën e të dhënave si dhe ofron funksione të cilat veprojnë mbi ato të dhëna.
+
+Të dhënat e klasës njihen si **fusha**, ndërsa funksionet e klasës njihen si **metoda**.
+
+---
+
+Të dhënat e klasës deklarohen sikur te strukturat:
+
+```cpp
+class Pika {
+  double x;
+  double y;
+};
+```
+
+Realisht, në C++ nuk ka dallim teknik ndërmjet strukturës dhe klasës.
+
+---
+
+**Kontrollimi i qasjes (private, public)**
+
+Fushat **private** mund të lexohen vetëm nga funksionet brenda klasës.
+
+Fushat **publike** mund të lexohen nga cilido bllok.
+
+---
+
+```cpp
+class Pika {
+  public:  double x;
+  private: double y;
+};
 
 int main() {
-  int n;
-  cout << "Shtyp n: ";
-  cin >> n;
-
-  // Sintaksa e zakonshme
-  cout << shuma(n, [](int i) { return 3 * i + 2; }) << endl;
-  cout << shuma(n, [](int x) { return x * x; }) << endl;
-
-  // Macro
-  cout << shuma(n, lambda(i, 3 * i + 2)) << endl;
-  cout << shuma(n, lambda(x, x * x)) << endl;
-
+  Pika p;
+  p.x = 5.0; // OK.
+  p.y = 3.5; // Gabim, ndalohet leximi nga blloku i jashtëm.
   return 0;
 }
 ```
 
 ---
 
-**Detyrë:** Të shkruhet funksioni i rendit të lartë `bool ekziston(T[], n, func<T,bool> f)`
-i cili e teston vargun nëse ndonjëri nga elementet e tij plotësojnë predikatin e dhënë.
+Në disa raste dëshirojmë t'i mbajmë fushat **private** me qëllim të ndalimit të qasjes nga blloqet e jashtme.
 
---
+Kjo është një veçori kritike për arritjen e **enkapsulimit**.
+
+---
+
+Nëse nuk ceket, klasat e kanë qasjen e nënkuptuar private, ndërsa strukturat e kanë publike.
+
+Nuk ka dallim tjetër ndëmjet strukturave dhe klasave.
+
+---
+
+Funksionet e klasës deklarohen bashkë me të dhënat:
 
 ```cpp
-#include <iostream>
-#include <string>
-#define lambda(arg, expr) ([](auto arg) { return (expr); })
-using namespace std;
+class Pika {
+private:
+  double x;
+  double y;
 
-// Fatkeqësisht nuk mund ta shprehim F si function<bool(T)>
-
-template<typename T, typename F> // F :: T -> bool
-bool ekziston(T vargu[], int n, F kushti) {
-  for (int i = 0; i < n; i++) {
-    if (kushti(vargu[i])) {
-      return true;
-    }
+public:
+  double distanca_nga_qendra() {
+    return sqrt(pow(x, 2) + pow(y, 2));
   }
+};
+```
 
-  return false;
-}
+---
+
+Thirrja e metodës bëhet përmes operatorit të qasjes sikur te fushat:
+
+```cpp
+Pika p = ...;
+
+cout << p.distanca_nga_qendra();
+```
+
+Në këtë rast funksioni merr vlerat e pikës `p`.
+
+---
+
+```cpp
+class Pika {
+  private: double x, y;
+  public:  bool baraz(Pika tjeter) {
+    return x == tjeter.x && tjeter.y == tjeter.y;
+  }
+};
 
 int main() {
-  int v[5] = { 1, 3, -2, 5, 4 };
-  cout << ekziston(v, 5, lambda(x, x > 12)) << endl;
-  cout << ekziston(v, 5, lambda(x, x % 2 == 0)) << endl;
-
-  string stringjet[3] = { "abc", "tekst i gjate", "123" };
-  cout << ekziston(stringjet, 3, lambda(s, s.length() > 10)) << endl;
-
+  Pika p1 = ..., p2 = ...;
+  if (p1.baraz(p2)) cout << "Te njejta";
+  else              cout << "Te ndryshme";
   return 0;
 }
 ```
 
 ---
 
-Në C++ është e vështirë të shprehen tipet mbi tipe.
+Vini re se si parametri i parë i funksionit sikur `p1` në `baraz(p1,p2)` tani bëhet implicit duke marrë formën `p1.baraz(p2)`.
 
-Për një tip funksioni `F` të aplikuar me një parameter `T`,
-tipin kthyes mund t'ia nënkuptojmë (infer) përmes tipit të mapuar `result<F,T>`.
-
-```cpp
-template<typename F, typename T>
-using result = typename result_of<F&(T&)>::type;
-```
+Argumenti implicit që paraqet referencën kontekstuale të objektit aktual në POO quhet `this`.
 
 ---
 
-## Detyra shtesë
-
----
-
-**Detyrë:** Të shkruhet funksioni `map_reduce(v,n,f)` i cili merr një varg të monoidëve `v` dhe një lambda `f`.
-
-Ky funksion së pari i pasqyron (mapon) të dhënat me një funksion $f$, dhe pastaj i kombinon (redukton).
-
----
-
-**Detyrë:** Të shkruhet funksioni i rendit të lartë `bind` i cili e kthen rezultatin e thirrjes
-`f(*t)` vetëm kur argumenti `t` nuk është `NULL`. Në rastet tjera të kthehet `NULL` pointer i tipit `U*`.
+Vlera kontekstuale `this` është pointer për objektin aktual.
 
 ```cpp
-U* bind(T* t, func<T, U*> f)
-```
+class Personi {
+private:
+  string emri;
+  int mosha;
 
---
-
-```cpp
-#include <iostream>
-#include <math.h>
-using namespace std;
-
-template<typename F, typename T>
-using result = typename result_of<F&(T&)>::type;
-
-template<typename F, typename T>
-using deref_result = typename remove_pointer<result<F, T>>::type;
-
-template<typename T, typename F, typename U = deref_result<F, T>>
-// F :: T -> U*
-U* bind(T* t, F f) {
-  if (t != NULL) {
-    U* rez = f(*t);
-    return rez;
-  } else {
-    return NULL;
+public:
+  void shtyp_infot() {
+    cout << "Emri: "  << this->emri  << endl;
+    cout << "Mosha: " << this->mosha << endl;
   }
-}
+};
+```
 
+---
+
+Nëse kemi 2 variabla `p1` dhe `p2`, me funksione të zakonshme kemi shënuar:
+
+```cpp
+shtyp_infot(p1);
+shtyp_infot(p2);
+```
+
+Me metoda (stili i POO) e shënojmë:
+
+```cpp
+p1.shtyp_infot();
+p2.shtyp_infot();
+```
+
+---
+
+Edhe pse po duket se thirrja `p1.shtyp_infot()` nuk po merr parametra,
+ajo realisht mban referencën e variablës `p1` gjatë thirrjes së funksionit.
+
+Thirrjet `p1.shtyp_infot()` dhe `p2.shtyp_infot()` japin rezultate të ndryshme
+pasi që ekzekutohen në kontekste të ndryshme.
+
+---
+
+### Konstruktorët
+
+Variablat tipi i të cilave është klasë i quajmë **objekte** ose **instanca**.
+
+Konstruktori është një funksion i veçantë i cili thirret gjatë krijimit të instancës.
+
+Zakonisht përdoren për të inicializuar gjendjen e klasës duke i dhënë vlera fushave.
+
+---
+
+Konstruktori shkruhet si metodë e cila ka emrin e klasës dhe nuk ka tip kthimi.
+
+```cpp
+class Pika {
+private:
+  double x;
+  double y;
+
+public:
+  Pika(double x, double y) {
+    this->x = x;
+    this->y = y;
+  }
+};
+```
+
+Konstruktorët mund të mbingarkohen.
+
+---
+
+Konstruktori thirret gjatë krijimit të instancës.
+
+Thirrjet e mëposhtme janë ekuivalente:
+
+```cpp
 int main() {
-  auto f = [](int x) -> double* {
-    if (x < 0) {
-      return NULL;
-    } else {
-      return new double { sqrt(x) };
-    }
-  };
-
-  int* a = new int { 9 };
-  int* b = new int { -1 };
-  int* c = NULL;
-
-  double* sqrt_a = bind(a, f); // 3
-  double* sqrt_b = bind(b, f); // NULL
-  double* sqrt_c = bind(c, f); // NULL
-
-  // Shtyp një vlerë që ekziston.
-  auto print = [](double x) -> void* {
-    cout << x << endl;
-    return NULL;
-  };
-
-  bind(sqrt_a, print); // shtypet sepse ekziston
-  bind(sqrt_b, print); // nuk shtypet
-  bind(sqrt_c, print); // nuk shtypet
-
-  delete sqrt_a;
-  delete sqrt_b; // no-op
-  delete sqrt_c; // no-op
-  delete a;
-  delete b;
-
+  Pika p1 = Pika(2.5, 3);
+  Pika p2(2.5, 3);
   return 0;
 }
 ```
+
+---
+
+Konstruktori më së shpeshti përdoret për të vendosur vlera në fusha.
+
+```cpp
+class Studenti {
+private:
+  int mosha;
+  double notaMesatare;
+public:
+  Studenti(int mosha, double notaMesatare) {
+    this->mosha = mosha;
+    this->notaMesatare = notaMesatare;
+  }
+}
+```
+
+Vini re se dykuptimësinë e identifikatorëve e tejkalojmë përmes qasjes eksplicite me `this`.
+
+---
+
+**Copy constructor**
+
+Në C++ secila klasë ka një konstruktor special për kopjim të objektit.
+
+Zakonisht kjo mund të shkaktojë sjellje të papritura, prandaj shpesh do ta ndalojmë.
+
+```cpp
+class Studenti {
+public:
+  // Konstruktori i kopjimit.
+  Studenti(const Studenti&) { ... }
+  // Operatori i shoqërimit.
+  Studenti& operator=(const Studenti&) { ... }
+};
+```
+
+---
+
+**Destruktori** është bllok kodi që thirret:
+
+- Kur tipi i alokuar në stack del nga blloku aktual.
+- Kur fshihet pointeri për objektin e alokuar dinamikisht.
+
+Zakonisht përdoret për lirim të resurseve.
+
+---
+
+Shkruhet në formën `~Klasa() { ... }`.
+
+Nuk merr parametra e as nuk kthen asgjë.
+
+```cpp
+class Klasa {
+private:
+  int* data;
+
+public:
+  Klasa() { // Konstruktori
+    this->data = new int { 0 };
+  }
+
+  ~Klasa() { // Destruktori
+    delete this->data;
+  }
+};
+```
+
+---
+
+**Enkapsulimi i fushave private**
+
+Zakonisht e kontrollojmë qasjen në fusha me dy metoda publike `getX()` dhe `setX(x)`.
+
+```cpp
+class Studenti {
+private:
+  int mosha;
+
+public:
+  int getMosha() {
+    return this->mosha;
+  }
+
+  void setMosha(int mosha) {
+    this->mosha = mosha;
+  }
+};
+```
+
+---
+
+**Detyrë:** Të shkruhet klasa `Studenti` e cila ka:
+
+- Fushat private `emri`, `mbiemri`, `mosha`, `notat[5]`
+- Konstruktor që inicializon fushat.
+- Metodën `nota(i)` e cila merr notën në pozitën `i`.
+- Metodën `notaMesatare()`.
+- Metodën `emriPlote()` e cila kthen emrin dhe mbiemrin e bashkuar.
+- Metodën `shtyp()` e cila shtyp në ekran të dhënat e studentit.
+
+---
+
+**Detyrë:** Të shkruhet klasa `Pika` e cila ka:
+
+- Fushat private `x` dhe `y` (nr. real).
+- Konstruktorin inicializues `Pika(x,y)` dhe metodat mbështjellëse të fushave.
+- Metodën `distanca(Pika tjeter)`.
+- Metodën `shtyp()` që shtyp në ekran kordinatat në formën `(x,y)`, psh. `(4,3)`.
+
+---
+
+**Detyrë:** Të shkruhet klasa `Rrethi` e cila ka:
+
+- Fushat private `rrezja` (nr. real) dhe `qendra` (e tipit `Pika` nga detyra e kaluar).
+- Konstruktorin `Rrethi(qendra,rrezja)`.
+- Metodat `siperfaqja()` dhe `perimetri()`.
+- Metodën `distanca(Rrethi tjeter)` e cila llogarit distancën mes qendrave të rrathëve.
+- Metodën `shtyp()` që shtyp në ekran qendrën dhe rrezen e rrethit.
+
+---
+
+**Detyrë:** Të krijohet një varg me 5 instanca të tipit `Rrethi` nga detyra e kaluar.
+
+- Të mbushet ky varg me objekte të inicializuara sipas dëshirës.
+- Të gjendet rrethi me sipërfaqen më të madhe dhe të ruhet adresa e tij në një pointer.
+- Të shtypet në ekran rrethi i adresuar nga pointeri përmes metodës `shtyp()`.
+
+---
+
+<!-- .slide: style="font-size:0.8em;" -->
+
+**Detyrë:** Të shkruhet klasa `NumerKompleks` me veçoritë private
+`re` dhe `im` si dhe anëtarët në vijim:
+
+- Konstruktorin `NumerKompleks(re,im)`
+- Metodat `shto(k)`, `zbrit(k)`, `shumezo(k)`, ku `k` është `NumerKompleks`.
+- Mbingarkimet `shto(re,im)`, `zbrit(re,im)`, `shumezo(re,im)`.
+- Metodat `shtyp()`, `toString()`.
+
+Në `main` të deklarohen disa instanca të tipit
+`NumerKompleks` dhe të kryhen llogaritje të ndryshme.
