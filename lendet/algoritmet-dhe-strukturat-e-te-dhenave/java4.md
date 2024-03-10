@@ -2,480 +2,455 @@
 
 ---
 
-## Array listat
+## Përsëritje
 
-Vargjet me alokim statik kanë disa kufizime.
-
-- Madhësia duhet të jetë konstante.
-- Duhet ta dimë paraprakisht sa hapësirë (elemente) të rezervojmë.
-- Nuk mund të shtojmë ose largojmë elemente.
+- Çfarë janë klasat?
+- Ku dallojnë **public** dhe **private**?
+- Çfarë janë: fushat, konstruktorët, metodat?
 
 ---
 
-**Lista** është një strukturë e të dhënave që mundëson:
+<!-- .slide: style="font-size:0.8em;" -->
 
-- Mbajtjen e një numri variabil të elementeve.
-- Shtim dhe largim të elementeve.
-- Zmadhim dhe zvogëlim sipas nevojës.
+**Detyrë:** Të shkruhet klasa `Studenti` me fushat private `emri`, `mbiemri`, dhe `notat[5]`.
 
----
-
-Dy implementime kryesore të listave janë:
-
-- Listat përmes vargjeve – **array list**.
-- Listat me nyje të lidhura – **linked list**.
-
-![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/lists.png)
+- Të shkruhen metodat `notaMesatare` dhe `emriPlote`.
+- Të shkruhet konstruktori për inicializim të fushave.
+- Të mbishkruhet konstruktori i kopjimit dhe operatori i shoqërimit.
+- Në `main` të deklarohen dy studentë dhe të ruhet në një variabël studenti me notën mesatare më të madhe.
+- Të shtypet në ekran emri i plotë i këtij studenti.
 
 ---
 
-Operacionet themelore që ofrojnë listat:
+Kur mund të themi se dy objekte janë të njëjta?
 
-- Leximi i elementeve
-- Shtimi i elementeve
-- Zëvendësimi i elementeve
-- Largimi i elementeve
+- Kur kanë karakteristikat identike, apo
+- Kur gjenden në adresën e njëjtë?
 
----
-
-## Array lista
-
-Strukturë që mban një varg në të cilin ruhen elementet në formë të njëpasnjëshme.
+Nuk ka përgjigje definitive për këtë pyetje – varet nga konteksti i përdorimit.
 
 ---
 
-**Leximi i elementit në pozitën `i`**
+Secila klasë në C++ ka një konstruktor të kopjimit.
 
-Merr elementin në indeksin `i` të vargut.
+Nëse nuk mbishkruhet, nënkuptohet si kopjim i të gjitha fushave përmes vlerës.
 
-![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/array-read.png) <!-- .element: style="border:none;" -->
+Kopja përmes vlerës quhet **kopje e cekët**, pasi që nuk kopjon objektet e referencuara nga pointerët.
 
----
-
-**Zëvendësimi i elementit në pozitën `i`**
-
-Vendose elementin e ri në indeksin `i` të vargut.
-
-![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/array-write.png) <!-- .element: style="border:none;" -->
+**Kopja e thellë** kopjon edhe objektet e referencuara.
 
 ---
 
-**Shtimi i elementit në fund**
+Shpesh do të dizajnojmë tipe të cilat nuk kemi dëshirë të kopjohen në mënyrë implicite.
 
-Vendos elementin në pozitën `n`.
-
-![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/array-push.png) <!-- .element: style="border:none;" -->
-
----
-
-**Shtimi i elementit në pozitën `i`**
-
-Krijo hapësirë për elementin duke i shtyer elementet e mbetura në të djathtë.
-
-![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/array-insert.png) <!-- .element: style="border:none;" -->
-
----
-
-**Largimi i elementit në fund**
-
-Largoje elementin nga pozita `n-1`.
-
-![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/array-pop.png) <!-- .element: style="border:none;" -->
-
----
-
-**Largimi i elementit në pozitën `i`**
-
-Zhvendosi elementet e mbetura në të majtë.
-
-![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/array-remove.png ) <!-- .element: style="border:none;" -->
-
----
-
-**Tejkalimi i madhësisë së vargut**
-
-Nëse për shkak të një operacioni shtimi tejkalohet madhësia e vargut,
-duhet ta krijojmë një varg të ri me madhësi dyfishe të së vjetrit.
-
-Të gjitha elementet kopjohen në vargun e ri, e pastaj kryhet operacioni.
-
----
-
-**Detyrë:** Të shkruhet një version i thjeshtë i klasës `ArrayList` e cila mban një varg të numrave të plotë.
-
-Kapaciteti maksimal i listës të jetë numër fiks, psh. 100.
-
---
+Për këtë arsye e ndalojmë operatorin `=` dhe konstruktorin `T(T&)` me `delete`:
 
 ```cpp
-#include <iostream>
-using namespace std;
-
-class ArrayList {
-  private:
-  int data[100];
-  int n;
-
-  public:
-  ArrayList() {
-    this->n = 0;
-  }
-
-  int at(int index) {
-    if (index < 0 || index >= n) {
-      throw "Jashte kufijve.";
-    }
-
-    return this->data[index];
-  }
-
-  void set(int index, int element) {
-    if (index < 0 || index >= n) {
-      throw "Jashte kufijve.";
-    }
-
-    this->data[index] = element;
-  }
-
-  int length() {
-    return this->n;
-  }
-
-  void remove(int index) {
-    if (index < 0 || index >= n) {
-      throw "Jashte kufijve.";
-    }
-
-    for (int i = index; i < n - 1; i++) {
-      this->data[i] = this->data[i + 1];
-    }
-
-    this->n--;
-  }
-
-  void add(int element) {
-    if (this->n >= 100) {
-      throw "Nuk ka hapesire.";
-    }
-
-    data[n] = element;
-    this->n++;
-  }
-
-  void shtyp() {
-    cout << "[ ";
-    for (int i = 0; i < this->n; i++) {
-      cout << this->data[i];
-      if (i < this->n - 1) {
-        cout << ", ";
-      } else {
-        cout << " ";
-      }
-    }
-
-    cout << "]" << endl;
-  }
+class Studenti {
+private:
+  // Konstruktori i kopjimit.
+  Studenti(const Studenti&) = delete;
+  // Operatori i shoqërimit.
+  Studenti& operator=(const Studenti&) = delete;
 };
+```
 
-int main() {
-  ArrayList lista = ArrayList();
-  lista.shtyp();
-  // []
+---
 
-  lista.add(5);
-  lista.shtyp();
-  // [5]
+Tipet që nuk mund të kopjohen mund të bartën vetëm përmes referencës. Pse?
 
-  lista.add(10);
-  lista.shtyp();
-  // [5, 10]
+---
 
-  lista.add(-3);
-  lista.shtyp();
-  // [5, 10, -3]
+**Semantikat e lëvizjes**
 
-  lista.set(1, 7);
-  lista.shtyp();
-  // [5, 7, -3]
+Lëvizja e objektit nënkupton bartjen e pronësisë së resurseve që i menaxhon te një objekt tjetër.
 
-  lista.add(15);
-  lista.shtyp();
-  // [5, 7, -3, 15]
+Kjo është më efikase sesa kopjimi i thellë.
 
-  lista.add(25);
-  lista.shtyp();
-  // [5, 7, -3, 15, 25]
+Objekti burimor "humb" pronësinë, duke ia pamundësuar lirimin e resurseve në destruktor.
 
-  lista.remove(2);
-  lista.shtyp();
-  // [5, 7, 15, 25]
+---
 
-  return 0;
+Në C++ 11 është shtuar një tip i ri i referencës – referencat në R-Values.
+
+Shënohet ngjashëm me referencat e zakonshme:
+
+```cpp
+void funksioni(Tipi&& rval) {
+  ...
 }
 ```
 
 ---
 
-**Detyrë:** Të avancohet klasa `ArrayList` ashtu që të ketë kapacitet dinamik.
-
---
+**Move constructori** mundëson bartjen e vlerave nga një R-Value të përkohshme në objektin e anës së majtë.
 
 ```cpp
-#include <iostream>
-#define INITIAL_CAPACITY 4
-using namespace std;
-
-class ArrayList {
-  private:
-  int* data;
-  int n;
-  int capacity;
-
-  void resize() {
-    int newCapacity = 2 * capacity;
-    int* newData    = new int[newCapacity];
-    for (int i = 0; i < this->n; i++) {
-      newData[i] = this->data[i];
-    }
-
-    delete[] this->data;
-    this->data     = newData;
-    this->capacity = newCapacity;
-  }
-
-  ArrayList(const ArrayList&) = delete;
-  ArrayList& operator=(const ArrayList&) = delete;
-
-  public:
-  ArrayList() {
-    this->n        = 0;
-    this->capacity = INITIAL_CAPACITY;
-    this->data     = new int[INITIAL_CAPACITY];
-  }
-
-  ArrayList(ArrayList&& rval) {
-    this->n        = rval.n;
-    this->capacity = rval.capacity;
-    this->data     = rval.data;
-    rval.data      = NULL;
-  }
-
-  ~ArrayList() {
-    delete[] this->data;
-  }
-
-  int at(int index) {
-    if (index < 0 || index >= this->n) {
-      throw "Jashte kufijve.";
-    }
-
-    return this->data[index];
-  }
-
-  void set(int index, int element) {
-    if (index < 0 || index >= this->n) {
-      throw "Jashte kufijve.";
-    }
-
-    this->data[index] = element;
-  }
-
-  int length() {
-    return this->n;
-  }
-
-  int getCapacity() {
-    return this->capacity;
-  }
-
-  void remove(int index) {
-    if (index < 0 || index >= this->n) {
-      throw "Jashte kufijve.";
-    }
-
-    for (int i = index; i < n - 1; i++) {
-      this->data[i] = this->data[i + 1];
-    }
-
-    this->n--;
-  }
-
-  void add(int element) {
-    if (this->n >= this->capacity) {
-      this->resize();
-    }
-
-    data[n] = element;
-    this->n++;
-  }
-
-  void shtyp() {
-    cout << "[ ";
-    for (int i = 0; i < this->n; i++) {
-      cout << this->data[i];
-      if (i < this->n - 1) {
-        cout << ", ";
-      } else {
-        cout << " ";
-      }
-    }
-
-    cout << "]" << endl;
-  }
+class Studenti {
+public:
+  // Konstruktori i lëvizjes.
+  Studenti(Studenti&& tjeter) { ... }
 };
-
-int main() {
-  ArrayList lista = ArrayList();
-
-  lista.shtyp();
-  cout << "Kapaciteti: " << lista.getCapacity() << endl;
-
-  for (int i = 0; i < 10; i++) {
-    lista.add(i + 1);
-  }
-
-  lista.shtyp();
-  cout << "Kapaciteti: " << lista.getCapacity() << endl;
-
-  return 0;
-}
 ```
+
+Kjo na nevojitet për të shmangur kopjimin e tipeve referente të alokuara statikisht.
 
 ---
 
-**Detyrë:** Të avancohet klasa `ArrayList` ashtu që të mbajë çfarëdo tipi `T`.
+Pra, për një tip referent i vendosim këto kushtëzime:
 
---
+- Nuk lejohen kopjime implicite.
+- E bartim vetëm përmes referencës.
+- E kthejmë përmes referencës, ose
+- E kthejmë përmes lëvizjes (shkëmbimit).
+
+---
+
+<!-- .slide: style="font-size:0.8em;" -->
+
+**Detyrë:** Të shkruhet klasa `Varg` me anëtarët:
+
+- Fushat private `data` e tipit `int*` dhe `n` e tipit `int`.
+- Konstruktorin `Varg(*data, n)` i cili inicializon fushat përmes kopjimit.
+- Konstruktorët për ndalim të kopjes por lejim të lëvizjes.
+- Destruktorin `~Varg()` i cili liron memorien `data`.
+- Funksionin `at(i)` i cili kthen elementin në pozitën `i`.
+- Funksionin `length()` i cili kthen gjatësinë e vargut.
+
+---
+
+## Programimi gjenerik
+
+Funksionet na kanë mundësuar ta gjeneralizojmë logjikën për çfarëdo vlere të parametrit `x`.
+
+Ndonjëherë mund ta gjeneralizojmë një logjikë ose strukturë për çfarëdo tipi `T`.
+
+---
+
+Funksioni që mund të aplikohet mbi tipe të ndryshme quhet funksion gjenerik (ang. **generic**).
+
+Struktura e të dhënave që mund të mbajë tipe të ndryshme quhet tip i të dhënave gjenerik.
+
+---
+
+Në C++ gjeneralizimi i funksioneve dhe tipeve arrihet përmes **templates** (shablloneve).
+
+Sintaksa:
 
 ```cpp
-#include <iostream>
-#define INITIAL_CAPACITY 4
-using namespace std;
+template<typename T1, typename T2, typename TRez, ...>
+TRez funksioni(T1 arg1, T2 arg2, ...) {
+  ...
+}
 
 template<typename T>
-class ArrayList {
-  private:
+struct Tipi {
+  T fusha;
+};
+```
+
+---
+
+**Shembull:** Struktura `Varg<T>` mban një varg dhe gjatësinë e saj për çfarëdo tipi `T`:
+
+```cpp
+template<typename T>
+struct Varg {
   T* data;
   int n;
-  int capacity;
-
-  void resize() {
-    int newCapacity = 2 * capacity;
-    T* newData      = new T[newCapacity];
-    for (int i = 0; i < this->n; i++) {
-      newData[i] = this->data[i];
-    }
-
-    delete[] this->data;
-    this->data     = newData;
-    this->capacity = newCapacity;
-  }
-
-  ArrayList(const ArrayList&) = delete;
-  ArrayList& operator=(const ArrayList&) = delete;
-
-  public:
-  ArrayList() {
-    this->n        = 0;
-    this->capacity = INITIAL_CAPACITY;
-    this->data     = new T[INITIAL_CAPACITY];
-  }
-
-  ArrayList(ArrayList&& rval) {
-    this->n        = rval.n;
-    this->capacity = rval.capacity;
-    this->data     = rval.data;
-    rval.data      = NULL;
-  }
-
-  ~ArrayList() {
-    delete[] this->data;
-  }
-
-  T at(int index) {
-    if (index < 0 || index >= this->n) {
-      throw "Jashte kufijve.";
-    }
-
-    return this->data[index];
-  }
-
-  void set(int index, int element) {
-    if (index < 0 || index >= this->n) {
-      throw "Jashte kufijve.";
-    }
-
-    this->data[index] = element;
-  }
-
-  int length() {
-    return this->n;
-  }
-
-  int getCapacity() {
-    return this->capacity;
-  }
-
-  void remove(int index) {
-    if (index < 0 || index >= this->n) {
-      throw "Jashte kufijve.";
-    }
-
-    for (int i = index; i < n - 1; i++) {
-      this->data[i] = this->data[i + 1];
-    }
-
-    this->n--;
-  }
-
-  ArrayList<T>& add(T element) {
-    if (this->n >= this->capacity) {
-      this->resize();
-    }
-
-    data[n] = element;
-    this->n++;
-    return *this;
-  }
-
-  void shtyp() {
-    cout << "[ ";
-    for (int i = 0; i < this->n; i++) {
-      cout << this->data[i];
-      if (i < this->n - 1) {
-        cout << ", ";
-      } else {
-        cout << " ";
-      }
-    }
-
-    cout << "]" << endl;
-  }
 };
 
 int main() {
-  ArrayList<int> lista_int = ArrayList<int>();
-  lista_int.add(1);
-  lista_int.add(2);
-  lista_int.add(3);
-  lista_int.shtyp();
+  int ptr1[4] = { 1, 2, 3, 4 };
+  char ptr2[3] = { 'a', 'b', 'c' };
+  Varg<int>  v1 = {ptr1, 4};
+  Varg<char> v2 = {ptr2, 3};
+  return 0;
+}
+```
 
-  ArrayList<int> lista = ArrayList<int>();
-  lista.add(5).add(3).add(10).add(11).shtyp();
+---
 
-  ArrayList<string> lista_str = ArrayList<string>();
-  lista_str.add("Hello");
-  lista_str.add("Howdy");
-  lista_str.add("Hi");
-  lista_str.shtyp();
+Shumë tipe të ndryshme të të dhënave ndajnë natyrë të njëjtë të sjelljes.
+Funksionet e gjeneralizuara e nxjerrin të përbashkët këtë logjikë.
 
-  ArrayList<char> lista_char = ArrayList<char>();
-  lista_char.add('a');
-  lista_char.add('b');
-  lista_char.add('c');
-  cout << lista_char.length() << endl;
-  cout << lista_char.at(1) << endl;
+Në vend se të kemi shumë mbingarkime, ndonjëherë mund ta kemi një funksion të vetëm.
+
+---
+
+**Detyrë:** Të shkruhet funksioni `swap(T& a, T& b)` i cili ndërron vendet e dy variablave të tipit `T`.
+
+---
+
+**Detyrë:** Të gjeneralizohet tipi `Varg` ashtu që të mbajë çfarëdo tipi `T`, pra `Varg<T>`.
+
+---
+
+Shpesh kompajlleri kupton llojin e variablës prej vlerës së inicializuar nga ana e djathtë.
+
+Në këto raste variablën mund ta deklarojmë si **auto**.
+
+```cpp
+auto x = 3;              // int
+auto y = 1.5;            // double
+auto z = "pershendetje"; // const char*
+```
+
+---
+
+**Detyrë:** Të tregohen tipet e variablave në vijim.
+
+```cpp
+auto a = 5;
+auto b = a / 2.0;
+auto c = (b > 3.0);
+auto d = a % 2;
+auto e = (c ? 'x' : 'y');
+```
+
+---
+
+## Funksionet anonime
+
+Kur një funksion përdoret si shprehje atëherë njihet si funksion anonim ose lambda shprehje.
+
+Këto shprehje nuk janë doemos të lidhura me ndonjë identifikator.
+
+---
+
+Funksioni si shprehje ka tipin `function<U(T)>`.
+
+Ky funksion merr një argument `T` dhe kthen një vlerë `U`.
+
+Ky tip gjendet në headerin `<functional>`.
+
+---
+
+Sintaksa për lambda shprehje:
+
+```cpp
+[konteksti](tipi1 arg1, tipi2 arg2, ...) -> tipi_kthyes {
+  ...
+  return ...;
+}
+```
+
+Kur tipi kthyes është i nënkuptuar nga kompajlleri mund të mos shkruhet fare.
+
+---
+
+**Shembull:** Lambda që teston a është argumenti çift.
+
+```cpp
+[](int x) -> bool { return x % 2 == 0; }
+```
+
+Ose shkurtimisht:
+
+```cpp
+[](int x) { return x % 2 == 0; }
+```
+
+---
+
+Kur dëshirojmë ta përdorim një lambda zakonisht e lidhim për ndonjë variabël:
+
+```cpp
+function<bool(int)> eshte_cift = [](int x) -> bool {
+  return x % 2 == 0;
+};
+```
+
+Ose shkurtimisht:
+
+```cpp
+auto eshte_cift = [](int x) { return x % 2 == 0; };
+```
+
+---
+
+Zakonisht jemi mësuar që variablat të mbajnë shënime. Në këto shembuj variablat po mbajnë funksione.
+
+Lambdat ruhen si instanca të tipeve speciale të quajtura **function object** ose **functor**.
+
+---
+
+**Shembull:** Thirrja e funksionit anonim.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+  auto eshte_cift = [](int x) { return x % 2 == 0; };
+
+  if (eshte_cift(2)) {
+    cout << "Numer cift." << endl;
+  } else {
+    cout << "Numer tek."  << endl;
+  }
+  return 0;
+}
+```
+
+---
+
+**Detyrë:** Të tregohet dalja në ekran për kodin në vazhdim.
+
+```cpp
+auto funks1 = [](int x) { return x + 2; };
+auto funks2 = [](int x) { return x - 1; };
+auto f = (2 > 3) ? (funks1) : (funks2);
+cout << f(4);
+```
+
+---
+
+**Detyrë:** Të deklarohen 3 lambda për veprimet:
+
+- Katrori i numrit.
+- Vlera absolute e numrit.
+- Trefishi i numrit.
+
+Në `main` të lidhen këto vlera për variabla lokale dhe të thirren me ndonjë argument sipas dëshirës.
+
+---
+
+Pasi që lambdat janë shprehje, ato mund të përdoren si parametra dhe vlera kthyese të funksioneve.
+
+Funksionet që pranojnë ose kthejnë funksione tjera njihen si **funksione të rendit të lartë**.
+
+Në të ardhmën do të mësojmë funksione të shpeshta si `map`, `filter`, `reduce`, `any`, `all`, etj.
+
+---
+
+**Shembull:** Funksioni që teston a vlen një predikat për një argument të dhënë.
+
+```cpp
+void testo(int vlera, function<bool(int)> predikati) {
+  if (predikati(vlera)) {
+    cout << "Kushti vlen." << endl;
+  } else {
+    cout << "Kushti nuk vlen" << endl;
+  }
+}
+...
+testo(7, [](int x) { return x > 5; });
+testo(2, [](int x) { return x > 5; });
+testo(3, [](int x) { return x % 2 == 0; });
+```
+
+---
+
+**Detyrë:** Të shkruhet funksioni `ekziston(v,n,f)`, i cili pranon një varg të numrave
+dhe kthen `true` nëse së paku ndonjëri prej tyre përmbush kushtin `f` (predikatin).
+
+---
+
+**Konteksti i funksionit anonim**
+
+Trupi i lambdës mund të referencojë vlera nga blloku i deklarimit të saj.
+
+Kapja mund të bëhet përmes vlerës ose përmes referencës.
+
+Instanca e funksionit bashkë me rrethinën e saj (vlerat e kapura) njihet si **closure**.
+
+---
+
+Kapja përmes vlerës dhe referencës:
+
+```cpp
+int shtesa = 2;
+auto zmadho_val = [shtesa](int x)  { return x + shtesa; };
+auto zmadho_ref = [&shtesa](int x) { return x + shtesa; };
+shtesa++;
+cout << zmadho_val(5) << endl;
+cout << zmadho_ref(5) << endl;
+```
+
+---
+
+Ekzistojnë dy sintaksa shkurtesë:
+
+- `[=]` i kap automatikisht vlerat e përdorura përmes **vlerës**.
+- `[&]` i kap automatikisht vlerat e përdorura përmes **referencës**.
+
+---
+
+Në shumë gjuhë lambdat shënohen me sintaksen shigjetë: $x => \text{trupi}(x)$.
+
+Funksionin katrori mund ta interpretojmë si transformimin: $x \Rightarrow x^2$.
+
+---
+
+Në C++, sintaksën me shigjetë mund ta imitojmë përmes `#define`:
+
+```cpp
+#define lambda(arg, expr) ([](auto arg) { return (expr); })
+
+lambda(x, x * x) // x => x * x
+```
+
+---
+
+Tipin `function<U(T)>` mund ta shkruajmë edhe si:
+
+```cpp
+template<typename T, typename U>
+using func = function<U(T)>;
+```
+
+Psh. tipi `func<int,bool>` paraqet funksionin që merr një `int` dhe kthen një `bool`.
+
+```cpp
+func<int, bool> eshte_cift = lambda(x, x % 2 == 0);
+```
+
+---
+
+**Detyrë:** Të shkruhet funksioni i rendit të lartë `shuma(n,f)` i cili llogarit shumën $\sum{f(i)}$ për $i\in 1\dots n$.
+
+$$
+\text{shuma}(n, f) = \sum_{i=1}^{n}{f(i)}
+$$
+
+--
+
+```cpp
+#include <iostream>
+#include <functional>
+#define lambda(arg, expr) ([](auto arg) { return (expr); })
+using namespace std;
+
+template<typename T, typename U>
+using func = function<U(T)>;
+
+int shuma(int n, func<int, int> f) {
+  int s = 0;
+  for (int i = 1; i <= n; i++) {
+    s += f(i);
+  }
+
+  return s;
+}
+
+int main() {
+  int n;
+  cout << "Shtyp n: ";
+  cin >> n;
+
+  // Sintaksa e zakonshme
+  cout << shuma(n, [](int i) { return 3 * i + 2; }) << endl;
+  cout << shuma(n, [](int x) { return x * x; }) << endl;
+
+  // Macro
+  cout << shuma(n, lambda(i, 3 * i + 2)) << endl;
+  cout << shuma(n, lambda(x, x * x)) << endl;
 
   return 0;
 }
 ```
+
+---
+
+**Detyrë:** Të shtohet metoda `ekziston(f)` në klasën `Varg<T>`.
