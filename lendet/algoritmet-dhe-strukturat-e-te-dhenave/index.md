@@ -24,6 +24,7 @@ suppresshooks: true
 2. [Referencat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java2)
 3. [Klasat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java3)
 4. [Klasat (vazhdim)](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4)
+5. [Array listat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java5)
 
 <!-- 1. [Pointerët, referencat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java1) -->
 <!-- 2. [Klasat](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java2)
