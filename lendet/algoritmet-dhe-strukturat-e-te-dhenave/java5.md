@@ -25,7 +25,7 @@ Dy implementime kryesore të listave janë:
 - Listat përmes vargjeve – **array list**.
 - Listat me nyje të lidhura – **linked list**.
 
-![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/lists.png)
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java5/lists.png)
 
 ---
 
@@ -48,7 +48,7 @@ Strukturë që mban një varg në të cilin ruhen elementet në formë të njëp
 
 Merr elementin në indeksin `i` të vargut.
 
-![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/array-read.png) <!-- .element: style="border:none;" -->
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java5/array-read.png) <!-- .element: style="border:none;" -->
 
 ---
 
@@ -56,7 +56,7 @@ Merr elementin në indeksin `i` të vargut.
 
 Vendose elementin e ri në indeksin `i` të vargut.
 
-![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/array-write.png) <!-- .element: style="border:none;" -->
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java5/array-write.png) <!-- .element: style="border:none;" -->
 
 ---
 
@@ -64,7 +64,7 @@ Vendose elementin e ri në indeksin `i` të vargut.
 
 Vendos elementin në pozitën `n`.
 
-![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/array-push.png) <!-- .element: style="border:none;" -->
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java5/array-push.png) <!-- .element: style="border:none;" -->
 
 ---
 
@@ -72,7 +72,7 @@ Vendos elementin në pozitën `n`.
 
 Krijo hapësirë për elementin duke i shtyer elementet e mbetura në të djathtë.
 
-![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/array-insert.png) <!-- .element: style="border:none;" -->
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java5/array-insert.png) <!-- .element: style="border:none;" -->
 
 ---
 
@@ -80,7 +80,7 @@ Krijo hapësirë për elementin duke i shtyer elementet e mbetura në të djatht
 
 Largoje elementin nga pozita `n-1`.
 
-![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/array-pop.png) <!-- .element: style="border:none;" -->
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java5/array-pop.png) <!-- .element: style="border:none;" -->
 
 ---
 
@@ -88,7 +88,7 @@ Largoje elementin nga pozita `n-1`.
 
 Zhvendosi elementet e mbetura në të majtë.
 
-![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java4/array-remove.png ) <!-- .element: style="border:none;" -->
+![](/lendet/algoritmet-dhe-strukturat-e-te-dhenave/java5/array-remove.png ) <!-- .element: style="border:none;" -->
 
 ---
 
