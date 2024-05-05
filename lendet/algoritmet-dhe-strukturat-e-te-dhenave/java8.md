@@ -34,7 +34,7 @@ Operacionet themelore që ofrojnë listat:
 
 ## Listat e lidhura
 
-Strukturë që lidh në zingjir elementet një pas një.
+Strukturë që lidh në zinxhir elementet një pas një.
 
 ---
 
@@ -61,7 +61,7 @@ Ky është definicion rekursiv, pasi që secila nyje mund të imagjinohet si "ko
 
 Nëse një nyje nuk ka element pas saj, pointeri për `next` vendoset `NULL`.
 
-Lista vizitohet duke filluar nga nyja e parë dhe duke ndjekur zingjirin deri sa të arrihet `NULL`.
+Lista vizitohet duke filluar nga nyja e parë dhe duke ndjekur zinxhirin deri sa të arrihet `NULL`.
 
 Kjo nënkupton që lista e lidhur nuk ofron qasje të rastit (random access).
 
