@@ -30,7 +30,7 @@ Poashtu, heap përdoren në **heapsort** për renditje të vargut.
 Elementet e heap mund të ruhen në formë kompakte në varg.
 
 - Indeksi i rrënjës është gjithmonë $0$.
-- Indeksi i prindit për një nyje me indeks $i$ është $\lfloor\dfrac{i}{2}\rfloor$
+- Indeksi i prindit për një nyje me indeks $i$ është $\lfloor\dfrac{i-1}{2}\rfloor$
 - Indeksi i fëmijës së majtë është $2{\times}i + 1$.
 - Indeksi i fëmijës së djathtë është $2{\times}i + 2$.
 
