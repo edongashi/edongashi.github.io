@@ -252,7 +252,7 @@ shtyp_infot(p1);
 shtyp_infot(p2);
 ```
 
-Me metoda (stili i POO) e shënojmë:
+Me metoda (stili i POO) e shkruajmë:
 
 ```cpp
 p1.shtyp_infot();

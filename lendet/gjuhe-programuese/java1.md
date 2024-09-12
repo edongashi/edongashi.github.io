@@ -1,23 +1,5 @@
 ## Bazat e Programimit - Java 1
 
-Edon Gashi
-
-edon.gashi@uni-pr.edu
-
-edongashi.github.io
-
----
-
-[edongashi.github.io](https://edongashi.github.io)
-
-![](/lendet/gjuhe-programuese/java1/edongashi.github.io.png)
-
----
-
-Discord ([discord.gg/83fAWDV5Hq](https://discord.gg/83fAWDV5Hq))
-
-![](/lendet/gjuhe-programuese/java1/discord.png)
-
 ---
 
 ### Kompjuteri
@@ -314,7 +296,7 @@ int main() {
 }
 ```
 
-Programi i sipërm mund të shënohet si më poshtë:
+Programi i sipërm mund të shkruhet si më poshtë:
 
 ```cpp
 #include <iostream>

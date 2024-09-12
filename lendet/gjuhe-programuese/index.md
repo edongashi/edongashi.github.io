@@ -27,7 +27,6 @@ suppresshooks: true
 
 ## Linqe
 
-- [Discord](https://discord.gg/83fAWDV5Hq)
 - [cpp.sh](http://cpp.sh/) - Testo programe të C++ në ueb.
 - [cplusplus.com](http://www.cplusplus.com/doc/tutorial/) - Materiale mësimore për gjuhën C++.
 
